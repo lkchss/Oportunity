@@ -1,0 +1,143 @@
+================================================================================
+ALGORITHM TEST RESULTS (AFTER ADMISSIBILITY FIX)
+================================================================================
+
+
+================================================================================
+Profile 1: Strong T14 Candidate
+================================================================================
+LSAT: 177 | GPA: 3.95 | Goal: BigLaw
+
+Top 10 Matches:
+--------------------------------------------------------------------------------
+ 1. Duke University School of Law                 | Composite:  86.3 | Tier: safety       | Admit:  91.8 | Goal:  67.9
+ 2. Cornell Law School                            | Composite:  86.1 | Tier: safety       | Admit:  90.8 | Goal:  71.9
+ 3. University of Michigan Law School             | Composite:  82.4 | Tier: safety       | Admit:  93.3 | Goal:  52.0
+ 4. Columbia Law School                           | Composite:  82.1 | Tier: safety       | Admit:  90.8 | Goal:  55.0
+ 5. University of Pennsylvania Law School (Carey) | Composite:  80.9 | Tier: safety       | Admit:  88.0 | Goal:  52.0
+ 6. New York University School of Law             | Composite:  80.6 | Tier: safety       | Admit:  90.8 | Goal:  50.0
+ 7. Northwestern University Pritzker School of Law | Composite:  80.0 | Tier: safety       | Admit:  87.6 | Goal:  50.0
+ 8. Northwestern University Pritzker School of Law | Composite:  80.0 | Tier: safety       | Admit:  87.6 | Goal:  50.0
+ 9. UC Berkeley School of Law                     | Composite:  78.9 | Tier: safety       | Admit:  90.8 | Goal:  45.0
+10. University of Virginia Law School             | Composite:  78.4 | Tier: safety       | Admit:  86.6 | Goal:  45.0
+
+Analysis:
+  - Top school: Duke University School of Law
+  - Admissibility score range: 86.6 - 91.8
+  - Tier breakdown: safety
+
+
+================================================================================
+Profile 2: Splitter (High LSAT, Lower GPA)
+================================================================================
+LSAT: 172 | GPA: 3.3 | Goal: BigLaw
+
+Top 10 Matches:
+--------------------------------------------------------------------------------
+ 1. Cornell Law School                            | Composite:  70.7 | Tier: reach        | Admit:  46.2 | Goal:  71.9
+ 2. Duke University School of Law                 | Composite:  70.2 | Tier: target       | Admit:  59.8 | Goal:  67.9
+ 3. Fordham University School of Law              | Composite:  68.5 | Tier: safety       | Admit:  81.3 | Goal:  20.0
+ 4. Boston College Law School                     | Composite:  67.5 | Tier: safety       | Admit:  81.2 | Goal:  16.0
+ 5. Boston University School of Law               | Composite:  67.3 | Tier: safety       | Admit:  80.3 | Goal:  18.0
+ 6. New York University School of Law             | Composite:  66.7 | Tier: target       | Admit:  50.9 | Goal:  50.0
+ 7. UC Berkeley School of Law                     | Composite:  66.0 | Tier: safety       | Admit:  68.6 | Goal:  45.0
+ 8. University of Michigan Law School             | Composite:  65.7 | Tier: target       | Admit:  59.9 | Goal:  52.0
+ 9. University of Pennsylvania Law School (Carey) | Composite:  65.4 | Tier: reach        | Admit:  43.8 | Goal:  52.0
+10. St. John's University School of Law           | Composite:  65.0 | Tier: safety       | Admit:  85.6 | Goal:   8.0
+
+Analysis:
+  - Top school: Cornell Law School
+  - Admissibility score range: 85.6 - 46.2
+  - Tier breakdown: target, safety, reach
+
+
+================================================================================
+Profile 3: Reverse Splitter (Lower LSAT, High GPA)
+================================================================================
+LSAT: 160 | GPA: 3.98 | Goal: Public Interest
+
+Top 10 Matches:
+--------------------------------------------------------------------------------
+ 1. Vermont Law School                            | Composite:  67.8 | Tier: safety       | Admit: 100.0 | Goal:  22.0
+ 2. Lewis & Clark Law School                      | Composite:  62.7 | Tier: safety       | Admit:  92.6 | Goal:  18.0
+ 3. University of Denver Sturm College of Law     | Composite:  56.1 | Tier: safety       | Admit:  92.5 | Goal:  12.0
+ 4. University of Arizona College of Law          | Composite:  55.7 | Tier: safety       | Admit:  92.5 | Goal:  10.0
+ 5. University of Washington School of Law        | Composite:  53.9 | Tier: target       | Admit:  66.0 | Goal:  16.0
+ 6. University of California, Irvine School of Law | Composite:  52.5 | Tier: target       | Admit:  65.4 | Goal:  10.0
+ 7. University of San Diego School of Law         | Composite:  52.2 | Tier: safety       | Admit:  89.1 | Goal:  10.0
+ 8. UC Berkeley School of Law                     | Composite:  50.3 | Tier: hard reach   | Admit:  47.5 | Goal:  18.0
+ 9. Marquette University Law School               | Composite:  49.5 | Tier: safety       | Admit: 100.0 | Goal:   8.0
+10. St. John's University School of Law           | Composite:  49.5 | Tier: safety       | Admit: 100.0 | Goal:  10.0
+
+Analysis:
+  - Top school: Vermont Law School
+  - Admissibility score range: 100.0 - 100.0
+  - Tier breakdown: target, hard reach, safety
+
+
+================================================================================
+Profile 4: Academia Goal
+================================================================================
+LSAT: 175 | GPA: 3.92 | Goal: Academia
+
+Top 10 Matches:
+--------------------------------------------------------------------------------
+ 1. University of Michigan Law School             | Composite:  68.1 | Tier: safety       | Admit:  91.0 | Goal:  28.0
+ 2. Harvard Law School                            | Composite:  68.0 | Tier: target       | Admit:  67.0 | Goal:  28.2
+ 3. University of Notre Dame Law School           | Composite:  66.1 | Tier: safety       | Admit:  95.2 | Goal:  13.6
+ 4. Boston University School of Law               | Composite:  64.9 | Tier: safety       | Admit:  94.6 | Goal:  10.2
+ 5. Cornell Law School                            | Composite:  64.7 | Tier: safety       | Admit:  77.5 | Goal:  33.0
+ 6. University of Southern California (Gould) School of Law | Composite:  64.6 | Tier: safety       | Admit:  93.5 | Goal:  11.2
+ 7. UCLA School of Law                            | Composite:  64.3 | Tier: safety       | Admit:  87.1 | Goal:  20.8
+ 8. Fordham University School of Law              | Composite:  63.3 | Tier: safety       | Admit:  96.8 | Goal:  10.4
+ 9. Stanford Law School                           | Composite:  63.2 | Tier: safety       | Admit:  75.8 | Goal:  25.2
+10. University of Virginia Law School             | Composite:  62.9 | Tier: safety       | Admit:  75.0 | Goal:  27.6
+
+Analysis:
+  - Top school: University of Michigan Law School
+  - Admissibility score range: 75.0 - 91.0
+  - Tier breakdown: target, safety
+
+
+================================================================================
+Profile 5: Regional Focus
+================================================================================
+LSAT: 165 | GPA: 3.7 | Goal: Government
+
+Top 10 Matches:
+--------------------------------------------------------------------------------
+ 1. University of Alabama School of Law           | Composite:  56.7 | Tier: safety       | Admit:  84.2 | Goal:   4.0
+ 2. Vermont Law School                            | Composite:  55.7 | Tier: safety       | Admit:  94.9 | Goal:  10.0
+ 3. Case Western Reserve University School of Law | Composite:  55.0 | Tier: safety       | Admit:  92.5 | Goal:   6.0
+ 4. Temple University Beasley School of Law       | Composite:  54.9 | Tier: safety       | Admit:  94.9 | Goal:   5.0
+ 5. Marquette University Law School               | Composite:  54.7 | Tier: safety       | Admit:  95.5 | Goal:   4.0
+ 6. St. John's University School of Law           | Composite:  54.5 | Tier: safety       | Admit:  95.8 | Goal:   5.0
+ 7. Seton Hall University School of Law           | Composite:  54.3 | Tier: safety       | Admit:  96.4 | Goal:   4.0
+ 8. Ohio State University College of Law          | Composite:  53.9 | Tier: safety       | Admit:  90.4 | Goal:   6.0
+ 9. Georgia State University College of Law       | Composite:  52.7 | Tier: safety       | Admit:  94.9 | Goal:   6.0
+10. George Mason University Law School            | Composite:  52.4 | Tier: safety       | Admit:  87.1 | Goal:  12.0
+
+Analysis:
+  - Top school: University of Alabama School of Law
+  - Admissibility score range: 87.1 - 84.2
+  - Tier breakdown: safety
+
+
+================================================================================
+Profile 6: Weak Candidate
+================================================================================
+LSAT: 155 | GPA: 3.2 | Goal: Unsure
+
+Top 10 Matches:
+--------------------------------------------------------------------------------
+ 1. Marquette University Law School               | Composite:  55.2 | Tier: target       | Admit:  60.8 | Goal:   5.0
+ 2. Seton Hall University School of Law           | Composite:  54.0 | Tier: safety       | Admit:  73.5 | Goal:   5.0
+ 3. St. John's University School of Law           | Composite:  52.2 | Tier: target       | Admit:  67.3 | Goal:   6.2
+ 4. Vermont Law School                            | Composite:  50.6 | Tier: target       | Admit:  59.8 | Goal:   9.5
+ 5. Georgia State University College of Law       | Composite:  48.3 | Tier: target       | Admit:  54.0 | Goal:   6.5
+ 6. Temple University Beasley School of Law       | Composite:  48.1 | Tier: target       | Admit:  54.0 | Goal:   5.8
+
+Analysis:
+  - Top school: Marquette University Law School
+  - Admissibility score range: 54.0 - 60.8
+  - Tier breakdown: target, safety
