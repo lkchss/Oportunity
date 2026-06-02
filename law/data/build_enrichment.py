@@ -155,12 +155,27 @@ def main() -> None:
         class_size_1l = int(_num(class_1l["TotalJD1Total"])) if class_1l is not None else None
 
         e = emp.get(aba)
+        real_outcomes: dict[str, float] = {}
         if e is not None and _num(e["Total_GraduatesTotal"]) > 0:
             grads = _num(e["Total_GraduatesTotal"])
             ftlt_bar = _num(e["Employed_BarAdmissionRequiredFTLT"])
             ftlt_jd = _num(e["Employed_JDAdvantageFTLT"])
             employed_10mo_pct = round((ftlt_bar + ftlt_jd) / grads, 4)
             school_funded_pct = round(_num(e["Funded_TotTotalEmployed"]) / grads, 4)
+
+            # Real career outcome rates from the ABA firm-size / employer-type
+            # breakdowns (totals ÷ graduates). Overwrites the prior estimates.
+            biglaw = (_num(e["101-250-Total"]) + _num(e["251-500-Total"])
+                      + _num(e["501Plus-Total"])) / grads
+            solo_small = (_num(e["Solo-Total"]) + _num(e["1-10-Total"])
+                          + _num(e["11-25-Total"])) / grads
+            real_outcomes = {
+                "biglaw_pct": round(biglaw, 4),
+                "federal_clerkship_pct": round(_num(e["Clerkships_Federal_Total"]) / grads, 4),
+                "government_pct": round(_num(e["Government_Total"]) / grads, 4),
+                "public_interest_pct": round(_num(e["PublicInterest_Total"]) / grads, 4),
+                "solo_small_firm_pct": round(solo_small, 4),
+            }
         else:
             employed_10mo_pct = school_funded_pct = None
             warnings.append(f"{sid}: no employment row / 0 grads")
@@ -182,6 +197,7 @@ def main() -> None:
         school["school_funded_pct"] = school_funded_pct
         school["transfers_in"] = transfers_in
         school["transfers_out"] = transfers_out
+        school.update(real_outcomes)  # overwrite estimated career rates with real ABA data
         covered.append(sid)
 
     JSON_PATH.write_text(
