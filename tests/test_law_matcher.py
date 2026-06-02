@@ -364,17 +364,27 @@ class TestFinancialMath:
         _, bd_baylor = _compute_financial(profile, baylor, 50.0)
         assert bd_wisc["idr_monthly_net"] < bd_baylor["idr_monthly_net"]
 
-    def test_high_scholarship_score_uses_median_scholarship(self, schools):
-        """Scholarship score >= 65 should yield expected_aid = median_scholarship * 3."""
-        school = _school(schools, "iowa-law")
-        _, bd = _compute_financial(_profile(), school, 70.0)  # score >= 65
-        assert bd["expected_aid"] == school["median_scholarship"] * 3
+    def test_grid_aid_increases_with_competitiveness(self, schools):
+        """With real award-grid data, a stronger applicant gets more expected aid."""
+        school = _school(schools, "iowa-law")  # has scholarship_full_pct grid
+        _, bd_strong = _compute_financial(_profile(), school, 80.0)
+        _, bd_weak   = _compute_financial(_profile(), school, 20.0)
+        assert bd_strong["expected_aid"] > bd_weak["expected_aid"]
 
-    def test_low_scholarship_score_yields_zero_aid(self, schools):
-        """Scholarship score < 45 should yield expected_aid = 0."""
+    def test_grid_aid_bounded_by_full_tuition(self, schools):
+        """Expected aid can never exceed three years of effective tuition."""
         school = _school(schools, "boston-college-law")
-        _, bd = _compute_financial(_profile(), school, 30.0)  # score < 45
-        assert bd["expected_aid"] == 0.0
+        _, bd = _compute_financial(_profile(), school, 100.0)
+        assert bd["expected_aid"] <= bd["annual_tuition_effective"] * 3 + 1
+
+    def test_aid_heuristic_fallback_when_no_grid(self, schools):
+        """Schools lacking grid data fall back to the median-scholarship heuristic."""
+        school = dict(_school(schools, "iowa-law"))
+        school.pop("scholarship_full_pct", None)  # force fallback path
+        _, bd_high = _compute_financial(_profile(), school, 70.0)  # >= 65
+        _, bd_low  = _compute_financial(_profile(), school, 30.0)  # < 45
+        assert bd_high["expected_aid"] == school["median_scholarship"] * 3
+        assert bd_low["expected_aid"] == 0.0
 
     def test_private_goal_uses_private_salary(self, schools):
         """BigLaw goal uses median_private_sector_salary."""
