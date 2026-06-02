@@ -183,6 +183,17 @@ def _compute_career_fit(profile: dict, school: dict, scalars: dict) -> float:
         lrap = school.get("lrap_quality", "moderate").lower()
         score *= _LRAP_MULTIPLIERS.get(lrap, 1.0)
 
+    # Real-outcome quality adjustment (ABA Employment Summary, when available).
+    # employed_10mo_pct (FTLT bar-required + JD-advantage / grads) is the
+    # gold-standard placement metric; school_funded_pct flags employment-stat
+    # gaming (schools hiring their own grads into short-term funded roles) and is
+    # netted out. Blend 70% goal-specific fit, 30% real discounted placement.
+    employed = school.get("employed_10mo_pct")
+    if employed is not None:
+        funded = school.get("school_funded_pct") or 0.0
+        real_placement = max(employed - funded, 0.0)
+        score = score * 0.70 + (real_placement * 100) * 0.30
+
     return _clamp(score)
 
 
@@ -292,7 +303,16 @@ def _compute_scholarship(
     else:
         merit_base = 50.0
 
-    school_generosity = school.get("scholarship_pct", 0.75) * 100
+    # Generosity: prefer the real ABA 509 award grid (weights award SIZE, not just
+    # receipt) — full band counts most, then half-to-full, then <half. Fall back to
+    # the flat "any grant" rate when grid data is absent.
+    full_pct = school.get("scholarship_full_pct")
+    if full_pct is not None:
+        htf_pct = school.get("scholarship_half_to_full_pct") or 0.0
+        lth_pct = school.get("scholarship_less_than_half_pct") or 0.0
+        school_generosity = (full_pct * 1.0 + htf_pct * 0.7 + lth_pct * 0.3) * 100
+    else:
+        school_generosity = school.get("scholarship_pct", 0.75) * 100
     median_scholarship_bonus = min(school.get("median_scholarship", 20000) / 50000, 1.0) * 10
 
     lsat_pct = _clamp(
@@ -309,6 +329,11 @@ def _compute_scholarship(
         + percentile_fit
         + median_scholarship_bonus
     )
+
+    # Conditional scholarships (ABA reported) can be revoked after 1L if the
+    # student misses a GPA stipulation — a real downside risk, lightly penalized.
+    if school.get("conditional_scholarship"):
+        merit_score -= 5.0
 
     # --- Need component ---
     income_bracket = profile.get("income_bracket", "prefer_not")
@@ -345,6 +370,32 @@ _LRAP_MONTHLY_REDUCTION = {
 }
 
 
+def _expected_tuition_discount(school: dict, scholarship_score: float) -> Optional[float]:
+    """
+    Fraction of annual tuition the applicant can expect covered, derived from the
+    school's real ABA 509 award grid scaled by the applicant's competitiveness.
+
+    Returns None when grid data is absent (caller falls back to the heuristic).
+
+    avg_award_frac = dollar-weighted average award SIZE among recipients
+                     (full≈1.0, half-to-full≈0.75, <half≈0.25 of tuition).
+    award_rate     = share of the class receiving any grant, scaled by a
+                     competitiveness factor (scholarship_score 50 ≈ neutral).
+    discount       = avg_award_frac × min(award_rate × comp, 1.0)   ∈ [0, 1]
+    """
+    full = school.get("scholarship_full_pct")
+    if full is None:
+        return None
+    htf = school.get("scholarship_half_to_full_pct") or 0.0
+    lth = school.get("scholarship_less_than_half_pct") or 0.0
+    awarded = full + htf + lth
+    if awarded <= 0:
+        return 0.0
+    avg_award_frac = (full * 1.0 + htf * 0.75 + lth * 0.25) / awarded
+    comp = 0.4 + (scholarship_score / 100) * 1.0          # [0.4, 1.4]
+    return min(avg_award_frac * min(awarded * comp, 1.0), 1.0)
+
+
 def _compute_financial(
     profile: dict,
     school: dict,
@@ -377,9 +428,14 @@ def _compute_financial(
 
     gross_cost = tuition_3yr + living_3yr
 
-    # Estimated aid based on scholarship likelihood
+    # Estimated aid: prefer the school's real award grid (ABA 509) gated by the
+    # applicant's competitiveness; fall back to the median-scholarship heuristic
+    # when grid data is absent.
     median_scholarship = school.get("median_scholarship", 0)
-    if scholarship_score >= 65:
+    discount = _expected_tuition_discount(school, scholarship_score)
+    if discount is not None:
+        expected_aid = annual_tuition * discount * 3
+    elif scholarship_score >= 65:
         expected_aid = median_scholarship * 3
     elif scholarship_score >= 45:
         expected_aid = median_scholarship * 1.5
