@@ -58,6 +58,9 @@ OPTIONAL_FIELDS = {
     "conditional_scholarship": bool,
     "employed_10mo_pct": (int, float),
     "school_funded_pct": (int, float),
+    # Transfer mobility (ABA 2025 Transfers report) — for "transfer up after 1L" use case
+    "transfers_in": (int, float),
+    "transfers_out": (int, float),
 }
 
 
