@@ -10,11 +10,13 @@ import pytest
 from law.data_loader import load_law_schools
 from law.matcher import (
     rank_schools,
+    transfer_up_plan,
     _compute_admissibility,
     _compute_career_fit,
     _compute_location_fit,
     _compute_scholarship,
     _compute_financial,
+    _transfer_metrics,
     _precompute_career_scalars,
 )
 
@@ -397,3 +399,53 @@ class TestFinancialMath:
         school = _school(schools, "fordham-law")
         _, bd = _compute_financial(_profile(goal="Government"), school, 50.0)
         assert bd["starting_salary"] == school["median_public_sector_salary"]
+
+
+# ---------------------------------------------------------------------------
+# 5. Transfer-up feature
+# ---------------------------------------------------------------------------
+
+class TestTransferUp:
+
+    def test_metrics_present_on_ranked_schools(self, schools):
+        """Ranked entries expose transfer_out_rate / transfer_in_rate."""
+        ranked = rank_schools(_profile(), schools, top_n=5)
+        for s in ranked:
+            assert "transfer_out_rate" in s and "transfer_in_rate" in s
+
+    def test_metrics_rate_definition(self, schools):
+        """Rate equals count / class size."""
+        s = _school(schools, "suny-buffalo-law")
+        m = _transfer_metrics(s)
+        assert m["transfer_out_rate"] == round(s["transfers_out"] / s["class_size_1l"], 3)
+
+    def test_metrics_none_without_class_size(self):
+        """Missing class size yields None rates, no crash."""
+        m = _transfer_metrics({"transfers_out": 5, "transfers_in": 3})
+        assert m == {"transfer_out_rate": None, "transfer_in_rate": None}
+
+    def test_plan_shape(self, schools):
+        """Plan returns launchpad and target lists."""
+        plan = transfer_up_plan(_profile(lsat=158, gpa=3.4), schools)
+        assert set(plan) == {"launchpads", "targets"}
+        assert isinstance(plan["launchpads"], list)
+        assert isinstance(plan["targets"], list)
+
+    def test_targets_rank_above_best_realistic(self, schools):
+        """Every transfer target outranks the applicant's best realistic admit."""
+        profile = _profile(lsat=156, gpa=3.3)  # not T14-competitive
+        plan = transfer_up_plan(profile, schools)
+        realistic = [
+            s["usnwr_rank_2026"] for s in schools
+            if _compute_admissibility(profile["lsat"], profile["gpa"], s)[1]
+            in ("safety", "target")
+        ]
+        if plan["targets"] and realistic:
+            best = min(realistic)
+            assert all(t["usnwr_rank_2026"] < best for t in plan["targets"])
+
+    def test_launchpads_sorted_by_out_rate(self, schools):
+        """Launchpads are ordered by transfer-out mobility, descending."""
+        plan = transfer_up_plan(_profile(lsat=157, gpa=3.4), schools)
+        rates = [lp["transfer_out_rate"] for lp in plan["launchpads"]]
+        assert rates == sorted(rates, reverse=True)
