@@ -3,15 +3,18 @@
 - [ ] UI/UX streamlining pass (informed by stress test findings)
 - [ ] Enable LLM narratives (law/llm_client.py is built, currently unused)
 - [ ] Next loop iter: 2 residual regressions (p03, p14) — both mid/low-income MA/NY profiles where judge still wants a stronger aid story
-- [ ] Add class_size_1l -> admissibility softener + transfers_in/out -> transfer-up signal/feature (display-only so far, not in composite)
-- [ ] Data enrichment MEDIUM tier (second pass): median_grad_debt, placement_by_state, bar_pass_ultimate + state avg
-- [ ] Data enrichment MEDIUM tier (second pass): median_grad_debt, placement_by_state, bar_pass_ultimate + state avg
+- [ ] Add class_size_1l -> admissibility softener (transfers now done as a feature)
+- [ ] Tier-3 BLOCKED ON DATA: median_grad_debt, bar_pass_ultimate (+state avg), placement_by_state are NOT in the 5 ABA bulk files.
+      Need: ABA "Bar Passage Outcomes" report + a graduate-debt source (US News / ABA GRD). Drop in law/data/raw/ to proceed.
+- [ ] Render transfer-up plan styling in the final UI pass (TransferPanel is placeholder-styled)
+- [ ] Add lower-ranked schools (ranks 83+) so the transfer-up launchpad list works for genuinely-not-T14 profiles (157/3.4 currently has 0 safety/target)
 - [ ] Data enrichment HARD/predicted (later): selectivity trend (multi-year), NLJ250-by-market, part-time/transfer
-- [ ] After enrichment: wire new fields into matcher (scholarship grid -> aid; class_size -> admit-prob; employment quality -> career), then resume LLM-judge loop
 
 ## In progress
 
 ## Done
+- [x] Transfer-up feature: _transfer_metrics + transfer_up_plan (launchpads/targets) in matcher, /api/match transfer_plan, TransferPanel UI, 6 tests. Commit daa4697.
+- [x] Tier-3 available part: recompute 5 real career outcome rates from ABA Employment Summary. LLM-judge 17-7 (71%) -> KEEP, commit 5adb764.
 - [x] Normalize grid scholarship generosity to dataset max. LLM-judge 13-2 (87%) over iter-1 -> KEEP, committed d9f90f3.
       Recovered 5 of 6 prior regressions; regressions now 2 (p03, p14).
 - [x] Wire ABA enrichment into matcher (real aid grid, grid generosity + conditional penalty, real placement net of school-funded).
