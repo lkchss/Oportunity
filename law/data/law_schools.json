@@ -670,7 +670,13 @@
       "annual_tuition": 54736,
       "annual_tuition_resident": 33489,
       "annual_tuition_nonresident": 54736,
-      "cost_of_living_index": 88
+      "cost_of_living_index": 88,
+      "class_size_1l": 190,
+      "scholarship_full_pct": 0.2587,
+      "scholarship_half_to_full_pct": 0.2851,
+      "scholarship_less_than_half_pct": 0.1976,
+      "no_scholarship_pct": 0.2587,
+      "conditional_scholarship": false
     },
     {
       "id": "baylor-law",
