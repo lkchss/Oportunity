@@ -2,7 +2,7 @@
 - [ ] Refine plain web styling into final visual design (placeholder style in law/web/)
 - [ ] UI/UX streamlining pass (informed by stress test findings)
 - [ ] Enable LLM narratives (law/llm_client.py is built, currently unused)
-- [ ] Next loop iter: investigate 6 regressions (p01 p09 p11 p13 p14 p20) from the data-wiring round
+- [ ] Next loop iter: 2 residual regressions (p03, p14) — both mid/low-income MA/NY profiles where judge still wants a stronger aid story
 - [ ] Add class_size_1l -> admissibility softener + transfers_in/out -> transfer-up signal/feature (display-only so far, not in composite)
 - [ ] Data enrichment MEDIUM tier (second pass): median_grad_debt, placement_by_state, bar_pass_ultimate + state avg
 - [ ] Data enrichment MEDIUM tier (second pass): median_grad_debt, placement_by_state, bar_pass_ultimate + state avg
@@ -12,6 +12,8 @@
 ## In progress
 
 ## Done
+- [x] Normalize grid scholarship generosity to dataset max. LLM-judge 13-2 (87%) over iter-1 -> KEEP, committed d9f90f3.
+      Recovered 5 of 6 prior regressions; regressions now 2 (p03, p14).
 - [x] Wire ABA enrichment into matcher (real aid grid, grid generosity + conditional penalty, real placement net of school-funded).
       LLM-judge: 18-6 (75% win) over baseline -> KEEP, committed 971bb9c. Real data beats re-weighting (earlier weighting iters ~40%).
 - [x] Data enrichment EASY tier: all 75 schools populated from ABA 2025 bulk reports via law/data/build_enrichment.py
