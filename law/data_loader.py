@@ -46,6 +46,21 @@ REQUIRED_FIELDS = {
 }
 
 
+# Enrichment fields (ABA 509 + Employment Summary). Optional during rollout:
+# validated only when present, so schools can be populated in batches without
+# breaking the loader. Promote to REQUIRED_FIELDS once all 75 are populated.
+OPTIONAL_FIELDS = {
+    "class_size_1l": (int, float),
+    "scholarship_full_pct": (int, float),
+    "scholarship_half_to_full_pct": (int, float),
+    "scholarship_less_than_half_pct": (int, float),
+    "no_scholarship_pct": (int, float),
+    "conditional_scholarship": bool,
+    "employed_10mo_pct": (int, float),
+    "school_funded_pct": (int, float),
+}
+
+
 class DataValidationError(Exception):
     """Raised when law school data fails validation."""
     pass
@@ -94,6 +109,23 @@ def _validate_entry(entry: dict) -> None:
                     f"expected {expected_type.__name__}"
                 )
 
+    # Validate optional enrichment fields only if present (None allowed = unverified)
+    for field, expected_type in OPTIONAL_FIELDS.items():
+        if field not in entry or entry[field] is None:
+            continue
+        value = entry[field]
+        types = expected_type if isinstance(expected_type, tuple) else (expected_type,)
+        # bool is a subclass of int — guard so a bool field can't be a stray int
+        if expected_type is bool and not isinstance(value, bool):
+            raise DataValidationError(
+                f"School '{school_id}': field '{field}' must be bool, got {type(value).__name__}"
+            )
+        if not isinstance(value, types):
+            raise DataValidationError(
+                f"School '{school_id}': field '{field}' has type {type(value).__name__}, "
+                f"expected {' or '.join(t.__name__ for t in types)}"
+            )
+
 
 def load_law_schools() -> list[dict]:
     """
@@ -114,7 +146,7 @@ def load_law_schools() -> list[dict]:
 
     # Load JSON
     try:
-        with open(data_path, "r") as f:
+        with open(data_path, "r", encoding="utf-8") as f:
             data = json.load(f)
     except json.JSONDecodeError as e:
         raise json.JSONDecodeError(
