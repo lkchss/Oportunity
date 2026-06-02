@@ -10,7 +10,7 @@
       "tuition": "LawHub 2025-26 Tuition Data",
       "rankings": "US News 2026 Best Law Schools"
     },
-    "estimated_fields": "government_pct, solo_small_firm_pct, jd_required_pct, median_private_sector_salary, median_public_sector_salary, target_states, lrap_quality, cost_of_living_index \u00e2\u20ac\u201d estimated from ABA employment categories and NALP market data; verify against current ABA 509 before production use",
+    "estimated_fields": "government_pct, solo_small_firm_pct, jd_required_pct, median_private_sector_salary, median_public_sector_salary, target_states, lrap_quality, cost_of_living_index â€” estimated from ABA employment categories and NALP market data; verify against current ABA 509 before production use",
     "last_updated": "2026-05"
   },
   "schools": [
@@ -58,7 +58,15 @@
       "annual_tuition": 72755,
       "annual_tuition_resident": 72755,
       "annual_tuition_nonresident": 72755,
-      "cost_of_living_index": 155
+      "cost_of_living_index": 155,
+      "class_size_1l": 219,
+      "scholarship_full_pct": 0.0126,
+      "scholarship_half_to_full_pct": 0.1339,
+      "scholarship_less_than_half_pct": 0.7449,
+      "no_scholarship_pct": 0.1087,
+      "conditional_scholarship": false,
+      "employed_10mo_pct": 0.9413,
+      "school_funded_pct": 0.0205
     },
     {
       "id": "notre-dame-law",
@@ -463,7 +471,15 @@
       "annual_tuition": 55300,
       "annual_tuition_resident": 38186,
       "annual_tuition_nonresident": 55300,
-      "cost_of_living_index": 105
+      "cost_of_living_index": 105,
+      "class_size_1l": 229,
+      "scholarship_full_pct": 0.1175,
+      "scholarship_half_to_full_pct": 0.4542,
+      "scholarship_less_than_half_pct": 0.3711,
+      "no_scholarship_pct": 0.0573,
+      "conditional_scholarship": false,
+      "employed_10mo_pct": 0.9354,
+      "school_funded_pct": 0.0304
     },
     {
       "id": "ohio-state-moritz-law",
@@ -509,7 +525,15 @@
       "annual_tuition": 52515,
       "annual_tuition_resident": 37263,
       "annual_tuition_nonresident": 52515,
-      "cost_of_living_index": 95
+      "cost_of_living_index": 95,
+      "class_size_1l": 160,
+      "scholarship_full_pct": 0.3743,
+      "scholarship_half_to_full_pct": 0.2891,
+      "scholarship_less_than_half_pct": 0.2277,
+      "no_scholarship_pct": 0.1089,
+      "conditional_scholarship": false,
+      "employed_10mo_pct": 0.9218,
+      "school_funded_pct": 0.0112
     },
     {
       "id": "wake-forest-law",
@@ -1050,7 +1074,15 @@
       "annual_tuition": 74608,
       "annual_tuition_resident": 74608,
       "annual_tuition_nonresident": 74608,
-      "cost_of_living_index": 185
+      "cost_of_living_index": 185,
+      "class_size_1l": 439,
+      "scholarship_full_pct": 0.0,
+      "scholarship_half_to_full_pct": 0.3604,
+      "scholarship_less_than_half_pct": 0.5135,
+      "no_scholarship_pct": 0.126,
+      "conditional_scholarship": false,
+      "employed_10mo_pct": 0.9429,
+      "school_funded_pct": 0.0
     },
     {
       "id": "smu-dedman-law",
@@ -1280,7 +1312,15 @@
       "annual_tuition": 33975,
       "annual_tuition_resident": 26865,
       "annual_tuition_nonresident": 33975,
-      "cost_of_living_index": 75
+      "cost_of_living_index": 75,
+      "class_size_1l": 127,
+      "scholarship_full_pct": 0.3619,
+      "scholarship_half_to_full_pct": 0.0773,
+      "scholarship_less_than_half_pct": 0.4144,
+      "no_scholarship_pct": 0.1464,
+      "conditional_scholarship": true,
+      "employed_10mo_pct": 0.9576,
+      "school_funded_pct": 0.0085
     },
     {
       "id": "pepperdine-law",
