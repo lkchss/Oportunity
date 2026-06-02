@@ -9,7 +9,10 @@ REQUIRED_FIELDS = {
     "id": str,
     "name": str,
     "location": str,
+    "state": str,
     "website_url": str,
+    "usnwr_rank_2026": (int, float),
+    "is_public": bool,
     # ABA 509 admissions data
     "lsat_25": (int, float),
     "lsat_50": (int, float),
@@ -23,14 +26,22 @@ REQUIRED_FIELDS = {
     # NALP / ABA employment data
     "biglaw_pct": (int, float),
     "federal_clerkship_pct": (int, float),
-    "public_interest_pct": (int, float),
     "government_pct": (int, float),
+    "public_interest_pct": (int, float),
+    "solo_small_firm_pct": (int, float),
+    "jd_required_pct": (int, float),
     "bar_pass_rate_first_time": (int, float),
+    # NALP salary data
+    "median_private_sector_salary": (int, float),
+    "median_public_sector_salary": (int, float),
     # Programmatic strengths
     "practice_area_strengths": list,
     "lrap_quality": str,
+    "target_states": list,
     # Cost
     "annual_tuition": (int, float),
+    "annual_tuition_resident": (int, float),
+    "annual_tuition_nonresident": (int, float),
     "cost_of_living_index": (int, float),
 }
 

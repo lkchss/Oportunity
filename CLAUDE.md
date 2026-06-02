@@ -1,6 +1,50 @@
-do not generate additional .md files unless asked to.
+Do not generate additional .md files unless asked to.
 
-read README.md for context on the project.
+## Product Lines
+
+Two independent product lines live side-by-side in this repo.
+
+### MVP — General Opportunity Finder
+Streamlit app: user fills form → Claude web_search → ranked opportunity cards.
+
+```
+mvp/
+  main.py      # Streamlit app — user fills form, Claude web_search returns results in UI
+  portal.py    # Streamlit profile builder — saves profile.json for CLI pipeline
+  run.py       # CLI pipeline entry point — reads profile.json, DuckDuckGo search, HTML report
+  search.py    # All Claude API calls live here (web_search tool)
+  scraper.py   # DuckDuckGo search used by run.py
+  queries.py   # Builds search query strings from profile fields
+  report.py    # Renders HTML report from DuckDuckGo results
+```
+
+```bash
+streamlit run mvp/main.py
+```
+
+### Law — Law School Matcher
+Streamlit app: user inputs academic profile → matching algorithm → ranked law school results.
+
+```
+law/
+  main.py        # Streamlit app entry point
+  matcher.py     # Core matching algorithm
+  data_loader.py # Loads law school data
+  claude_client.py / llm_client.py  # Claude API calls
+  data/
+    law_schools.json  # Law school database
+```
+
+```bash
+streamlit run law/main.py
+```
+
+## Shared
+```
+tests/
+requirements.txt
+.env.example   # Copy to .env and add ANTHROPIC_API_KEY
+```
 
 ## Tech Stack
 - Python 3.11+
@@ -8,36 +52,13 @@ read README.md for context on the project.
 - Anthropic Python SDK (Claude integration)
 - python-dotenv (environment variable management)
 
-## Directory Structure
-```
-app/
-  main.py          # Streamlit entry point — run this to launch the app
-  claude_client.py # All Claude API calls live here
-tests/             # Test files
-.github/
-  ISSUE_TEMPLATE/  # Templates for GitHub issues
-requirements.txt
-.env.example       # Copy to .env and add ANTHROPIC_API_KEY
-```
-
-## Running the App
+## Setup
 ```bash
 pip install -r requirements.txt
-cp .env.example .env   # then open .env and add your Anthropic API key
-streamlit run app/main.py
+cp .env.example .env   # add ANTHROPIC_API_KEY
 ```
 
-## Working on GitHub Issues
-When assigned a GitHub issue:
-1. Read the issue title, description, and acceptance criteria carefully.
-2. Identify which files need to change (start by reading them before editing).
-3. Implement only what the acceptance criteria describe — no extra features.
-4. Commit with a message referencing the issue, e.g. `fix #12: add resume upload`.
-5. Push to the feature branch.
-
 ## Code Conventions
-- Use type hints on all function signatures.
+- Type hints on all function signatures.
 - Keep functions small and single-purpose.
-- All Claude API calls go through `app/claude_client.py`.
-- All Streamlit UI code goes in `app/main.py` (or new files under `app/` for larger features).
 - Never commit `.env` or API keys.

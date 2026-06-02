@@ -24,3 +24,10 @@ venv/
 # OS
 .DS_Store
 Thumbs.db
+
+# Opportunity personal data
+profile.json
+output/
+
+# Eval harness run artifacts (regenerated each run)
+eval/runs/

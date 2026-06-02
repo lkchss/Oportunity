@@ -9,7 +9,18 @@
       "Bash(python:*)",
       "Bash(git add:*)",
       "Bash(git commit:*)",
-      "Bash(pip install:*)"
+      "Bash(pip install:*)",
+      "WebFetch(domain:lsd.law)",
+      "WebFetch(domain:www.americanbar.org)",
+      "WebFetch(domain:www.usnews.com)",
+      "WebFetch(domain:www.abarequireddisclosures.org)",
+      "WebFetch(domain:excessofdemocracy.com)",
+      "WebFetch(domain:www.law.gwu.edu)",
+      "WebFetch(domain:www.bc.edu)",
+      "WebFetch(domain:www.law.gmu.edu)",
+      "Bash(python -m eval.snapshot candidate)",
+      "Bash(git checkout *)",
+      "Bash(python -m eval.diff)"
     ]
   }
 }
