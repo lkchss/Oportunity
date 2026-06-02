@@ -2,16 +2,18 @@
 - [ ] Refine plain web styling into final visual design (placeholder style in law/web/)
 - [ ] UI/UX streamlining pass (informed by stress test findings)
 - [ ] Enable LLM narratives (law/llm_client.py is built, currently unused)
-- [ ] Wire enrichment fields into matcher (scholarship grid -> aid; class_size -> admit-prob;
-      employed_10mo/school_funded -> career; transfers_in/out -> transfer-up signal), then resume LLM-judge loop
+- [ ] Next loop iter: investigate 6 regressions (p01 p09 p11 p13 p14 p20) from the data-wiring round
+- [ ] Add class_size_1l -> admissibility softener + transfers_in/out -> transfer-up signal/feature (display-only so far, not in composite)
+- [ ] Data enrichment MEDIUM tier (second pass): median_grad_debt, placement_by_state, bar_pass_ultimate + state avg
 - [ ] Data enrichment MEDIUM tier (second pass): median_grad_debt, placement_by_state, bar_pass_ultimate + state avg
 - [ ] Data enrichment HARD/predicted (later): selectivity trend (multi-year), NLJ250-by-market, part-time/transfer
 - [ ] After enrichment: wire new fields into matcher (scholarship grid -> aid; class_size -> admit-prob; employment quality -> career), then resume LLM-judge loop
-- [ ] Optimization loop: 3 iters run, all REVERT (weighting not the lever; ~40% judge-noise floor). Resume after data enrichment.
 
 ## In progress
 
 ## Done
+- [x] Wire ABA enrichment into matcher (real aid grid, grid generosity + conditional penalty, real placement net of school-funded).
+      LLM-judge: 18-6 (75% win) over baseline -> KEEP, committed 971bb9c. Real data beats re-weighting (earlier weighting iters ~40%).
 - [x] Data enrichment EASY tier: all 75 schools populated from ABA 2025 bulk reports via law/data/build_enrichment.py
       (class_size_1l, scholarship grid, conditional_scholarship, employed_10mo_pct, school_funded_pct) + transfers_in/out
 - [x] Build LLM-judge optimization harness (eval/): seeded profiles, blind pairwise diff-only judging via zero-context agents, win-rate gate
