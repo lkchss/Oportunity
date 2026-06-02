@@ -65,8 +65,10 @@
       "scholarship_less_than_half_pct": 0.7449,
       "no_scholarship_pct": 0.1087,
       "conditional_scholarship": false,
-      "employed_10mo_pct": 0.9413,
-      "school_funded_pct": 0.0205
+      "employed_10mo_pct": 0.9577,
+      "school_funded_pct": 0.0141,
+      "transfers_in": 4,
+      "transfers_out": 6
     },
     {
       "id": "notre-dame-law",
@@ -112,7 +114,17 @@
       "annual_tuition": 73950,
       "annual_tuition_resident": 73950,
       "annual_tuition_nonresident": 73950,
-      "cost_of_living_index": 90
+      "cost_of_living_index": 90,
+      "class_size_1l": 185,
+      "scholarship_full_pct": 0.0633,
+      "scholarship_half_to_full_pct": 0.3128,
+      "scholarship_less_than_half_pct": 0.5407,
+      "no_scholarship_pct": 0.0832,
+      "conditional_scholarship": false,
+      "employed_10mo_pct": 0.9329,
+      "school_funded_pct": 0.0427,
+      "transfers_in": 10,
+      "transfers_out": 1
     },
     {
       "id": "texas-am-law",
@@ -156,7 +168,17 @@
       "annual_tuition": 48522,
       "annual_tuition_resident": 32634,
       "annual_tuition_nonresident": 48522,
-      "cost_of_living_index": 98
+      "cost_of_living_index": 98,
+      "class_size_1l": 128,
+      "scholarship_full_pct": 0.2462,
+      "scholarship_half_to_full_pct": 0.4822,
+      "scholarship_less_than_half_pct": 0.2234,
+      "no_scholarship_pct": 0.0482,
+      "conditional_scholarship": false,
+      "employed_10mo_pct": 0.9919,
+      "school_funded_pct": 0.0,
+      "transfers_in": 6,
+      "transfers_out": 2
     },
     {
       "id": "minnesota-law",
@@ -201,7 +223,17 @@
       "annual_tuition": 64523,
       "annual_tuition_resident": 54118,
       "annual_tuition_nonresident": 64523,
-      "cost_of_living_index": 110
+      "cost_of_living_index": 110,
+      "class_size_1l": 229,
+      "scholarship_full_pct": 0.011,
+      "scholarship_half_to_full_pct": 0.4992,
+      "scholarship_less_than_half_pct": 0.4335,
+      "no_scholarship_pct": 0.0563,
+      "conditional_scholarship": false,
+      "employed_10mo_pct": 0.9505,
+      "school_funded_pct": 0.018,
+      "transfers_in": 7,
+      "transfers_out": 5
     },
     {
       "id": "boston-university-law",
@@ -246,7 +278,17 @@
       "annual_tuition": 71382,
       "annual_tuition_resident": 71382,
       "annual_tuition_nonresident": 71382,
-      "cost_of_living_index": 155
+      "cost_of_living_index": 155,
+      "class_size_1l": 238,
+      "scholarship_full_pct": 0.065,
+      "scholarship_half_to_full_pct": 0.2704,
+      "scholarship_less_than_half_pct": 0.577,
+      "no_scholarship_pct": 0.0876,
+      "conditional_scholarship": false,
+      "employed_10mo_pct": 0.9579,
+      "school_funded_pct": 0.0374,
+      "transfers_in": 13,
+      "transfers_out": 5
     },
     {
       "id": "byu-clark-law",
@@ -292,7 +334,17 @@
       "annual_tuition": 31984,
       "annual_tuition_resident": 15992,
       "annual_tuition_nonresident": 31984,
-      "cost_of_living_index": 95
+      "cost_of_living_index": 95,
+      "class_size_1l": 122,
+      "scholarship_full_pct": 0.4514,
+      "scholarship_half_to_full_pct": 0.1371,
+      "scholarship_less_than_half_pct": 0.3943,
+      "no_scholarship_pct": 0.0171,
+      "conditional_scholarship": true,
+      "employed_10mo_pct": 0.9449,
+      "school_funded_pct": 0.0394,
+      "transfers_in": 1,
+      "transfers_out": 0
     },
     {
       "id": "george-washington-law",
@@ -337,7 +389,17 @@
       "annual_tuition": 75420,
       "annual_tuition_resident": 75420,
       "annual_tuition_nonresident": 75420,
-      "cost_of_living_index": 158
+      "cost_of_living_index": 158,
+      "class_size_1l": 612,
+      "scholarship_full_pct": 0.0167,
+      "scholarship_half_to_full_pct": 0.2317,
+      "scholarship_less_than_half_pct": 0.5235,
+      "no_scholarship_pct": 0.2281,
+      "conditional_scholarship": false,
+      "employed_10mo_pct": 0.9684,
+      "school_funded_pct": 0.0053,
+      "transfers_in": 46,
+      "transfers_out": 33
     },
     {
       "id": "georgia-law",
@@ -382,7 +444,17 @@
       "annual_tuition": 40402,
       "annual_tuition_resident": 19502,
       "annual_tuition_nonresident": 40402,
-      "cost_of_living_index": 88
+      "cost_of_living_index": 88,
+      "class_size_1l": 187,
+      "scholarship_full_pct": 0.4231,
+      "scholarship_half_to_full_pct": 0.129,
+      "scholarship_less_than_half_pct": 0.2884,
+      "no_scholarship_pct": 0.1594,
+      "conditional_scholarship": false,
+      "employed_10mo_pct": 0.9529,
+      "school_funded_pct": 0.0,
+      "transfers_in": 4,
+      "transfers_out": 2
     },
     {
       "id": "usc-gould-law",
@@ -426,7 +498,17 @@
       "annual_tuition": 85948,
       "annual_tuition_resident": 85948,
       "annual_tuition_nonresident": 85948,
-      "cost_of_living_index": 170
+      "cost_of_living_index": 170,
+      "class_size_1l": 228,
+      "scholarship_full_pct": 0.0127,
+      "scholarship_half_to_full_pct": 0.4462,
+      "scholarship_less_than_half_pct": 0.4921,
+      "no_scholarship_pct": 0.0491,
+      "conditional_scholarship": false,
+      "employed_10mo_pct": 0.9604,
+      "school_funded_pct": 0.0044,
+      "transfers_in": 20,
+      "transfers_out": 7
     },
     {
       "id": "wisconsin-law",
@@ -472,14 +554,16 @@
       "annual_tuition_resident": 38186,
       "annual_tuition_nonresident": 55300,
       "cost_of_living_index": 105,
-      "class_size_1l": 229,
-      "scholarship_full_pct": 0.1175,
-      "scholarship_half_to_full_pct": 0.4542,
-      "scholarship_less_than_half_pct": 0.3711,
-      "no_scholarship_pct": 0.0573,
+      "class_size_1l": 230,
+      "scholarship_full_pct": 0.191,
+      "scholarship_half_to_full_pct": 0.3731,
+      "scholarship_less_than_half_pct": 0.3776,
+      "no_scholarship_pct": 0.0582,
       "conditional_scholarship": false,
-      "employed_10mo_pct": 0.9354,
-      "school_funded_pct": 0.0304
+      "employed_10mo_pct": 0.949,
+      "school_funded_pct": 0.0314,
+      "transfers_in": 9,
+      "transfers_out": 5
     },
     {
       "id": "ohio-state-moritz-law",
@@ -526,14 +610,16 @@
       "annual_tuition_resident": 37263,
       "annual_tuition_nonresident": 52515,
       "cost_of_living_index": 95,
-      "class_size_1l": 160,
-      "scholarship_full_pct": 0.3743,
-      "scholarship_half_to_full_pct": 0.2891,
-      "scholarship_less_than_half_pct": 0.2277,
-      "no_scholarship_pct": 0.1089,
+      "class_size_1l": 159,
+      "scholarship_full_pct": 0.3631,
+      "scholarship_half_to_full_pct": 0.3734,
+      "scholarship_less_than_half_pct": 0.1618,
+      "no_scholarship_pct": 0.1017,
       "conditional_scholarship": false,
-      "employed_10mo_pct": 0.9218,
-      "school_funded_pct": 0.0112
+      "employed_10mo_pct": 0.9299,
+      "school_funded_pct": 0.0127,
+      "transfers_in": 5,
+      "transfers_out": 2
     },
     {
       "id": "wake-forest-law",
@@ -579,7 +665,17 @@
       "annual_tuition": 59144,
       "annual_tuition_resident": 59144,
       "annual_tuition_nonresident": 59144,
-      "cost_of_living_index": 88
+      "cost_of_living_index": 88,
+      "class_size_1l": 205,
+      "scholarship_full_pct": 0.0348,
+      "scholarship_half_to_full_pct": 0.5435,
+      "scholarship_less_than_half_pct": 0.1799,
+      "no_scholarship_pct": 0.2418,
+      "conditional_scholarship": false,
+      "employed_10mo_pct": 0.9873,
+      "school_funded_pct": 0.0,
+      "transfers_in": 6,
+      "transfers_out": 5
     },
     {
       "id": "george-mason-scalia-law",
@@ -624,7 +720,17 @@
       "annual_tuition": 44968,
       "annual_tuition_resident": 27832,
       "annual_tuition_nonresident": 44968,
-      "cost_of_living_index": 152
+      "cost_of_living_index": 152,
+      "class_size_1l": 159,
+      "scholarship_full_pct": 0.0595,
+      "scholarship_half_to_full_pct": 0.46,
+      "scholarship_less_than_half_pct": 0.3158,
+      "no_scholarship_pct": 0.1648,
+      "conditional_scholarship": false,
+      "employed_10mo_pct": 0.976,
+      "school_funded_pct": 0.012,
+      "transfers_in": 26,
+      "transfers_out": 2
     },
     {
       "id": "iowa-law",
@@ -671,12 +777,16 @@
       "annual_tuition_resident": 33489,
       "annual_tuition_nonresident": 54736,
       "cost_of_living_index": 88,
-      "class_size_1l": 190,
-      "scholarship_full_pct": 0.2587,
-      "scholarship_half_to_full_pct": 0.2851,
-      "scholarship_less_than_half_pct": 0.1976,
-      "no_scholarship_pct": 0.2587,
-      "conditional_scholarship": false
+      "class_size_1l": 159,
+      "scholarship_full_pct": 0.284,
+      "scholarship_half_to_full_pct": 0.31,
+      "scholarship_less_than_half_pct": 0.172,
+      "no_scholarship_pct": 0.234,
+      "conditional_scholarship": false,
+      "employed_10mo_pct": 0.9747,
+      "school_funded_pct": 0.0127,
+      "transfers_in": 1,
+      "transfers_out": 3
     },
     {
       "id": "baylor-law",
@@ -720,7 +830,17 @@
       "annual_tuition": 67547,
       "annual_tuition_resident": 67547,
       "annual_tuition_nonresident": 67547,
-      "cost_of_living_index": 82
+      "cost_of_living_index": 82,
+      "class_size_1l": 168,
+      "scholarship_full_pct": 0.2661,
+      "scholarship_half_to_full_pct": 0.2905,
+      "scholarship_less_than_half_pct": 0.4124,
+      "no_scholarship_pct": 0.031,
+      "conditional_scholarship": false,
+      "employed_10mo_pct": 0.9636,
+      "school_funded_pct": 0.0,
+      "transfers_in": 3,
+      "transfers_out": 2
     },
     {
       "id": "florida-state-law",
@@ -764,7 +884,17 @@
       "annual_tuition": 46260,
       "annual_tuition_resident": 24240,
       "annual_tuition_nonresident": 46260,
-      "cost_of_living_index": 90
+      "cost_of_living_index": 90,
+      "class_size_1l": 153,
+      "scholarship_full_pct": 0.2755,
+      "scholarship_half_to_full_pct": 0.2494,
+      "scholarship_less_than_half_pct": 0.2542,
+      "no_scholarship_pct": 0.2209,
+      "conditional_scholarship": false,
+      "employed_10mo_pct": 0.9242,
+      "school_funded_pct": 0.0152,
+      "transfers_in": 17,
+      "transfers_out": 0
     },
     {
       "id": "uc-irvine-law",
@@ -807,7 +937,17 @@
       "annual_tuition": 73533,
       "annual_tuition_resident": 61288,
       "annual_tuition_nonresident": 73533,
-      "cost_of_living_index": 168
+      "cost_of_living_index": 168,
+      "class_size_1l": 189,
+      "scholarship_full_pct": 0.0,
+      "scholarship_half_to_full_pct": 0.1688,
+      "scholarship_less_than_half_pct": 0.7827,
+      "no_scholarship_pct": 0.0485,
+      "conditional_scholarship": false,
+      "employed_10mo_pct": 0.9355,
+      "school_funded_pct": 0.0065,
+      "transfers_in": 5,
+      "transfers_out": 14
     },
     {
       "id": "florida-levin-law",
@@ -852,7 +992,17 @@
       "annual_tuition": 39662,
       "annual_tuition_resident": 21804,
       "annual_tuition_nonresident": 39662,
-      "cost_of_living_index": 88
+      "cost_of_living_index": 88,
+      "class_size_1l": 230,
+      "scholarship_full_pct": 0.3522,
+      "scholarship_half_to_full_pct": 0.1871,
+      "scholarship_less_than_half_pct": 0.3381,
+      "no_scholarship_pct": 0.1226,
+      "conditional_scholarship": false,
+      "employed_10mo_pct": 0.9395,
+      "school_funded_pct": 0.0,
+      "transfers_in": 13,
+      "transfers_out": 1
     },
     {
       "id": "washington-lee-law",
@@ -898,7 +1048,17 @@
       "annual_tuition": 59940,
       "annual_tuition_resident": 59940,
       "annual_tuition_nonresident": 59940,
-      "cost_of_living_index": 85
+      "cost_of_living_index": 85,
+      "class_size_1l": 131,
+      "scholarship_full_pct": 0.0113,
+      "scholarship_half_to_full_pct": 0.6271,
+      "scholarship_less_than_half_pct": 0.3277,
+      "no_scholarship_pct": 0.0339,
+      "conditional_scholarship": false,
+      "employed_10mo_pct": 0.9273,
+      "school_funded_pct": 0.0091,
+      "transfers_in": 1,
+      "transfers_out": 6
     },
     {
       "id": "william-mary-law",
@@ -943,7 +1103,17 @@
       "annual_tuition": 70839,
       "annual_tuition_resident": 46102,
       "annual_tuition_nonresident": 70839,
-      "cost_of_living_index": 98
+      "cost_of_living_index": 98,
+      "class_size_1l": 184,
+      "scholarship_full_pct": 0.0543,
+      "scholarship_half_to_full_pct": 0.3663,
+      "scholarship_less_than_half_pct": 0.2384,
+      "no_scholarship_pct": 0.3411,
+      "conditional_scholarship": false,
+      "employed_10mo_pct": 0.9347,
+      "school_funded_pct": 0.0151,
+      "transfers_in": 3,
+      "transfers_out": 3
     },
     {
       "id": "emory-law",
@@ -988,7 +1158,17 @@
       "annual_tuition": 70472,
       "annual_tuition_resident": 70472,
       "annual_tuition_nonresident": 70472,
-      "cost_of_living_index": 112
+      "cost_of_living_index": 112,
+      "class_size_1l": 392,
+      "scholarship_full_pct": 0.0132,
+      "scholarship_half_to_full_pct": 0.5198,
+      "scholarship_less_than_half_pct": 0.4485,
+      "no_scholarship_pct": 0.0185,
+      "conditional_scholarship": false,
+      "employed_10mo_pct": 0.9107,
+      "school_funded_pct": 0.0,
+      "transfers_in": 8,
+      "transfers_out": 18
     },
     {
       "id": "alabama-law",
@@ -1034,7 +1214,17 @@
       "annual_tuition": 48999,
       "annual_tuition_resident": 25879,
       "annual_tuition_nonresident": 48999,
-      "cost_of_living_index": 80
+      "cost_of_living_index": 80,
+      "class_size_1l": 140,
+      "scholarship_full_pct": 0.2532,
+      "scholarship_half_to_full_pct": 0.4076,
+      "scholarship_less_than_half_pct": 0.3013,
+      "no_scholarship_pct": 0.038,
+      "conditional_scholarship": false,
+      "employed_10mo_pct": 0.9863,
+      "school_funded_pct": 0.0205,
+      "transfers_in": 4,
+      "transfers_out": 1
     },
     {
       "id": "fordham-law",
@@ -1081,14 +1271,16 @@
       "annual_tuition_resident": 74608,
       "annual_tuition_nonresident": 74608,
       "cost_of_living_index": 185,
-      "class_size_1l": 439,
+      "class_size_1l": 444,
       "scholarship_full_pct": 0.0,
-      "scholarship_half_to_full_pct": 0.3604,
-      "scholarship_less_than_half_pct": 0.5135,
-      "no_scholarship_pct": 0.126,
+      "scholarship_half_to_full_pct": 0.3506,
+      "scholarship_less_than_half_pct": 0.5191,
+      "no_scholarship_pct": 0.1303,
       "conditional_scholarship": false,
-      "employed_10mo_pct": 0.9429,
-      "school_funded_pct": 0.0
+      "employed_10mo_pct": 0.9,
+      "school_funded_pct": 0.0048,
+      "transfers_in": 12,
+      "transfers_out": 14
     },
     {
       "id": "smu-dedman-law",
@@ -1134,7 +1326,17 @@
       "annual_tuition": 58504,
       "annual_tuition_resident": 58504,
       "annual_tuition_nonresident": 58504,
-      "cost_of_living_index": 105
+      "cost_of_living_index": 105,
+      "class_size_1l": 254,
+      "scholarship_full_pct": 0.0354,
+      "scholarship_half_to_full_pct": 0.2666,
+      "scholarship_less_than_half_pct": 0.6394,
+      "no_scholarship_pct": 0.0586,
+      "conditional_scholarship": true,
+      "employed_10mo_pct": 0.9822,
+      "school_funded_pct": 0.0,
+      "transfers_in": 8,
+      "transfers_out": 5
     },
     {
       "id": "arizona-state-law",
@@ -1180,7 +1382,17 @@
       "annual_tuition": 53542,
       "annual_tuition_resident": 29832,
       "annual_tuition_nonresident": 53542,
-      "cost_of_living_index": 105
+      "cost_of_living_index": 105,
+      "class_size_1l": 266,
+      "scholarship_full_pct": 0.1295,
+      "scholarship_half_to_full_pct": 0.3912,
+      "scholarship_less_than_half_pct": 0.4433,
+      "no_scholarship_pct": 0.036,
+      "conditional_scholarship": false,
+      "employed_10mo_pct": 0.9276,
+      "school_funded_pct": 0.0,
+      "transfers_in": 24,
+      "transfers_out": 6
     },
     {
       "id": "utah-quinney-law",
@@ -1226,7 +1438,17 @@
       "annual_tuition": 45382,
       "annual_tuition_resident": 34721,
       "annual_tuition_nonresident": 45382,
-      "cost_of_living_index": 95
+      "cost_of_living_index": 95,
+      "class_size_1l": 107,
+      "scholarship_full_pct": 0.1694,
+      "scholarship_half_to_full_pct": 0.4691,
+      "scholarship_less_than_half_pct": 0.2736,
+      "no_scholarship_pct": 0.0879,
+      "conditional_scholarship": false,
+      "employed_10mo_pct": 0.9677,
+      "school_funded_pct": 0.0108,
+      "transfers_in": 3,
+      "transfers_out": 0
     },
     {
       "id": "illinois-law",
@@ -1272,7 +1494,17 @@
       "annual_tuition": 46500,
       "annual_tuition_resident": 36500,
       "annual_tuition_nonresident": 46500,
-      "cost_of_living_index": 80
+      "cost_of_living_index": 80,
+      "class_size_1l": 188,
+      "scholarship_full_pct": 0.0212,
+      "scholarship_half_to_full_pct": 0.5784,
+      "scholarship_less_than_half_pct": 0.3877,
+      "no_scholarship_pct": 0.0127,
+      "conditional_scholarship": false,
+      "employed_10mo_pct": 0.9542,
+      "school_funded_pct": 0.0261,
+      "transfers_in": 2,
+      "transfers_out": 5
     },
     {
       "id": "kansas-law",
@@ -1319,14 +1551,16 @@
       "annual_tuition_resident": 26865,
       "annual_tuition_nonresident": 33975,
       "cost_of_living_index": 75,
-      "class_size_1l": 127,
-      "scholarship_full_pct": 0.3619,
-      "scholarship_half_to_full_pct": 0.0773,
-      "scholarship_less_than_half_pct": 0.4144,
-      "no_scholarship_pct": 0.1464,
+      "class_size_1l": 122,
+      "scholarship_full_pct": 0.2055,
+      "scholarship_half_to_full_pct": 0.1726,
+      "scholarship_less_than_half_pct": 0.4712,
+      "no_scholarship_pct": 0.1507,
       "conditional_scholarship": true,
-      "employed_10mo_pct": 0.9576,
-      "school_funded_pct": 0.0085
+      "employed_10mo_pct": 0.9603,
+      "school_funded_pct": 0.0079,
+      "transfers_in": 1,
+      "transfers_out": 1
     },
     {
       "id": "pepperdine-law",
@@ -1372,7 +1606,17 @@
       "annual_tuition": 69950,
       "annual_tuition_resident": 69950,
       "annual_tuition_nonresident": 69950,
-      "cost_of_living_index": 175
+      "cost_of_living_index": 175,
+      "class_size_1l": 230,
+      "scholarship_full_pct": 0.047,
+      "scholarship_half_to_full_pct": 0.25,
+      "scholarship_less_than_half_pct": 0.4737,
+      "no_scholarship_pct": 0.2293,
+      "conditional_scholarship": true,
+      "employed_10mo_pct": 0.9344,
+      "school_funded_pct": 0.0164,
+      "transfers_in": 4,
+      "transfers_out": 11
     },
     {
       "id": "indiana-maurer-law",
@@ -1418,7 +1662,17 @@
       "annual_tuition": 59522,
       "annual_tuition_resident": 38472,
       "annual_tuition_nonresident": 59522,
-      "cost_of_living_index": 75
+      "cost_of_living_index": 75,
+      "class_size_1l": 186,
+      "scholarship_full_pct": 0.0798,
+      "scholarship_half_to_full_pct": 0.6155,
+      "scholarship_less_than_half_pct": 0.3004,
+      "no_scholarship_pct": 0.0042,
+      "conditional_scholarship": false,
+      "employed_10mo_pct": 0.9085,
+      "school_funded_pct": 0.0305,
+      "transfers_in": 3,
+      "transfers_out": 1
     },
     {
       "id": "temple-beasley-law",
@@ -1464,7 +1718,17 @@
       "annual_tuition": 50545,
       "annual_tuition_resident": 34137,
       "annual_tuition_nonresident": 50545,
-      "cost_of_living_index": 120
+      "cost_of_living_index": 120,
+      "class_size_1l": 237,
+      "scholarship_full_pct": 0.0369,
+      "scholarship_half_to_full_pct": 0.6233,
+      "scholarship_less_than_half_pct": 0.1935,
+      "no_scholarship_pct": 0.1462,
+      "conditional_scholarship": false,
+      "employed_10mo_pct": 0.9385,
+      "school_funded_pct": 0.0,
+      "transfers_in": 4,
+      "transfers_out": 2
     },
     {
       "id": "villanova-law",
@@ -1510,7 +1774,17 @@
       "annual_tuition": 58000,
       "annual_tuition_resident": 58000,
       "annual_tuition_nonresident": 58000,
-      "cost_of_living_index": 125
+      "cost_of_living_index": 125,
+      "class_size_1l": 232,
+      "scholarship_full_pct": 0.0,
+      "scholarship_half_to_full_pct": 0.609,
+      "scholarship_less_than_half_pct": 0.2577,
+      "no_scholarship_pct": 0.1333,
+      "conditional_scholarship": false,
+      "employed_10mo_pct": 0.9402,
+      "school_funded_pct": 0.0,
+      "transfers_in": 2,
+      "transfers_out": 5
     },
     {
       "id": "washington-law",
@@ -1556,7 +1830,17 @@
       "annual_tuition": 58956,
       "annual_tuition_resident": 47073,
       "annual_tuition_nonresident": 58956,
-      "cost_of_living_index": 125
+      "cost_of_living_index": 125,
+      "class_size_1l": 207,
+      "scholarship_full_pct": 0.0,
+      "scholarship_half_to_full_pct": 0.0882,
+      "scholarship_less_than_half_pct": 0.6158,
+      "no_scholarship_pct": 0.296,
+      "conditional_scholarship": false,
+      "employed_10mo_pct": 0.8757,
+      "school_funded_pct": 0.0,
+      "transfers_in": 1,
+      "transfers_out": 5
     },
     {
       "id": "uc-davis-law",
@@ -1602,7 +1886,17 @@
       "annual_tuition": 72115,
       "annual_tuition_resident": 59870,
       "annual_tuition_nonresident": 72115,
-      "cost_of_living_index": 105
+      "cost_of_living_index": 105,
+      "class_size_1l": 209,
+      "scholarship_full_pct": 0.0083,
+      "scholarship_half_to_full_pct": 0.4017,
+      "scholarship_less_than_half_pct": 0.5785,
+      "no_scholarship_pct": 0.0116,
+      "conditional_scholarship": false,
+      "employed_10mo_pct": 0.9461,
+      "school_funded_pct": 0.0245,
+      "transfers_in": 12,
+      "transfers_out": 9
     },
     {
       "id": "university-san-diego-law",
@@ -1648,7 +1942,17 @@
       "annual_tuition": 64690,
       "annual_tuition_resident": 64690,
       "annual_tuition_nonresident": 64690,
-      "cost_of_living_index": 120
+      "cost_of_living_index": 120,
+      "class_size_1l": 240,
+      "scholarship_full_pct": 0.032,
+      "scholarship_half_to_full_pct": 0.4061,
+      "scholarship_less_than_half_pct": 0.4727,
+      "no_scholarship_pct": 0.0892,
+      "conditional_scholarship": true,
+      "employed_10mo_pct": 0.9831,
+      "school_funded_pct": 0.0763,
+      "transfers_in": 5,
+      "transfers_out": 9
     },
     {
       "id": "houston-law",
@@ -1694,7 +1998,17 @@
       "annual_tuition": 52279,
       "annual_tuition_resident": 37554,
       "annual_tuition_nonresident": 52279,
-      "cost_of_living_index": 95
+      "cost_of_living_index": 95,
+      "class_size_1l": 249,
+      "scholarship_full_pct": 0.0296,
+      "scholarship_half_to_full_pct": 0.1085,
+      "scholarship_less_than_half_pct": 0.6017,
+      "no_scholarship_pct": 0.2602,
+      "conditional_scholarship": false,
+      "employed_10mo_pct": 0.8992,
+      "school_funded_pct": 0.042,
+      "transfers_in": 25,
+      "transfers_out": 3
     },
     {
       "id": "colorado-law",
@@ -1740,7 +2054,17 @@
       "annual_tuition": 45272,
       "annual_tuition_resident": 37262,
       "annual_tuition_nonresident": 45272,
-      "cost_of_living_index": 110
+      "cost_of_living_index": 110,
+      "class_size_1l": 199,
+      "scholarship_full_pct": 0.0333,
+      "scholarship_half_to_full_pct": 0.2622,
+      "scholarship_less_than_half_pct": 0.5734,
+      "no_scholarship_pct": 0.1311,
+      "conditional_scholarship": false,
+      "employed_10mo_pct": 0.9618,
+      "school_funded_pct": 0.0318,
+      "transfers_in": 0,
+      "transfers_out": 3
     },
     {
       "id": "tennessee-law",
@@ -1786,7 +2110,17 @@
       "annual_tuition": 39252,
       "annual_tuition_resident": 20508,
       "annual_tuition_nonresident": 39252,
-      "cost_of_living_index": 82
+      "cost_of_living_index": 82,
+      "class_size_1l": 140,
+      "scholarship_full_pct": 0.0424,
+      "scholarship_half_to_full_pct": 0.1845,
+      "scholarship_less_than_half_pct": 0.6658,
+      "no_scholarship_pct": 0.1072,
+      "conditional_scholarship": false,
+      "employed_10mo_pct": 0.9113,
+      "school_funded_pct": 0.0,
+      "transfers_in": 2,
+      "transfers_out": 2
     },
     {
       "id": "uconn-law",
@@ -1832,7 +2166,17 @@
       "annual_tuition": 62644,
       "annual_tuition_resident": 31602,
       "annual_tuition_nonresident": 62644,
-      "cost_of_living_index": 115
+      "cost_of_living_index": 115,
+      "class_size_1l": 151,
+      "scholarship_full_pct": 0.0255,
+      "scholarship_half_to_full_pct": 0.2654,
+      "scholarship_less_than_half_pct": 0.6178,
+      "no_scholarship_pct": 0.0913,
+      "conditional_scholarship": false,
+      "employed_10mo_pct": 0.8873,
+      "school_funded_pct": 0.0,
+      "transfers_in": 2,
+      "transfers_out": 5
     },
     {
       "id": "cardozo-law",
@@ -1878,7 +2222,17 @@
       "annual_tuition": 72270,
       "annual_tuition_resident": 72270,
       "annual_tuition_nonresident": 72270,
-      "cost_of_living_index": 145
+      "cost_of_living_index": 145,
+      "class_size_1l": 326,
+      "scholarship_full_pct": 0.0257,
+      "scholarship_half_to_full_pct": 0.5038,
+      "scholarship_less_than_half_pct": 0.4534,
+      "no_scholarship_pct": 0.0171,
+      "conditional_scholarship": false,
+      "employed_10mo_pct": 0.9043,
+      "school_funded_pct": 0.0132,
+      "transfers_in": 3,
+      "transfers_out": 8
     },
     {
       "id": "missouri-law",
@@ -1924,7 +2278,17 @@
       "annual_tuition": 40000,
       "annual_tuition_resident": 25938,
       "annual_tuition_nonresident": 40000,
-      "cost_of_living_index": 78
+      "cost_of_living_index": 78,
+      "class_size_1l": 130,
+      "scholarship_full_pct": 0.1617,
+      "scholarship_half_to_full_pct": 0.3127,
+      "scholarship_less_than_half_pct": 0.3127,
+      "no_scholarship_pct": 0.2129,
+      "conditional_scholarship": true,
+      "employed_10mo_pct": 0.952,
+      "school_funded_pct": 0.024,
+      "transfers_in": 0,
+      "transfers_out": 2
     },
     {
       "id": "maryland-carey-law",
@@ -1970,7 +2334,17 @@
       "annual_tuition": 55369,
       "annual_tuition_resident": 38213,
       "annual_tuition_nonresident": 55369,
-      "cost_of_living_index": 110
+      "cost_of_living_index": 110,
+      "class_size_1l": 229,
+      "scholarship_full_pct": 0.1553,
+      "scholarship_half_to_full_pct": 0.3059,
+      "scholarship_less_than_half_pct": 0.3261,
+      "no_scholarship_pct": 0.2127,
+      "conditional_scholarship": false,
+      "employed_10mo_pct": 0.8798,
+      "school_funded_pct": 0.0048,
+      "transfers_in": 7,
+      "transfers_out": 13
     },
     {
       "id": "richmond-law",
@@ -2016,7 +2390,17 @@
       "annual_tuition": 55550,
       "annual_tuition_resident": 55550,
       "annual_tuition_nonresident": 55550,
-      "cost_of_living_index": 90
+      "cost_of_living_index": 90,
+      "class_size_1l": 146,
+      "scholarship_full_pct": 0.2755,
+      "scholarship_half_to_full_pct": 0.2577,
+      "scholarship_less_than_half_pct": 0.2806,
+      "no_scholarship_pct": 0.1862,
+      "conditional_scholarship": false,
+      "employed_10mo_pct": 0.9145,
+      "school_funded_pct": 0.0,
+      "transfers_in": 1,
+      "transfers_out": 4
     },
     {
       "id": "st-johns-law",
@@ -2062,7 +2446,17 @@
       "annual_tuition": 72630,
       "annual_tuition_resident": 72630,
       "annual_tuition_nonresident": 72630,
-      "cost_of_living_index": 135
+      "cost_of_living_index": 135,
+      "class_size_1l": 248,
+      "scholarship_full_pct": 0.0,
+      "scholarship_half_to_full_pct": 0.5007,
+      "scholarship_less_than_half_pct": 0.3399,
+      "no_scholarship_pct": 0.1595,
+      "conditional_scholarship": false,
+      "employed_10mo_pct": 0.9237,
+      "school_funded_pct": 0.0,
+      "transfers_in": 10,
+      "transfers_out": 0
     },
     {
       "id": "wayne-state-law",
@@ -2108,7 +2502,17 @@
       "annual_tuition": 46365,
       "annual_tuition_resident": 42594,
       "annual_tuition_nonresident": 46365,
-      "cost_of_living_index": 80
+      "cost_of_living_index": 80,
+      "class_size_1l": 130,
+      "scholarship_full_pct": 0.491,
+      "scholarship_half_to_full_pct": 0.1954,
+      "scholarship_less_than_half_pct": 0.1414,
+      "no_scholarship_pct": 0.1722,
+      "conditional_scholarship": false,
+      "employed_10mo_pct": 0.9516,
+      "school_funded_pct": 0.0081,
+      "transfers_in": 3,
+      "transfers_out": 3
     },
     {
       "id": "tulane-law",
@@ -2154,7 +2558,17 @@
       "annual_tuition": 66264,
       "annual_tuition_resident": 66264,
       "annual_tuition_nonresident": 66264,
-      "cost_of_living_index": 95
+      "cost_of_living_index": 95,
+      "class_size_1l": 241,
+      "scholarship_full_pct": 0.0049,
+      "scholarship_half_to_full_pct": 0.4528,
+      "scholarship_less_than_half_pct": 0.4088,
+      "no_scholarship_pct": 0.1336,
+      "conditional_scholarship": false,
+      "employed_10mo_pct": 0.8879,
+      "school_funded_pct": 0.0093,
+      "transfers_in": 0,
+      "transfers_out": 7
     },
     {
       "id": "arizona-rogers-law",
@@ -2200,7 +2614,17 @@
       "annual_tuition": 31360,
       "annual_tuition_resident": 26490,
       "annual_tuition_nonresident": 31360,
-      "cost_of_living_index": 88
+      "cost_of_living_index": 88,
+      "class_size_1l": 117,
+      "scholarship_full_pct": 0.4423,
+      "scholarship_half_to_full_pct": 0.3239,
+      "scholarship_less_than_half_pct": 0.1099,
+      "no_scholarship_pct": 0.1239,
+      "conditional_scholarship": false,
+      "employed_10mo_pct": 0.9231,
+      "school_funded_pct": 0.0,
+      "transfers_in": 1,
+      "transfers_out": 0
     },
     {
       "id": "loyola-la-law",
@@ -2246,7 +2670,17 @@
       "annual_tuition": 67490,
       "annual_tuition_resident": 67490,
       "annual_tuition_nonresident": 67490,
-      "cost_of_living_index": 140
+      "cost_of_living_index": 140,
+      "class_size_1l": 338,
+      "scholarship_full_pct": 0.0143,
+      "scholarship_half_to_full_pct": 0.4602,
+      "scholarship_less_than_half_pct": 0.1429,
+      "no_scholarship_pct": 0.3827,
+      "conditional_scholarship": true,
+      "employed_10mo_pct": 0.9033,
+      "school_funded_pct": 0.0167,
+      "transfers_in": 13,
+      "transfers_out": 10
     },
     {
       "id": "miami-law",
@@ -2292,7 +2726,17 @@
       "annual_tuition": 63850,
       "annual_tuition_resident": 63850,
       "annual_tuition_nonresident": 63850,
-      "cost_of_living_index": 115
+      "cost_of_living_index": 115,
+      "class_size_1l": 313,
+      "scholarship_full_pct": 0.0047,
+      "scholarship_half_to_full_pct": 0.5484,
+      "scholarship_less_than_half_pct": 0.0968,
+      "no_scholarship_pct": 0.3501,
+      "conditional_scholarship": false,
+      "employed_10mo_pct": 0.8773,
+      "school_funded_pct": 0.0,
+      "transfers_in": 7,
+      "transfers_out": 9
     },
     {
       "id": "catholic-columbus-law",
@@ -2338,7 +2782,17 @@
       "annual_tuition": 58932,
       "annual_tuition_resident": 58932,
       "annual_tuition_nonresident": 58932,
-      "cost_of_living_index": 130
+      "cost_of_living_index": 130,
+      "class_size_1l": 182,
+      "scholarship_full_pct": 0.0027,
+      "scholarship_half_to_full_pct": 0.4893,
+      "scholarship_less_than_half_pct": 0.4947,
+      "no_scholarship_pct": 0.0134,
+      "conditional_scholarship": true,
+      "employed_10mo_pct": 0.9292,
+      "school_funded_pct": 0.0442,
+      "transfers_in": 1,
+      "transfers_out": 5
     },
     {
       "id": "stanford-law",
@@ -2384,7 +2838,17 @@
       "annual_tuition": 74475,
       "annual_tuition_resident": 74475,
       "annual_tuition_nonresident": 74475,
-      "cost_of_living_index": 165
+      "cost_of_living_index": 165,
+      "class_size_1l": 193,
+      "scholarship_full_pct": 0.1168,
+      "scholarship_half_to_full_pct": 0.2513,
+      "scholarship_less_than_half_pct": 0.1363,
+      "no_scholarship_pct": 0.4956,
+      "conditional_scholarship": false,
+      "employed_10mo_pct": 0.9105,
+      "school_funded_pct": 0.0789,
+      "transfers_in": 8,
+      "transfers_out": 1
     },
     {
       "id": "uchicago-law",
@@ -2430,7 +2894,17 @@
       "annual_tuition": 79008,
       "annual_tuition_resident": 79008,
       "annual_tuition_nonresident": 79008,
-      "cost_of_living_index": 110
+      "cost_of_living_index": 110,
+      "class_size_1l": 204,
+      "scholarship_full_pct": 0.0935,
+      "scholarship_half_to_full_pct": 0.05,
+      "scholarship_less_than_half_pct": 0.6387,
+      "no_scholarship_pct": 0.2177,
+      "conditional_scholarship": false,
+      "employed_10mo_pct": 0.9815,
+      "school_funded_pct": 0.0231,
+      "transfers_in": 12,
+      "transfers_out": 1
     },
     {
       "id": "yale-law",
@@ -2476,7 +2950,17 @@
       "annual_tuition": 74044,
       "annual_tuition_resident": 74044,
       "annual_tuition_nonresident": 74044,
-      "cost_of_living_index": 115
+      "cost_of_living_index": 115,
+      "class_size_1l": 204,
+      "scholarship_full_pct": 0.1415,
+      "scholarship_half_to_full_pct": 0.1512,
+      "scholarship_less_than_half_pct": 0.3382,
+      "no_scholarship_pct": 0.3691,
+      "conditional_scholarship": false,
+      "employed_10mo_pct": 0.9289,
+      "school_funded_pct": 0.0995,
+      "transfers_in": 11,
+      "transfers_out": 0
     },
     {
       "id": "penn-carey-law",
@@ -2522,7 +3006,17 @@
       "annual_tuition": 74688,
       "annual_tuition_resident": 74688,
       "annual_tuition_nonresident": 74688,
-      "cost_of_living_index": 110
+      "cost_of_living_index": 110,
+      "class_size_1l": 266,
+      "scholarship_full_pct": 0.1383,
+      "scholarship_half_to_full_pct": 0.2069,
+      "scholarship_less_than_half_pct": 0.2477,
+      "no_scholarship_pct": 0.4071,
+      "conditional_scholarship": false,
+      "employed_10mo_pct": 0.9881,
+      "school_funded_pct": 0.0595,
+      "transfers_in": 8,
+      "transfers_out": 4
     },
     {
       "id": "uva-law",
@@ -2568,7 +3062,17 @@
       "annual_tuition": 74700,
       "annual_tuition_resident": 74700,
       "annual_tuition_nonresident": 77700,
-      "cost_of_living_index": 88
+      "cost_of_living_index": 88,
+      "class_size_1l": 309,
+      "scholarship_full_pct": 0.0667,
+      "scholarship_half_to_full_pct": 0.2557,
+      "scholarship_less_than_half_pct": 0.341,
+      "no_scholarship_pct": 0.3366,
+      "conditional_scholarship": false,
+      "employed_10mo_pct": 0.987,
+      "school_funded_pct": 0.0292,
+      "transfers_in": 0,
+      "transfers_out": 1
     },
     {
       "id": "harvard-law",
@@ -2614,7 +3118,17 @@
       "annual_tuition": 77100,
       "annual_tuition_resident": 77100,
       "annual_tuition_nonresident": 77100,
-      "cost_of_living_index": 145
+      "cost_of_living_index": 145,
+      "class_size_1l": 579,
+      "scholarship_full_pct": 0.0085,
+      "scholarship_half_to_full_pct": 0.1114,
+      "scholarship_less_than_half_pct": 0.2589,
+      "no_scholarship_pct": 0.6213,
+      "conditional_scholarship": false,
+      "employed_10mo_pct": 0.9585,
+      "school_funded_pct": 0.0316,
+      "transfers_in": 37,
+      "transfers_out": 2
     },
     {
       "id": "duke-law",
@@ -2660,7 +3174,17 @@
       "annual_tuition": 80100,
       "annual_tuition_resident": 80100,
       "annual_tuition_nonresident": 80100,
-      "cost_of_living_index": 87
+      "cost_of_living_index": 87,
+      "class_size_1l": 227,
+      "scholarship_full_pct": 0.0028,
+      "scholarship_half_to_full_pct": 0.27,
+      "scholarship_less_than_half_pct": 0.6708,
+      "no_scholarship_pct": 0.0565,
+      "conditional_scholarship": false,
+      "employed_10mo_pct": 0.987,
+      "school_funded_pct": 0.0217,
+      "transfers_in": 0,
+      "transfers_out": 1
     },
     {
       "id": "nyu-law",
@@ -2706,7 +3230,17 @@
       "annual_tuition": 79954,
       "annual_tuition_resident": 79954,
       "annual_tuition_nonresident": 79954,
-      "cost_of_living_index": 190
+      "cost_of_living_index": 190,
+      "class_size_1l": 454,
+      "scholarship_full_pct": 0.1115,
+      "scholarship_half_to_full_pct": 0.0497,
+      "scholarship_less_than_half_pct": 0.4943,
+      "no_scholarship_pct": 0.3444,
+      "conditional_scholarship": false,
+      "employed_10mo_pct": 0.9928,
+      "school_funded_pct": 0.0576,
+      "transfers_in": 42,
+      "transfers_out": 1
     },
     {
       "id": "columbia-law",
@@ -2752,7 +3286,17 @@
       "annual_tuition": 81888,
       "annual_tuition_resident": 81888,
       "annual_tuition_nonresident": 81888,
-      "cost_of_living_index": 190
+      "cost_of_living_index": 190,
+      "class_size_1l": 445,
+      "scholarship_full_pct": 0.051,
+      "scholarship_half_to_full_pct": 0.1279,
+      "scholarship_less_than_half_pct": 0.3592,
+      "no_scholarship_pct": 0.4619,
+      "conditional_scholarship": false,
+      "employed_10mo_pct": 0.9716,
+      "school_funded_pct": 0.0175,
+      "transfers_in": 50,
+      "transfers_out": 4
     },
     {
       "id": "northwestern-pritzker-law",
@@ -2798,7 +3342,17 @@
       "annual_tuition": 76704,
       "annual_tuition_resident": 76704,
       "annual_tuition_nonresident": 76704,
-      "cost_of_living_index": 110
+      "cost_of_living_index": 110,
+      "class_size_1l": 253,
+      "scholarship_full_pct": 0.0237,
+      "scholarship_half_to_full_pct": 0.3961,
+      "scholarship_less_than_half_pct": 0.3447,
+      "no_scholarship_pct": 0.2355,
+      "conditional_scholarship": false,
+      "employed_10mo_pct": 0.9735,
+      "school_funded_pct": 0.0341,
+      "transfers_in": 38,
+      "transfers_out": 4
     },
     {
       "id": "michigan-law",
@@ -2844,7 +3398,17 @@
       "annual_tuition": 76680,
       "annual_tuition_resident": 76680,
       "annual_tuition_nonresident": 79680,
-      "cost_of_living_index": 88
+      "cost_of_living_index": 88,
+      "class_size_1l": 344,
+      "scholarship_full_pct": 0.0313,
+      "scholarship_half_to_full_pct": 0.3,
+      "scholarship_less_than_half_pct": 0.5798,
+      "no_scholarship_pct": 0.0889,
+      "conditional_scholarship": false,
+      "employed_10mo_pct": 0.9738,
+      "school_funded_pct": 0.035,
+      "transfers_in": 9,
+      "transfers_out": 0
     },
     {
       "id": "vanderbilt-law",
@@ -2890,7 +3454,17 @@
       "annual_tuition": 73148,
       "annual_tuition_resident": 73148,
       "annual_tuition_nonresident": 73148,
-      "cost_of_living_index": 93
+      "cost_of_living_index": 93,
+      "class_size_1l": 173,
+      "scholarship_full_pct": 0.0455,
+      "scholarship_half_to_full_pct": 0.2376,
+      "scholarship_less_than_half_pct": 0.6139,
+      "no_scholarship_pct": 0.103,
+      "conditional_scholarship": false,
+      "employed_10mo_pct": 0.982,
+      "school_funded_pct": 0.0299,
+      "transfers_in": 13,
+      "transfers_out": 2
     },
     {
       "id": "cornell-law",
@@ -2936,7 +3510,17 @@
       "annual_tuition": 81306,
       "annual_tuition_resident": 81306,
       "annual_tuition_nonresident": 81306,
-      "cost_of_living_index": 82
+      "cost_of_living_index": 82,
+      "class_size_1l": 217,
+      "scholarship_full_pct": 0.015,
+      "scholarship_half_to_full_pct": 0.2217,
+      "scholarship_less_than_half_pct": 0.67,
+      "no_scholarship_pct": 0.0933,
+      "conditional_scholarship": false,
+      "employed_10mo_pct": 0.9949,
+      "school_funded_pct": 0.0305,
+      "transfers_in": 0,
+      "transfers_out": 8
     },
     {
       "id": "ucla-law",
@@ -2982,7 +3566,17 @@
       "annual_tuition": 61734,
       "annual_tuition_resident": 61734,
       "annual_tuition_nonresident": 73979,
-      "cost_of_living_index": 175
+      "cost_of_living_index": 175,
+      "class_size_1l": 328,
+      "scholarship_full_pct": 0.0875,
+      "scholarship_half_to_full_pct": 0.2414,
+      "scholarship_less_than_half_pct": 0.501,
+      "no_scholarship_pct": 0.17,
+      "conditional_scholarship": false,
+      "employed_10mo_pct": 0.9699,
+      "school_funded_pct": 0.0422,
+      "transfers_in": 35,
+      "transfers_out": 4
     },
     {
       "id": "washu-law",
@@ -3028,7 +3622,17 @@
       "annual_tuition": 70008,
       "annual_tuition_resident": 70008,
       "annual_tuition_nonresident": 70008,
-      "cost_of_living_index": 90
+      "cost_of_living_index": 90,
+      "class_size_1l": 264,
+      "scholarship_full_pct": 0.2087,
+      "scholarship_half_to_full_pct": 0.5826,
+      "scholarship_less_than_half_pct": 0.1536,
+      "no_scholarship_pct": 0.0551,
+      "conditional_scholarship": false,
+      "employed_10mo_pct": 0.978,
+      "school_funded_pct": 0.0183,
+      "transfers_in": 20,
+      "transfers_out": 6
     },
     {
       "id": "kentucky-rosenberg-law",
@@ -3074,7 +3678,17 @@
       "annual_tuition": 27301,
       "annual_tuition_resident": 27301,
       "annual_tuition_nonresident": 51452,
-      "cost_of_living_index": 88
+      "cost_of_living_index": 88,
+      "class_size_1l": 148,
+      "scholarship_full_pct": 0.043,
+      "scholarship_half_to_full_pct": 0.1671,
+      "scholarship_less_than_half_pct": 0.7671,
+      "no_scholarship_pct": 0.0228,
+      "conditional_scholarship": false,
+      "employed_10mo_pct": 0.9304,
+      "school_funded_pct": 0.0,
+      "transfers_in": 3,
+      "transfers_out": 3
     },
     {
       "id": "seton-hall-law",
@@ -3120,7 +3734,17 @@
       "annual_tuition": 71550,
       "annual_tuition_resident": 71550,
       "annual_tuition_nonresident": 71550,
-      "cost_of_living_index": 125
+      "cost_of_living_index": 125,
+      "class_size_1l": 304,
+      "scholarship_full_pct": 0.0092,
+      "scholarship_half_to_full_pct": 0.5033,
+      "scholarship_less_than_half_pct": 0.3719,
+      "no_scholarship_pct": 0.1156,
+      "conditional_scholarship": false,
+      "employed_10mo_pct": 0.9082,
+      "school_funded_pct": 0.0,
+      "transfers_in": 2,
+      "transfers_out": 10
     },
     {
       "id": "georgia-state-law",
@@ -3166,7 +3790,17 @@
       "annual_tuition": 17596,
       "annual_tuition_resident": 17596,
       "annual_tuition_nonresident": 39320,
-      "cost_of_living_index": 105
+      "cost_of_living_index": 105,
+      "class_size_1l": 244,
+      "scholarship_full_pct": 0.1267,
+      "scholarship_half_to_full_pct": 0.17,
+      "scholarship_less_than_half_pct": 0.1901,
+      "no_scholarship_pct": 0.5131,
+      "conditional_scholarship": true,
+      "employed_10mo_pct": 0.9282,
+      "school_funded_pct": 0.0,
+      "transfers_in": 7,
+      "transfers_out": 2
     },
     {
       "id": "loyola-chicago-law",
@@ -3212,7 +3846,17 @@
       "annual_tuition": 58670,
       "annual_tuition_resident": 58670,
       "annual_tuition_nonresident": 58670,
-      "cost_of_living_index": 110
+      "cost_of_living_index": 110,
+      "class_size_1l": 296,
+      "scholarship_full_pct": 0.024,
+      "scholarship_half_to_full_pct": 0.5661,
+      "scholarship_less_than_half_pct": 0.3486,
+      "no_scholarship_pct": 0.0613,
+      "conditional_scholarship": false,
+      "employed_10mo_pct": 0.9119,
+      "school_funded_pct": 0.0,
+      "transfers_in": 1,
+      "transfers_out": 13
     },
     {
       "id": "northeastern-law",
@@ -3258,7 +3902,17 @@
       "annual_tuition": 65652,
       "annual_tuition_resident": 65652,
       "annual_tuition_nonresident": 65652,
-      "cost_of_living_index": 155
+      "cost_of_living_index": 155,
+      "class_size_1l": 287,
+      "scholarship_full_pct": 0.1084,
+      "scholarship_half_to_full_pct": 0.3443,
+      "scholarship_less_than_half_pct": 0.4938,
+      "no_scholarship_pct": 0.0535,
+      "conditional_scholarship": false,
+      "employed_10mo_pct": 0.8638,
+      "school_funded_pct": 0.0047,
+      "transfers_in": 4,
+      "transfers_out": 0
     },
     {
       "id": "pittsburgh-law",
@@ -3304,7 +3958,17 @@
       "annual_tuition": 41633,
       "annual_tuition_resident": 41633,
       "annual_tuition_nonresident": 55131,
-      "cost_of_living_index": 92
+      "cost_of_living_index": 92,
+      "class_size_1l": 155,
+      "scholarship_full_pct": 0.0375,
+      "scholarship_half_to_full_pct": 0.5737,
+      "scholarship_less_than_half_pct": 0.2064,
+      "no_scholarship_pct": 0.1823,
+      "conditional_scholarship": false,
+      "employed_10mo_pct": 0.877,
+      "school_funded_pct": 0.0,
+      "transfers_in": 1,
+      "transfers_out": 9
     },
     {
       "id": "fiu-law",
@@ -3350,7 +4014,17 @@
       "annual_tuition": 21129,
       "annual_tuition_resident": 21129,
       "annual_tuition_nonresident": 36279,
-      "cost_of_living_index": 130
+      "cost_of_living_index": 130,
+      "class_size_1l": 173,
+      "scholarship_full_pct": 0.1532,
+      "scholarship_half_to_full_pct": 0.1135,
+      "scholarship_less_than_half_pct": 0.2847,
+      "no_scholarship_pct": 0.4486,
+      "conditional_scholarship": true,
+      "employed_10mo_pct": 0.9299,
+      "school_funded_pct": 0.0318,
+      "transfers_in": 15,
+      "transfers_out": 4
     },
     {
       "id": "cincinnati-law",
@@ -3396,7 +4070,17 @@
       "annual_tuition": 24010,
       "annual_tuition_resident": 24010,
       "annual_tuition_nonresident": 29010,
-      "cost_of_living_index": 88
+      "cost_of_living_index": 88,
+      "class_size_1l": 137,
+      "scholarship_full_pct": 0.1096,
+      "scholarship_half_to_full_pct": 0.5749,
+      "scholarship_less_than_half_pct": 0.3182,
+      "no_scholarship_pct": -0.0027,
+      "conditional_scholarship": false,
+      "employed_10mo_pct": 0.9055,
+      "school_funded_pct": 0.0,
+      "transfers_in": 0,
+      "transfers_out": 1
     },
     {
       "id": "drexel-kline-law",
@@ -3442,7 +4126,17 @@
       "annual_tuition": 58850,
       "annual_tuition_resident": 58850,
       "annual_tuition_nonresident": 58850,
-      "cost_of_living_index": 110
+      "cost_of_living_index": 110,
+      "class_size_1l": 178,
+      "scholarship_full_pct": 0.0368,
+      "scholarship_half_to_full_pct": 0.355,
+      "scholarship_less_than_half_pct": 0.3636,
+      "no_scholarship_pct": 0.2446,
+      "conditional_scholarship": true,
+      "employed_10mo_pct": 0.8947,
+      "school_funded_pct": 0.0,
+      "transfers_in": 3,
+      "transfers_out": 4
     },
     {
       "id": "suny-buffalo-law",
@@ -3488,7 +4182,17 @@
       "annual_tuition": 29750,
       "annual_tuition_resident": 29750,
       "annual_tuition_nonresident": 35420,
-      "cost_of_living_index": 85
+      "cost_of_living_index": 85,
+      "class_size_1l": 172,
+      "scholarship_full_pct": 0.0,
+      "scholarship_half_to_full_pct": 0.1068,
+      "scholarship_less_than_half_pct": 0.4078,
+      "no_scholarship_pct": 0.4854,
+      "conditional_scholarship": false,
+      "employed_10mo_pct": 0.9489,
+      "school_funded_pct": 0.0219,
+      "transfers_in": 0,
+      "transfers_out": 5
     }
   ]
 }

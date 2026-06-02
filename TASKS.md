@@ -2,9 +2,8 @@
 - [ ] Refine plain web styling into final visual design (placeholder style in law/web/)
 - [ ] UI/UX streamlining pass (informed by stress test findings)
 - [ ] Enable LLM narratives (law/llm_client.py is built, currently unused)
-- [ ] Data enrichment EASY tier: collect ABA 509 + Employment Summary fields for all 75 schools —
-      class_size_1l, scholarship grid (full/half-to-full/<half/none pct), conditional_scholarship,
-      employed_10mo_pct, school_funded_pct
+- [ ] Wire enrichment fields into matcher (scholarship grid -> aid; class_size -> admit-prob;
+      employed_10mo/school_funded -> career; transfers_in/out -> transfer-up signal), then resume LLM-judge loop
 - [ ] Data enrichment MEDIUM tier (second pass): median_grad_debt, placement_by_state, bar_pass_ultimate + state avg
 - [ ] Data enrichment HARD/predicted (later): selectivity trend (multi-year), NLJ250-by-market, part-time/transfer
 - [ ] After enrichment: wire new fields into matcher (scholarship grid -> aid; class_size -> admit-prob; employment quality -> career), then resume LLM-judge loop
@@ -13,6 +12,8 @@
 ## In progress
 
 ## Done
+- [x] Data enrichment EASY tier: all 75 schools populated from ABA 2025 bulk reports via law/data/build_enrichment.py
+      (class_size_1l, scholarship grid, conditional_scholarship, employed_10mo_pct, school_funded_pct) + transfers_in/out
 - [x] Build LLM-judge optimization harness (eval/): seeded profiles, blind pairwise diff-only judging via zero-context agents, win-rate gate
 - [x] Commit current working tree (all law/ changes since session start) — baseline commit 64f859a on branch algo-optimization
 - [x] Build Flask web app (law/server.py + law/web/) from the mock-up: Profile form -> Results table -> School detail, wired to rank_schools (plain placeholder styling)
