@@ -272,11 +272,28 @@ _NEED_FACTORS = {
 _NEED_BOOST_MAX = 15.0   # max points added to scholarship score for high-need
 
 
+def _grid_generosity(school: dict) -> Optional[float]:
+    """Award-size-weighted generosity from the ABA 509 grid (None if absent)."""
+    full = school.get("scholarship_full_pct")
+    if full is None:
+        return None
+    htf = school.get("scholarship_half_to_full_pct") or 0.0
+    lth = school.get("scholarship_less_than_half_pct") or 0.0
+    return full * 1.0 + htf * 0.7 + lth * 0.3
+
+
+def _precompute_scholarship_scalar(schools: list[dict]) -> float:
+    """Max grid generosity across the dataset, for normalizing to 0-100."""
+    vals = [g for s in schools if (g := _grid_generosity(s)) is not None]
+    return max(vals, default=0.70) or 0.70
+
+
 def _compute_scholarship(
     profile: dict,
     school: dict,
     lsat: Optional[int],
     gpa: float,
+    generosity_max: float = 0.70,
 ) -> float:
     """
     Combined merit + need-based scholarship likelihood.
@@ -304,13 +321,12 @@ def _compute_scholarship(
         merit_base = 50.0
 
     # Generosity: prefer the real ABA 509 award grid (weights award SIZE, not just
-    # receipt) — full band counts most, then half-to-full, then <half. Fall back to
-    # the flat "any grant" rate when grid data is absent.
-    full_pct = school.get("scholarship_full_pct")
-    if full_pct is not None:
-        htf_pct = school.get("scholarship_half_to_full_pct") or 0.0
-        lth_pct = school.get("scholarship_less_than_half_pct") or 0.0
-        school_generosity = (full_pct * 1.0 + htf_pct * 0.7 + lth_pct * 0.3) * 100
+    # receipt) — full band counts most, then half-to-full, then <half — normalized
+    # against the most generous school so it occupies the full 0-100 range. Fall
+    # back to the flat "any grant" rate when grid data is absent.
+    grid_g = _grid_generosity(school)
+    if grid_g is not None:
+        school_generosity = _clamp((grid_g / generosity_max) * 100)
     else:
         school_generosity = school.get("scholarship_pct", 0.75) * 100
     median_scholarship_bonus = min(school.get("median_scholarship", 20000) / 50000, 1.0) * 10
@@ -596,6 +612,7 @@ def rank_schools(
     career_slider      = profile.get("career_weight", 5)
     location_slider    = profile.get("location_weight", 5)
     scalars = _precompute_career_scalars(schools)
+    generosity_max = _precompute_scholarship_scalar(schools)
 
     scored = []
     for school in schools:
@@ -603,7 +620,7 @@ def rank_schools(
         prestige            = _compute_prestige(school)
         career_fit          = _compute_career_fit(profile, school, scalars)
         location_fit        = _compute_location_fit(profile, school)
-        scholarship         = _compute_scholarship(profile, school, lsat, gpa)
+        scholarship         = _compute_scholarship(profile, school, lsat, gpa, generosity_max)
         financial, breakdown = _compute_financial(profile, school, scholarship)
 
         scores = {
