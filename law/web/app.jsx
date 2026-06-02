@@ -226,6 +226,45 @@ function ResultsScreen({ data, onOpen, onBack }) {
           </button>
         </div>
       )}
+
+      <TransferPanel plan={data.transfer_plan} />
+    </div>
+  );
+}
+
+/* Transfer-up plan: where to enroll and aim to transfer into after 1L. */
+function TransferPanel({ plan }) {
+  if (!plan) return null;
+  const { launchpads = [], targets = [] } = plan;
+  if (!launchpads.length && !targets.length) return null;
+  return (
+    <div className="card" style={{ marginTop: 20, padding: 18, background: "var(--panel, #f7f7f9)" }}>
+      <h4 style={{ margin: "0 0 4px" }}>Transfer-up path</h4>
+      <div className="mono" style={{ marginBottom: 12 }}>
+        Not competitive for your top tier yet? Enroll at a launchpad, excel in 1L, transfer up.
+      </div>
+      <div style={{ display: "flex", gap: 24, flexWrap: "wrap" }}>
+        <div style={{ flex: "1 1 260px" }}>
+          <div className="mono" style={{ fontWeight: 600, marginBottom: 6 }}>
+            Launchpads — strongest 1L transfer-out mobility
+          </div>
+          {launchpads.map((s) => (
+            <div key={s.id} className="transfer-row">
+              {s.name} <span className="mono">· #{s.usnwr_rank_2026} · {Math.round(s.transfer_out_rate * 1000) / 10}% transfer out</span>
+            </div>
+          ))}
+        </div>
+        <div style={{ flex: "1 1 260px" }}>
+          <div className="mono" style={{ fontWeight: 600, marginBottom: 6 }}>
+            Targets — higher-ranked schools that admit the most transfers
+          </div>
+          {targets.map((s) => (
+            <div key={s.id} className="transfer-row">
+              {s.name} <span className="mono">· #{s.usnwr_rank_2026} · {s.transfers_in} transfers in</span>
+            </div>
+          ))}
+        </div>
+      </div>
     </div>
   );
 }

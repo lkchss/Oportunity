@@ -571,6 +571,101 @@ def _composite(
     return _clamp(raw * multiplier)
 
 
+# ---------------------------------------------------------------------------
+# Transfer-up planning (for applicants not competitive at their target tier
+# who intend to transfer to a higher-ranked school after 1L)
+# ---------------------------------------------------------------------------
+
+def _transfer_metrics(school: dict) -> dict:
+    """
+    Per-school transfer mobility from ABA Transfers data, normalized by 1L class
+    size. Returns rates rounded to 3 dp; values are None when data is missing.
+
+      transfer_out_rate — share of the 1L class that transferred out (a proxy for
+                          "viable launchpad": students here successfully move up).
+      transfer_in_rate  — transfers admitted relative to class size (how open the
+                          school is to taking transfers).
+    """
+    class_1l = school.get("class_size_1l")
+    t_out = school.get("transfers_out")
+    t_in = school.get("transfers_in")
+    out_rate = round(t_out / class_1l, 3) if class_1l and t_out is not None else None
+    in_rate = round(t_in / class_1l, 3) if class_1l and t_in is not None else None
+    return {"transfer_out_rate": out_rate, "transfer_in_rate": in_rate}
+
+
+def transfer_up_plan(
+    profile: dict,
+    schools: list[dict],
+    top_n: int = 5,
+) -> dict:
+    """
+    Build a two-sided transfer-up plan for an applicant who may not be competitive
+    at their desired tier and wants to transfer after 1L.
+
+      launchpads — schools the applicant can realistically get into (safety/target)
+                   that have the strongest transfer-out mobility: good places to
+                   enroll, perform, and transfer up from.
+      targets    — higher-ranked schools (better USNWR rank than the applicant's
+                   best realistic admit) that admit the most transfers: realistic
+                   destinations to aim for after 1L.
+
+    Returns {"launchpads": [...], "targets": [...]} where each item carries name,
+    usnwr_rank_2026, and the relevant transfer metric. Empty lists when data or
+    eligible schools are absent.
+    """
+    lsat = profile.get("lsat")
+    gpa = profile.get("gpa")
+    if not gpa:
+        raise ValueError("profile must include a valid GPA")
+
+    realistic_ranks = []
+    launchpad_pool = []
+    for school in schools:
+        _, tier = _compute_admissibility(lsat, gpa, school)
+        if tier in ("safety", "target"):
+            rank = school.get("usnwr_rank_2026")
+            if rank is not None:
+                realistic_ranks.append(rank)
+            metrics = _transfer_metrics(school)
+            if metrics["transfer_out_rate"] is not None:
+                launchpad_pool.append((school, metrics["transfer_out_rate"]))
+
+    launchpad_pool.sort(key=lambda pair: pair[1], reverse=True)
+    launchpads = [
+        {
+            "id": s.get("id"),
+            "name": s.get("name"),
+            "usnwr_rank_2026": s.get("usnwr_rank_2026"),
+            "transfer_out_rate": rate,
+        }
+        for s, rate in launchpad_pool[:top_n]
+    ]
+
+    # Best realistic admit = lowest (best) rank among safety/target schools.
+    best_realistic = min(realistic_ranks) if realistic_ranks else None
+    targets = []
+    if best_realistic is not None:
+        eligible = [
+            s for s in schools
+            if (s.get("usnwr_rank_2026") is not None
+                and s["usnwr_rank_2026"] < best_realistic
+                and s.get("transfers_in"))
+        ]
+        eligible.sort(key=lambda s: s["transfers_in"], reverse=True)
+        targets = [
+            {
+                "id": s.get("id"),
+                "name": s.get("name"),
+                "usnwr_rank_2026": s.get("usnwr_rank_2026"),
+                "transfers_in": s.get("transfers_in"),
+            }
+            for s in eligible[:top_n]
+        ]
+
+    return {"launchpads": launchpads, "targets": targets}
+
+
 def rank_schools(
     profile: dict,
     schools: list[dict],
@@ -641,6 +736,7 @@ def rank_schools(
         entry["scholarship_score"]     = round(scholarship, 1)
         entry["financial_score"]       = round(financial, 1)
         entry["financial_breakdown"]   = breakdown
+        entry.update(_transfer_metrics(school))
         entry["composite_score"]       = round(
             _composite(scores, career_slider, location_slider, scholarship_slider, tier), 1
         )

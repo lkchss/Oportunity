@@ -224,3 +224,6 @@ input[type="range"] { width: 100%; accent-color: var(--accent); }
 }
 @keyframes spin { to { transform: rotate(360deg); } }
 .error-banner { background: var(--hard-bg); color: var(--hard); border: 1px solid var(--hard); border-radius: 8px; padding: 12px 16px; margin-bottom: 16px; }
+
+.transfer-row { padding: 5px 0; border-bottom: 1px solid var(--line); font-size: 14px; }
+.transfer-row:last-child { border-bottom: none; }
