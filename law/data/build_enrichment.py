@@ -11,6 +11,7 @@ Run:  python -m law.data.build_enrichment        (from repo root)
 
 import json
 from pathlib import Path
+from typing import Optional
 
 import pandas as pd
 
@@ -107,8 +108,18 @@ def _num(v) -> float:
     return float(s)
 
 
-def _index(df: pd.DataFrame) -> dict[str, pd.Series]:
-    return {str(r["SchoolName"]).strip(): r for _, r in df.iterrows()}
+def _pct(v) -> Optional[float]:
+    """Coerce an ABA percentage cell ('70.16%') to a 0-1 fraction; blanks -> None."""
+    if pd.isna(v):
+        return None
+    s = str(v).replace("%", "").replace(",", "").strip()
+    if s in ("", "-", "N/A", "nan"):
+        return None
+    return float(s) / 100
+
+
+def _index(df: pd.DataFrame, key: str = "SchoolName") -> dict[str, pd.Series]:
+    return {str(r[key]).strip(): r for _, r in df.iterrows()}
 
 
 def main() -> None:
@@ -117,6 +128,8 @@ def main() -> None:
     emp = _index(pd.read_excel(RAW / "Employment_Summary_2025.xlsx"))
     tuition = _index(pd.read_excel(RAW / "Tuitions_and_Fees_Living_Expenses_Cond._Scholarships_2025.xlsx"))
     transfers = _index(pd.read_excel(RAW / "Transfers_2025.xlsx"))
+    bar_ft = _index(pd.read_excel(RAW / "First_Time_Bar_Admission_2026.xlsx"), key="School Name")
+    bar_ult = _index(pd.read_excel(RAW / "Two-Year_Ultimate_Bar_Admission_2026.xlsx"), key="School Name")
 
     data = json.loads(JSON_PATH.read_text(encoding="utf-8"))
     schools = data["schools"]
@@ -187,6 +200,29 @@ def main() -> None:
         transfers_in = int(_num(tr["TransferIn"])) if tr is not None else None
         transfers_out = int(_num(tr["JD1 Transfers Out"])) if tr is not None else None
 
+        # Bar passage (ABA 2026 reports). First-time = school's own pass rate,
+        # state avg = its jurisdiction baseline, vs_state = school minus state
+        # (a school-quality signal independent of student inputs). Ultimate =
+        # two-year cumulative pass rate.
+        bf = bar_ft.get(aba)
+        bar_fields: dict[str, Optional[float]] = {}
+        if bf is not None:
+            ft = _pct(bf["AvgSchoolPassPercent*"])
+            st = _pct(bf["AvgStatePassPercent**"])
+            bar_fields["bar_pass_rate_first_time"] = round(ft, 4) if ft is not None else None
+            bar_fields["bar_pass_state_avg"] = round(st, 4) if st is not None else None
+            bar_fields["bar_pass_vs_state"] = (
+                round(ft - st, 4) if (ft is not None and st is not None) else None
+            )
+        else:
+            warnings.append(f"{sid}: no first-time bar row")
+        bu = bar_ult.get(aba)
+        if bu is not None:
+            ult = _pct(bu["%Passers"])
+            bar_fields["bar_pass_ultimate"] = round(ult, 4) if ult is not None else None
+        else:
+            warnings.append(f"{sid}: no ultimate bar row")
+
         school["class_size_1l"] = class_size_1l
         school["scholarship_full_pct"] = full_pct
         school["scholarship_half_to_full_pct"] = half_to_full_pct
@@ -198,6 +234,11 @@ def main() -> None:
         school["transfers_in"] = transfers_in
         school["transfers_out"] = transfers_out
         school.update(real_outcomes)  # overwrite estimated career rates with real ABA data
+        if bar_fields.get("bar_pass_rate_first_time") is not None:
+            school["bar_pass_rate_first_time"] = bar_fields.pop("bar_pass_rate_first_time")
+        else:
+            bar_fields.pop("bar_pass_rate_first_time", None)
+        school.update({k: v for k, v in bar_fields.items() if v is not None})
         covered.append(sid)
 
     JSON_PATH.write_text(

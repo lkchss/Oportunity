@@ -37,7 +37,7 @@
       "public_interest_pct": 0.0657,
       "solo_small_firm_pct": 0.0751,
       "jd_required_pct": 0.958,
-      "bar_pass_rate_first_time": 0.938,
+      "bar_pass_rate_first_time": 0.9619,
       "median_private_sector_salary": 215000,
       "median_public_sector_salary": 72000,
       "practice_area_strengths": [
@@ -68,7 +68,10 @@
       "employed_10mo_pct": 0.9577,
       "school_funded_pct": 0.0141,
       "transfers_in": 4,
-      "transfers_out": 6
+      "transfers_out": 6,
+      "bar_pass_state_avg": 0.8529,
+      "bar_pass_vs_state": 0.109,
+      "bar_pass_ultimate": 0.9876
     },
     {
       "id": "notre-dame-law",
@@ -93,7 +96,7 @@
       "public_interest_pct": 0.0427,
       "solo_small_firm_pct": 0.0732,
       "jd_required_pct": 0.93,
-      "bar_pass_rate_first_time": 0.922,
+      "bar_pass_rate_first_time": 0.8944,
       "median_private_sector_salary": 180000,
       "median_public_sector_salary": 65000,
       "practice_area_strengths": [
@@ -124,7 +127,10 @@
       "employed_10mo_pct": 0.9329,
       "school_funded_pct": 0.0427,
       "transfers_in": 10,
-      "transfers_out": 1
+      "transfers_out": 1,
+      "bar_pass_state_avg": 0.816,
+      "bar_pass_vs_state": 0.0784,
+      "bar_pass_ultimate": 0.9818
     },
     {
       "id": "texas-am-law",
@@ -149,7 +155,7 @@
       "public_interest_pct": 0.0484,
       "solo_small_firm_pct": 0.2419,
       "jd_required_pct": 0.87,
-      "bar_pass_rate_first_time": 0.875,
+      "bar_pass_rate_first_time": 0.9528,
       "median_private_sector_salary": 105000,
       "median_public_sector_salary": 62000,
       "practice_area_strengths": [
@@ -178,7 +184,10 @@
       "employed_10mo_pct": 0.9919,
       "school_funded_pct": 0.0,
       "transfers_in": 6,
-      "transfers_out": 2
+      "transfers_out": 2,
+      "bar_pass_state_avg": 0.8234,
+      "bar_pass_vs_state": 0.1294,
+      "bar_pass_ultimate": 0.9938
     },
     {
       "id": "minnesota-law",
@@ -203,7 +212,7 @@
       "public_interest_pct": 0.1036,
       "solo_small_firm_pct": 0.0991,
       "jd_required_pct": 0.88,
-      "bar_pass_rate_first_time": 0.93,
+      "bar_pass_rate_first_time": 0.9531,
       "median_private_sector_salary": 135000,
       "median_public_sector_salary": 65000,
       "practice_area_strengths": [
@@ -233,7 +242,10 @@
       "employed_10mo_pct": 0.9505,
       "school_funded_pct": 0.018,
       "transfers_in": 7,
-      "transfers_out": 5
+      "transfers_out": 5,
+      "bar_pass_state_avg": 0.8531,
+      "bar_pass_vs_state": 0.1,
+      "bar_pass_ultimate": 0.9608
     },
     {
       "id": "boston-university-law",
@@ -258,7 +270,7 @@
       "public_interest_pct": 0.0981,
       "solo_small_firm_pct": 0.0888,
       "jd_required_pct": 0.94,
-      "bar_pass_rate_first_time": 0.9,
+      "bar_pass_rate_first_time": 0.9493,
       "median_private_sector_salary": 200000,
       "median_public_sector_salary": 65000,
       "practice_area_strengths": [
@@ -288,7 +300,10 @@
       "employed_10mo_pct": 0.9579,
       "school_funded_pct": 0.0374,
       "transfers_in": 13,
-      "transfers_out": 5
+      "transfers_out": 5,
+      "bar_pass_state_avg": 0.8436,
+      "bar_pass_vs_state": 0.1057,
+      "bar_pass_ultimate": 0.9628
     },
     {
       "id": "byu-clark-law",
@@ -313,7 +328,7 @@
       "public_interest_pct": 0.063,
       "solo_small_firm_pct": 0.1969,
       "jd_required_pct": 0.92,
-      "bar_pass_rate_first_time": 0.96,
+      "bar_pass_rate_first_time": 0.9685,
       "median_private_sector_salary": 145000,
       "median_public_sector_salary": 60000,
       "practice_area_strengths": [
@@ -344,7 +359,10 @@
       "employed_10mo_pct": 0.9449,
       "school_funded_pct": 0.0394,
       "transfers_in": 1,
-      "transfers_out": 0
+      "transfers_out": 0,
+      "bar_pass_state_avg": 0.8477,
+      "bar_pass_vs_state": 0.1208,
+      "bar_pass_ultimate": 1.0
     },
     {
       "id": "george-washington-law",
@@ -369,7 +387,7 @@
       "public_interest_pct": 0.0773,
       "solo_small_firm_pct": 0.1634,
       "jd_required_pct": 0.9,
-      "bar_pass_rate_first_time": 0.87,
+      "bar_pass_rate_first_time": 0.8766,
       "median_private_sector_salary": 160000,
       "median_public_sector_salary": 78000,
       "practice_area_strengths": [
@@ -399,7 +417,10 @@
       "employed_10mo_pct": 0.9684,
       "school_funded_pct": 0.0053,
       "transfers_in": 46,
-      "transfers_out": 33
+      "transfers_out": 33,
+      "bar_pass_state_avg": 0.8487,
+      "bar_pass_vs_state": 0.0279,
+      "bar_pass_ultimate": 0.9721
     },
     {
       "id": "georgia-law",
@@ -424,7 +445,7 @@
       "public_interest_pct": 0.0882,
       "solo_small_firm_pct": 0.2,
       "jd_required_pct": 0.9,
-      "bar_pass_rate_first_time": 0.905,
+      "bar_pass_rate_first_time": 0.8837,
       "median_private_sector_salary": 130000,
       "median_public_sector_salary": 62000,
       "practice_area_strengths": [
@@ -454,7 +475,10 @@
       "employed_10mo_pct": 0.9529,
       "school_funded_pct": 0.0,
       "transfers_in": 4,
-      "transfers_out": 2
+      "transfers_out": 2,
+      "bar_pass_state_avg": 0.7991,
+      "bar_pass_vs_state": 0.0846,
+      "bar_pass_ultimate": 0.9762
     },
     {
       "id": "usc-gould-law",
@@ -479,7 +503,7 @@
       "public_interest_pct": 0.0617,
       "solo_small_firm_pct": 0.0969,
       "jd_required_pct": 0.95,
-      "bar_pass_rate_first_time": 0.88,
+      "bar_pass_rate_first_time": 0.9414,
       "median_private_sector_salary": 220000,
       "median_public_sector_salary": 67000,
       "practice_area_strengths": [
@@ -508,7 +532,10 @@
       "employed_10mo_pct": 0.9604,
       "school_funded_pct": 0.0044,
       "transfers_in": 20,
-      "transfers_out": 7
+      "transfers_out": 7,
+      "bar_pass_state_avg": 0.8328,
+      "bar_pass_vs_state": 0.1086,
+      "bar_pass_ultimate": 0.989
     },
     {
       "id": "wisconsin-law",
@@ -533,7 +560,7 @@
       "public_interest_pct": 0.1098,
       "solo_small_firm_pct": 0.2314,
       "jd_required_pct": 0.88,
-      "bar_pass_rate_first_time": 0.888,
+      "bar_pass_rate_first_time": 0.75,
       "median_private_sector_salary": 110000,
       "median_public_sector_salary": 63000,
       "practice_area_strengths": [
@@ -563,7 +590,10 @@
       "employed_10mo_pct": 0.949,
       "school_funded_pct": 0.0314,
       "transfers_in": 9,
-      "transfers_out": 5
+      "transfers_out": 5,
+      "bar_pass_state_avg": 0.8135,
+      "bar_pass_vs_state": -0.0635,
+      "bar_pass_ultimate": 1.0
     },
     {
       "id": "ohio-state-moritz-law",
@@ -588,7 +618,7 @@
       "public_interest_pct": 0.121,
       "solo_small_firm_pct": 0.1847,
       "jd_required_pct": 0.88,
-      "bar_pass_rate_first_time": 0.882,
+      "bar_pass_rate_first_time": 0.9313,
       "median_private_sector_salary": 145000,
       "median_public_sector_salary": 63000,
       "practice_area_strengths": [
@@ -619,7 +649,10 @@
       "employed_10mo_pct": 0.9299,
       "school_funded_pct": 0.0127,
       "transfers_in": 5,
-      "transfers_out": 2
+      "transfers_out": 2,
+      "bar_pass_state_avg": 0.7858,
+      "bar_pass_vs_state": 0.1455,
+      "bar_pass_ultimate": 0.9605
     },
     {
       "id": "wake-forest-law",
@@ -644,7 +677,7 @@
       "public_interest_pct": 0.038,
       "solo_small_firm_pct": 0.1646,
       "jd_required_pct": 0.9,
-      "bar_pass_rate_first_time": 0.873,
+      "bar_pass_rate_first_time": 0.8961,
       "median_private_sector_salary": 170000,
       "median_public_sector_salary": 62000,
       "practice_area_strengths": [
@@ -675,7 +708,10 @@
       "employed_10mo_pct": 0.9873,
       "school_funded_pct": 0.0,
       "transfers_in": 6,
-      "transfers_out": 5
+      "transfers_out": 5,
+      "bar_pass_state_avg": 0.8143,
+      "bar_pass_vs_state": 0.0818,
+      "bar_pass_ultimate": 0.967
     },
     {
       "id": "george-mason-scalia-law",
@@ -700,7 +736,7 @@
       "public_interest_pct": 0.0419,
       "solo_small_firm_pct": 0.1677,
       "jd_required_pct": 0.827,
-      "bar_pass_rate_first_time": 0.855,
+      "bar_pass_rate_first_time": 0.8634,
       "median_private_sector_salary": 165000,
       "median_public_sector_salary": 75000,
       "practice_area_strengths": [
@@ -730,7 +766,10 @@
       "employed_10mo_pct": 0.976,
       "school_funded_pct": 0.012,
       "transfers_in": 26,
-      "transfers_out": 2
+      "transfers_out": 2,
+      "bar_pass_state_avg": 0.8339,
+      "bar_pass_vs_state": 0.0295,
+      "bar_pass_ultimate": 0.9667
     },
     {
       "id": "iowa-law",
@@ -755,7 +794,7 @@
       "public_interest_pct": 0.057,
       "solo_small_firm_pct": 0.1646,
       "jd_required_pct": 0.88,
-      "bar_pass_rate_first_time": 0.9,
+      "bar_pass_rate_first_time": 0.9139,
       "median_private_sector_salary": 110000,
       "median_public_sector_salary": 60000,
       "practice_area_strengths": [
@@ -786,7 +825,10 @@
       "employed_10mo_pct": 0.9747,
       "school_funded_pct": 0.0127,
       "transfers_in": 1,
-      "transfers_out": 3
+      "transfers_out": 3,
+      "bar_pass_state_avg": 0.8089,
+      "bar_pass_vs_state": 0.105,
+      "bar_pass_ultimate": 0.9152
     },
     {
       "id": "baylor-law",
@@ -811,7 +853,7 @@
       "public_interest_pct": 0.0091,
       "solo_small_firm_pct": 0.3091,
       "jd_required_pct": 0.9,
-      "bar_pass_rate_first_time": 0.93,
+      "bar_pass_rate_first_time": 0.9369,
       "median_private_sector_salary": 100000,
       "median_public_sector_salary": 58000,
       "practice_area_strengths": [
@@ -840,7 +882,10 @@
       "employed_10mo_pct": 0.9636,
       "school_funded_pct": 0.0,
       "transfers_in": 3,
-      "transfers_out": 2
+      "transfers_out": 2,
+      "bar_pass_state_avg": 0.8265,
+      "bar_pass_vs_state": 0.1104,
+      "bar_pass_ultimate": 0.9789
     },
     {
       "id": "florida-state-law",
@@ -865,7 +910,7 @@
       "public_interest_pct": 0.0606,
       "solo_small_firm_pct": 0.2576,
       "jd_required_pct": 0.88,
-      "bar_pass_rate_first_time": 0.876,
+      "bar_pass_rate_first_time": 0.8881,
       "median_private_sector_salary": 100000,
       "median_public_sector_salary": 62000,
       "practice_area_strengths": [
@@ -894,7 +939,10 @@
       "employed_10mo_pct": 0.9242,
       "school_funded_pct": 0.0152,
       "transfers_in": 17,
-      "transfers_out": 0
+      "transfers_out": 0,
+      "bar_pass_state_avg": 0.7636,
+      "bar_pass_vs_state": 0.1245,
+      "bar_pass_ultimate": 0.9388
     },
     {
       "id": "uc-irvine-law",
@@ -919,7 +967,7 @@
       "public_interest_pct": 0.0903,
       "solo_small_firm_pct": 0.1742,
       "jd_required_pct": 0.88,
-      "bar_pass_rate_first_time": 0.855,
+      "bar_pass_rate_first_time": 0.8987,
       "median_private_sector_salary": 180000,
       "median_public_sector_salary": 68000,
       "practice_area_strengths": [
@@ -947,7 +995,10 @@
       "employed_10mo_pct": 0.9355,
       "school_funded_pct": 0.0065,
       "transfers_in": 5,
-      "transfers_out": 14
+      "transfers_out": 14,
+      "bar_pass_state_avg": 0.8268,
+      "bar_pass_vs_state": 0.0719,
+      "bar_pass_ultimate": 0.9615
     },
     {
       "id": "florida-levin-law",
@@ -972,7 +1023,7 @@
       "public_interest_pct": 0.0651,
       "solo_small_firm_pct": 0.1395,
       "jd_required_pct": 0.9,
-      "bar_pass_rate_first_time": 0.9,
+      "bar_pass_rate_first_time": 0.902,
       "median_private_sector_salary": 160000,
       "median_public_sector_salary": 63000,
       "practice_area_strengths": [
@@ -1002,7 +1053,10 @@
       "employed_10mo_pct": 0.9395,
       "school_funded_pct": 0.0,
       "transfers_in": 13,
-      "transfers_out": 1
+      "transfers_out": 1,
+      "bar_pass_state_avg": 0.7707,
+      "bar_pass_vs_state": 0.1313,
+      "bar_pass_ultimate": 0.9524
     },
     {
       "id": "washington-lee-law",
@@ -1027,7 +1081,7 @@
       "public_interest_pct": 0.0364,
       "solo_small_firm_pct": 0.0909,
       "jd_required_pct": 0.9,
-      "bar_pass_rate_first_time": 0.878,
+      "bar_pass_rate_first_time": 0.9346,
       "median_private_sector_salary": 165000,
       "median_public_sector_salary": 63000,
       "practice_area_strengths": [
@@ -1058,7 +1112,10 @@
       "employed_10mo_pct": 0.9273,
       "school_funded_pct": 0.0091,
       "transfers_in": 1,
-      "transfers_out": 6
+      "transfers_out": 6,
+      "bar_pass_state_avg": 0.8275,
+      "bar_pass_vs_state": 0.1071,
+      "bar_pass_ultimate": 0.9813
     },
     {
       "id": "william-mary-law",
@@ -1083,7 +1140,7 @@
       "public_interest_pct": 0.0854,
       "solo_small_firm_pct": 0.1457,
       "jd_required_pct": 0.89,
-      "bar_pass_rate_first_time": 0.862,
+      "bar_pass_rate_first_time": 0.9278,
       "median_private_sector_salary": 120000,
       "median_public_sector_salary": 65000,
       "practice_area_strengths": [
@@ -1113,7 +1170,10 @@
       "employed_10mo_pct": 0.9347,
       "school_funded_pct": 0.0151,
       "transfers_in": 3,
-      "transfers_out": 3
+      "transfers_out": 3,
+      "bar_pass_state_avg": 0.8262,
+      "bar_pass_vs_state": 0.1016,
+      "bar_pass_ultimate": 0.9716
     },
     {
       "id": "emory-law",
@@ -1138,7 +1198,7 @@
       "public_interest_pct": 0.0759,
       "solo_small_firm_pct": 0.1518,
       "jd_required_pct": 0.92,
-      "bar_pass_rate_first_time": 0.878,
+      "bar_pass_rate_first_time": 0.8634,
       "median_private_sector_salary": 185000,
       "median_public_sector_salary": 65000,
       "practice_area_strengths": [
@@ -1168,7 +1228,10 @@
       "employed_10mo_pct": 0.9107,
       "school_funded_pct": 0.0,
       "transfers_in": 8,
-      "transfers_out": 18
+      "transfers_out": 18,
+      "bar_pass_state_avg": 0.8082,
+      "bar_pass_vs_state": 0.0552,
+      "bar_pass_ultimate": 0.9609
     },
     {
       "id": "alabama-law",
@@ -1193,7 +1256,7 @@
       "public_interest_pct": 0.0411,
       "solo_small_firm_pct": 0.2055,
       "jd_required_pct": 0.9,
-      "bar_pass_rate_first_time": 0.91,
+      "bar_pass_rate_first_time": 0.9524,
       "median_private_sector_salary": 130000,
       "median_public_sector_salary": 62000,
       "practice_area_strengths": [
@@ -1224,7 +1287,10 @@
       "employed_10mo_pct": 0.9863,
       "school_funded_pct": 0.0205,
       "transfers_in": 4,
-      "transfers_out": 1
+      "transfers_out": 1,
+      "bar_pass_state_avg": 0.8129,
+      "bar_pass_vs_state": 0.1395,
+      "bar_pass_ultimate": 0.9915
     },
     {
       "id": "fordham-law",
@@ -1249,7 +1315,7 @@
       "public_interest_pct": 0.0524,
       "solo_small_firm_pct": 0.0524,
       "jd_required_pct": 0.94,
-      "bar_pass_rate_first_time": 0.909,
+      "bar_pass_rate_first_time": 0.908,
       "median_private_sector_salary": 215000,
       "median_public_sector_salary": 75000,
       "practice_area_strengths": [
@@ -1280,7 +1346,10 @@
       "employed_10mo_pct": 0.9,
       "school_funded_pct": 0.0048,
       "transfers_in": 12,
-      "transfers_out": 14
+      "transfers_out": 14,
+      "bar_pass_state_avg": 0.8678,
+      "bar_pass_vs_state": 0.0402,
+      "bar_pass_ultimate": 0.9584
     },
     {
       "id": "smu-dedman-law",
@@ -1305,7 +1374,7 @@
       "public_interest_pct": 0.0044,
       "solo_small_firm_pct": 0.2178,
       "jd_required_pct": 0.91,
-      "bar_pass_rate_first_time": 0.978,
+      "bar_pass_rate_first_time": 0.9775,
       "median_private_sector_salary": 165000,
       "median_public_sector_salary": 70000,
       "practice_area_strengths": [
@@ -1336,7 +1405,10 @@
       "employed_10mo_pct": 0.9822,
       "school_funded_pct": 0.0,
       "transfers_in": 8,
-      "transfers_out": 5
+      "transfers_out": 5,
+      "bar_pass_state_avg": 0.8253,
+      "bar_pass_vs_state": 0.1522,
+      "bar_pass_ultimate": 0.967
     },
     {
       "id": "arizona-state-law",
@@ -1361,7 +1433,7 @@
       "public_interest_pct": 0.0621,
       "solo_small_firm_pct": 0.2862,
       "jd_required_pct": 0.88,
-      "bar_pass_rate_first_time": 0.919,
+      "bar_pass_rate_first_time": 0.9194,
       "median_private_sector_salary": 95000,
       "median_public_sector_salary": 65000,
       "practice_area_strengths": [
@@ -1392,7 +1464,10 @@
       "employed_10mo_pct": 0.9276,
       "school_funded_pct": 0.0,
       "transfers_in": 24,
-      "transfers_out": 6
+      "transfers_out": 6,
+      "bar_pass_state_avg": 0.7823,
+      "bar_pass_vs_state": 0.1371,
+      "bar_pass_ultimate": 0.9449
     },
     {
       "id": "utah-quinney-law",
@@ -1417,7 +1492,7 @@
       "public_interest_pct": 0.0645,
       "solo_small_firm_pct": 0.3656,
       "jd_required_pct": 0.88,
-      "bar_pass_rate_first_time": 0.946,
+      "bar_pass_rate_first_time": 0.9457,
       "median_private_sector_salary": 80000,
       "median_public_sector_salary": 62000,
       "practice_area_strengths": [
@@ -1448,7 +1523,10 @@
       "employed_10mo_pct": 0.9677,
       "school_funded_pct": 0.0108,
       "transfers_in": 3,
-      "transfers_out": 0
+      "transfers_out": 0,
+      "bar_pass_state_avg": 0.8505,
+      "bar_pass_vs_state": 0.0952,
+      "bar_pass_ultimate": 0.9877
     },
     {
       "id": "illinois-law",
@@ -1504,7 +1582,10 @@
       "employed_10mo_pct": 0.9542,
       "school_funded_pct": 0.0261,
       "transfers_in": 2,
-      "transfers_out": 5
+      "transfers_out": 5,
+      "bar_pass_state_avg": 0.8127,
+      "bar_pass_vs_state": 0.1193,
+      "bar_pass_ultimate": 0.973
     },
     {
       "id": "kansas-law",
@@ -1529,7 +1610,7 @@
       "public_interest_pct": 0.0873,
       "solo_small_firm_pct": 0.2778,
       "jd_required_pct": 0.88,
-      "bar_pass_rate_first_time": 0.942,
+      "bar_pass_rate_first_time": 0.9421,
       "median_private_sector_salary": 75000,
       "median_public_sector_salary": 58000,
       "practice_area_strengths": [
@@ -1560,7 +1641,10 @@
       "employed_10mo_pct": 0.9603,
       "school_funded_pct": 0.0079,
       "transfers_in": 1,
-      "transfers_out": 1
+      "transfers_out": 1,
+      "bar_pass_state_avg": 0.8383,
+      "bar_pass_vs_state": 0.1038,
+      "bar_pass_ultimate": 0.9888
     },
     {
       "id": "pepperdine-law",
@@ -1585,7 +1669,7 @@
       "public_interest_pct": 0.0546,
       "solo_small_firm_pct": 0.3388,
       "jd_required_pct": 0.89,
-      "bar_pass_rate_first_time": 0.907,
+      "bar_pass_rate_first_time": 0.9071,
       "median_private_sector_salary": 115000,
       "median_public_sector_salary": 70000,
       "practice_area_strengths": [
@@ -1616,7 +1700,10 @@
       "employed_10mo_pct": 0.9344,
       "school_funded_pct": 0.0164,
       "transfers_in": 4,
-      "transfers_out": 11
+      "transfers_out": 11,
+      "bar_pass_state_avg": 0.8244,
+      "bar_pass_vs_state": 0.0827,
+      "bar_pass_ultimate": 0.963
     },
     {
       "id": "indiana-maurer-law",
@@ -1641,7 +1728,7 @@
       "public_interest_pct": 0.0671,
       "solo_small_firm_pct": 0.1646,
       "jd_required_pct": 0.88,
-      "bar_pass_rate_first_time": 0.846,
+      "bar_pass_rate_first_time": 0.8462,
       "median_private_sector_salary": 115000,
       "median_public_sector_salary": 64000,
       "practice_area_strengths": [
@@ -1672,7 +1759,10 @@
       "employed_10mo_pct": 0.9085,
       "school_funded_pct": 0.0305,
       "transfers_in": 3,
-      "transfers_out": 1
+      "transfers_out": 1,
+      "bar_pass_state_avg": 0.8095,
+      "bar_pass_vs_state": 0.0367,
+      "bar_pass_ultimate": 0.9383
     },
     {
       "id": "temple-beasley-law",
@@ -1728,7 +1818,10 @@
       "employed_10mo_pct": 0.9385,
       "school_funded_pct": 0.0,
       "transfers_in": 4,
-      "transfers_out": 2
+      "transfers_out": 2,
+      "bar_pass_state_avg": 0.7985,
+      "bar_pass_vs_state": 0.0915,
+      "bar_pass_ultimate": 0.966
     },
     {
       "id": "villanova-law",
@@ -1753,7 +1846,7 @@
       "public_interest_pct": 0.0652,
       "solo_small_firm_pct": 0.1957,
       "jd_required_pct": 0.89,
-      "bar_pass_rate_first_time": 0.9,
+      "bar_pass_rate_first_time": 0.8995,
       "median_private_sector_salary": 130000,
       "median_public_sector_salary": 67000,
       "practice_area_strengths": [
@@ -1784,7 +1877,10 @@
       "employed_10mo_pct": 0.9402,
       "school_funded_pct": 0.0,
       "transfers_in": 2,
-      "transfers_out": 5
+      "transfers_out": 5,
+      "bar_pass_state_avg": 0.8016,
+      "bar_pass_vs_state": 0.0979,
+      "bar_pass_ultimate": 0.9647
     },
     {
       "id": "washington-law",
@@ -1809,7 +1905,7 @@
       "public_interest_pct": 0.1751,
       "solo_small_firm_pct": 0.1469,
       "jd_required_pct": 0.89,
-      "bar_pass_rate_first_time": 0.932,
+      "bar_pass_rate_first_time": 0.9261,
       "median_private_sector_salary": 145000,
       "median_public_sector_salary": 72000,
       "practice_area_strengths": [
@@ -1840,7 +1936,10 @@
       "employed_10mo_pct": 0.8757,
       "school_funded_pct": 0.0,
       "transfers_in": 1,
-      "transfers_out": 5
+      "transfers_out": 5,
+      "bar_pass_state_avg": 0.8293,
+      "bar_pass_vs_state": 0.0968,
+      "bar_pass_ultimate": 0.9636
     },
     {
       "id": "uc-davis-law",
@@ -1865,7 +1964,7 @@
       "public_interest_pct": 0.1569,
       "solo_small_firm_pct": 0.1471,
       "jd_required_pct": 0.89,
-      "bar_pass_rate_first_time": 0.874,
+      "bar_pass_rate_first_time": 0.9324,
       "median_private_sector_salary": 160000,
       "median_public_sector_salary": 75000,
       "practice_area_strengths": [
@@ -1896,7 +1995,10 @@
       "employed_10mo_pct": 0.9461,
       "school_funded_pct": 0.0245,
       "transfers_in": 12,
-      "transfers_out": 9
+      "transfers_out": 9,
+      "bar_pass_state_avg": 0.8253,
+      "bar_pass_vs_state": 0.1071,
+      "bar_pass_ultimate": 0.9371
     },
     {
       "id": "university-san-diego-law",
@@ -1921,7 +2023,7 @@
       "public_interest_pct": 0.0636,
       "solo_small_firm_pct": 0.2627,
       "jd_required_pct": 0.88,
-      "bar_pass_rate_first_time": 0.918,
+      "bar_pass_rate_first_time": 0.8673,
       "median_private_sector_salary": 115000,
       "median_public_sector_salary": 70000,
       "practice_area_strengths": [
@@ -1952,7 +2054,10 @@
       "employed_10mo_pct": 0.9831,
       "school_funded_pct": 0.0763,
       "transfers_in": 5,
-      "transfers_out": 9
+      "transfers_out": 9,
+      "bar_pass_state_avg": 0.823,
+      "bar_pass_vs_state": 0.0443,
+      "bar_pass_ultimate": 0.9683
     },
     {
       "id": "houston-law",
@@ -1977,7 +2082,7 @@
       "public_interest_pct": 0.042,
       "solo_small_firm_pct": 0.2605,
       "jd_required_pct": 0.88,
-      "bar_pass_rate_first_time": 0.86,
+      "bar_pass_rate_first_time": 0.8445,
       "median_private_sector_salary": 150000,
       "median_public_sector_salary": 70000,
       "practice_area_strengths": [
@@ -2008,7 +2113,10 @@
       "employed_10mo_pct": 0.8992,
       "school_funded_pct": 0.042,
       "transfers_in": 25,
-      "transfers_out": 3
+      "transfers_out": 3,
+      "bar_pass_state_avg": 0.8255,
+      "bar_pass_vs_state": 0.019,
+      "bar_pass_ultimate": 0.9378
     },
     {
       "id": "colorado-law",
@@ -2033,7 +2141,7 @@
       "public_interest_pct": 0.1019,
       "solo_small_firm_pct": 0.2102,
       "jd_required_pct": 0.88,
-      "bar_pass_rate_first_time": 0.904,
+      "bar_pass_rate_first_time": 0.8968,
       "median_private_sector_salary": 120000,
       "median_public_sector_salary": 68000,
       "practice_area_strengths": [
@@ -2064,7 +2172,10 @@
       "employed_10mo_pct": 0.9618,
       "school_funded_pct": 0.0318,
       "transfers_in": 0,
-      "transfers_out": 3
+      "transfers_out": 3,
+      "bar_pass_state_avg": 0.8051,
+      "bar_pass_vs_state": 0.0917,
+      "bar_pass_ultimate": 0.9341
     },
     {
       "id": "tennessee-law",
@@ -2089,7 +2200,7 @@
       "public_interest_pct": 0.0645,
       "solo_small_firm_pct": 0.2984,
       "jd_required_pct": 0.88,
-      "bar_pass_rate_first_time": 0.919,
+      "bar_pass_rate_first_time": 0.856,
       "median_private_sector_salary": 95000,
       "median_public_sector_salary": 58000,
       "practice_area_strengths": [
@@ -2120,7 +2231,10 @@
       "employed_10mo_pct": 0.9113,
       "school_funded_pct": 0.0,
       "transfers_in": 2,
-      "transfers_out": 2
+      "transfers_out": 2,
+      "bar_pass_state_avg": 0.8001,
+      "bar_pass_vs_state": 0.0559,
+      "bar_pass_ultimate": 0.9279
     },
     {
       "id": "uconn-law",
@@ -2145,7 +2259,7 @@
       "public_interest_pct": 0.0634,
       "solo_small_firm_pct": 0.1761,
       "jd_required_pct": 0.88,
-      "bar_pass_rate_first_time": 0.85,
+      "bar_pass_rate_first_time": 0.8281,
       "median_private_sector_salary": 95000,
       "median_public_sector_salary": 68000,
       "practice_area_strengths": [
@@ -2176,7 +2290,10 @@
       "employed_10mo_pct": 0.8873,
       "school_funded_pct": 0.0,
       "transfers_in": 2,
-      "transfers_out": 5
+      "transfers_out": 5,
+      "bar_pass_state_avg": 0.7355,
+      "bar_pass_vs_state": 0.0926,
+      "bar_pass_ultimate": 0.8926
     },
     {
       "id": "cardozo-law",
@@ -2201,7 +2318,7 @@
       "public_interest_pct": 0.0825,
       "solo_small_firm_pct": 0.2211,
       "jd_required_pct": 0.9,
-      "bar_pass_rate_first_time": 0.878,
+      "bar_pass_rate_first_time": 0.8783,
       "median_private_sector_salary": 191500,
       "median_public_sector_salary": 75000,
       "practice_area_strengths": [
@@ -2232,7 +2349,10 @@
       "employed_10mo_pct": 0.9043,
       "school_funded_pct": 0.0132,
       "transfers_in": 3,
-      "transfers_out": 8
+      "transfers_out": 8,
+      "bar_pass_state_avg": 0.8677,
+      "bar_pass_vs_state": 0.0106,
+      "bar_pass_ultimate": 0.9375
     },
     {
       "id": "missouri-law",
@@ -2257,7 +2377,7 @@
       "public_interest_pct": 0.112,
       "solo_small_firm_pct": 0.296,
       "jd_required_pct": 0.88,
-      "bar_pass_rate_first_time": 0.845,
+      "bar_pass_rate_first_time": 0.8618,
       "median_private_sector_salary": 80000,
       "median_public_sector_salary": 55000,
       "practice_area_strengths": [
@@ -2288,7 +2408,10 @@
       "employed_10mo_pct": 0.952,
       "school_funded_pct": 0.024,
       "transfers_in": 0,
-      "transfers_out": 2
+      "transfers_out": 2,
+      "bar_pass_state_avg": 0.8578,
+      "bar_pass_vs_state": 0.004,
+      "bar_pass_ultimate": 0.9412
     },
     {
       "id": "maryland-carey-law",
@@ -2313,7 +2436,7 @@
       "public_interest_pct": 0.0433,
       "solo_small_firm_pct": 0.149,
       "jd_required_pct": 0.89,
-      "bar_pass_rate_first_time": 0.821,
+      "bar_pass_rate_first_time": 0.8169,
       "median_private_sector_salary": 105000,
       "median_public_sector_salary": 70000,
       "practice_area_strengths": [
@@ -2344,7 +2467,10 @@
       "employed_10mo_pct": 0.8798,
       "school_funded_pct": 0.0048,
       "transfers_in": 7,
-      "transfers_out": 13
+      "transfers_out": 13,
+      "bar_pass_state_avg": 0.7559,
+      "bar_pass_vs_state": 0.061,
+      "bar_pass_ultimate": 0.8634
     },
     {
       "id": "richmond-law",
@@ -2369,7 +2495,7 @@
       "public_interest_pct": 0.1111,
       "solo_small_firm_pct": 0.2479,
       "jd_required_pct": 0.89,
-      "bar_pass_rate_first_time": 0.829,
+      "bar_pass_rate_first_time": 0.913,
       "median_private_sector_salary": 100000,
       "median_public_sector_salary": 60000,
       "practice_area_strengths": [
@@ -2400,7 +2526,10 @@
       "employed_10mo_pct": 0.9145,
       "school_funded_pct": 0.0,
       "transfers_in": 1,
-      "transfers_out": 4
+      "transfers_out": 4,
+      "bar_pass_state_avg": 0.8227,
+      "bar_pass_vs_state": 0.0903,
+      "bar_pass_ultimate": 0.9524
     },
     {
       "id": "st-johns-law",
@@ -2425,7 +2554,7 @@
       "public_interest_pct": 0.0884,
       "solo_small_firm_pct": 0.1888,
       "jd_required_pct": 0.89,
-      "bar_pass_rate_first_time": 0.879,
+      "bar_pass_rate_first_time": 0.8755,
       "median_private_sector_salary": 145000,
       "median_public_sector_salary": 65000,
       "practice_area_strengths": [
@@ -2456,7 +2585,10 @@
       "employed_10mo_pct": 0.9237,
       "school_funded_pct": 0.0,
       "transfers_in": 10,
-      "transfers_out": 0
+      "transfers_out": 0,
+      "bar_pass_state_avg": 0.8708,
+      "bar_pass_vs_state": 0.0047,
+      "bar_pass_ultimate": 0.9429
     },
     {
       "id": "wayne-state-law",
@@ -2481,7 +2613,7 @@
       "public_interest_pct": 0.129,
       "solo_small_firm_pct": 0.25,
       "jd_required_pct": 0.88,
-      "bar_pass_rate_first_time": 0.87,
+      "bar_pass_rate_first_time": 0.7385,
       "median_private_sector_salary": 85000,
       "median_public_sector_salary": 60000,
       "practice_area_strengths": [
@@ -2512,7 +2644,10 @@
       "employed_10mo_pct": 0.9516,
       "school_funded_pct": 0.0081,
       "transfers_in": 3,
-      "transfers_out": 3
+      "transfers_out": 3,
+      "bar_pass_state_avg": 0.7167,
+      "bar_pass_vs_state": 0.0218,
+      "bar_pass_ultimate": 0.8762
     },
     {
       "id": "tulane-law",
@@ -2537,7 +2672,7 @@
       "public_interest_pct": 0.1028,
       "solo_small_firm_pct": 0.1636,
       "jd_required_pct": 0.89,
-      "bar_pass_rate_first_time": 0.762,
+      "bar_pass_rate_first_time": 0.7612,
       "median_private_sector_salary": 130000,
       "median_public_sector_salary": 62000,
       "practice_area_strengths": [
@@ -2568,7 +2703,10 @@
       "employed_10mo_pct": 0.8879,
       "school_funded_pct": 0.0093,
       "transfers_in": 0,
-      "transfers_out": 7
+      "transfers_out": 7,
+      "bar_pass_state_avg": 0.8189,
+      "bar_pass_vs_state": -0.0577,
+      "bar_pass_ultimate": 0.9282
     },
     {
       "id": "arizona-rogers-law",
@@ -2593,7 +2731,7 @@
       "public_interest_pct": 0.1385,
       "solo_small_firm_pct": 0.2231,
       "jd_required_pct": 0.88,
-      "bar_pass_rate_first_time": 0.69,
+      "bar_pass_rate_first_time": 0.8413,
       "median_private_sector_salary": 90000,
       "median_public_sector_salary": 62000,
       "practice_area_strengths": [
@@ -2624,7 +2762,10 @@
       "employed_10mo_pct": 0.9231,
       "school_funded_pct": 0.0,
       "transfers_in": 1,
-      "transfers_out": 0
+      "transfers_out": 0,
+      "bar_pass_state_avg": 0.7769,
+      "bar_pass_vs_state": 0.0644,
+      "bar_pass_ultimate": 0.9537
     },
     {
       "id": "loyola-la-law",
@@ -2649,7 +2790,7 @@
       "public_interest_pct": 0.08,
       "solo_small_firm_pct": 0.31,
       "jd_required_pct": 0.88,
-      "bar_pass_rate_first_time": 0.868,
+      "bar_pass_rate_first_time": 0.7972,
       "median_private_sector_salary": 115000,
       "median_public_sector_salary": 68000,
       "practice_area_strengths": [
@@ -2680,7 +2821,10 @@
       "employed_10mo_pct": 0.9033,
       "school_funded_pct": 0.0167,
       "transfers_in": 13,
-      "transfers_out": 10
+      "transfers_out": 10,
+      "bar_pass_state_avg": 0.8267,
+      "bar_pass_vs_state": -0.0295,
+      "bar_pass_ultimate": 0.9377
     },
     {
       "id": "miami-law",
@@ -2705,7 +2849,7 @@
       "public_interest_pct": 0.0574,
       "solo_small_firm_pct": 0.2715,
       "jd_required_pct": 0.89,
-      "bar_pass_rate_first_time": 0.877,
+      "bar_pass_rate_first_time": 0.8529,
       "median_private_sector_salary": 120000,
       "median_public_sector_salary": 65000,
       "practice_area_strengths": [
@@ -2736,7 +2880,10 @@
       "employed_10mo_pct": 0.8773,
       "school_funded_pct": 0.0,
       "transfers_in": 7,
-      "transfers_out": 9
+      "transfers_out": 9,
+      "bar_pass_state_avg": 0.77,
+      "bar_pass_vs_state": 0.0829,
+      "bar_pass_ultimate": 0.9096
     },
     {
       "id": "catholic-columbus-law",
@@ -2761,7 +2908,7 @@
       "public_interest_pct": 0.0088,
       "solo_small_firm_pct": 0.1327,
       "jd_required_pct": 0.89,
-      "bar_pass_rate_first_time": 0.851,
+      "bar_pass_rate_first_time": 0.9038,
       "median_private_sector_salary": 95000,
       "median_public_sector_salary": 70000,
       "practice_area_strengths": [
@@ -2792,7 +2939,10 @@
       "employed_10mo_pct": 0.9292,
       "school_funded_pct": 0.0442,
       "transfers_in": 1,
-      "transfers_out": 5
+      "transfers_out": 5,
+      "bar_pass_state_avg": 0.8192,
+      "bar_pass_vs_state": 0.0846,
+      "bar_pass_ultimate": 0.9429
     },
     {
       "id": "stanford-law",
@@ -2817,7 +2967,7 @@
       "public_interest_pct": 0.0947,
       "solo_small_firm_pct": 0.0105,
       "jd_required_pct": 0.965,
-      "bar_pass_rate_first_time": 0.965,
+      "bar_pass_rate_first_time": 0.9943,
       "median_private_sector_salary": 215000,
       "median_public_sector_salary": 72000,
       "practice_area_strengths": [
@@ -2848,7 +2998,10 @@
       "employed_10mo_pct": 0.9105,
       "school_funded_pct": 0.0789,
       "transfers_in": 8,
-      "transfers_out": 1
+      "transfers_out": 1,
+      "bar_pass_state_avg": 0.8466,
+      "bar_pass_vs_state": 0.1477,
+      "bar_pass_ultimate": 1.0
     },
     {
       "id": "uchicago-law",
@@ -2873,7 +3026,7 @@
       "public_interest_pct": 0.037,
       "solo_small_firm_pct": 0.0093,
       "jd_required_pct": 0.975,
-      "bar_pass_rate_first_time": 0.974,
+      "bar_pass_rate_first_time": 0.9673,
       "median_private_sector_salary": 215000,
       "median_public_sector_salary": 72000,
       "practice_area_strengths": [
@@ -2904,7 +3057,10 @@
       "employed_10mo_pct": 0.9815,
       "school_funded_pct": 0.0231,
       "transfers_in": 12,
-      "transfers_out": 1
+      "transfers_out": 1,
+      "bar_pass_state_avg": 0.8377,
+      "bar_pass_vs_state": 0.1296,
+      "bar_pass_ultimate": 0.9951
     },
     {
       "id": "yale-law",
@@ -2929,7 +3085,7 @@
       "public_interest_pct": 0.1422,
       "solo_small_firm_pct": 0.0,
       "jd_required_pct": 0.965,
-      "bar_pass_rate_first_time": 0.965,
+      "bar_pass_rate_first_time": 0.9854,
       "median_private_sector_salary": 215000,
       "median_public_sector_salary": 72000,
       "practice_area_strengths": [
@@ -2960,7 +3116,10 @@
       "employed_10mo_pct": 0.9289,
       "school_funded_pct": 0.0995,
       "transfers_in": 11,
-      "transfers_out": 0
+      "transfers_out": 0,
+      "bar_pass_state_avg": 0.854,
+      "bar_pass_vs_state": 0.1314,
+      "bar_pass_ultimate": 1.0
     },
     {
       "id": "penn-carey-law",
@@ -2985,7 +3144,7 @@
       "public_interest_pct": 0.1032,
       "solo_small_firm_pct": 0.0119,
       "jd_required_pct": 0.97,
-      "bar_pass_rate_first_time": 0.967,
+      "bar_pass_rate_first_time": 0.9442,
       "median_private_sector_salary": 225000,
       "median_public_sector_salary": 72000,
       "practice_area_strengths": [
@@ -3016,7 +3175,10 @@
       "employed_10mo_pct": 0.9881,
       "school_funded_pct": 0.0595,
       "transfers_in": 8,
-      "transfers_out": 4
+      "transfers_out": 4,
+      "bar_pass_state_avg": 0.8456,
+      "bar_pass_vs_state": 0.0986,
+      "bar_pass_ultimate": 0.9876
     },
     {
       "id": "uva-law",
@@ -3041,7 +3203,7 @@
       "public_interest_pct": 0.0584,
       "solo_small_firm_pct": 0.0292,
       "jd_required_pct": 0.965,
-      "bar_pass_rate_first_time": 0.95,
+      "bar_pass_rate_first_time": 0.9511,
       "median_private_sector_salary": 225000,
       "median_public_sector_salary": 72000,
       "practice_area_strengths": [
@@ -3072,7 +3234,10 @@
       "employed_10mo_pct": 0.987,
       "school_funded_pct": 0.0292,
       "transfers_in": 0,
-      "transfers_out": 1
+      "transfers_out": 1,
+      "bar_pass_state_avg": 0.8485,
+      "bar_pass_vs_state": 0.1026,
+      "bar_pass_ultimate": 1.0
     },
     {
       "id": "harvard-law",
@@ -3128,7 +3293,10 @@
       "employed_10mo_pct": 0.9585,
       "school_funded_pct": 0.0316,
       "transfers_in": 37,
-      "transfers_out": 2
+      "transfers_out": 2,
+      "bar_pass_state_avg": 0.8524,
+      "bar_pass_vs_state": 0.1266,
+      "bar_pass_ultimate": 0.9874
     },
     {
       "id": "duke-law",
@@ -3153,7 +3321,7 @@
       "public_interest_pct": 0.0478,
       "solo_small_firm_pct": 0.0304,
       "jd_required_pct": 0.97,
-      "bar_pass_rate_first_time": 0.975,
+      "bar_pass_rate_first_time": 0.9823,
       "median_private_sector_salary": 215000,
       "median_public_sector_salary": 68000,
       "practice_area_strengths": [
@@ -3184,7 +3352,10 @@
       "employed_10mo_pct": 0.987,
       "school_funded_pct": 0.0217,
       "transfers_in": 0,
-      "transfers_out": 1
+      "transfers_out": 1,
+      "bar_pass_state_avg": 0.8459,
+      "bar_pass_vs_state": 0.1364,
+      "bar_pass_ultimate": 0.9915
     },
     {
       "id": "nyu-law",
@@ -3209,7 +3380,7 @@
       "public_interest_pct": 0.1775,
       "solo_small_firm_pct": 0.0048,
       "jd_required_pct": 0.96,
-      "bar_pass_rate_first_time": 0.967,
+      "bar_pass_rate_first_time": 0.9694,
       "median_private_sector_salary": 225000,
       "median_public_sector_salary": 72000,
       "practice_area_strengths": [
@@ -3240,7 +3411,10 @@
       "employed_10mo_pct": 0.9928,
       "school_funded_pct": 0.0576,
       "transfers_in": 42,
-      "transfers_out": 1
+      "transfers_out": 1,
+      "bar_pass_state_avg": 0.8637,
+      "bar_pass_vs_state": 0.1057,
+      "bar_pass_ultimate": 0.9838
     },
     {
       "id": "columbia-law",
@@ -3265,7 +3439,7 @@
       "public_interest_pct": 0.0677,
       "solo_small_firm_pct": 0.0087,
       "jd_required_pct": 0.965,
-      "bar_pass_rate_first_time": 0.958,
+      "bar_pass_rate_first_time": 0.9473,
       "median_private_sector_salary": 225000,
       "median_public_sector_salary": 78500,
       "practice_area_strengths": [
@@ -3296,7 +3470,10 @@
       "employed_10mo_pct": 0.9716,
       "school_funded_pct": 0.0175,
       "transfers_in": 50,
-      "transfers_out": 4
+      "transfers_out": 4,
+      "bar_pass_state_avg": 0.866,
+      "bar_pass_vs_state": 0.0813,
+      "bar_pass_ultimate": 0.9929
     },
     {
       "id": "northwestern-pritzker-law",
@@ -3321,7 +3498,7 @@
       "public_interest_pct": 0.0568,
       "solo_small_firm_pct": 0.0265,
       "jd_required_pct": 0.965,
-      "bar_pass_rate_first_time": 0.918,
+      "bar_pass_rate_first_time": 0.9183,
       "median_private_sector_salary": 215000,
       "median_public_sector_salary": 70000,
       "practice_area_strengths": [
@@ -3352,7 +3529,10 @@
       "employed_10mo_pct": 0.9735,
       "school_funded_pct": 0.0341,
       "transfers_in": 38,
-      "transfers_out": 4
+      "transfers_out": 4,
+      "bar_pass_state_avg": 0.8249,
+      "bar_pass_vs_state": 0.0934,
+      "bar_pass_ultimate": 0.9812
     },
     {
       "id": "michigan-law",
@@ -3377,7 +3557,7 @@
       "public_interest_pct": 0.1283,
       "solo_small_firm_pct": 0.0262,
       "jd_required_pct": 0.965,
-      "bar_pass_rate_first_time": 0.956,
+      "bar_pass_rate_first_time": 0.9415,
       "median_private_sector_salary": 215000,
       "median_public_sector_salary": 70000,
       "practice_area_strengths": [
@@ -3408,7 +3588,10 @@
       "employed_10mo_pct": 0.9738,
       "school_funded_pct": 0.035,
       "transfers_in": 9,
-      "transfers_out": 0
+      "transfers_out": 0,
+      "bar_pass_state_avg": 0.8268,
+      "bar_pass_vs_state": 0.1147,
+      "bar_pass_ultimate": 0.9935
     },
     {
       "id": "vanderbilt-law",
@@ -3433,7 +3616,7 @@
       "public_interest_pct": 0.0479,
       "solo_small_firm_pct": 0.0778,
       "jd_required_pct": 0.965,
-      "bar_pass_rate_first_time": 0.946,
+      "bar_pass_rate_first_time": 0.9464,
       "median_private_sector_salary": 215000,
       "median_public_sector_salary": 78000,
       "practice_area_strengths": [
@@ -3464,7 +3647,10 @@
       "employed_10mo_pct": 0.982,
       "school_funded_pct": 0.0299,
       "transfers_in": 13,
-      "transfers_out": 2
+      "transfers_out": 2,
+      "bar_pass_state_avg": 0.8193,
+      "bar_pass_vs_state": 0.1271,
+      "bar_pass_ultimate": 0.9847
     },
     {
       "id": "cornell-law",
@@ -3489,7 +3675,7 @@
       "public_interest_pct": 0.0812,
       "solo_small_firm_pct": 0.0457,
       "jd_required_pct": 0.97,
-      "bar_pass_rate_first_time": 0.964,
+      "bar_pass_rate_first_time": 0.9368,
       "median_private_sector_salary": 225000,
       "median_public_sector_salary": 68000,
       "practice_area_strengths": [
@@ -3520,7 +3706,10 @@
       "employed_10mo_pct": 0.9949,
       "school_funded_pct": 0.0305,
       "transfers_in": 0,
-      "transfers_out": 8
+      "transfers_out": 8,
+      "bar_pass_state_avg": 0.858,
+      "bar_pass_vs_state": 0.0788,
+      "bar_pass_ultimate": 0.9825
     },
     {
       "id": "ucla-law",
@@ -3545,7 +3734,7 @@
       "public_interest_pct": 0.1295,
       "solo_small_firm_pct": 0.0904,
       "jd_required_pct": 0.96,
-      "bar_pass_rate_first_time": 0.942,
+      "bar_pass_rate_first_time": 0.9665,
       "median_private_sector_salary": 215000,
       "median_public_sector_salary": 70000,
       "practice_area_strengths": [
@@ -3576,7 +3765,10 @@
       "employed_10mo_pct": 0.9699,
       "school_funded_pct": 0.0422,
       "transfers_in": 35,
-      "transfers_out": 4
+      "transfers_out": 4,
+      "bar_pass_state_avg": 0.8313,
+      "bar_pass_vs_state": 0.1352,
+      "bar_pass_ultimate": 0.9615
     },
     {
       "id": "washu-law",
@@ -3601,7 +3793,7 @@
       "public_interest_pct": 0.0476,
       "solo_small_firm_pct": 0.0916,
       "jd_required_pct": 0.965,
-      "bar_pass_rate_first_time": 0.936,
+      "bar_pass_rate_first_time": 0.8963,
       "median_private_sector_salary": 215000,
       "median_public_sector_salary": 68000,
       "practice_area_strengths": [
@@ -3632,7 +3824,10 @@
       "employed_10mo_pct": 0.978,
       "school_funded_pct": 0.0183,
       "transfers_in": 20,
-      "transfers_out": 6
+      "transfers_out": 6,
+      "bar_pass_state_avg": 0.8341,
+      "bar_pass_vs_state": 0.0622,
+      "bar_pass_ultimate": 0.96
     },
     {
       "id": "kentucky-rosenberg-law",
@@ -3657,7 +3852,7 @@
       "public_interest_pct": 0.0696,
       "solo_small_firm_pct": 0.3217,
       "jd_required_pct": 0.85,
-      "bar_pass_rate_first_time": 0.87,
+      "bar_pass_rate_first_time": 0.7982,
       "median_private_sector_salary": 95000,
       "median_public_sector_salary": 58000,
       "practice_area_strengths": [
@@ -3688,7 +3883,10 @@
       "employed_10mo_pct": 0.9304,
       "school_funded_pct": 0.0,
       "transfers_in": 3,
-      "transfers_out": 3
+      "transfers_out": 3,
+      "bar_pass_state_avg": 0.7886,
+      "bar_pass_vs_state": 0.0096,
+      "bar_pass_ultimate": 0.8346
     },
     {
       "id": "seton-hall-law",
@@ -3713,7 +3911,7 @@
       "public_interest_pct": 0.0193,
       "solo_small_firm_pct": 0.0966,
       "jd_required_pct": 0.86,
-      "bar_pass_rate_first_time": 0.84,
+      "bar_pass_rate_first_time": 0.8713,
       "median_private_sector_salary": 120000,
       "median_public_sector_salary": 62000,
       "practice_area_strengths": [
@@ -3744,7 +3942,10 @@
       "employed_10mo_pct": 0.9082,
       "school_funded_pct": 0.0,
       "transfers_in": 2,
-      "transfers_out": 10
+      "transfers_out": 10,
+      "bar_pass_state_avg": 0.7438,
+      "bar_pass_vs_state": 0.1275,
+      "bar_pass_ultimate": 0.9325
     },
     {
       "id": "georgia-state-law",
@@ -3769,7 +3970,7 @@
       "public_interest_pct": 0.0718,
       "solo_small_firm_pct": 0.3385,
       "jd_required_pct": 0.85,
-      "bar_pass_rate_first_time": 0.88,
+      "bar_pass_rate_first_time": 0.8743,
       "median_private_sector_salary": 100000,
       "median_public_sector_salary": 60000,
       "practice_area_strengths": [
@@ -3800,7 +4001,10 @@
       "employed_10mo_pct": 0.9282,
       "school_funded_pct": 0.0,
       "transfers_in": 7,
-      "transfers_out": 2
+      "transfers_out": 2,
+      "bar_pass_state_avg": 0.7955,
+      "bar_pass_vs_state": 0.0788,
+      "bar_pass_ultimate": 0.927
     },
     {
       "id": "loyola-chicago-law",
@@ -3825,7 +4029,7 @@
       "public_interest_pct": 0.1149,
       "solo_small_firm_pct": 0.2107,
       "jd_required_pct": 0.86,
-      "bar_pass_rate_first_time": 0.87,
+      "bar_pass_rate_first_time": 0.8571,
       "median_private_sector_salary": 110000,
       "median_public_sector_salary": 62000,
       "practice_area_strengths": [
@@ -3856,7 +4060,10 @@
       "employed_10mo_pct": 0.9119,
       "school_funded_pct": 0.0,
       "transfers_in": 1,
-      "transfers_out": 13
+      "transfers_out": 13,
+      "bar_pass_state_avg": 0.8094,
+      "bar_pass_vs_state": 0.0477,
+      "bar_pass_ultimate": 0.9607
     },
     {
       "id": "northeastern-law",
@@ -3881,7 +4088,7 @@
       "public_interest_pct": 0.2488,
       "solo_small_firm_pct": 0.1221,
       "jd_required_pct": 0.87,
-      "bar_pass_rate_first_time": 0.85,
+      "bar_pass_rate_first_time": 0.9052,
       "median_private_sector_salary": 105000,
       "median_public_sector_salary": 62000,
       "practice_area_strengths": [
@@ -3912,7 +4119,10 @@
       "employed_10mo_pct": 0.8638,
       "school_funded_pct": 0.0047,
       "transfers_in": 4,
-      "transfers_out": 0
+      "transfers_out": 0,
+      "bar_pass_state_avg": 0.8427,
+      "bar_pass_vs_state": 0.0625,
+      "bar_pass_ultimate": 0.9406
     },
     {
       "id": "pittsburgh-law",
@@ -3937,7 +4147,7 @@
       "public_interest_pct": 0.123,
       "solo_small_firm_pct": 0.1311,
       "jd_required_pct": 0.85,
-      "bar_pass_rate_first_time": 0.87,
+      "bar_pass_rate_first_time": 0.9304,
       "median_private_sector_salary": 100000,
       "median_public_sector_salary": 60000,
       "practice_area_strengths": [
@@ -3968,7 +4178,10 @@
       "employed_10mo_pct": 0.877,
       "school_funded_pct": 0.0,
       "transfers_in": 1,
-      "transfers_out": 9
+      "transfers_out": 9,
+      "bar_pass_state_avg": 0.8008,
+      "bar_pass_vs_state": 0.1296,
+      "bar_pass_ultimate": 0.9619
     },
     {
       "id": "fiu-law",
@@ -3993,7 +4206,7 @@
       "public_interest_pct": 0.1338,
       "solo_small_firm_pct": 0.3248,
       "jd_required_pct": 0.85,
-      "bar_pass_rate_first_time": 0.86,
+      "bar_pass_rate_first_time": 0.859,
       "median_private_sector_salary": 95000,
       "median_public_sector_salary": 58000,
       "practice_area_strengths": [
@@ -4024,7 +4237,10 @@
       "employed_10mo_pct": 0.9299,
       "school_funded_pct": 0.0318,
       "transfers_in": 15,
-      "transfers_out": 4
+      "transfers_out": 4,
+      "bar_pass_state_avg": 0.7593,
+      "bar_pass_vs_state": 0.0997,
+      "bar_pass_ultimate": 0.9684
     },
     {
       "id": "cincinnati-law",
@@ -4049,7 +4265,7 @@
       "public_interest_pct": 0.1181,
       "solo_small_firm_pct": 0.3228,
       "jd_required_pct": 0.85,
-      "bar_pass_rate_first_time": 0.87,
+      "bar_pass_rate_first_time": 0.8512,
       "median_private_sector_salary": 90000,
       "median_public_sector_salary": 58000,
       "practice_area_strengths": [
@@ -4080,7 +4296,10 @@
       "employed_10mo_pct": 0.9055,
       "school_funded_pct": 0.0,
       "transfers_in": 0,
-      "transfers_out": 1
+      "transfers_out": 1,
+      "bar_pass_state_avg": 0.7861,
+      "bar_pass_vs_state": 0.0651,
+      "bar_pass_ultimate": 0.9504
     },
     {
       "id": "drexel-kline-law",
@@ -4105,7 +4324,7 @@
       "public_interest_pct": 0.0677,
       "solo_small_firm_pct": 0.1504,
       "jd_required_pct": 0.855,
-      "bar_pass_rate_first_time": 0.82,
+      "bar_pass_rate_first_time": 0.8421,
       "median_private_sector_salary": 100000,
       "median_public_sector_salary": 60000,
       "practice_area_strengths": [
@@ -4136,7 +4355,10 @@
       "employed_10mo_pct": 0.8947,
       "school_funded_pct": 0.0,
       "transfers_in": 3,
-      "transfers_out": 4
+      "transfers_out": 4,
+      "bar_pass_state_avg": 0.795,
+      "bar_pass_vs_state": 0.0471,
+      "bar_pass_ultimate": 0.9184
     },
     {
       "id": "suny-buffalo-law",
@@ -4161,7 +4383,7 @@
       "public_interest_pct": 0.2044,
       "solo_small_firm_pct": 0.2628,
       "jd_required_pct": 0.85,
-      "bar_pass_rate_first_time": 0.87,
+      "bar_pass_rate_first_time": 0.8846,
       "median_private_sector_salary": 90000,
       "median_public_sector_salary": 58000,
       "practice_area_strengths": [
@@ -4192,7 +4414,10 @@
       "employed_10mo_pct": 0.9489,
       "school_funded_pct": 0.0219,
       "transfers_in": 0,
-      "transfers_out": 5
+      "transfers_out": 5,
+      "bar_pass_state_avg": 0.8723,
+      "bar_pass_vs_state": 0.0123,
+      "bar_pass_ultimate": 0.8974
     }
   ]
 }
