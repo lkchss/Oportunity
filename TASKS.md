@@ -4,11 +4,9 @@
 - [ ] Enable LLM narratives (law/llm_client.py is built, currently unused)
 - [ ] Next loop iter: 2 residual regressions (p03, p14) — both mid/low-income MA/NY profiles where judge still wants a stronger aid story
 - [ ] Add class_size_1l -> admissibility softener (transfers now done as a feature)
-- [ ] NEXT LEVER (useful data already in hand, unused): conditional-scholarship RETENTION — Tuition file cols
-      EnteringScholarships_/ReducedScholarships_ give the fraction of conditional awards later cut. Replace the
-      flat -5 conditional penalty with a magnitude-based one, then judge.
 - [ ] Tier-3 STILL BLOCKED ON DATA: median_grad_debt (LST blocked, not in ABA) + placement_by_state (per-school PDFs).
-      Bar passage DONE (added First_Time + Two-Year Ultimate 2026). Real debt $ remains the #1 judge ask.
+      Real debt $ remains the #1 judge ask. Bar passage + conditional-retention DONE.
+- [ ] Open PR for algo-optimization (pushed to origin; URL: github.com/lkchss/Opportunity/pull/new/algo-optimization)
 - [ ] Render transfer-up plan styling in the final UI pass (TransferPanel is placeholder-styled)
 - [ ] Add lower-ranked schools (ranks 83+) so the transfer-up launchpad list works for genuinely-not-T14 profiles (157/3.4 currently has 0 safety/target)
 - [ ] Data enrichment HARD/predicted (later): selectivity trend (multi-year), NLJ250-by-market, part-time/transfer
@@ -16,6 +14,8 @@
 ## In progress
 
 ## Done
+- [x] Push algo-optimization branch to origin (17 commits).
+- [x] Conditional-scholarship penalty scaled by real reduction_rate (data + matcher). LLM-judge 5-4 (56%, marginal) -> KEEP.
 - [x] Wire bar_pass_vs_state into career fit (±10% value-add). LLM-judge 17-7 (71%) -> KEEP, commit 35e6f49.
 - [x] Add ABA 2026 bar passage data (first-time, state avg, vs-state, ultimate) for all 75. Commit + detail-screen surfacing.
 - [x] Finish transfer feature: surface mobility + bar passage on school detail screen.
