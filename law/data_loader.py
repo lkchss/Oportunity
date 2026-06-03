@@ -56,6 +56,7 @@ OPTIONAL_FIELDS = {
     "scholarship_less_than_half_pct": (int, float),
     "no_scholarship_pct": (int, float),
     "conditional_scholarship": bool,
+    "conditional_reduction_rate": (int, float),  # share of conditional awards later cut (ABA)
     "employed_10mo_pct": (int, float),
     "school_funded_pct": (int, float),
     # Transfer mobility (ABA 2025 Transfers report) — for "transfer up after 1L" use case

@@ -71,7 +71,8 @@
       "transfers_out": 6,
       "bar_pass_state_avg": 0.8529,
       "bar_pass_vs_state": 0.109,
-      "bar_pass_ultimate": 0.9876
+      "bar_pass_ultimate": 0.9876,
+      "conditional_reduction_rate": null
     },
     {
       "id": "notre-dame-law",
@@ -130,7 +131,8 @@
       "transfers_out": 1,
       "bar_pass_state_avg": 0.816,
       "bar_pass_vs_state": 0.0784,
-      "bar_pass_ultimate": 0.9818
+      "bar_pass_ultimate": 0.9818,
+      "conditional_reduction_rate": null
     },
     {
       "id": "texas-am-law",
@@ -187,7 +189,8 @@
       "transfers_out": 2,
       "bar_pass_state_avg": 0.8234,
       "bar_pass_vs_state": 0.1294,
-      "bar_pass_ultimate": 0.9938
+      "bar_pass_ultimate": 0.9938,
+      "conditional_reduction_rate": null
     },
     {
       "id": "minnesota-law",
@@ -245,7 +248,8 @@
       "transfers_out": 5,
       "bar_pass_state_avg": 0.8531,
       "bar_pass_vs_state": 0.1,
-      "bar_pass_ultimate": 0.9608
+      "bar_pass_ultimate": 0.9608,
+      "conditional_reduction_rate": null
     },
     {
       "id": "boston-university-law",
@@ -303,7 +307,8 @@
       "transfers_out": 5,
       "bar_pass_state_avg": 0.8436,
       "bar_pass_vs_state": 0.1057,
-      "bar_pass_ultimate": 0.9628
+      "bar_pass_ultimate": 0.9628,
+      "conditional_reduction_rate": null
     },
     {
       "id": "byu-clark-law",
@@ -362,7 +367,8 @@
       "transfers_out": 0,
       "bar_pass_state_avg": 0.8477,
       "bar_pass_vs_state": 0.1208,
-      "bar_pass_ultimate": 1.0
+      "bar_pass_ultimate": 1.0,
+      "conditional_reduction_rate": 0.2
     },
     {
       "id": "george-washington-law",
@@ -420,7 +426,8 @@
       "transfers_out": 33,
       "bar_pass_state_avg": 0.8487,
       "bar_pass_vs_state": 0.0279,
-      "bar_pass_ultimate": 0.9721
+      "bar_pass_ultimate": 0.9721,
+      "conditional_reduction_rate": null
     },
     {
       "id": "georgia-law",
@@ -478,7 +485,8 @@
       "transfers_out": 2,
       "bar_pass_state_avg": 0.7991,
       "bar_pass_vs_state": 0.0846,
-      "bar_pass_ultimate": 0.9762
+      "bar_pass_ultimate": 0.9762,
+      "conditional_reduction_rate": null
     },
     {
       "id": "usc-gould-law",
@@ -535,7 +543,8 @@
       "transfers_out": 7,
       "bar_pass_state_avg": 0.8328,
       "bar_pass_vs_state": 0.1086,
-      "bar_pass_ultimate": 0.989
+      "bar_pass_ultimate": 0.989,
+      "conditional_reduction_rate": null
     },
     {
       "id": "wisconsin-law",
@@ -593,7 +602,8 @@
       "transfers_out": 5,
       "bar_pass_state_avg": 0.8135,
       "bar_pass_vs_state": -0.0635,
-      "bar_pass_ultimate": 1.0
+      "bar_pass_ultimate": 1.0,
+      "conditional_reduction_rate": null
     },
     {
       "id": "ohio-state-moritz-law",
@@ -652,7 +662,8 @@
       "transfers_out": 2,
       "bar_pass_state_avg": 0.7858,
       "bar_pass_vs_state": 0.1455,
-      "bar_pass_ultimate": 0.9605
+      "bar_pass_ultimate": 0.9605,
+      "conditional_reduction_rate": null
     },
     {
       "id": "wake-forest-law",
@@ -711,7 +722,8 @@
       "transfers_out": 5,
       "bar_pass_state_avg": 0.8143,
       "bar_pass_vs_state": 0.0818,
-      "bar_pass_ultimate": 0.967
+      "bar_pass_ultimate": 0.967,
+      "conditional_reduction_rate": null
     },
     {
       "id": "george-mason-scalia-law",
@@ -769,7 +781,8 @@
       "transfers_out": 2,
       "bar_pass_state_avg": 0.8339,
       "bar_pass_vs_state": 0.0295,
-      "bar_pass_ultimate": 0.9667
+      "bar_pass_ultimate": 0.9667,
+      "conditional_reduction_rate": null
     },
     {
       "id": "iowa-law",
@@ -828,7 +841,8 @@
       "transfers_out": 3,
       "bar_pass_state_avg": 0.8089,
       "bar_pass_vs_state": 0.105,
-      "bar_pass_ultimate": 0.9152
+      "bar_pass_ultimate": 0.9152,
+      "conditional_reduction_rate": null
     },
     {
       "id": "baylor-law",
@@ -885,7 +899,8 @@
       "transfers_out": 2,
       "bar_pass_state_avg": 0.8265,
       "bar_pass_vs_state": 0.1104,
-      "bar_pass_ultimate": 0.9789
+      "bar_pass_ultimate": 0.9789,
+      "conditional_reduction_rate": null
     },
     {
       "id": "florida-state-law",
@@ -942,7 +957,8 @@
       "transfers_out": 0,
       "bar_pass_state_avg": 0.7636,
       "bar_pass_vs_state": 0.1245,
-      "bar_pass_ultimate": 0.9388
+      "bar_pass_ultimate": 0.9388,
+      "conditional_reduction_rate": null
     },
     {
       "id": "uc-irvine-law",
@@ -998,7 +1014,8 @@
       "transfers_out": 14,
       "bar_pass_state_avg": 0.8268,
       "bar_pass_vs_state": 0.0719,
-      "bar_pass_ultimate": 0.9615
+      "bar_pass_ultimate": 0.9615,
+      "conditional_reduction_rate": null
     },
     {
       "id": "florida-levin-law",
@@ -1056,7 +1073,8 @@
       "transfers_out": 1,
       "bar_pass_state_avg": 0.7707,
       "bar_pass_vs_state": 0.1313,
-      "bar_pass_ultimate": 0.9524
+      "bar_pass_ultimate": 0.9524,
+      "conditional_reduction_rate": null
     },
     {
       "id": "washington-lee-law",
@@ -1115,7 +1133,8 @@
       "transfers_out": 6,
       "bar_pass_state_avg": 0.8275,
       "bar_pass_vs_state": 0.1071,
-      "bar_pass_ultimate": 0.9813
+      "bar_pass_ultimate": 0.9813,
+      "conditional_reduction_rate": null
     },
     {
       "id": "william-mary-law",
@@ -1173,7 +1192,8 @@
       "transfers_out": 3,
       "bar_pass_state_avg": 0.8262,
       "bar_pass_vs_state": 0.1016,
-      "bar_pass_ultimate": 0.9716
+      "bar_pass_ultimate": 0.9716,
+      "conditional_reduction_rate": null
     },
     {
       "id": "emory-law",
@@ -1231,7 +1251,8 @@
       "transfers_out": 18,
       "bar_pass_state_avg": 0.8082,
       "bar_pass_vs_state": 0.0552,
-      "bar_pass_ultimate": 0.9609
+      "bar_pass_ultimate": 0.9609,
+      "conditional_reduction_rate": null
     },
     {
       "id": "alabama-law",
@@ -1290,7 +1311,8 @@
       "transfers_out": 1,
       "bar_pass_state_avg": 0.8129,
       "bar_pass_vs_state": 0.1395,
-      "bar_pass_ultimate": 0.9915
+      "bar_pass_ultimate": 0.9915,
+      "conditional_reduction_rate": null
     },
     {
       "id": "fordham-law",
@@ -1349,7 +1371,8 @@
       "transfers_out": 14,
       "bar_pass_state_avg": 0.8678,
       "bar_pass_vs_state": 0.0402,
-      "bar_pass_ultimate": 0.9584
+      "bar_pass_ultimate": 0.9584,
+      "conditional_reduction_rate": null
     },
     {
       "id": "smu-dedman-law",
@@ -1408,7 +1431,8 @@
       "transfers_out": 5,
       "bar_pass_state_avg": 0.8253,
       "bar_pass_vs_state": 0.1522,
-      "bar_pass_ultimate": 0.967
+      "bar_pass_ultimate": 0.967,
+      "conditional_reduction_rate": 0.1667
     },
     {
       "id": "arizona-state-law",
@@ -1467,7 +1491,8 @@
       "transfers_out": 6,
       "bar_pass_state_avg": 0.7823,
       "bar_pass_vs_state": 0.1371,
-      "bar_pass_ultimate": 0.9449
+      "bar_pass_ultimate": 0.9449,
+      "conditional_reduction_rate": null
     },
     {
       "id": "utah-quinney-law",
@@ -1526,7 +1551,8 @@
       "transfers_out": 0,
       "bar_pass_state_avg": 0.8505,
       "bar_pass_vs_state": 0.0952,
-      "bar_pass_ultimate": 0.9877
+      "bar_pass_ultimate": 0.9877,
+      "conditional_reduction_rate": null
     },
     {
       "id": "illinois-law",
@@ -1585,7 +1611,8 @@
       "transfers_out": 5,
       "bar_pass_state_avg": 0.8127,
       "bar_pass_vs_state": 0.1193,
-      "bar_pass_ultimate": 0.973
+      "bar_pass_ultimate": 0.973,
+      "conditional_reduction_rate": null
     },
     {
       "id": "kansas-law",
@@ -1644,7 +1671,8 @@
       "transfers_out": 1,
       "bar_pass_state_avg": 0.8383,
       "bar_pass_vs_state": 0.1038,
-      "bar_pass_ultimate": 0.9888
+      "bar_pass_ultimate": 0.9888,
+      "conditional_reduction_rate": 0.2047
     },
     {
       "id": "pepperdine-law",
@@ -1703,7 +1731,8 @@
       "transfers_out": 11,
       "bar_pass_state_avg": 0.8244,
       "bar_pass_vs_state": 0.0827,
-      "bar_pass_ultimate": 0.963
+      "bar_pass_ultimate": 0.963,
+      "conditional_reduction_rate": 0.2152
     },
     {
       "id": "indiana-maurer-law",
@@ -1762,7 +1791,8 @@
       "transfers_out": 1,
       "bar_pass_state_avg": 0.8095,
       "bar_pass_vs_state": 0.0367,
-      "bar_pass_ultimate": 0.9383
+      "bar_pass_ultimate": 0.9383,
+      "conditional_reduction_rate": null
     },
     {
       "id": "temple-beasley-law",
@@ -1821,7 +1851,8 @@
       "transfers_out": 2,
       "bar_pass_state_avg": 0.7985,
       "bar_pass_vs_state": 0.0915,
-      "bar_pass_ultimate": 0.966
+      "bar_pass_ultimate": 0.966,
+      "conditional_reduction_rate": null
     },
     {
       "id": "villanova-law",
@@ -1880,7 +1911,8 @@
       "transfers_out": 5,
       "bar_pass_state_avg": 0.8016,
       "bar_pass_vs_state": 0.0979,
-      "bar_pass_ultimate": 0.9647
+      "bar_pass_ultimate": 0.9647,
+      "conditional_reduction_rate": null
     },
     {
       "id": "washington-law",
@@ -1939,7 +1971,8 @@
       "transfers_out": 5,
       "bar_pass_state_avg": 0.8293,
       "bar_pass_vs_state": 0.0968,
-      "bar_pass_ultimate": 0.9636
+      "bar_pass_ultimate": 0.9636,
+      "conditional_reduction_rate": null
     },
     {
       "id": "uc-davis-law",
@@ -1998,7 +2031,8 @@
       "transfers_out": 9,
       "bar_pass_state_avg": 0.8253,
       "bar_pass_vs_state": 0.1071,
-      "bar_pass_ultimate": 0.9371
+      "bar_pass_ultimate": 0.9371,
+      "conditional_reduction_rate": null
     },
     {
       "id": "university-san-diego-law",
@@ -2057,7 +2091,8 @@
       "transfers_out": 9,
       "bar_pass_state_avg": 0.823,
       "bar_pass_vs_state": 0.0443,
-      "bar_pass_ultimate": 0.9683
+      "bar_pass_ultimate": 0.9683,
+      "conditional_reduction_rate": 0.1185
     },
     {
       "id": "houston-law",
@@ -2116,7 +2151,8 @@
       "transfers_out": 3,
       "bar_pass_state_avg": 0.8255,
       "bar_pass_vs_state": 0.019,
-      "bar_pass_ultimate": 0.9378
+      "bar_pass_ultimate": 0.9378,
+      "conditional_reduction_rate": null
     },
     {
       "id": "colorado-law",
@@ -2175,7 +2211,8 @@
       "transfers_out": 3,
       "bar_pass_state_avg": 0.8051,
       "bar_pass_vs_state": 0.0917,
-      "bar_pass_ultimate": 0.9341
+      "bar_pass_ultimate": 0.9341,
+      "conditional_reduction_rate": null
     },
     {
       "id": "tennessee-law",
@@ -2234,7 +2271,8 @@
       "transfers_out": 2,
       "bar_pass_state_avg": 0.8001,
       "bar_pass_vs_state": 0.0559,
-      "bar_pass_ultimate": 0.9279
+      "bar_pass_ultimate": 0.9279,
+      "conditional_reduction_rate": null
     },
     {
       "id": "uconn-law",
@@ -2293,7 +2331,8 @@
       "transfers_out": 5,
       "bar_pass_state_avg": 0.7355,
       "bar_pass_vs_state": 0.0926,
-      "bar_pass_ultimate": 0.8926
+      "bar_pass_ultimate": 0.8926,
+      "conditional_reduction_rate": null
     },
     {
       "id": "cardozo-law",
@@ -2352,7 +2391,8 @@
       "transfers_out": 8,
       "bar_pass_state_avg": 0.8677,
       "bar_pass_vs_state": 0.0106,
-      "bar_pass_ultimate": 0.9375
+      "bar_pass_ultimate": 0.9375,
+      "conditional_reduction_rate": null
     },
     {
       "id": "missouri-law",
@@ -2411,7 +2451,8 @@
       "transfers_out": 2,
       "bar_pass_state_avg": 0.8578,
       "bar_pass_vs_state": 0.004,
-      "bar_pass_ultimate": 0.9412
+      "bar_pass_ultimate": 0.9412,
+      "conditional_reduction_rate": 0.1818
     },
     {
       "id": "maryland-carey-law",
@@ -2470,7 +2511,8 @@
       "transfers_out": 13,
       "bar_pass_state_avg": 0.7559,
       "bar_pass_vs_state": 0.061,
-      "bar_pass_ultimate": 0.8634
+      "bar_pass_ultimate": 0.8634,
+      "conditional_reduction_rate": null
     },
     {
       "id": "richmond-law",
@@ -2529,7 +2571,8 @@
       "transfers_out": 4,
       "bar_pass_state_avg": 0.8227,
       "bar_pass_vs_state": 0.0903,
-      "bar_pass_ultimate": 0.9524
+      "bar_pass_ultimate": 0.9524,
+      "conditional_reduction_rate": null
     },
     {
       "id": "st-johns-law",
@@ -2588,7 +2631,8 @@
       "transfers_out": 0,
       "bar_pass_state_avg": 0.8708,
       "bar_pass_vs_state": 0.0047,
-      "bar_pass_ultimate": 0.9429
+      "bar_pass_ultimate": 0.9429,
+      "conditional_reduction_rate": null
     },
     {
       "id": "wayne-state-law",
@@ -2647,7 +2691,8 @@
       "transfers_out": 3,
       "bar_pass_state_avg": 0.7167,
       "bar_pass_vs_state": 0.0218,
-      "bar_pass_ultimate": 0.8762
+      "bar_pass_ultimate": 0.8762,
+      "conditional_reduction_rate": null
     },
     {
       "id": "tulane-law",
@@ -2706,7 +2751,8 @@
       "transfers_out": 7,
       "bar_pass_state_avg": 0.8189,
       "bar_pass_vs_state": -0.0577,
-      "bar_pass_ultimate": 0.9282
+      "bar_pass_ultimate": 0.9282,
+      "conditional_reduction_rate": null
     },
     {
       "id": "arizona-rogers-law",
@@ -2765,7 +2811,8 @@
       "transfers_out": 0,
       "bar_pass_state_avg": 0.7769,
       "bar_pass_vs_state": 0.0644,
-      "bar_pass_ultimate": 0.9537
+      "bar_pass_ultimate": 0.9537,
+      "conditional_reduction_rate": null
     },
     {
       "id": "loyola-la-law",
@@ -2824,7 +2871,8 @@
       "transfers_out": 10,
       "bar_pass_state_avg": 0.8267,
       "bar_pass_vs_state": -0.0295,
-      "bar_pass_ultimate": 0.9377
+      "bar_pass_ultimate": 0.9377,
+      "conditional_reduction_rate": 0.1488
     },
     {
       "id": "miami-law",
@@ -2883,7 +2931,8 @@
       "transfers_out": 9,
       "bar_pass_state_avg": 0.77,
       "bar_pass_vs_state": 0.0829,
-      "bar_pass_ultimate": 0.9096
+      "bar_pass_ultimate": 0.9096,
+      "conditional_reduction_rate": null
     },
     {
       "id": "catholic-columbus-law",
@@ -2942,7 +2991,8 @@
       "transfers_out": 5,
       "bar_pass_state_avg": 0.8192,
       "bar_pass_vs_state": 0.0846,
-      "bar_pass_ultimate": 0.9429
+      "bar_pass_ultimate": 0.9429,
+      "conditional_reduction_rate": 0.2603
     },
     {
       "id": "stanford-law",
@@ -3001,7 +3051,8 @@
       "transfers_out": 1,
       "bar_pass_state_avg": 0.8466,
       "bar_pass_vs_state": 0.1477,
-      "bar_pass_ultimate": 1.0
+      "bar_pass_ultimate": 1.0,
+      "conditional_reduction_rate": null
     },
     {
       "id": "uchicago-law",
@@ -3060,7 +3111,8 @@
       "transfers_out": 1,
       "bar_pass_state_avg": 0.8377,
       "bar_pass_vs_state": 0.1296,
-      "bar_pass_ultimate": 0.9951
+      "bar_pass_ultimate": 0.9951,
+      "conditional_reduction_rate": null
     },
     {
       "id": "yale-law",
@@ -3119,7 +3171,8 @@
       "transfers_out": 0,
       "bar_pass_state_avg": 0.854,
       "bar_pass_vs_state": 0.1314,
-      "bar_pass_ultimate": 1.0
+      "bar_pass_ultimate": 1.0,
+      "conditional_reduction_rate": null
     },
     {
       "id": "penn-carey-law",
@@ -3178,7 +3231,8 @@
       "transfers_out": 4,
       "bar_pass_state_avg": 0.8456,
       "bar_pass_vs_state": 0.0986,
-      "bar_pass_ultimate": 0.9876
+      "bar_pass_ultimate": 0.9876,
+      "conditional_reduction_rate": null
     },
     {
       "id": "uva-law",
@@ -3237,7 +3291,8 @@
       "transfers_out": 1,
       "bar_pass_state_avg": 0.8485,
       "bar_pass_vs_state": 0.1026,
-      "bar_pass_ultimate": 1.0
+      "bar_pass_ultimate": 1.0,
+      "conditional_reduction_rate": null
     },
     {
       "id": "harvard-law",
@@ -3296,7 +3351,8 @@
       "transfers_out": 2,
       "bar_pass_state_avg": 0.8524,
       "bar_pass_vs_state": 0.1266,
-      "bar_pass_ultimate": 0.9874
+      "bar_pass_ultimate": 0.9874,
+      "conditional_reduction_rate": null
     },
     {
       "id": "duke-law",
@@ -3355,7 +3411,8 @@
       "transfers_out": 1,
       "bar_pass_state_avg": 0.8459,
       "bar_pass_vs_state": 0.1364,
-      "bar_pass_ultimate": 0.9915
+      "bar_pass_ultimate": 0.9915,
+      "conditional_reduction_rate": null
     },
     {
       "id": "nyu-law",
@@ -3414,7 +3471,8 @@
       "transfers_out": 1,
       "bar_pass_state_avg": 0.8637,
       "bar_pass_vs_state": 0.1057,
-      "bar_pass_ultimate": 0.9838
+      "bar_pass_ultimate": 0.9838,
+      "conditional_reduction_rate": null
     },
     {
       "id": "columbia-law",
@@ -3473,7 +3531,8 @@
       "transfers_out": 4,
       "bar_pass_state_avg": 0.866,
       "bar_pass_vs_state": 0.0813,
-      "bar_pass_ultimate": 0.9929
+      "bar_pass_ultimate": 0.9929,
+      "conditional_reduction_rate": null
     },
     {
       "id": "northwestern-pritzker-law",
@@ -3532,7 +3591,8 @@
       "transfers_out": 4,
       "bar_pass_state_avg": 0.8249,
       "bar_pass_vs_state": 0.0934,
-      "bar_pass_ultimate": 0.9812
+      "bar_pass_ultimate": 0.9812,
+      "conditional_reduction_rate": null
     },
     {
       "id": "michigan-law",
@@ -3591,7 +3651,8 @@
       "transfers_out": 0,
       "bar_pass_state_avg": 0.8268,
       "bar_pass_vs_state": 0.1147,
-      "bar_pass_ultimate": 0.9935
+      "bar_pass_ultimate": 0.9935,
+      "conditional_reduction_rate": null
     },
     {
       "id": "vanderbilt-law",
@@ -3650,7 +3711,8 @@
       "transfers_out": 2,
       "bar_pass_state_avg": 0.8193,
       "bar_pass_vs_state": 0.1271,
-      "bar_pass_ultimate": 0.9847
+      "bar_pass_ultimate": 0.9847,
+      "conditional_reduction_rate": null
     },
     {
       "id": "cornell-law",
@@ -3709,7 +3771,8 @@
       "transfers_out": 8,
       "bar_pass_state_avg": 0.858,
       "bar_pass_vs_state": 0.0788,
-      "bar_pass_ultimate": 0.9825
+      "bar_pass_ultimate": 0.9825,
+      "conditional_reduction_rate": null
     },
     {
       "id": "ucla-law",
@@ -3768,7 +3831,8 @@
       "transfers_out": 4,
       "bar_pass_state_avg": 0.8313,
       "bar_pass_vs_state": 0.1352,
-      "bar_pass_ultimate": 0.9615
+      "bar_pass_ultimate": 0.9615,
+      "conditional_reduction_rate": null
     },
     {
       "id": "washu-law",
@@ -3827,7 +3891,8 @@
       "transfers_out": 6,
       "bar_pass_state_avg": 0.8341,
       "bar_pass_vs_state": 0.0622,
-      "bar_pass_ultimate": 0.96
+      "bar_pass_ultimate": 0.96,
+      "conditional_reduction_rate": null
     },
     {
       "id": "kentucky-rosenberg-law",
@@ -3886,7 +3951,8 @@
       "transfers_out": 3,
       "bar_pass_state_avg": 0.7886,
       "bar_pass_vs_state": 0.0096,
-      "bar_pass_ultimate": 0.8346
+      "bar_pass_ultimate": 0.8346,
+      "conditional_reduction_rate": null
     },
     {
       "id": "seton-hall-law",
@@ -3945,7 +4011,8 @@
       "transfers_out": 10,
       "bar_pass_state_avg": 0.7438,
       "bar_pass_vs_state": 0.1275,
-      "bar_pass_ultimate": 0.9325
+      "bar_pass_ultimate": 0.9325,
+      "conditional_reduction_rate": null
     },
     {
       "id": "georgia-state-law",
@@ -4004,7 +4071,8 @@
       "transfers_out": 2,
       "bar_pass_state_avg": 0.7955,
       "bar_pass_vs_state": 0.0788,
-      "bar_pass_ultimate": 0.927
+      "bar_pass_ultimate": 0.927,
+      "conditional_reduction_rate": 0.0811
     },
     {
       "id": "loyola-chicago-law",
@@ -4063,7 +4131,8 @@
       "transfers_out": 13,
       "bar_pass_state_avg": 0.8094,
       "bar_pass_vs_state": 0.0477,
-      "bar_pass_ultimate": 0.9607
+      "bar_pass_ultimate": 0.9607,
+      "conditional_reduction_rate": null
     },
     {
       "id": "northeastern-law",
@@ -4122,7 +4191,8 @@
       "transfers_out": 0,
       "bar_pass_state_avg": 0.8427,
       "bar_pass_vs_state": 0.0625,
-      "bar_pass_ultimate": 0.9406
+      "bar_pass_ultimate": 0.9406,
+      "conditional_reduction_rate": null
     },
     {
       "id": "pittsburgh-law",
@@ -4181,7 +4251,8 @@
       "transfers_out": 9,
       "bar_pass_state_avg": 0.8008,
       "bar_pass_vs_state": 0.1296,
-      "bar_pass_ultimate": 0.9619
+      "bar_pass_ultimate": 0.9619,
+      "conditional_reduction_rate": null
     },
     {
       "id": "fiu-law",
@@ -4240,7 +4311,8 @@
       "transfers_out": 4,
       "bar_pass_state_avg": 0.7593,
       "bar_pass_vs_state": 0.0997,
-      "bar_pass_ultimate": 0.9684
+      "bar_pass_ultimate": 0.9684,
+      "conditional_reduction_rate": 0.2056
     },
     {
       "id": "cincinnati-law",
@@ -4299,7 +4371,8 @@
       "transfers_out": 1,
       "bar_pass_state_avg": 0.7861,
       "bar_pass_vs_state": 0.0651,
-      "bar_pass_ultimate": 0.9504
+      "bar_pass_ultimate": 0.9504,
+      "conditional_reduction_rate": null
     },
     {
       "id": "drexel-kline-law",
@@ -4358,7 +4431,8 @@
       "transfers_out": 4,
       "bar_pass_state_avg": 0.795,
       "bar_pass_vs_state": 0.0471,
-      "bar_pass_ultimate": 0.9184
+      "bar_pass_ultimate": 0.9184,
+      "conditional_reduction_rate": 0.1803
     },
     {
       "id": "suny-buffalo-law",
@@ -4417,7 +4491,8 @@
       "transfers_out": 5,
       "bar_pass_state_avg": 0.8723,
       "bar_pass_vs_state": 0.0123,
-      "bar_pass_ultimate": 0.8974
+      "bar_pass_ultimate": 0.8974,
+      "conditional_reduction_rate": null
     }
   ]
 }
