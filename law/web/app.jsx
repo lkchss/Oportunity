@@ -397,6 +397,12 @@ function DetailScreen({ school, profile, onBack }) {
           </div>
           <Bar value={school.radar[0]} label="Admissibility" color={BAR_COLORS[0]} />
           <div className="mono">tier: {TIER_LABEL[school.admissibility_tier]} · protects both medians</div>
+          {(school.transfer_out_rate != null || school.transfer_in_rate != null) && (
+            <div className="mono">
+              transfer mobility: {Math.round((school.transfer_out_rate || 0) * 1000) / 10}% leave after 1L
+              {school.transfers_in != null && <span> · admits {school.transfers_in} transfers/yr</span>}
+            </div>
+          )}
         </div>
 
         <div className="box story-col">
@@ -406,6 +412,13 @@ function DetailScreen({ school, profile, onBack }) {
           <Bar value={school.federal_clerkship_pct * 100} label="Fed. Clerkship" color={BAR_COLORS[1]} />
           <Bar value={school.government_pct * 100} label="Government" color={BAR_COLORS[2]} />
           <Bar value={school.public_interest_pct * 100} label="Public Interest" color={BAR_COLORS[3]} />
+          <div className="mono">
+            bar pass {fmtPct(school.bar_pass_rate_first_time)}
+            {school.bar_pass_vs_state != null && (
+              <span> · {school.bar_pass_vs_state >= 0 ? "+" : ""}{Math.round(school.bar_pass_vs_state * 1000) / 10} pts vs state avg</span>
+            )}
+            {school.bar_pass_ultimate != null && <span> · {fmtPct(school.bar_pass_ultimate)} ultimate</span>}
+          </div>
           {school.target_states && school.target_states.length > 0 && (
             <div className="mono">feeder markets: {school.target_states.join(" · ")}</div>
           )}
