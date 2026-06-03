@@ -551,11 +551,12 @@ def _composite(
     location_slider: float,
     scholarship_slider: float,
     tier: str,
+    cost_sensitivity: float = 0.0,
 ) -> float:
     """
     Weighted average of six scores, scaled by admissibility tier.
 
-    Fixed weights:  admissibility 0.15, prestige 0.05  (total 0.20 fixed)
+    Fixed weights:  admissibility 0.12, prestige 0.08  (total 0.20 fixed)
     User-adjustable (sliders 0-10 each, financial absorbs the remainder):
       career_w     = 0.25 + (career_slider/10)*0.12     → [0.25, 0.37]
       location_w   = 0.17 + (location_slider/10)*0.10   → [0.17, 0.27]
@@ -569,6 +570,22 @@ def _composite(
     location_w    = 0.17 + (location_slider    / 10) * 0.10
     scholarship_w = 0.05 + (scholarship_slider / 10) * 0.10
     financial_w   = 0.80 - career_w - location_w - scholarship_w
+
+    # Financial weight is the *remainder*, so raising the scholarship-importance
+    # slider paradoxically shrinks the weight on real net debt — worst exactly for
+    # the cost-sensitive applicants who crank that slider. Guarantee financial a
+    # need-scaled floor (income bracket + scholarship slider drive cost_sensitivity),
+    # refilling the deficit proportionally from the discretionary career/location
+    # budget. No-op for cost-insensitive profiles, where the floor sits below the
+    # natural financial_w, so non-cost-driven rankings are unchanged.
+    financial_floor = 0.10 + cost_sensitivity * 0.12   # [0.10, 0.22]
+    if financial_w < financial_floor:
+        deficit = financial_floor - financial_w
+        pool = career_w + location_w
+        if pool > 0:
+            career_w   -= deficit * (career_w / pool)
+            location_w -= deficit * (location_w / pool)
+        financial_w = financial_floor
 
     raw = (
         scores["admissibility"] * 0.12
@@ -717,6 +734,12 @@ def rank_schools(
     scholarship_slider = profile.get("scholarship", 5)
     career_slider      = profile.get("career_weight", 5)
     location_slider    = profile.get("location_weight", 5)
+
+    # Cost-sensitivity drives the financial-weight floor in _composite: the higher
+    # of the applicant's income-based need and their explicit scholarship slider.
+    need_factor      = _NEED_FACTORS.get(profile.get("income_bracket", "prefer_not"), 0.30)
+    cost_sensitivity = max(need_factor, scholarship_slider / 10)
+
     scalars = _precompute_career_scalars(schools)
     generosity_max = _precompute_scholarship_scalar(schools)
 
@@ -749,7 +772,8 @@ def rank_schools(
         entry["financial_breakdown"]   = breakdown
         entry.update(_transfer_metrics(school))
         entry["composite_score"]       = round(
-            _composite(scores, career_slider, location_slider, scholarship_slider, tier), 1
+            _composite(scores, career_slider, location_slider, scholarship_slider,
+                       tier, cost_sensitivity), 1
         )
         scored.append(entry)
 
