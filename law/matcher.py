@@ -194,6 +194,13 @@ def _compute_career_fit(profile: dict, school: dict, scalars: dict) -> float:
         real_placement = max(employed - funded, 0.0)
         score = score * 0.70 + (real_placement * 100) * 0.30
 
+    # Bar-passage value-add (ABA 2026): a school that beats its state's first-time
+    # pass rate adds outcome value beyond the students it admits; one that lags is
+    # a risk. bar_pass_vs_state is school-minus-state; nudge career ±10% (capped).
+    vs_state = school.get("bar_pass_vs_state")
+    if vs_state is not None:
+        score *= 1 + max(-0.10, min(0.10, vs_state))
+
     return _clamp(score)
 
 
