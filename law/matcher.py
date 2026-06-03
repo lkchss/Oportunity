@@ -354,9 +354,13 @@ def _compute_scholarship(
     )
 
     # Conditional scholarships (ABA reported) can be revoked after 1L if the
-    # student misses a GPA stipulation — a real downside risk, lightly penalized.
+    # student misses a GPA stipulation. Penalize by the school's ACTUAL reduction
+    # rate (share of conditional awards historically cut) when known — a school
+    # that rarely cuts is low-risk, one that guts a quarter of them is not — and
+    # fall back to a flat penalty when the rate is unavailable.
     if school.get("conditional_scholarship"):
-        merit_score -= 5.0
+        reduction_rate = school.get("conditional_reduction_rate")
+        merit_score -= reduction_rate * 40.0 if reduction_rate is not None else 5.0
 
     # --- Need component ---
     income_bracket = profile.get("income_bracket", "prefer_not")
