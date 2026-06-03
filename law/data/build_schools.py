@@ -217,8 +217,19 @@ def build_base_record(aba: str, fy_row, tui_row, basics_row, grants_row, emp_row
     sid = _slug(name)
 
     # Tuition (ABA): resident vs non-resident; private schools report them equal.
-    res = _num(tui_row["FT_Resident_Annual"]) if tui_row is not None else 0.0
-    nonres = _num(tui_row["FT_NonResident_Annual"]) if tui_row is not None else 0.0
+    # Many schools leave the *Annual columns blank and bill per credit instead —
+    # fall back to FT_*_Credit x a standard full-time JD load (~30 credits/year;
+    # total required hours vary 87-90 and some report quarter-hours, so a flat 30
+    # is the robust estimate).
+    _CREDITS_PER_YEAR = 30
+    res = nonres = 0.0
+    if tui_row is not None:
+        res = _num(tui_row["FT_Resident_Annual"])
+        nonres = _num(tui_row["FT_NonResident_Annual"])
+        if res <= 0:
+            res = _num(tui_row["FT_Resident_Credit"]) * _CREDITS_PER_YEAR
+        if nonres <= 0:
+            nonres = _num(tui_row["FT_NonResident_Credit"]) * _CREDITS_PER_YEAR
     nonres = nonres or res
     res = res or nonres
 
