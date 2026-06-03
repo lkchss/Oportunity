@@ -4725,9 +4725,9 @@
       "target_states": [
         "AR"
       ],
-      "annual_tuition": 13770,
+      "annual_tuition": 30180,
       "annual_tuition_resident": 13770,
-      "annual_tuition_nonresident": 13770,
+      "annual_tuition_nonresident": 30180,
       "cost_of_living_index": 100,
       "class_size_1l": 154,
       "scholarship_full_pct": 0.0881,
@@ -4775,9 +4775,9 @@
       "target_states": [
         "AR"
       ],
-      "annual_tuition": 0,
-      "annual_tuition_resident": 0,
-      "annual_tuition_nonresident": 0,
+      "annual_tuition": 39120,
+      "annual_tuition_resident": 16230,
+      "annual_tuition_nonresident": 39120,
       "cost_of_living_index": 100,
       "class_size_1l": 135,
       "scholarship_full_pct": 0.0217,
@@ -5525,9 +5525,9 @@
       "target_states": [
         "IL"
       ],
-      "annual_tuition": 0,
-      "annual_tuition_resident": 0,
-      "annual_tuition_nonresident": 0,
+      "annual_tuition": 54900,
+      "annual_tuition_resident": 54900,
+      "annual_tuition_nonresident": 54900,
       "cost_of_living_index": 105,
       "class_size_1l": 255,
       "scholarship_full_pct": 0.0398,
@@ -5675,9 +5675,9 @@
       "target_states": [
         "MI"
       ],
-      "annual_tuition": 0,
-      "annual_tuition_resident": 0,
-      "annual_tuition_nonresident": 0,
+      "annual_tuition": 47400,
+      "annual_tuition_resident": 47400,
+      "annual_tuition_nonresident": 47400,
       "cost_of_living_index": 100,
       "class_size_1l": 252,
       "scholarship_full_pct": 0.0131,
@@ -5725,9 +5725,9 @@
       "target_states": [
         "NE"
       ],
-      "annual_tuition": 0,
-      "annual_tuition_resident": 0,
-      "annual_tuition_nonresident": 0,
+      "annual_tuition": 46260,
+      "annual_tuition_resident": 46260,
+      "annual_tuition_nonresident": 46260,
       "cost_of_living_index": 100,
       "class_size_1l": 168,
       "scholarship_full_pct": 0.1589,
@@ -5775,9 +5775,9 @@
       "target_states": [
         "OH"
       ],
-      "annual_tuition": 0,
-      "annual_tuition_resident": 0,
-      "annual_tuition_nonresident": 0,
+      "annual_tuition": 41400,
+      "annual_tuition_resident": 41400,
+      "annual_tuition_nonresident": 41400,
       "cost_of_living_index": 100,
       "class_size_1l": 170,
       "scholarship_full_pct": 0.0557,
@@ -5925,9 +5925,9 @@
       "target_states": [
         "MI"
       ],
-      "annual_tuition": 0,
-      "annual_tuition_resident": 0,
-      "annual_tuition_nonresident": 0,
+      "annual_tuition": 48480,
+      "annual_tuition_resident": 48480,
+      "annual_tuition_nonresident": 48480,
       "cost_of_living_index": 100,
       "class_size_1l": 247,
       "scholarship_full_pct": 0.0096,
@@ -6225,9 +6225,9 @@
       "target_states": [
         "FL"
       ],
-      "annual_tuition": 0,
-      "annual_tuition_resident": 0,
-      "annual_tuition_nonresident": 0,
+      "annual_tuition": 32940,
+      "annual_tuition_resident": 13680,
+      "annual_tuition_nonresident": 32940,
       "cost_of_living_index": 102,
       "class_size_1l": 181,
       "scholarship_full_pct": 0.0595,
@@ -6575,9 +6575,9 @@
       "target_states": [
         "IL"
       ],
-      "annual_tuition": 0,
-      "annual_tuition_resident": 0,
-      "annual_tuition_nonresident": 0,
+      "annual_tuition": 46800,
+      "annual_tuition_resident": 37440,
+      "annual_tuition_nonresident": 46800,
       "cost_of_living_index": 105,
       "class_size_1l": 420,
       "scholarship_full_pct": 0.0091,
@@ -6625,9 +6625,9 @@
       "target_states": [
         "IN"
       ],
-      "annual_tuition": 0,
-      "annual_tuition_resident": 0,
-      "annual_tuition_nonresident": 0,
+      "annual_tuition": 49650,
+      "annual_tuition_resident": 30840,
+      "annual_tuition_nonresident": 49650,
       "cost_of_living_index": 100,
       "class_size_1l": 285,
       "scholarship_full_pct": 0.0647,
@@ -6725,9 +6725,9 @@
       "target_states": [
         "FL"
       ],
-      "annual_tuition": 0,
-      "annual_tuition_resident": 0,
-      "annual_tuition_nonresident": 0,
+      "annual_tuition": 36000,
+      "annual_tuition_resident": 36000,
+      "annual_tuition_nonresident": 36000,
       "cost_of_living_index": 102,
       "class_size_1l": 72,
       "scholarship_full_pct": 0.0,
@@ -6874,9 +6874,9 @@
       "target_states": [
         "TN"
       ],
-      "annual_tuition": 0,
-      "annual_tuition_resident": 0,
-      "annual_tuition_nonresident": 0,
+      "annual_tuition": 44700,
+      "annual_tuition_resident": 44700,
+      "annual_tuition_nonresident": 44700,
       "cost_of_living_index": 100,
       "class_size_1l": 165,
       "scholarship_full_pct": 0.07,
@@ -7472,9 +7472,9 @@
       "target_states": [
         "MO"
       ],
-      "annual_tuition": 0,
-      "annual_tuition_resident": 0,
-      "annual_tuition_nonresident": 0,
+      "annual_tuition": 29580,
+      "annual_tuition_resident": 23580,
+      "annual_tuition_nonresident": 29580,
       "cost_of_living_index": 100,
       "class_size_1l": 149,
       "scholarship_full_pct": 0.0414,
@@ -7622,9 +7622,9 @@
       "target_states": [
         "NE"
       ],
-      "annual_tuition": 0,
-      "annual_tuition_resident": 0,
-      "annual_tuition_nonresident": 0,
+      "annual_tuition": 36870,
+      "annual_tuition_resident": 13680,
+      "annual_tuition_nonresident": 36870,
       "cost_of_living_index": 100,
       "class_size_1l": 157,
       "scholarship_full_pct": 0.0679,
@@ -8022,9 +8022,9 @@
       "target_states": [
         "ND"
       ],
-      "annual_tuition": 0,
-      "annual_tuition_resident": 0,
-      "annual_tuition_nonresident": 0,
+      "annual_tuition": 35430,
+      "annual_tuition_resident": 17730,
+      "annual_tuition_nonresident": 35430,
       "cost_of_living_index": 100,
       "class_size_1l": 98,
       "scholarship_full_pct": 0.0176,
@@ -8072,9 +8072,9 @@
       "target_states": [
         "TX"
       ],
-      "annual_tuition": 0,
-      "annual_tuition_resident": 0,
-      "annual_tuition_nonresident": 0,
+      "annual_tuition": 29310,
+      "annual_tuition_resident": 16860,
+      "annual_tuition_nonresident": 29310,
       "cost_of_living_index": 100,
       "class_size_1l": 127,
       "scholarship_full_pct": 0.0184,
@@ -8322,9 +8322,9 @@
       "target_states": [
         "OK"
       ],
-      "annual_tuition": 0,
-      "annual_tuition_resident": 0,
-      "annual_tuition_nonresident": 0,
+      "annual_tuition": 33210,
+      "annual_tuition_resident": 33210,
+      "annual_tuition_nonresident": 33210,
       "cost_of_living_index": 100,
       "class_size_1l": 165,
       "scholarship_full_pct": 0.0726,
@@ -8622,9 +8622,9 @@
       "target_states": [
         "PR"
       ],
-      "annual_tuition": 0,
-      "annual_tuition_resident": 0,
-      "annual_tuition_nonresident": 0,
+      "annual_tuition": 16200,
+      "annual_tuition_resident": 16200,
+      "annual_tuition_nonresident": 16200,
       "cost_of_living_index": 90,
       "class_size_1l": 194,
       "scholarship_full_pct": 0.0104,
@@ -8672,9 +8672,9 @@
       "target_states": [
         "PR"
       ],
-      "annual_tuition": 0,
-      "annual_tuition_resident": 0,
-      "annual_tuition_nonresident": 0,
+      "annual_tuition": 9150,
+      "annual_tuition_resident": 9150,
+      "annual_tuition_nonresident": 9150,
       "cost_of_living_index": 90,
       "class_size_1l": 122,
       "scholarship_full_pct": 0.0,
@@ -8772,9 +8772,9 @@
       "target_states": [
         "VA"
       ],
-      "annual_tuition": 0,
-      "annual_tuition_resident": 0,
-      "annual_tuition_nonresident": 0,
+      "annual_tuition": 42000,
+      "annual_tuition_resident": 42000,
+      "annual_tuition_nonresident": 42000,
       "cost_of_living_index": 105,
       "class_size_1l": 127,
       "scholarship_full_pct": 0.0061,
@@ -9072,9 +9072,9 @@
       "target_states": [
         "CA"
       ],
-      "annual_tuition": 0,
-      "annual_tuition_resident": 0,
-      "annual_tuition_nonresident": 0,
+      "annual_tuition": 67800,
+      "annual_tuition_resident": 67800,
+      "annual_tuition_nonresident": 67800,
       "cost_of_living_index": 135,
       "class_size_1l": 262,
       "scholarship_full_pct": 0.1988,
@@ -9122,9 +9122,9 @@
       "target_states": [
         "WA"
       ],
-      "annual_tuition": 0,
-      "annual_tuition_resident": 0,
-      "annual_tuition_nonresident": 0,
+      "annual_tuition": 61830,
+      "annual_tuition_resident": 61830,
+      "annual_tuition_nonresident": 61830,
       "cost_of_living_index": 115,
       "class_size_1l": 214,
       "scholarship_full_pct": 0.1111,
@@ -9322,9 +9322,9 @@
       "target_states": [
         "IL"
       ],
-      "annual_tuition": 0,
-      "annual_tuition_resident": 0,
-      "annual_tuition_nonresident": 0,
+      "annual_tuition": 16410,
+      "annual_tuition_resident": 16410,
+      "annual_tuition_nonresident": 16410,
       "cost_of_living_index": 105,
       "class_size_1l": 134,
       "scholarship_full_pct": 0.026,
@@ -10122,9 +10122,9 @@
       "target_states": [
         "KS"
       ],
-      "annual_tuition": 0,
-      "annual_tuition_resident": 0,
-      "annual_tuition_nonresident": 0,
+      "annual_tuition": 41790,
+      "annual_tuition_resident": 27960,
+      "annual_tuition_nonresident": 41790,
       "cost_of_living_index": 100,
       "class_size_1l": 138,
       "scholarship_full_pct": 0.1725,
@@ -10322,9 +10322,9 @@
       "target_states": [
         "PA"
       ],
-      "annual_tuition": 0,
-      "annual_tuition_resident": 0,
-      "annual_tuition_nonresident": 0,
+      "annual_tuition": 56250,
+      "annual_tuition_resident": 56250,
+      "annual_tuition_nonresident": 56250,
       "cost_of_living_index": 100,
       "class_size_1l": 161,
       "scholarship_full_pct": 0.005,
@@ -10372,9 +10372,9 @@
       "target_states": [
         "DE"
       ],
-      "annual_tuition": 0,
-      "annual_tuition_resident": 0,
-      "annual_tuition_nonresident": 0,
+      "annual_tuition": 58500,
+      "annual_tuition_resident": 58500,
+      "annual_tuition_nonresident": 58500,
       "cost_of_living_index": 100,
       "class_size_1l": 316,
       "scholarship_full_pct": 0.0132,
@@ -10472,9 +10472,9 @@
       "target_states": [
         "DE"
       ],
-      "annual_tuition": 0,
-      "annual_tuition_resident": 0,
-      "annual_tuition_nonresident": 0,
+      "annual_tuition": 25140,
+      "annual_tuition_resident": 25140,
+      "annual_tuition_nonresident": 25140,
       "cost_of_living_index": 100,
       "class_size_1l": 78,
       "scholarship_full_pct": 0.0217,
@@ -10519,9 +10519,9 @@
       "target_states": [
         "WY"
       ],
-      "annual_tuition": 0,
-      "annual_tuition_resident": 0,
-      "annual_tuition_nonresident": 0,
+      "annual_tuition": 36870,
+      "annual_tuition_resident": 17280,
+      "annual_tuition_nonresident": 36870,
       "cost_of_living_index": 100,
       "class_size_1l": 74,
       "scholarship_full_pct": 0.0655,
