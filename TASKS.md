@@ -1,8 +1,7 @@
 ## Backlog
 - [ ] Refine plain web styling into final visual design (placeholder style in law/web/)
 - [ ] UI/UX streamlining pass (informed by stress test findings)
-- [ ] Enable LLM narratives (law/llm_client.py is built, currently unused)
-- [ ] Next loop iter: 2 residual regressions (p03, p14) — both mid/low-income MA/NY profiles where judge still wants a stronger aid story
+- [ ] p14 residual regression: no-LSAT/MA/65k-130k — MA private schools ($250k debt) top the list on location; needs an affordable in-state option (UMass not in dataset) or real grad-debt $ to fix. Cost-sensitivity floor didn't bind (income 65-130k + default slider).
 - [ ] Add class_size_1l -> admissibility softener (transfers now done as a feature)
 - [ ] Tier-3 STILL BLOCKED ON DATA: median_grad_debt (LST blocked, not in ABA) + placement_by_state (per-school PDFs).
       Real debt $ remains the #1 judge ask. Bar passage + conditional-retention DONE.
@@ -14,6 +13,8 @@
 ## In progress
 
 ## Done
+- [x] Remove unused LLM narrative generator (law/llm_client.py + dead app-import test). Not wired into server/matcher.
+- [x] Fix p03 regression: cost-sensitivity financial-weight floor in _composite (scholarship slider no longer starves financial weight). LLM-judge 10-5 (67%) -> KEEP. Fixed p03/p09/p16/p23; losses spread (p01/p02/p08/p15/p17), not concentrated.
 - [x] Push algo-optimization branch to origin (17 commits).
 - [x] Conditional-scholarship penalty scaled by real reduction_rate (data + matcher). LLM-judge 5-4 (56%, marginal) -> KEEP.
 - [x] Wire bar_pass_vs_state into career fit (±10% value-add). LLM-judge 17-7 (71%) -> KEEP, commit 35e6f49.
