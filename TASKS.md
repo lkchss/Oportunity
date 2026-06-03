@@ -4,8 +4,11 @@
 - [ ] Enable LLM narratives (law/llm_client.py is built, currently unused)
 - [ ] Next loop iter: 2 residual regressions (p03, p14) — both mid/low-income MA/NY profiles where judge still wants a stronger aid story
 - [ ] Add class_size_1l -> admissibility softener (transfers now done as a feature)
-- [ ] Tier-3 BLOCKED ON DATA: median_grad_debt, bar_pass_ultimate (+state avg), placement_by_state are NOT in the 5 ABA bulk files.
-      Need: ABA "Bar Passage Outcomes" report + a graduate-debt source (US News / ABA GRD). Drop in law/data/raw/ to proceed.
+- [ ] NEXT LEVER (useful data already in hand, unused): conditional-scholarship RETENTION — Tuition file cols
+      EnteringScholarships_/ReducedScholarships_ give the fraction of conditional awards later cut. Replace the
+      flat -5 conditional penalty with a magnitude-based one, then judge.
+- [ ] Tier-3 STILL BLOCKED ON DATA: median_grad_debt (LST blocked, not in ABA) + placement_by_state (per-school PDFs).
+      Bar passage DONE (added First_Time + Two-Year Ultimate 2026). Real debt $ remains the #1 judge ask.
 - [ ] Render transfer-up plan styling in the final UI pass (TransferPanel is placeholder-styled)
 - [ ] Add lower-ranked schools (ranks 83+) so the transfer-up launchpad list works for genuinely-not-T14 profiles (157/3.4 currently has 0 safety/target)
 - [ ] Data enrichment HARD/predicted (later): selectivity trend (multi-year), NLJ250-by-market, part-time/transfer
@@ -13,6 +16,9 @@
 ## In progress
 
 ## Done
+- [x] Wire bar_pass_vs_state into career fit (±10% value-add). LLM-judge 17-7 (71%) -> KEEP, commit 35e6f49.
+- [x] Add ABA 2026 bar passage data (first-time, state avg, vs-state, ultimate) for all 75. Commit + detail-screen surfacing.
+- [x] Finish transfer feature: surface mobility + bar passage on school detail screen.
 - [x] Transfer-up feature: _transfer_metrics + transfer_up_plan (launchpads/targets) in matcher, /api/match transfer_plan, TransferPanel UI, 6 tests. Commit daa4697.
 - [x] Tier-3 available part: recompute 5 real career outcome rates from ABA Employment Summary. LLM-judge 17-7 (71%) -> KEEP, commit 5adb764.
 - [x] Normalize grid scholarship generosity to dataset max. LLM-judge 13-2 (87%) over iter-1 -> KEEP, committed d9f90f3.
