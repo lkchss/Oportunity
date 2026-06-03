@@ -196,6 +196,19 @@ def main() -> None:
         t = tuition.get(aba)
         conditional = bool(t is not None and str(t["OfferScholorships"]).strip().upper() == "Y")
 
+        # Conditional-scholarship retention risk: share of entering conditional
+        # awards later reduced/eliminated, pooled over the two most recent years
+        # for stability. None when the school offers no conditional aid or reports
+        # no entering conditional students.
+        conditional_reduction_rate = None
+        if conditional and t is not None:
+            ent = (_num(t["EnteringScholarships_24_25"])
+                   + _num(t["EnteringScholarships_23_24"]))
+            red = (_num(t["ReducedScholarships_24_25"])
+                   + _num(t["ReducedScholarships_23_24"]))
+            if ent > 0:
+                conditional_reduction_rate = round(red / ent, 4)
+
         tr = transfers.get(aba)
         transfers_in = int(_num(tr["TransferIn"])) if tr is not None else None
         transfers_out = int(_num(tr["JD1 Transfers Out"])) if tr is not None else None
@@ -229,6 +242,7 @@ def main() -> None:
         school["scholarship_less_than_half_pct"] = less_than_half_pct
         school["no_scholarship_pct"] = no_pct
         school["conditional_scholarship"] = conditional
+        school["conditional_reduction_rate"] = conditional_reduction_rate
         school["employed_10mo_pct"] = employed_10mo_pct
         school["school_funded_pct"] = school_funded_pct
         school["transfers_in"] = transfers_in
