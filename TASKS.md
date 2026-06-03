@@ -1,7 +1,10 @@
 ## Backlog
-- [ ] Refine plain web styling into final visual design (placeholder style in law/web/)
+- [ ] NEXT LEVER — over-qualification / safety-intrusion dampener: cheap UNRANKED schools where the applicant is far above the 75th pctile now top high-stats & no-location lists (e.g. Jacksonville #1 for 166/3.78 p18; out-of-state cheap schools pushed MA schools down for p14). Exposed by the coverage expansion. Likely cause of most of the 9 expansion losses. Needs its own eval cycle.
+- [ ] Verify the 121 new schools: 4 assigned elite ranks (Berkeley 10/Georgetown 14/UT 16/UNC 22) + soft estimated defaults (median_private_salary $90k, public $58k, COL, lrap=moderate, target_states=[home]). Data warnings: wilmington (no employment/bar rows), ohio-northern (scholarship grid sums to 1.78).
+- [ ] Optionally merge a real US News 2026 rank list for the 83-150 band (currently RNP-sentinel 999; prestige floors at ~0 past rank 84 so low impact).
+- [ ] Refine plain web styling into final visual design (placeholder style in law/web/); render usnwr_rank_2026==999 as "Unranked" in web/server like the judge prompt now does.
 - [ ] UI/UX streamlining pass (informed by stress test findings)
-- [ ] p14 residual regression: no-LSAT/MA/65k-130k — MA private schools ($250k debt) top the list on location; needs an affordable in-state option (UMass not in dataset) or real grad-debt $ to fix. Cost-sensitivity floor didn't bind (income 65-130k + default slider).
+- [ ] p14 (no-LSAT/MA/65k-130k): UMass (in-state MA, affordable) now IS in the dataset, but expansion still regressed p14 — cheap out-of-state schools pushed MA schools down (the over-qualification/intrusion artifact above). Fixing the dampener should also fix p14.
 - [ ] Add class_size_1l -> admissibility softener (transfers now done as a feature)
 - [ ] Tier-3 STILL BLOCKED ON DATA: median_grad_debt (LST blocked, not in ABA) + placement_by_state (per-school PDFs).
       Real debt $ remains the #1 judge ask. Bar passage + conditional-retention DONE.
@@ -13,6 +16,7 @@
 ## In progress
 
 ## Done
+- [x] Expand coverage 75 -> 196 schools: add all 121 missing ABA schools via law/data/build_schools.py (base record from First_Year_Class admissibility + Tuitions + The_Basics; enrichment fills real career/scholarship/bar/transfers). Fixes the coverage cliff (was 0 schools with median LSAT <=155; sub-156 applicants now get real safety/target lists). Includes elite gaps Berkeley/Georgetown/UT-Austin/UNC + UMass. LLM-judge 12-9 (57%) -> KEEP (marginal; depressed by the over-qualification artifact now queued as next lever). Also: dti computed from rounded net_debt (test invariant); judge prompt renders RNP.
 - [x] Remove unused LLM narrative generator (law/llm_client.py + dead app-import test). Not wired into server/matcher.
 - [x] Fix p03 regression: cost-sensitivity financial-weight floor in _composite (scholarship slider no longer starves financial weight). LLM-judge 10-5 (67%) -> KEEP. Fixed p03/p09/p16/p23; losses spread (p01/p02/p08/p15/p17), not concentrated.
 - [x] Push algo-optimization branch to origin (17 commits).

@@ -47,8 +47,10 @@ def _fmt_ranking(rows: list[dict]) -> str:
     for i, s in enumerate(rows, 1):
         debt = s.get("net_debt")
         debt_str = f"${debt:,}" if isinstance(debt, (int, float)) else "n/a"
+        rank = s.get("usnwr_rank")
+        rank_str = "Unranked" if (rank is None or rank >= 999) else f"USNWR #{rank}"
         lines.append(
-            f"{i:>2}. {s['name']} (USNWR #{s['usnwr_rank']}) "
+            f"{i:>2}. {s['name']} ({rank_str}) "
             f"[{s['admissibility_tier']}] "
             f"composite={s['composite_score']} "
             f"admiss={s['admissibility_score']} career={s['career_fit_score']} "

@@ -479,8 +479,10 @@ def _compute_financial(
         else school.get("median_public_sector_salary", 60000)
     )
 
-    # Primary score: standard 10-yr repayment DTI (conservative baseline)
-    dti            = net_debt / max(starting_salary, 1)
+    # Primary score: standard 10-yr repayment DTI (conservative baseline).
+    # Use the rounded net_debt that gets reported so the displayed DTI exactly
+    # equals reported net_debt / salary (no off-by-a-cent rounding drift).
+    dti            = round(net_debt) / max(starting_salary, 1)
     score          = _clamp(100 - (dti * 25))
     monthly_payment = net_debt * _MONTHLY_PAYMENT_FACTOR
 
