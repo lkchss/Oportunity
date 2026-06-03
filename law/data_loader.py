@@ -61,6 +61,10 @@ OPTIONAL_FIELDS = {
     # Transfer mobility (ABA 2025 Transfers report) — for "transfer up after 1L" use case
     "transfers_in": (int, float),
     "transfers_out": (int, float),
+    # Bar passage (ABA 2026 First-Time + Two-Year Ultimate reports), fractions 0-1
+    "bar_pass_state_avg": (int, float),
+    "bar_pass_vs_state": (int, float),   # school first-time minus state avg (signed)
+    "bar_pass_ultimate": (int, float),
 }
 
 
