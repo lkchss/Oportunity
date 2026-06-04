@@ -4,14 +4,21 @@ Serves the static frontend in ``law/web`` and exposes a single JSON endpoint
 that runs the matching algorithm against a posted profile.
 """
 
+import hmac
+import os
 from pathlib import Path
 
-from flask import Flask, jsonify, request, send_from_directory
+from flask import Flask, Response, jsonify, request, send_from_directory
 
 from law.data_loader import DataValidationError, load_law_schools
 from law.matcher import rank_schools, transfer_up_plan
 
 WEB_DIR = Path(__file__).parent / "web"
+
+# Single shared password (HTTP Basic Auth). Set APP_PASSWORD in the deploy
+# environment to gate the whole site; leave it unset for open local dev. The
+# browser supplies a username we ignore — only the password is checked.
+_APP_PASSWORD = os.environ.get("APP_PASSWORD")
 
 # Radar axis order — must match SCORE_NAMES on the frontend.
 _RADAR_KEYS = [
@@ -29,6 +36,23 @@ try:
     _SCHOOLS = load_law_schools()
 except (FileNotFoundError, DataValidationError) as exc:  # pragma: no cover
     raise SystemExit(f"Failed to load law school data: {exc}")
+
+
+@app.before_request
+def _require_password() -> Response | None:
+    """Gate every route behind a single shared password when one is configured."""
+    if not _APP_PASSWORD:
+        return None  # no password set — open (local dev)
+    auth = request.authorization
+    if auth is not None and auth.password is not None and hmac.compare_digest(
+        auth.password, _APP_PASSWORD
+    ):
+        return None
+    return Response(
+        "Authentication required.",
+        401,
+        {"WWW-Authenticate": 'Basic realm="Law School Matcher"'},
+    )
 
 
 def _build_profile(payload: dict) -> dict:

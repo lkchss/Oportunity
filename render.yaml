@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: law-school-matcher
+    runtime: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn law.server:app --bind 0.0.0.0:$PORT
+    envVars:
+      # Shared site password — set this value in the Render dashboard at deploy
+      # time (sync:false means Render will prompt rather than read it from here,
+      # so the password never lands in the repo).
+      - key: APP_PASSWORD
+        sync: false
+      - key: PYTHON_VERSION
+        value: 3.12.7
