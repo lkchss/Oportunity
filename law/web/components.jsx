@@ -39,9 +39,10 @@ function fmtPct(frac) {
   if (frac == null) return "—";
   return Math.round(frac * 100) + "%";
 }
-/* USNWR rank — the 999 sentinel means Rank-Not-Published; show N/A. */
+/* USNWR rank — the 999 sentinel means Rank-Not-Published (same label the
+   judge prompt uses). */
 function fmtRank(rank) {
-  if (rank == null || rank >= 999) return "N/A";
+  if (rank == null || rank >= 999) return "Unranked";
   return "#" + rank;
 }
 

@@ -1,0 +1,4 @@
+# Law School Matcher (law/) deploy dependencies only — keeps Render builds
+# small. The full dev/MVP stack lives in requirements.txt.
+flask>=3.0.0
+gunicorn>=21.2.0

@@ -538,3 +538,25 @@ class TestTransferUp:
         tx_ids = [lp["id"] for lp in tx["launchpads"]] + [t["id"] for t in tx["targets"]]
         ny_ids = [lp["id"] for lp in ny["launchpads"]] + [t["id"] for t in ny["targets"]]
         assert tx_ids != ny_ids
+
+
+class TestDisplayOnlyFields:
+    def test_display_only_fields_never_affect_ranking(self, schools):
+        """Quality + Scorecard fields are display-only by contract: stripping
+        them must produce the identical ranking. Guards against accidental
+        wiring into the matcher."""
+        display_only = {
+            "attrition_1l_pct", "faculty_ft_total", "student_faculty_ratio",
+            "clinic_seats_filled", "field_placements_filled",
+            "simulation_seats_filled", "hands_on_per_student",
+            "scorecard_median_debt", "scorecard_debt_monthly",
+            "scorecard_earn_1yr", "scorecard_earn_4yr",
+        }
+        profile = _profile(lsat=160, gpa=3.5, goal="BigLaw", target_state="NY")
+        base = rank_schools(profile, schools, top_n=30)
+        stripped = [{k: v for k, v in s.items() if k not in display_only}
+                    for s in schools]
+        again = rank_schools(profile, stripped, top_n=30)
+        assert [s["id"] for s in base] == [s["id"] for s in again]
+        assert ([s["composite_score"] for s in base]
+                == [s["composite_score"] for s in again])

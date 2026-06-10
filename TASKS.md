@@ -1,7 +1,7 @@
 ## Backlog
 - [x] BUG FIXED (2026-06-10, commit 1d9071d): no-LSAT scholarship inflation — lsat=160 placeholder hit the splitter merit path. Now GPA-only merit + GPA-only percentile fit when LSAT is None. appalachian: None 83.0→62.9 (real-150 = 66.5). Snapshot diff: only p14/p15 (the two no-LSAT seeds) changed, lower-rank reshuffles only, top-5 stable. Regression test added (all lsat_75<=154 schools).
 - [x] Audit follow-ups DONE (2026-06-10): claude_client.py deleted + google-generativeai dropped + no-LLM rule in CLAUDE.md (commit 05e1314); rounds 3-6 committed (9515bc3); mvp consolidation committed (b920619).
-- [ ] Audit follow-ups remaining (low): decide fate of legacy law/main.py Streamlit UI (frozen pre-round-3); clamp 4 scholarship_pct values >1.0 in build_schools (dayton/iu-mckinney/mitchell-hamline/penn-state-dickinson, fallback-path only); law-only requirements file for Render build speed  → uses: none
+- [x] Audit follow-ups remaining DONE (2026-06-10): legacy law/main.py DELETED (frozen pre-round-3 duplicate; Flask server.py is the app; CLAUDE.md updated — run via `python -m law.server`); scholarship_pct clamped to 1.0 (4 schools + min() in build_schools); requirements-law.txt (flask+gunicorn only) + render.yaml now uses it.
 ### Law additions — non-LLM, audit 2026-06-10 (3 ABA datasets already on disk, unwired)
 - [x] Wire 3 ABA quality reports (2026-06-10, commit 9e3de06): law/data/build_quality.py merges Attrition + Faculty Resources + Curricular Offerings into law_schools.json (196/196). New fields: attrition_1l_pct (range 0-21%, 6 schools >15%; flagged "high" >10% on detail screen, paired with conditional-scholarship warning), student_faculty_ratio (4.9-36.0), clinic/field/simulation seats + hands_on_per_student. DISPLAY-ONLY — nothing scored, eval unaffected. Loader validates; range test added.
 - [ ] Optional later: career-fit nudge from hands_on_per_student for PI/government goals (eval-affecting — needs LLM-judge run)  → uses: reviewer (top)
@@ -15,15 +15,15 @@
 - [ ] MVP: delete retired one-offs (_grade.py, _grade_h.py, _grade_j.py, _grade_n.py, export_horizons.py, export_jobs.py; finder.py kept for back-compat) once lists.py proven over a few cycles  → uses: none
 - [ ] (TRIED & REVERTED) over-qualification dampener: composite multiplier (1-min((overshoot-3)/30, .45)) on schools far above the applicant's reach. Cleanly fixed p18 (Jacksonville off #1) but LLM-judge 7-11 (39%) -> REVERT. Regressions spanned high-stats non-cost-sensitive profiles (p07/p08/p12/p20), so it's not a calibration miss: the judge WANTS affordable safeties in lists, and any dampener strong enough to move Jacksonville off #1 also pushes down safeties it likes. Don't retry a global dampener; the Jacksonville-style intrusion is apparently tolerated by the judge. The matcher is now plateaued (data-blocked + judge rewards no further re-weighting).
 - [ ] (still verify, low priority) 4 assigned elite ranks (Berkeley 10/Georgetown 14/UT 16/UNC 22) + soft estimated defaults (salary $90k/$58k, COL, lrap=moderate, target_states=[home]) are mine-from-memory/heuristic. Known minor data: wilmington (brand-new, no employment/bar outcomes -> honest zeros), ohio-northern (scholarship grid sums to 1.78 but no_scholarship_pct isn't scored, cosmetic), marquette bar=0 (WI diploma privilege).
-- [ ] Optionally merge a real US News 2026 rank list for the 83-150 band (currently RNP-sentinel 999; prestige floors at ~0 past rank 84 so low impact).
-- [ ] Refine plain web styling into final visual design (placeholder style in law/web/); render usnwr_rank_2026==999 as "Unranked" in web/server like the judge prompt now does.
+- [ ] Optionally merge a real US News 2026 rank list for the 83-150 band. Note (2026-06-10): ZERO scoring impact (prestige formula floors at 0 past rank ~84) — value is purely display ("#95" vs "Unranked"). Needs a fact-checked source for ~70 schools; skipped in autonomous pass for that reason.  → uses: fact-checker (top)
+- [ ] Refine plain web styling into final visual design (placeholder style in law/web/). (DONE 2026-06-10: rank 999 now renders "Unranked" everywhere via fmtRank.)
 - [ ] UI/UX streamlining pass (informed by stress test findings)
 - [ ] p14 (no-LSAT/MA/65k-130k): UMass (in-state MA, affordable) now IS in the dataset, but expansion still regressed p14 — cheap out-of-state schools pushed MA schools down (the over-qualification/intrusion artifact above). Fixing the dampener should also fix p14.
 - [ ] Add class_size_1l -> admissibility softener (transfers now done as a feature)
 - [ ] Tier-3 data status: median_grad_debt now UNBLOCKED via College Scorecard (merged 2026-06-10, display-only; model wiring = open decision above). placement_by_state still blocked (per-school ABA PDFs only).
 - [ ] Open PR for algo-optimization (pushed to origin; URL: github.com/lkchss/Opportunity/pull/new/algo-optimization)
 - [ ] Render transfer-up plan styling in the final UI pass (TransferPanel is placeholder-styled)
-- [ ] Add lower-ranked schools (ranks 83+) so the transfer-up launchpad list works for genuinely-not-T14 profiles (157/3.4 currently has 0 safety/target)
+- [x] STALE — resolved by the 196-school expansion: 157/3.4 now gets 5 launchpads + 5 targets, 81 safety/target schools (verified 2026-06-10).
 - [ ] Data enrichment HARD/predicted (later): selectivity trend (multi-year), NLJ250-by-market, part-time/transfer
 
 ### New feature requests (2026-06-04)

@@ -30,15 +30,18 @@ tooling only, never part of the app.
 
 ```
 law/
-  main.py        # Streamlit app entry point
-  matcher.py     # Core matching algorithm
-  data_loader.py # Loads law school data
+  server.py      # Flask app entry point (serves web/ + POST /api/match)
+  matcher.py     # Core matching algorithm (deterministic, six scores)
+  data_loader.py # Loads + validates law school data
+  web/           # React (in-browser Babel) frontend
   data/
-    law_schools.json  # Law school database
+    law_schools.json   # Law school database (196 ABA schools)
+    build_*.py         # one-shot mergers for ABA / Scorecard raw data
+    raw/               # ABA bulk xlsx + Scorecard API extract
 ```
 
 ```bash
-streamlit run law/main.py
+python -m law.server   # http://127.0.0.1:5000
 ```
 
 ## Shared
