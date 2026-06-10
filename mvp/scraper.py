@@ -6,7 +6,8 @@ from typing import Any
 
 from duckduckgo_search import DDGS
 
-MAX_RESULTS_PER_QUERY = 5
+# page-1-only (5) missed everything below the fold; 25 reaches lower-SEO hits
+MAX_RESULTS_PER_QUERY = 25
 
 
 @dataclass

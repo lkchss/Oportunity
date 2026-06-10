@@ -96,6 +96,205 @@ class TestRegrade:
         assert "Ghost" in capsys.readouterr().out
 
 
+class TestRefreshOnReingest:
+    def test_known_url_with_new_deadline_refreshes_row(self, cfg, tmp_path):
+        conn = connect(cfg)
+        _ingest(cfg, conn, [{"title": "F", "url": "https://x.com/f",
+                             "fit_grade": "B", "deadline": "Passed (~Mar 1)"}],
+                tmp_path, name="b1.json")
+        _ingest(cfg, conn, [{"title": "F", "url": "https://x.com/f/",
+                             "fit_grade": "A", "deadline": "Mar 1, 2027"}],
+                tmp_path, name="b2.json")
+        rows = conn.execute(
+            "SELECT fit_grade, deadline, status FROM opportunities").fetchall()
+        assert rows == [("A", "Mar 1, 2027", "open")]
+
+    def test_known_url_unchanged_is_skipped_not_refreshed(self, cfg, tmp_path, capsys):
+        conn = connect(cfg)
+        items = [{"title": "G", "url": "https://x.com/g", "deadline": "Rolling"}]
+        _ingest(cfg, conn, items, tmp_path, name="b1.json")
+        capsys.readouterr()
+        _ingest(cfg, conn, items, tmp_path, name="b2.json")
+        assert "0 new, 0 refreshed" in capsys.readouterr().out
+
+    def test_status_only_change_refreshes(self, cfg, tmp_path):
+        conn = connect(cfg)
+        _ingest(cfg, conn, [{"title": "I", "url": "https://x.com/i",
+                             "deadline": "Rolling"}], tmp_path, name="b1.json")
+        _ingest(cfg, conn, [{"title": "I", "url": "https://x.com/i",
+                             "status": "passed"}], tmp_path, name="b2.json")
+        row = conn.execute(
+            "SELECT status, deadline FROM opportunities").fetchone()
+        assert row == ("passed", "Rolling")  # empty deadline must not clobber
+
+    def test_refresh_prints_old_to_new(self, cfg, tmp_path, capsys):
+        conn = connect(cfg)
+        _ingest(cfg, conn, [{"title": "J", "url": "https://x.com/j",
+                             "deadline": "Passed (~Mar 1)"}], tmp_path,
+                name="b1.json")
+        capsys.readouterr()
+        _ingest(cfg, conn, [{"title": "J", "url": "https://x.com/j",
+                             "deadline": "Mar 1, 2027"}], tmp_path, name="b2.json")
+        out = capsys.readouterr().out
+        assert "Passed (~Mar 1)" in out and "Mar 1, 2027" in out
+
+
+class TestRecheck:
+    def test_old_unverified_open_item_flagged(self, cfg, tmp_path, capsys):
+        conn = connect(cfg)
+        _ingest(cfg, conn, [
+            {"title": "Old", "url": "https://x.com/old", "deadline": "Rolling"},
+            {"title": "Gone", "url": "https://x.com/gone",
+             "deadline": "Passed (~Jan 1)"},
+        ], tmp_path)
+        conn.execute("UPDATE opportunities SET found_at='2020-01-01T00:00:00', "
+                     "checked_at=NULL")
+        conn.commit()
+        capsys.readouterr()
+        lists.recheck(conn, age_days=180)
+        out = capsys.readouterr().out
+        assert "Old" in out
+        assert "Gone" not in out  # passed items belong to --stale, not recheck
+
+    def test_regrade_counts_as_verification(self, cfg, tmp_path, capsys):
+        conn = connect(cfg)
+        _ingest(cfg, conn, [{"title": "H", "url": "https://x.com/h",
+                             "deadline": "Rolling"}], tmp_path)
+        conn.execute("UPDATE opportunities SET found_at='2020-01-01T00:00:00', "
+                     "checked_at=NULL")
+        conn.commit()
+        rg = tmp_path / "rg.json"
+        rg.write_text(json.dumps({"H": ["A", "Rolling"]}), encoding="utf-8")
+        regrade(conn, rg)
+        capsys.readouterr()
+        lists.recheck(conn, age_days=180)
+        assert "Nothing unverified" in capsys.readouterr().out
+
+
+class TestDryStreak:
+    def test_dry_warning_after_streak(self, cfg, tmp_path, capsys):
+        conn = connect(cfg)
+        _ingest(cfg, conn, [{"title": "S", "url": "https://x.com/s"}],
+                tmp_path, name="b0.json", bucket="vc")
+        for i in range(lists.DRY_STREAK):
+            _ingest(cfg, conn, [{"title": "S", "url": "https://x.com/s"}],
+                    tmp_path, name=f"b{i + 1}.json", bucket="vc")
+        assert "looks DRY" in capsys.readouterr().out
+        capsys.readouterr()
+        lists.stats(conn)
+        assert "DRY" in capsys.readouterr().out
+
+    def test_no_warning_at_streak_minus_one(self, cfg, tmp_path, capsys):
+        conn = connect(cfg)
+        _ingest(cfg, conn, [{"title": "S", "url": "https://x.com/s"}],
+                tmp_path, name="b0.json", bucket="vc")
+        for i in range(lists.DRY_STREAK - 1):
+            _ingest(cfg, conn, [{"title": "S", "url": "https://x.com/s"}],
+                    tmp_path, name=f"b{i + 1}.json", bucket="vc")
+        assert "looks DRY" not in capsys.readouterr().out
+
+    def test_refresh_only_batches_are_not_dry(self, cfg, tmp_path, capsys):
+        conn = connect(cfg)
+        _ingest(cfg, conn, [{"title": "S", "url": "https://x.com/s",
+                             "deadline": "Mar 1, 2026"}],
+                tmp_path, name="b0.json", bucket="vc")
+        for i in range(lists.DRY_STREAK + 1):
+            _ingest(cfg, conn, [{"title": "S", "url": "https://x.com/s",
+                                 "deadline": f"Mar 1, {2027 + i}"}],
+                    tmp_path, name=f"b{i + 1}.json", bucket="vc")
+        out = capsys.readouterr().out
+        assert "looks DRY" not in out
+        capsys.readouterr()
+        lists.stats(conn)
+        assert "DRY" not in capsys.readouterr().out
+
+
+class TestQueriesLog:
+    def test_queries_stored_and_reported(self, cfg, tmp_path, capsys):
+        conn = connect(cfg)
+        _ingest(cfg, conn, [{"title": "Q", "url": "https://x.com/q"}],
+                tmp_path, bucket="vc", queries="fellowship 2026 | open call vc")
+        capsys.readouterr()
+        lists.batches(conn)
+        out = capsys.readouterr().out
+        assert "fellowship 2026" in out
+        assert "open call vc" in out
+
+
+class TestTitlesFilter:
+    def test_category_substring_filter(self, cfg, tmp_path, capsys):
+        conn = connect(cfg)
+        _ingest(cfg, conn, [
+            {"title": "V", "url": "https://x.com/v", "category": "VC/Startup"},
+            {"title": "P", "url": "https://x.com/p", "category": "Policy"},
+        ], tmp_path)
+        capsys.readouterr()
+        lists.dump_titles(conn, category="VC")
+        out = capsys.readouterr().out
+        assert "V" in out and "https://x.com/p" not in out
+
+
+class TestSources:
+    def test_seed_list_and_check(self, cfg, tmp_path, capsys):
+        conn = connect(cfg)
+        lists.seed_sources(cfg, conn)
+        capsys.readouterr()
+        lists.list_sources(conn)
+        out = capsys.readouterr().out
+        assert "80,000 Hours" in out and "NEVER" in out
+        lists.mark_checked(conn, ["https://jobs.80000hours.org/"])
+        capsys.readouterr()
+        lists.list_sources(conn)
+        out = capsys.readouterr().out
+        assert out.count("NEVER") == len(lists.SEED_SOURCES["jobs"]) - 1
+
+    def test_seed_idempotent(self, cfg, tmp_path):
+        conn = connect(cfg)
+        lists.seed_sources(cfg, conn)
+        lists.seed_sources(cfg, conn)
+        n = conn.execute("SELECT COUNT(*) FROM sources").fetchone()[0]
+        assert n == len(lists.SEED_SOURCES["jobs"])
+
+    def test_mark_checked_unknown_url_warns(self, cfg, tmp_path, capsys):
+        conn = connect(cfg)
+        lists.mark_checked(conn, ["https://nope.example.com/"])
+        out = capsys.readouterr().out
+        assert "no source" in out and "0 source(s)" in out
+
+    def test_reregister_source_preserves_last_checked(self, cfg, tmp_path):
+        conn = connect(cfg)
+        lists.add_source(conn, "https://hub.example.com/", "Hub", "", "aggregator", "")
+        lists.mark_checked(conn, ["https://hub.example.com/"])
+        lists.add_source(conn, "https://hub.example.com/", "Hub v2", "", "x", "")
+        label, last = conn.execute(
+            "SELECT label, last_checked FROM sources").fetchone()
+        assert label == "Hub v2" and last is not None
+
+
+class TestCanaries:
+    def test_recall_hit_and_miss(self, cfg, tmp_path, capsys):
+        conn = connect(cfg)
+        _ingest(cfg, conn, [{"title": "Found", "url": "https://x.com/found"}],
+                tmp_path)
+        lists.canary_add(conn, "https://x.com/found/?utm_source=nl", "Found",
+                         "newsletter")
+        lists.canary_add(conn, "https://x.com/missed", "Missed", "friend")
+        capsys.readouterr()
+        lists.canary_check(conn)
+        out = capsys.readouterr().out
+        assert "Recall: 1/2" in out and "Missed" in out
+
+    def test_found_at_sticks(self, cfg, tmp_path, capsys):
+        conn = connect(cfg)
+        _ingest(cfg, conn, [{"title": "Found", "url": "https://x.com/found"}],
+                tmp_path)
+        lists.canary_add(conn, "https://x.com/found", "Found", "nl")
+        lists.canary_check(conn)
+        capsys.readouterr()
+        lists.canary_check(conn)
+        assert "Recall: 1/1" in capsys.readouterr().out
+
+
 class TestStatusBackfill:
     def test_legacy_db_gets_status_column_backfilled(self, tmp_path, cfg):
         legacy = sqlite3.connect(cfg.db)
