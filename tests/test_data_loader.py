@@ -251,3 +251,17 @@ class TestIntegration:
         assert "harvard-law" in school_ids
         assert "yale-law" in school_ids
         assert "stanford-law" in school_ids
+
+    def test_quality_fields_populated_and_in_range(self):
+        """ABA quality signals (attrition / faculty / curricular) should cover
+        nearly all schools and sit in sane ranges."""
+        schools = load_law_schools()
+        attr = [s["attrition_1l_pct"] for s in schools if s.get("attrition_1l_pct") is not None]
+        assert len(attr) >= 190
+        assert all(0 <= a <= 0.5 for a in attr)
+        ratios = [s["student_faculty_ratio"] for s in schools if s.get("student_faculty_ratio") is not None]
+        assert len(ratios) >= 190
+        assert all(2 <= r <= 50 for r in ratios)
+        hands = [s["hands_on_per_student"] for s in schools if s.get("hands_on_per_student") is not None]
+        assert len(hands) >= 190
+        assert all(0 <= h <= 10 for h in hands)

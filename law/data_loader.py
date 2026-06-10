@@ -66,6 +66,15 @@ OPTIONAL_FIELDS = {
     "bar_pass_state_avg": (int, float),
     "bar_pass_vs_state": (int, float),   # school first-time minus state avg (signed)
     "bar_pass_ultimate": (int, float),
+    # Quality signals (ABA Attrition / Faculty Resources / Curricular Offerings),
+    # display-only — never scored
+    "attrition_1l_pct": (int, float),
+    "faculty_ft_total": (int, float),
+    "student_faculty_ratio": (int, float),
+    "clinic_seats_filled": (int, float),
+    "field_placements_filled": (int, float),
+    "simulation_seats_filled": (int, float),
+    "hands_on_per_student": (int, float),
 }
 
 

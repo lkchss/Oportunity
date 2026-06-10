@@ -96,7 +96,14 @@
           "url": "https://en.wikipedia.org/wiki/Aziz_Rana"
         }
       ],
-      "living_expense_annual": 25726
+      "living_expense_annual": 25726,
+      "attrition_1l_pct": 0.0046,
+      "faculty_ft_total": 82,
+      "student_faculty_ratio": 7.8,
+      "clinic_seats_filled": 169,
+      "field_placements_filled": 101,
+      "simulation_seats_filled": 1168,
+      "hands_on_per_student": 2.25
     },
     {
       "id": "notre-dame-law",
@@ -241,7 +248,14 @@
           "url": "https://en.wikipedia.org/wiki/Amy_Coney_Barrett"
         }
       ],
-      "living_expense_annual": 25990
+      "living_expense_annual": 25990,
+      "attrition_1l_pct": 0.0054,
+      "faculty_ft_total": 56,
+      "student_faculty_ratio": 10.2,
+      "clinic_seats_filled": 204,
+      "field_placements_filled": 169,
+      "simulation_seats_filled": 325,
+      "hands_on_per_student": 1.22
     },
     {
       "id": "texas-am-law",
@@ -302,7 +316,14 @@
       "conditional_reduction_rate": null,
       "notable_alumni": [],
       "notable_faculty": [],
-      "living_expense_annual": 29696
+      "living_expense_annual": 29696,
+      "attrition_1l_pct": 0.0391,
+      "faculty_ft_total": 70,
+      "student_faculty_ratio": 5.7,
+      "clinic_seats_filled": 186,
+      "field_placements_filled": 162,
+      "simulation_seats_filled": 306,
+      "hands_on_per_student": 1.65
     },
     {
       "id": "minnesota-law",
@@ -364,7 +385,14 @@
       "conditional_reduction_rate": null,
       "notable_alumni": [],
       "notable_faculty": [],
-      "living_expense_annual": 19600
+      "living_expense_annual": 19600,
+      "attrition_1l_pct": 0.0,
+      "faculty_ft_total": 74,
+      "student_faculty_ratio": 8.9,
+      "clinic_seats_filled": 245,
+      "field_placements_filled": 411,
+      "simulation_seats_filled": 748,
+      "hands_on_per_student": 2.14
     },
     {
       "id": "boston-university-law",
@@ -508,7 +536,14 @@
           "url": "https://en.wikipedia.org/wiki/Linda_McClain"
         }
       ],
-      "living_expense_annual": 21532
+      "living_expense_annual": 21532,
+      "attrition_1l_pct": 0.0,
+      "faculty_ft_total": 93,
+      "student_faculty_ratio": 7.4,
+      "clinic_seats_filled": 211,
+      "field_placements_filled": 117,
+      "simulation_seats_filled": 327,
+      "hands_on_per_student": 0.95
     },
     {
       "id": "byu-clark-law",
@@ -571,7 +606,14 @@
       "conditional_reduction_rate": 0.2,
       "notable_alumni": [],
       "notable_faculty": [],
-      "living_expense_annual": 22436
+      "living_expense_annual": 22436,
+      "attrition_1l_pct": 0.0,
+      "faculty_ft_total": 47,
+      "student_faculty_ratio": 7.4,
+      "clinic_seats_filled": 110,
+      "field_placements_filled": 182,
+      "simulation_seats_filled": 237,
+      "hands_on_per_student": 1.52
     },
     {
       "id": "george-washington-law",
@@ -633,7 +675,14 @@
       "conditional_reduction_rate": null,
       "notable_alumni": [],
       "notable_faculty": [],
-      "living_expense_annual": 25240
+      "living_expense_annual": 25240,
+      "attrition_1l_pct": 0.0098,
+      "faculty_ft_total": 122,
+      "student_faculty_ratio": 14.2,
+      "clinic_seats_filled": 232,
+      "field_placements_filled": 497,
+      "simulation_seats_filled": 2046,
+      "hands_on_per_student": 1.61
     },
     {
       "id": "georgia-law",
@@ -736,7 +785,14 @@
         }
       ],
       "notable_faculty": [],
-      "living_expense_annual": 25978
+      "living_expense_annual": 25978,
+      "attrition_1l_pct": 0.0267,
+      "faculty_ft_total": 64,
+      "student_faculty_ratio": 8.5,
+      "clinic_seats_filled": 171,
+      "field_placements_filled": 244,
+      "simulation_seats_filled": 694,
+      "hands_on_per_student": 2.05
     },
     {
       "id": "usc-gould-law",
@@ -826,7 +882,14 @@
           "url": "https://en.wikipedia.org/wiki/Carole_E._Handler"
         }
       ],
-      "living_expense_annual": 32298
+      "living_expense_annual": 32298,
+      "attrition_1l_pct": 0.0044,
+      "faculty_ft_total": 87,
+      "student_faculty_ratio": 7.5,
+      "clinic_seats_filled": 160,
+      "field_placements_filled": 138,
+      "simulation_seats_filled": 632,
+      "hands_on_per_student": 1.43
     },
     {
       "id": "wisconsin-law",
@@ -929,7 +992,14 @@
           "url": "https://en.wikipedia.org/wiki/Frank_J._Remington"
         }
       ],
-      "living_expense_annual": 25056
+      "living_expense_annual": 25056,
+      "attrition_1l_pct": 0.0087,
+      "faculty_ft_total": 76,
+      "student_faculty_ratio": 8.4,
+      "clinic_seats_filled": 299,
+      "field_placements_filled": 280,
+      "simulation_seats_filled": 641,
+      "hands_on_per_student": 1.9
     },
     {
       "id": "ohio-state-moritz-law",
@@ -1070,7 +1140,14 @@
           "url": "https://en.wikipedia.org/wiki/Amy_J._Schmitz"
         }
       ],
-      "living_expense_annual": 23692
+      "living_expense_annual": 23692,
+      "attrition_1l_pct": 0.0189,
+      "faculty_ft_total": 61,
+      "student_faculty_ratio": 8.0,
+      "clinic_seats_filled": 130,
+      "field_placements_filled": 156,
+      "simulation_seats_filled": 930,
+      "hands_on_per_student": 2.5
     },
     {
       "id": "wake-forest-law",
@@ -1174,7 +1251,14 @@
         }
       ],
       "notable_faculty": [],
-      "living_expense_annual": 30639
+      "living_expense_annual": 30639,
+      "attrition_1l_pct": 0.0098,
+      "faculty_ft_total": 48,
+      "student_faculty_ratio": 11.7,
+      "clinic_seats_filled": 129,
+      "field_placements_filled": 69,
+      "simulation_seats_filled": 491,
+      "hands_on_per_student": 1.22
     },
     {
       "id": "george-mason-scalia-law",
@@ -1269,7 +1353,14 @@
           "url": "https://en.wikipedia.org/wiki/Todd_Zywicki"
         }
       ],
-      "living_expense_annual": 38342
+      "living_expense_annual": 38342,
+      "attrition_1l_pct": 0.0314,
+      "faculty_ft_total": 52,
+      "student_faculty_ratio": 8.4,
+      "clinic_seats_filled": 101,
+      "field_placements_filled": 270,
+      "simulation_seats_filled": 541,
+      "hands_on_per_student": 2.08
     },
     {
       "id": "iowa-law",
@@ -1373,7 +1464,14 @@
         }
       ],
       "notable_faculty": [],
-      "living_expense_annual": 23920
+      "living_expense_annual": 23920,
+      "attrition_1l_pct": 0.0252,
+      "faculty_ft_total": 47,
+      "student_faculty_ratio": 10.6,
+      "clinic_seats_filled": 65,
+      "field_placements_filled": 84,
+      "simulation_seats_filled": 519,
+      "hands_on_per_student": 1.34
     },
     {
       "id": "baylor-law",
@@ -1475,7 +1573,14 @@
         }
       ],
       "notable_faculty": [],
-      "living_expense_annual": 25023
+      "living_expense_annual": 25023,
+      "attrition_1l_pct": 0.0298,
+      "faculty_ft_total": 41,
+      "student_faculty_ratio": 10.7,
+      "clinic_seats_filled": 129,
+      "field_placements_filled": 100,
+      "simulation_seats_filled": 1636,
+      "hands_on_per_student": 4.25
     },
     {
       "id": "florida-state-law",
@@ -1536,7 +1641,14 @@
       "conditional_reduction_rate": null,
       "notable_alumni": [],
       "notable_faculty": [],
-      "living_expense_annual": 23180
+      "living_expense_annual": 23180,
+      "attrition_1l_pct": 0.0131,
+      "faculty_ft_total": 70,
+      "student_faculty_ratio": 6.5,
+      "clinic_seats_filled": 60,
+      "field_placements_filled": 96,
+      "simulation_seats_filled": 432,
+      "hands_on_per_student": 1.29
     },
     {
       "id": "uc-irvine-law",
@@ -1596,7 +1708,14 @@
       "conditional_reduction_rate": null,
       "notable_alumni": [],
       "notable_faculty": [],
-      "living_expense_annual": 37293
+      "living_expense_annual": 37293,
+      "attrition_1l_pct": 0.0,
+      "faculty_ft_total": 54,
+      "student_faculty_ratio": 9.1,
+      "clinic_seats_filled": 293,
+      "field_placements_filled": 104,
+      "simulation_seats_filled": 616,
+      "hands_on_per_student": 2.05
     },
     {
       "id": "florida-levin-law",
@@ -1658,7 +1777,14 @@
       "conditional_reduction_rate": null,
       "notable_alumni": [],
       "notable_faculty": [],
-      "living_expense_annual": 26646
+      "living_expense_annual": 26646,
+      "attrition_1l_pct": 0.0087,
+      "faculty_ft_total": 94,
+      "student_faculty_ratio": 7.0,
+      "clinic_seats_filled": 131,
+      "field_placements_filled": 155,
+      "simulation_seats_filled": 1241,
+      "hands_on_per_student": 2.32
     },
     {
       "id": "washington-lee-law",
@@ -1762,7 +1888,14 @@
           "url": "https://en.wikipedia.org/wiki/Roger_Groot"
         }
       ],
-      "living_expense_annual": 21890
+      "living_expense_annual": 21890,
+      "attrition_1l_pct": 0.0153,
+      "faculty_ft_total": 36,
+      "student_faculty_ratio": 10.2,
+      "clinic_seats_filled": 30,
+      "field_placements_filled": 92,
+      "simulation_seats_filled": 612,
+      "hands_on_per_student": 1.99
     },
     {
       "id": "william-mary-law",
@@ -1902,7 +2035,14 @@
           "url": "https://en.wikipedia.org/wiki/George_Wythe"
         }
       ],
-      "living_expense_annual": 25184
+      "living_expense_annual": 25184,
+      "attrition_1l_pct": 0.0217,
+      "faculty_ft_total": 46,
+      "student_faculty_ratio": 10.8,
+      "clinic_seats_filled": 150,
+      "field_placements_filled": 178,
+      "simulation_seats_filled": 143,
+      "hands_on_per_student": 0.95
     },
     {
       "id": "emory-law",
@@ -2005,7 +2145,14 @@
           "url": "https://en.wikipedia.org/wiki/Matthew_Sag"
         }
       ],
-      "living_expense_annual": 38990
+      "living_expense_annual": 38990,
+      "attrition_1l_pct": 0.0102,
+      "faculty_ft_total": 61,
+      "student_faculty_ratio": 15.0,
+      "clinic_seats_filled": 79,
+      "field_placements_filled": 236,
+      "simulation_seats_filled": 1081,
+      "hands_on_per_student": 1.53
     },
     {
       "id": "alabama-law",
@@ -2109,7 +2256,14 @@
         }
       ],
       "notable_faculty": [],
-      "living_expense_annual": 22620
+      "living_expense_annual": 22620,
+      "attrition_1l_pct": 0.0286,
+      "faculty_ft_total": 46,
+      "student_faculty_ratio": 8.4,
+      "clinic_seats_filled": 187,
+      "field_placements_filled": 136,
+      "simulation_seats_filled": 568,
+      "hands_on_per_student": 2.3
     },
     {
       "id": "fordham-law",
@@ -2186,7 +2340,14 @@
           "url": "https://en.wikipedia.org/wiki/The_Washington_Post"
         }
       ],
-      "living_expense_annual": 37354
+      "living_expense_annual": 37354,
+      "attrition_1l_pct": 0.0045,
+      "faculty_ft_total": 81,
+      "student_faculty_ratio": 16.7,
+      "clinic_seats_filled": 268,
+      "field_placements_filled": 308,
+      "simulation_seats_filled": 1378,
+      "hands_on_per_student": 1.45
     },
     {
       "id": "smu-dedman-law",
@@ -2307,7 +2468,14 @@
           "url": "https://en.wikipedia.org/wiki/Dale_Carpenter"
         }
       ],
-      "living_expense_annual": 17834
+      "living_expense_annual": 17834,
+      "attrition_1l_pct": 0.0,
+      "faculty_ft_total": 59,
+      "student_faculty_ratio": 11.4,
+      "clinic_seats_filled": 164,
+      "field_placements_filled": 209,
+      "simulation_seats_filled": 505,
+      "hands_on_per_student": 1.31
     },
     {
       "id": "arizona-state-law",
@@ -2436,7 +2604,14 @@
           "url": "https://en.wikipedia.org/wiki/Rebecca_Tsosie"
         }
       ],
-      "living_expense_annual": 33090
+      "living_expense_annual": 33090,
+      "attrition_1l_pct": 0.0113,
+      "faculty_ft_total": 71,
+      "student_faculty_ratio": 10.5,
+      "clinic_seats_filled": 117,
+      "field_placements_filled": 535,
+      "simulation_seats_filled": 631,
+      "hands_on_per_student": 1.72
     },
     {
       "id": "utah-quinney-law",
@@ -2540,7 +2715,14 @@
         }
       ],
       "notable_faculty": [],
-      "living_expense_annual": 38078
+      "living_expense_annual": 38078,
+      "attrition_1l_pct": 0.028,
+      "faculty_ft_total": 38,
+      "student_faculty_ratio": 8.2,
+      "clinic_seats_filled": 42,
+      "field_placements_filled": 163,
+      "simulation_seats_filled": 316,
+      "hands_on_per_student": 1.66
     },
     {
       "id": "illinois-law",
@@ -2603,7 +2785,14 @@
       "conditional_reduction_rate": null,
       "notable_alumni": [],
       "notable_faculty": [],
-      "living_expense_annual": 20620
+      "living_expense_annual": 20620,
+      "attrition_1l_pct": 0.0266,
+      "faculty_ft_total": 53,
+      "student_faculty_ratio": 9.4,
+      "clinic_seats_filled": 117,
+      "field_placements_filled": 209,
+      "simulation_seats_filled": 413,
+      "hands_on_per_student": 1.48
     },
     {
       "id": "kansas-law",
@@ -2728,7 +2917,14 @@
           "url": "https://en.wikipedia.org/wiki/Melanie_D._Wilson"
         }
       ],
-      "living_expense_annual": 20238
+      "living_expense_annual": 20238,
+      "attrition_1l_pct": 0.041,
+      "faculty_ft_total": 31,
+      "student_faculty_ratio": 11.5,
+      "clinic_seats_filled": 63,
+      "field_placements_filled": 132,
+      "simulation_seats_filled": 360,
+      "hands_on_per_student": 1.56
     },
     {
       "id": "pepperdine-law",
@@ -2873,7 +3069,14 @@
           "url": "https://en.wikipedia.org/wiki/Jim_Gash"
         }
       ],
-      "living_expense_annual": 33700
+      "living_expense_annual": 33700,
+      "attrition_1l_pct": 0.0652,
+      "faculty_ft_total": 50,
+      "student_faculty_ratio": 11.1,
+      "clinic_seats_filled": 138,
+      "field_placements_filled": 236,
+      "simulation_seats_filled": 1229,
+      "hands_on_per_student": 2.9
     },
     {
       "id": "indiana-maurer-law",
@@ -2961,7 +3164,14 @@
           "url": "https://en.wikipedia.org/wiki/S._Jay_Plager"
         }
       ],
-      "living_expense_annual": 25822
+      "living_expense_annual": 25822,
+      "attrition_1l_pct": 0.0323,
+      "faculty_ft_total": 69,
+      "student_faculty_ratio": 7.3,
+      "clinic_seats_filled": 198,
+      "field_placements_filled": 123,
+      "simulation_seats_filled": 764,
+      "hands_on_per_student": 2.16
     },
     {
       "id": "temple-beasley-law",
@@ -3065,7 +3275,14 @@
         }
       ],
       "notable_faculty": [],
-      "living_expense_annual": 27812
+      "living_expense_annual": 27812,
+      "attrition_1l_pct": 0.0127,
+      "faculty_ft_total": 69,
+      "student_faculty_ratio": 9.9,
+      "clinic_seats_filled": 197,
+      "field_placements_filled": 247,
+      "simulation_seats_filled": 775,
+      "hands_on_per_student": 1.78
     },
     {
       "id": "villanova-law",
@@ -3145,7 +3362,14 @@
           "url": "https://en.wikipedia.org/wiki/John_F._Murphy_(law_professor)"
         }
       ],
-      "living_expense_annual": 25492
+      "living_expense_annual": 25492,
+      "attrition_1l_pct": 0.0086,
+      "faculty_ft_total": 58,
+      "student_faculty_ratio": 10.3,
+      "clinic_seats_filled": 123,
+      "field_placements_filled": 318,
+      "simulation_seats_filled": 562,
+      "hands_on_per_student": 1.68
     },
     {
       "id": "washington-law",
@@ -3208,7 +3432,14 @@
       "conditional_reduction_rate": null,
       "notable_alumni": [],
       "notable_faculty": [],
-      "living_expense_annual": 29082
+      "living_expense_annual": 29082,
+      "attrition_1l_pct": 0.0048,
+      "faculty_ft_total": 54,
+      "student_faculty_ratio": 10.5,
+      "clinic_seats_filled": 120,
+      "field_placements_filled": 185,
+      "simulation_seats_filled": 546,
+      "hands_on_per_student": 1.5
     },
     {
       "id": "uc-davis-law",
@@ -3353,7 +3584,14 @@
           "url": "https://en.wikipedia.org/wiki/Rex_R._Perschbacher"
         }
       ],
-      "living_expense_annual": 33048
+      "living_expense_annual": 33048,
+      "attrition_1l_pct": 0.0,
+      "faculty_ft_total": 49,
+      "student_faculty_ratio": 12.4,
+      "clinic_seats_filled": 97,
+      "field_placements_filled": 131,
+      "simulation_seats_filled": 704,
+      "hands_on_per_student": 1.54
     },
     {
       "id": "university-san-diego-law",
@@ -3457,7 +3695,14 @@
         }
       ],
       "notable_faculty": [],
-      "living_expense_annual": 39197
+      "living_expense_annual": 39197,
+      "attrition_1l_pct": 0.0875,
+      "faculty_ft_total": 53,
+      "student_faculty_ratio": 13.7,
+      "clinic_seats_filled": 159,
+      "field_placements_filled": 428,
+      "simulation_seats_filled": 1647,
+      "hands_on_per_student": 3.08
     },
     {
       "id": "houston-law",
@@ -3574,7 +3819,14 @@
           "url": "https://en.wikipedia.org/wiki/Elizabeth_Warren"
         }
       ],
-      "living_expense_annual": 26086
+      "living_expense_annual": 26086,
+      "attrition_1l_pct": 0.008,
+      "faculty_ft_total": 61,
+      "student_faculty_ratio": 13.7,
+      "clinic_seats_filled": 143,
+      "field_placements_filled": 121,
+      "simulation_seats_filled": 828,
+      "hands_on_per_student": 1.3
     },
     {
       "id": "colorado-law",
@@ -3678,7 +3930,14 @@
           "url": "https://en.wikipedia.org/wiki/Margot_Kaminski"
         }
       ],
-      "living_expense_annual": 27626
+      "living_expense_annual": 27626,
+      "attrition_1l_pct": 0.0101,
+      "faculty_ft_total": 69,
+      "student_faculty_ratio": 7.9,
+      "clinic_seats_filled": 117,
+      "field_placements_filled": 165,
+      "simulation_seats_filled": 550,
+      "hands_on_per_student": 1.52
     },
     {
       "id": "tennessee-law",
@@ -3787,7 +4046,14 @@
           "url": "https://en.wikipedia.org/wiki/Melanie_D._Wilson"
         }
       ],
-      "living_expense_annual": 26216
+      "living_expense_annual": 26216,
+      "attrition_1l_pct": 0.0071,
+      "faculty_ft_total": 44,
+      "student_faculty_ratio": 9.5,
+      "clinic_seats_filled": 113,
+      "field_placements_filled": 69,
+      "simulation_seats_filled": 334,
+      "hands_on_per_student": 1.23
     },
     {
       "id": "uconn-law",
@@ -3920,7 +4186,14 @@
           "url": "https://en.wikipedia.org/wiki/Steven_Wilf"
         }
       ],
-      "living_expense_annual": 25860
+      "living_expense_annual": 25860,
+      "attrition_1l_pct": 0.0066,
+      "faculty_ft_total": 51,
+      "student_faculty_ratio": 9.4,
+      "clinic_seats_filled": 127,
+      "field_placements_filled": 104,
+      "simulation_seats_filled": 442,
+      "hands_on_per_student": 1.41
     },
     {
       "id": "cardozo-law",
@@ -4065,7 +4338,14 @@
           "url": "https://en.wikipedia.org/wiki/Edward_Zelinsky"
         }
       ],
-      "living_expense_annual": 34114
+      "living_expense_annual": 34114,
+      "attrition_1l_pct": 0.0092,
+      "faculty_ft_total": 67,
+      "student_faculty_ratio": 14.1,
+      "clinic_seats_filled": 263,
+      "field_placements_filled": 375,
+      "simulation_seats_filled": 815,
+      "hands_on_per_student": 1.54
     },
     {
       "id": "missouri-law",
@@ -4161,7 +4441,14 @@
           "url": "https://en.wikipedia.org/wiki/Dale_A._Whitman"
         }
       ],
-      "living_expense_annual": 22002
+      "living_expense_annual": 22002,
+      "attrition_1l_pct": 0.0308,
+      "faculty_ft_total": 36,
+      "student_faculty_ratio": 10.4,
+      "clinic_seats_filled": 88,
+      "field_placements_filled": 57,
+      "simulation_seats_filled": 620,
+      "hands_on_per_student": 2.05
     },
     {
       "id": "maryland-carey-law",
@@ -4224,7 +4511,14 @@
       "conditional_reduction_rate": null,
       "notable_alumni": [],
       "notable_faculty": [],
-      "living_expense_annual": 32842
+      "living_expense_annual": 32842,
+      "attrition_1l_pct": 0.0,
+      "faculty_ft_total": 69,
+      "student_faculty_ratio": 9.4,
+      "clinic_seats_filled": 242,
+      "field_placements_filled": 167,
+      "simulation_seats_filled": 571,
+      "hands_on_per_student": 1.51
     },
     {
       "id": "richmond-law",
@@ -4361,7 +4655,14 @@
           "url": "https://en.wikipedia.org/wiki/The_Washington_Post"
         }
       ],
-      "living_expense_annual": 26510
+      "living_expense_annual": 26510,
+      "attrition_1l_pct": 0.0068,
+      "faculty_ft_total": 60,
+      "student_faculty_ratio": 6.9,
+      "clinic_seats_filled": 57,
+      "field_placements_filled": 73,
+      "simulation_seats_filled": 354,
+      "hands_on_per_student": 1.17
     },
     {
       "id": "st-johns-law",
@@ -4424,7 +4725,14 @@
       "conditional_reduction_rate": null,
       "notable_alumni": [],
       "notable_faculty": [],
-      "living_expense_annual": 32728
+      "living_expense_annual": 32728,
+      "attrition_1l_pct": 0.0,
+      "faculty_ft_total": 44,
+      "student_faculty_ratio": 17.2,
+      "clinic_seats_filled": 139,
+      "field_placements_filled": 186,
+      "simulation_seats_filled": 726,
+      "hands_on_per_student": 1.39
     },
     {
       "id": "wayne-state-law",
@@ -4557,7 +4865,14 @@
           "url": "https://en.wikipedia.org/wiki/Brad_R._Roth"
         }
       ],
-      "living_expense_annual": 25132
+      "living_expense_annual": 25132,
+      "attrition_1l_pct": 0.0154,
+      "faculty_ft_total": 53,
+      "student_faculty_ratio": 7.4,
+      "clinic_seats_filled": 71,
+      "field_placements_filled": 91,
+      "simulation_seats_filled": 188,
+      "hands_on_per_student": 0.89
     },
     {
       "id": "tulane-law",
@@ -4661,7 +4976,14 @@
           "url": "https://en.wikipedia.org/wiki/Ferdinand_Stone"
         }
       ],
-      "living_expense_annual": 29670
+      "living_expense_annual": 29670,
+      "attrition_1l_pct": 0.0041,
+      "faculty_ft_total": 50,
+      "student_faculty_ratio": 12.6,
+      "clinic_seats_filled": 215,
+      "field_placements_filled": 196,
+      "simulation_seats_filled": 619,
+      "hands_on_per_student": 1.64
     },
     {
       "id": "arizona-rogers-law",
@@ -4770,7 +5092,14 @@
           "url": "https://en.wikipedia.org/wiki/Rebecca_Tsosie"
         }
       ],
-      "living_expense_annual": 25600
+      "living_expense_annual": 25600,
+      "attrition_1l_pct": 0.0085,
+      "faculty_ft_total": 69,
+      "student_faculty_ratio": 4.9,
+      "clinic_seats_filled": 218,
+      "field_placements_filled": 120,
+      "simulation_seats_filled": 1105,
+      "hands_on_per_student": 4.27
     },
     {
       "id": "loyola-la-law",
@@ -4874,7 +5203,14 @@
           "url": "https://en.wikipedia.org/wiki/Richard_L._Hasen"
         }
       ],
-      "living_expense_annual": 43030
+      "living_expense_annual": 43030,
+      "attrition_1l_pct": 0.0325,
+      "faculty_ft_total": 78,
+      "student_faculty_ratio": 12.8,
+      "clinic_seats_filled": 305,
+      "field_placements_filled": 198,
+      "simulation_seats_filled": 1341,
+      "hands_on_per_student": 1.84
     },
     {
       "id": "miami-law",
@@ -4978,7 +5314,14 @@
           "url": "https://en.wikipedia.org/wiki/Nell_Jessup_Newton"
         }
       ],
-      "living_expense_annual": 43924
+      "living_expense_annual": 43924,
+      "attrition_1l_pct": 0.0224,
+      "faculty_ft_total": 99,
+      "student_faculty_ratio": 10.0,
+      "clinic_seats_filled": 265,
+      "field_placements_filled": 283,
+      "simulation_seats_filled": 1167,
+      "hands_on_per_student": 1.73
     },
     {
       "id": "catholic-columbus-law",
@@ -5041,7 +5384,14 @@
       "conditional_reduction_rate": 0.2603,
       "notable_alumni": [],
       "notable_faculty": [],
-      "living_expense_annual": 32374
+      "living_expense_annual": 32374,
+      "attrition_1l_pct": 0.0385,
+      "faculty_ft_total": 35,
+      "student_faculty_ratio": 12.3,
+      "clinic_seats_filled": 77,
+      "field_placements_filled": 119,
+      "simulation_seats_filled": 165,
+      "hands_on_per_student": 0.84
     },
     {
       "id": "stanford-law",
@@ -5145,7 +5495,14 @@
           "url": "https://en.wikipedia.org/wiki/Lawrence_M._Friedman"
         }
       ],
-      "living_expense_annual": 51102
+      "living_expense_annual": 51102,
+      "attrition_1l_pct": 0.0104,
+      "faculty_ft_total": 98,
+      "student_faculty_ratio": 5.8,
+      "clinic_seats_filled": 241,
+      "field_placements_filled": 63,
+      "simulation_seats_filled": 471,
+      "hands_on_per_student": 1.36
     },
     {
       "id": "uchicago-law",
@@ -5213,7 +5570,14 @@
         }
       ],
       "notable_faculty": [],
-      "living_expense_annual": 35418
+      "living_expense_annual": 35418,
+      "attrition_1l_pct": 0.0049,
+      "faculty_ft_total": 86,
+      "student_faculty_ratio": 7.2,
+      "clinic_seats_filled": 589,
+      "field_placements_filled": 32,
+      "simulation_seats_filled": 656,
+      "hands_on_per_student": 2.08
     },
     {
       "id": "yale-law",
@@ -5317,7 +5681,14 @@
           "url": "https://en.wikipedia.org/wiki/Amy_Chua"
         }
       ],
-      "living_expense_annual": 28202
+      "living_expense_annual": 28202,
+      "attrition_1l_pct": 0.0,
+      "faculty_ft_total": 85,
+      "student_faculty_ratio": 7.4,
+      "clinic_seats_filled": 704,
+      "field_placements_filled": 56,
+      "simulation_seats_filled": 182,
+      "hands_on_per_student": 1.5
     },
     {
       "id": "penn-carey-law",
@@ -5421,7 +5792,14 @@
           "url": "https://en.wikipedia.org/wiki/Charles_W._Mooney_Jr."
         }
       ],
-      "living_expense_annual": 31640
+      "living_expense_annual": 31640,
+      "attrition_1l_pct": 0.0,
+      "faculty_ft_total": 105,
+      "student_faculty_ratio": 7.3,
+      "clinic_seats_filled": 140,
+      "field_placements_filled": 145,
+      "simulation_seats_filled": 1354,
+      "hands_on_per_student": 2.15
     },
     {
       "id": "uva-law",
@@ -5525,7 +5903,14 @@
           "url": "https://en.wikipedia.org/wiki/John_C._Harrison_(law_professor)"
         }
       ],
-      "living_expense_annual": 28770
+      "living_expense_annual": 28770,
+      "attrition_1l_pct": 0.0065,
+      "faculty_ft_total": 106,
+      "student_faculty_ratio": 8.7,
+      "clinic_seats_filled": 397,
+      "field_placements_filled": 59,
+      "simulation_seats_filled": 1111,
+      "hands_on_per_student": 1.71
     },
     {
       "id": "harvard-law",
@@ -5629,7 +6014,14 @@
           "url": "https://en.wikipedia.org/wiki/Archibald_Cox"
         }
       ],
-      "living_expense_annual": 38690
+      "living_expense_annual": 38690,
+      "attrition_1l_pct": 0.0017,
+      "faculty_ft_total": 203,
+      "student_faculty_ratio": 8.8,
+      "clinic_seats_filled": 791,
+      "field_placements_filled": 481,
+      "simulation_seats_filled": 905,
+      "hands_on_per_student": 1.22
     },
     {
       "id": "duke-law",
@@ -5721,7 +6113,14 @@
           "url": "https://en.wikipedia.org/wiki/Joseph_Tyree_Sneed_III"
         }
       ],
-      "living_expense_annual": 26116
+      "living_expense_annual": 26116,
+      "attrition_1l_pct": 0.0132,
+      "faculty_ft_total": null,
+      "student_faculty_ratio": null,
+      "clinic_seats_filled": 234,
+      "field_placements_filled": 69,
+      "simulation_seats_filled": 1436,
+      "hands_on_per_student": 2.41
     },
     {
       "id": "nyu-law",
@@ -5825,7 +6224,14 @@
           "url": "https://en.wikipedia.org/wiki/Lawrence_Collins,_Baron_Collins_of_Mapesbury"
         }
       ],
-      "living_expense_annual": 36094
+      "living_expense_annual": 36094,
+      "attrition_1l_pct": 0.0088,
+      "faculty_ft_total": 181,
+      "student_faculty_ratio": 7.8,
+      "clinic_seats_filled": 650,
+      "field_placements_filled": 350,
+      "simulation_seats_filled": 752,
+      "hands_on_per_student": 1.25
     },
     {
       "id": "columbia-law",
@@ -5929,7 +6335,14 @@
           "url": "https://en.wikipedia.org/wiki/Lori_Fisler_Damrosch"
         }
       ],
-      "living_expense_annual": 31554
+      "living_expense_annual": 31554,
+      "attrition_1l_pct": 0.009,
+      "faculty_ft_total": 120,
+      "student_faculty_ratio": 11.5,
+      "clinic_seats_filled": 205,
+      "field_placements_filled": 1127,
+      "simulation_seats_filled": 638,
+      "hands_on_per_student": 1.43
     },
     {
       "id": "northwestern-pritzker-law",
@@ -6033,7 +6446,14 @@
           "url": "https://en.wikipedia.org/wiki/James_E._Pfander"
         }
       ],
-      "living_expense_annual": 28220
+      "living_expense_annual": 28220,
+      "attrition_1l_pct": 0.0079,
+      "faculty_ft_total": 121,
+      "student_faculty_ratio": 6.4,
+      "clinic_seats_filled": 256,
+      "field_placements_filled": 191,
+      "simulation_seats_filled": 729,
+      "hands_on_per_student": 1.52
     },
     {
       "id": "michigan-law",
@@ -6178,7 +6598,14 @@
           "url": "https://en.wikipedia.org/wiki/Harry_Hutchins"
         }
       ],
-      "living_expense_annual": 26886
+      "living_expense_annual": 26886,
+      "attrition_1l_pct": 0.0058,
+      "faculty_ft_total": 112,
+      "student_faculty_ratio": 8.8,
+      "clinic_seats_filled": 337,
+      "field_placements_filled": 84,
+      "simulation_seats_filled": 686,
+      "hands_on_per_student": 1.12
     },
     {
       "id": "vanderbilt-law",
@@ -6241,7 +6668,14 @@
       "conditional_reduction_rate": null,
       "notable_alumni": [],
       "notable_faculty": [],
-      "living_expense_annual": 34934
+      "living_expense_annual": 34934,
+      "attrition_1l_pct": 0.0173,
+      "faculty_ft_total": 57,
+      "student_faculty_ratio": 9.2,
+      "clinic_seats_filled": 86,
+      "field_placements_filled": 61,
+      "simulation_seats_filled": 901,
+      "hands_on_per_student": 2.0
     },
     {
       "id": "cornell-law",
@@ -6345,7 +6779,14 @@
           "url": "https://en.wikipedia.org/wiki/Mitchel_Lasser"
         }
       ],
-      "living_expense_annual": 32952
+      "living_expense_annual": 32952,
+      "attrition_1l_pct": 0.0,
+      "faculty_ft_total": 76,
+      "student_faculty_ratio": 8.0,
+      "clinic_seats_filled": 290,
+      "field_placements_filled": 234,
+      "simulation_seats_filled": 349,
+      "hands_on_per_student": 1.43
     },
     {
       "id": "ucla-law",
@@ -6449,7 +6890,14 @@
           "url": "https://en.wikipedia.org/wiki/Hiroshi_Motomura"
         }
       ],
-      "living_expense_annual": 40046
+      "living_expense_annual": 40046,
+      "attrition_1l_pct": 0.0091,
+      "faculty_ft_total": 142,
+      "student_faculty_ratio": 7.2,
+      "clinic_seats_filled": 217,
+      "field_placements_filled": 145,
+      "simulation_seats_filled": 616,
+      "hands_on_per_student": 0.96
     },
     {
       "id": "washu-law",
@@ -6512,7 +6960,14 @@
       "conditional_reduction_rate": null,
       "notable_alumni": [],
       "notable_faculty": [],
-      "living_expense_annual": 28603
+      "living_expense_annual": 28603,
+      "attrition_1l_pct": 0.0152,
+      "faculty_ft_total": 127,
+      "student_faculty_ratio": 6.2,
+      "clinic_seats_filled": 197,
+      "field_placements_filled": 153,
+      "simulation_seats_filled": 574,
+      "hands_on_per_student": 1.17
     },
     {
       "id": "kentucky-rosenberg-law",
@@ -6616,7 +7071,14 @@
         }
       ],
       "notable_faculty": [],
-      "living_expense_annual": 28425
+      "living_expense_annual": 28425,
+      "attrition_1l_pct": 0.0068,
+      "faculty_ft_total": 31,
+      "student_faculty_ratio": 13.5,
+      "clinic_seats_filled": 19,
+      "field_placements_filled": 85,
+      "simulation_seats_filled": 301,
+      "hands_on_per_student": 0.97
     },
     {
       "id": "seton-hall-law",
@@ -6720,7 +7182,14 @@
         }
       ],
       "notable_faculty": [],
-      "living_expense_annual": 28548
+      "living_expense_annual": 28548,
+      "attrition_1l_pct": 0.0658,
+      "faculty_ft_total": 58,
+      "student_faculty_ratio": 14.2,
+      "clinic_seats_filled": 119,
+      "field_placements_filled": 205,
+      "simulation_seats_filled": 902,
+      "hands_on_per_student": 1.49
     },
     {
       "id": "georgia-state-law",
@@ -6824,7 +7293,14 @@
         }
       ],
       "notable_faculty": [],
-      "living_expense_annual": 26693
+      "living_expense_annual": 26693,
+      "attrition_1l_pct": 0.041,
+      "faculty_ft_total": 69,
+      "student_faculty_ratio": 9.9,
+      "clinic_seats_filled": 154,
+      "field_placements_filled": 155,
+      "simulation_seats_filled": 155,
+      "hands_on_per_student": 0.68
     },
     {
       "id": "loyola-chicago-law",
@@ -6928,7 +7404,14 @@
         }
       ],
       "notable_faculty": [],
-      "living_expense_annual": 32658
+      "living_expense_annual": 32658,
+      "attrition_1l_pct": 0.0068,
+      "faculty_ft_total": 68,
+      "student_faculty_ratio": 12.5,
+      "clinic_seats_filled": 179,
+      "field_placements_filled": 257,
+      "simulation_seats_filled": 952,
+      "hands_on_per_student": 1.64
     },
     {
       "id": "northeastern-law",
@@ -7032,7 +7515,14 @@
         }
       ],
       "notable_faculty": [],
-      "living_expense_annual": 22900
+      "living_expense_annual": 22900,
+      "attrition_1l_pct": 0.0035,
+      "faculty_ft_total": 58,
+      "student_faculty_ratio": 13.6,
+      "clinic_seats_filled": 396,
+      "field_placements_filled": 225,
+      "simulation_seats_filled": 398,
+      "hands_on_per_student": 1.3
     },
     {
       "id": "pittsburgh-law",
@@ -7095,7 +7585,14 @@
       "conditional_reduction_rate": null,
       "notable_alumni": [],
       "notable_faculty": [],
-      "living_expense_annual": 20346
+      "living_expense_annual": 20346,
+      "attrition_1l_pct": 0.0065,
+      "faculty_ft_total": 41,
+      "student_faculty_ratio": 9.5,
+      "clinic_seats_filled": 118,
+      "field_placements_filled": 72,
+      "simulation_seats_filled": 206,
+      "hands_on_per_student": 1.02
     },
     {
       "id": "fiu-law",
@@ -7195,7 +7692,14 @@
           "url": "https://en.wikipedia.org/wiki/Larry_Leiby"
         }
       ],
-      "living_expense_annual": 33176
+      "living_expense_annual": 33176,
+      "attrition_1l_pct": 0.0173,
+      "faculty_ft_total": 38,
+      "student_faculty_ratio": 15.3,
+      "clinic_seats_filled": 72,
+      "field_placements_filled": 238,
+      "simulation_seats_filled": 663,
+      "hands_on_per_student": 1.67
     },
     {
       "id": "cincinnati-law",
@@ -7258,7 +7762,14 @@
       "conditional_reduction_rate": null,
       "notable_alumni": [],
       "notable_faculty": [],
-      "living_expense_annual": 25956
+      "living_expense_annual": 25956,
+      "attrition_1l_pct": 0.0219,
+      "faculty_ft_total": 57,
+      "student_faculty_ratio": 7.0,
+      "clinic_seats_filled": 62,
+      "field_placements_filled": 137,
+      "simulation_seats_filled": 219,
+      "hands_on_per_student": 1.05
     },
     {
       "id": "drexel-kline-law",
@@ -7321,7 +7832,14 @@
       "conditional_reduction_rate": 0.1803,
       "notable_alumni": [],
       "notable_faculty": [],
-      "living_expense_annual": 28022
+      "living_expense_annual": 28022,
+      "attrition_1l_pct": 0.0562,
+      "faculty_ft_total": 37,
+      "student_faculty_ratio": 12.5,
+      "clinic_seats_filled": 73,
+      "field_placements_filled": 120,
+      "simulation_seats_filled": 318,
+      "hands_on_per_student": 1.11
     },
     {
       "id": "suny-buffalo-law",
@@ -7450,7 +7968,14 @@
           "url": "https://en.wikipedia.org/wiki/Clyde_Summers"
         }
       ],
-      "living_expense_annual": 24814
+      "living_expense_annual": 24814,
+      "attrition_1l_pct": 0.0872,
+      "faculty_ft_total": 65,
+      "student_faculty_ratio": 6.6,
+      "clinic_seats_filled": 116,
+      "field_placements_filled": 69,
+      "simulation_seats_filled": 331,
+      "hands_on_per_student": 1.2
     },
     {
       "id": "akron-the-university-of",
@@ -7503,7 +8028,14 @@
       "bar_pass_ultimate": 0.8898,
       "notable_alumni": [],
       "notable_faculty": [],
-      "living_expense_annual": 5500
+      "living_expense_annual": 5500,
+      "attrition_1l_pct": 0.0636,
+      "faculty_ft_total": 29,
+      "student_faculty_ratio": 16.3,
+      "clinic_seats_filled": 46,
+      "field_placements_filled": 35,
+      "simulation_seats_filled": 534,
+      "hands_on_per_student": 1.3
     },
     {
       "id": "albany-law-school",
@@ -7597,7 +8129,14 @@
           "url": "https://en.wikipedia.org/wiki/Learned_Hand"
         }
       ],
-      "living_expense_annual": 21844
+      "living_expense_annual": 21844,
+      "attrition_1l_pct": 0.0502,
+      "faculty_ft_total": 43,
+      "student_faculty_ratio": 14.3,
+      "clinic_seats_filled": 68,
+      "field_placements_filled": 405,
+      "simulation_seats_filled": 321,
+      "hands_on_per_student": 1.29
     },
     {
       "id": "american-university-washington-college-of-law",
@@ -7691,7 +8230,14 @@
           "url": "https://en.wikipedia.org/wiki/Nanette_B._Paul"
         }
       ],
-      "living_expense_annual": 33832
+      "living_expense_annual": 33832,
+      "attrition_1l_pct": 0.0169,
+      "faculty_ft_total": 72,
+      "student_faculty_ratio": 16.7,
+      "clinic_seats_filled": 181,
+      "field_placements_filled": 261,
+      "simulation_seats_filled": 619,
+      "hands_on_per_student": 0.88
     },
     {
       "id": "appalachian-school-of-law",
@@ -7744,7 +8290,14 @@
       "bar_pass_ultimate": 0.9149,
       "notable_alumni": [],
       "notable_faculty": [],
-      "living_expense_annual": 41800
+      "living_expense_annual": 41800,
+      "attrition_1l_pct": 0.0968,
+      "faculty_ft_total": 16,
+      "student_faculty_ratio": 11.4,
+      "clinic_seats_filled": 10,
+      "field_placements_filled": 48,
+      "simulation_seats_filled": 218,
+      "hands_on_per_student": 1.52
     },
     {
       "id": "university-of-arkansas-at-little-rock-school-of-law",
@@ -7818,7 +8371,14 @@
           "url": "https://en.wikipedia.org/wiki/Daniel_R._Schwarz"
         }
       ],
-      "living_expense_annual": 25459
+      "living_expense_annual": 25459,
+      "attrition_1l_pct": 0.0519,
+      "faculty_ft_total": 33,
+      "student_faculty_ratio": 13.0,
+      "clinic_seats_filled": 88,
+      "field_placements_filled": 50,
+      "simulation_seats_filled": 266,
+      "hands_on_per_student": 0.94
     },
     {
       "id": "university-of-arkansas-school-of-law",
@@ -7929,7 +8489,14 @@
           "url": "https://en.wikipedia.org/wiki/Mark_R._Killenbeck"
         }
       ],
-      "living_expense_annual": 22194
+      "living_expense_annual": 22194,
+      "attrition_1l_pct": 0.0667,
+      "faculty_ft_total": 34,
+      "student_faculty_ratio": 11.0,
+      "clinic_seats_filled": 51,
+      "field_placements_filled": 111,
+      "simulation_seats_filled": 177,
+      "hands_on_per_student": 0.9
     },
     {
       "id": "atlanta-s-john-marshall-law-school",
@@ -8020,7 +8587,14 @@
           "url": "https://en.wikipedia.org/wiki/Melanie_D._Wilson"
         }
       ],
-      "living_expense_annual": 35426
+      "living_expense_annual": 35426,
+      "attrition_1l_pct": 0.2143,
+      "faculty_ft_total": 25,
+      "student_faculty_ratio": 15.2,
+      "clinic_seats_filled": 0,
+      "field_placements_filled": 143,
+      "simulation_seats_filled": 272,
+      "hands_on_per_student": 1.09
     },
     {
       "id": "ave-maria-school-of-law",
@@ -8073,7 +8647,14 @@
       "bar_pass_ultimate": 0.8243,
       "notable_alumni": [],
       "notable_faculty": [],
-      "living_expense_annual": 32765
+      "living_expense_annual": 32765,
+      "attrition_1l_pct": 0.1921,
+      "faculty_ft_total": 28,
+      "student_faculty_ratio": 11.9,
+      "clinic_seats_filled": 34,
+      "field_placements_filled": 67,
+      "simulation_seats_filled": 70,
+      "hands_on_per_student": 0.51
     },
     {
       "id": "university-of-baltimore-school-of-law",
@@ -8131,7 +8712,14 @@
         }
       ],
       "notable_faculty": [],
-      "living_expense_annual": 25024
+      "living_expense_annual": 25024,
+      "attrition_1l_pct": 0.0237,
+      "faculty_ft_total": 59,
+      "student_faculty_ratio": 12.3,
+      "clinic_seats_filled": 149,
+      "field_placements_filled": 158,
+      "simulation_seats_filled": 326,
+      "hands_on_per_student": 0.87
     },
     {
       "id": "barry-university-school-of-law",
@@ -8201,7 +8789,14 @@
         }
       ],
       "notable_faculty": [],
-      "living_expense_annual": 32008
+      "living_expense_annual": 32008,
+      "attrition_1l_pct": 0.0827,
+      "faculty_ft_total": 32,
+      "student_faculty_ratio": 22.6,
+      "clinic_seats_filled": 70,
+      "field_placements_filled": 73,
+      "simulation_seats_filled": 692,
+      "hands_on_per_student": 1.15
     },
     {
       "id": "belmont-university-college-of-law",
@@ -8254,7 +8849,14 @@
       "bar_pass_ultimate": 0.9911,
       "notable_alumni": [],
       "notable_faculty": [],
-      "living_expense_annual": 32026
+      "living_expense_annual": 32026,
+      "attrition_1l_pct": 0.0956,
+      "faculty_ft_total": 23,
+      "student_faculty_ratio": 16.2,
+      "clinic_seats_filled": 4,
+      "field_placements_filled": 138,
+      "simulation_seats_filled": 694,
+      "hands_on_per_student": 2.25
     },
     {
       "id": "brooklyn-law-school",
@@ -8307,7 +8909,14 @@
       "bar_pass_ultimate": 0.9057,
       "notable_alumni": [],
       "notable_faculty": [],
-      "living_expense_annual": 36528
+      "living_expense_annual": 36528,
+      "attrition_1l_pct": 0.06,
+      "faculty_ft_total": 71,
+      "student_faculty_ratio": 15.9,
+      "clinic_seats_filled": 357,
+      "field_placements_filled": 460,
+      "simulation_seats_filled": 1546,
+      "hands_on_per_student": 2.1
     },
     {
       "id": "california-western-school-of-law",
@@ -8401,7 +9010,14 @@
         }
       ],
       "notable_faculty": [],
-      "living_expense_annual": 34342
+      "living_expense_annual": 34342,
+      "attrition_1l_pct": 0.0409,
+      "faculty_ft_total": 37,
+      "student_faculty_ratio": 18.1,
+      "clinic_seats_filled": 63,
+      "field_placements_filled": 103,
+      "simulation_seats_filled": 783,
+      "hands_on_per_student": 1.42
     },
     {
       "id": "university-of-california-berkeley-school-of-law",
@@ -8495,7 +9111,14 @@
           "url": "https://en.wikipedia.org/wiki/Melvin_A._Eisenberg"
         }
       ],
-      "living_expense_annual": 45866
+      "living_expense_annual": 45866,
+      "attrition_1l_pct": 0.0,
+      "faculty_ft_total": 109,
+      "student_faculty_ratio": 10.3,
+      "clinic_seats_filled": 194,
+      "field_placements_filled": 191,
+      "simulation_seats_filled": 1314,
+      "hands_on_per_student": 1.51
     },
     {
       "id": "uc-law-san-francisco",
@@ -8589,7 +9212,14 @@
         }
       ],
       "notable_faculty": [],
-      "living_expense_annual": 34466
+      "living_expense_annual": 34466,
+      "attrition_1l_pct": 0.0524,
+      "faculty_ft_total": 74,
+      "student_faculty_ratio": 14.2,
+      "clinic_seats_filled": 120,
+      "field_placements_filled": 312,
+      "simulation_seats_filled": 794,
+      "hands_on_per_student": 1.17
     },
     {
       "id": "campbell-university-school-of-law",
@@ -8642,7 +9272,14 @@
       "bar_pass_ultimate": 0.962,
       "notable_alumni": [],
       "notable_faculty": [],
-      "living_expense_annual": 35281
+      "living_expense_annual": 35281,
+      "attrition_1l_pct": 0.0476,
+      "faculty_ft_total": 32,
+      "student_faculty_ratio": 17.3,
+      "clinic_seats_filled": 122,
+      "field_placements_filled": 183,
+      "simulation_seats_filled": 927,
+      "hands_on_per_student": 2.23
     },
     {
       "id": "capital-university-law-school",
@@ -8745,7 +9382,14 @@
           "url": "https://en.wikipedia.org/wiki/Jack_Guttenberg"
         }
       ],
-      "living_expense_annual": 21112
+      "living_expense_annual": 21112,
+      "attrition_1l_pct": 0.1081,
+      "faculty_ft_total": 25,
+      "student_faculty_ratio": 19.3,
+      "clinic_seats_filled": 40,
+      "field_placements_filled": 142,
+      "simulation_seats_filled": 659,
+      "hands_on_per_student": 1.74
     },
     {
       "id": "case-western-reserve-university-school-of-law",
@@ -8819,7 +9463,14 @@
           "url": "https://en.wikipedia.org/wiki/Michael_Scharf"
         }
       ],
-      "living_expense_annual": 32008
+      "living_expense_annual": 32008,
+      "attrition_1l_pct": 0.0222,
+      "faculty_ft_total": 44,
+      "student_faculty_ratio": 12.1,
+      "clinic_seats_filled": 109,
+      "field_placements_filled": 287,
+      "simulation_seats_filled": 612,
+      "hands_on_per_student": 1.9
     },
     {
       "id": "chapman-university-fowler-school-of-law",
@@ -8902,7 +9553,14 @@
           "url": "https://en.wikipedia.org/wiki/Vernon_L._Smith"
         }
       ],
-      "living_expense_annual": 41778
+      "living_expense_annual": 41778,
+      "attrition_1l_pct": 0.0588,
+      "faculty_ft_total": 37,
+      "student_faculty_ratio": 11.4,
+      "clinic_seats_filled": 68,
+      "field_placements_filled": 196,
+      "simulation_seats_filled": 636,
+      "hands_on_per_student": 2.14
     },
     {
       "id": "charleston-school-of-law",
@@ -8964,7 +9622,14 @@
         }
       ],
       "notable_faculty": [],
-      "living_expense_annual": 27752
+      "living_expense_annual": 27752,
+      "attrition_1l_pct": 0.0871,
+      "faculty_ft_total": 29,
+      "student_faculty_ratio": 24.4,
+      "clinic_seats_filled": 53,
+      "field_placements_filled": 103,
+      "simulation_seats_filled": 605,
+      "hands_on_per_student": 1.08
     },
     {
       "id": "chicago-kent-college-of-law",
@@ -9071,7 +9736,14 @@
           "url": "https://en.wikipedia.org/wiki/Sarah_Harding_(legal_scholar)"
         }
       ],
-      "living_expense_annual": 27964
+      "living_expense_annual": 27964,
+      "attrition_1l_pct": 0.0039,
+      "faculty_ft_total": 49,
+      "student_faculty_ratio": 14.7,
+      "clinic_seats_filled": 212,
+      "field_placements_filled": 123,
+      "simulation_seats_filled": 824,
+      "hands_on_per_student": 1.61
     },
     {
       "id": "cuny-school-of-law",
@@ -9178,7 +9850,14 @@
           "url": "https://en.wikipedia.org/wiki/Howard_Lesnick"
         }
       ],
-      "living_expense_annual": 30805
+      "living_expense_annual": 30805,
+      "attrition_1l_pct": 0.0227,
+      "faculty_ft_total": 66,
+      "student_faculty_ratio": 10.5,
+      "clinic_seats_filled": 301,
+      "field_placements_filled": 36,
+      "simulation_seats_filled": 590,
+      "hands_on_per_student": 1.33
     },
     {
       "id": "cleveland-state-university-college-of-law",
@@ -9231,7 +9910,14 @@
       "bar_pass_ultimate": 0.8934,
       "notable_alumni": [],
       "notable_faculty": [],
-      "living_expense_annual": 21870
+      "living_expense_annual": 21870,
+      "attrition_1l_pct": 0.1378,
+      "faculty_ft_total": 31,
+      "student_faculty_ratio": 16.0,
+      "clinic_seats_filled": 83,
+      "field_placements_filled": 90,
+      "simulation_seats_filled": 175,
+      "hands_on_per_student": 0.7
     },
     {
       "id": "cooley-law-school",
@@ -9350,7 +10036,14 @@
           "url": "https://en.wikipedia.org/wiki/James_L._Ryan"
         }
       ],
-      "living_expense_annual": 29972
+      "living_expense_annual": 29972,
+      "attrition_1l_pct": 0.0992,
+      "faculty_ft_total": 26,
+      "student_faculty_ratio": 18.3,
+      "clinic_seats_filled": 50,
+      "field_placements_filled": 192,
+      "simulation_seats_filled": 0,
+      "hands_on_per_student": 0.51
     },
     {
       "id": "creighton-university-school-of-law",
@@ -9444,7 +10137,14 @@
         }
       ],
       "notable_faculty": [],
-      "living_expense_annual": 23400
+      "living_expense_annual": 23400,
+      "attrition_1l_pct": 0.0298,
+      "faculty_ft_total": 28,
+      "student_faculty_ratio": 15.2,
+      "clinic_seats_filled": 47,
+      "field_placements_filled": 55,
+      "simulation_seats_filled": 462,
+      "hands_on_per_student": 1.32
     },
     {
       "id": "university-of-dayton-school-of-law",
@@ -9523,7 +10223,14 @@
           "url": "https://en.wikipedia.org/wiki/Vipal_J._Patel"
         }
       ],
-      "living_expense_annual": 19395
+      "living_expense_annual": 19395,
+      "attrition_1l_pct": 0.0235,
+      "faculty_ft_total": 25,
+      "student_faculty_ratio": 17.7,
+      "clinic_seats_filled": 39,
+      "field_placements_filled": 71,
+      "simulation_seats_filled": 369,
+      "hands_on_per_student": 1.08
     },
     {
       "id": "depaul-university-college-of-law",
@@ -9617,7 +10324,14 @@
         }
       ],
       "notable_faculty": [],
-      "living_expense_annual": 29110
+      "living_expense_annual": 29110,
+      "attrition_1l_pct": 0.0588,
+      "faculty_ft_total": 34,
+      "student_faculty_ratio": 15.0,
+      "clinic_seats_filled": 124,
+      "field_placements_filled": 163,
+      "simulation_seats_filled": 305,
+      "hands_on_per_student": 1.16
     },
     {
       "id": "university-of-denver-sturm-college-of-law",
@@ -9724,7 +10438,14 @@
           "url": "https://en.wikipedia.org/wiki/Troy_Eid"
         }
       ],
-      "living_expense_annual": 27260
+      "living_expense_annual": 27260,
+      "attrition_1l_pct": 0.0175,
+      "faculty_ft_total": 69,
+      "student_faculty_ratio": 12.3,
+      "clinic_seats_filled": 207,
+      "field_placements_filled": 723,
+      "simulation_seats_filled": 500,
+      "hands_on_per_student": 1.68
     },
     {
       "id": "university-of-detroit-mercy-school-of-law",
@@ -9818,7 +10539,14 @@
         }
       ],
       "notable_faculty": [],
-      "living_expense_annual": 23983
+      "living_expense_annual": 23983,
+      "attrition_1l_pct": 0.0202,
+      "faculty_ft_total": 29,
+      "student_faculty_ratio": 22.9,
+      "clinic_seats_filled": 235,
+      "field_placements_filled": 119,
+      "simulation_seats_filled": 448,
+      "hands_on_per_student": 1.21
     },
     {
       "id": "university-of-the-district-of-columbia-david-a-clarke-school-of-law",
@@ -9912,7 +10640,14 @@
         }
       ],
       "notable_faculty": [],
-      "living_expense_annual": 34035
+      "living_expense_annual": 34035,
+      "attrition_1l_pct": 0.0778,
+      "faculty_ft_total": 25,
+      "student_faculty_ratio": 9.4,
+      "clinic_seats_filled": 152,
+      "field_placements_filled": 49,
+      "simulation_seats_filled": 163,
+      "hands_on_per_student": 1.54
     },
     {
       "id": "drake-university-law-school",
@@ -10006,7 +10741,14 @@
         }
       ],
       "notable_faculty": [],
-      "living_expense_annual": 20923
+      "living_expense_annual": 20923,
+      "attrition_1l_pct": 0.049,
+      "faculty_ft_total": 34,
+      "student_faculty_ratio": 10.9,
+      "clinic_seats_filled": 87,
+      "field_placements_filled": 91,
+      "simulation_seats_filled": 193,
+      "hands_on_per_student": 1.01
     },
     {
       "id": "duquesne-university-school-of-law",
@@ -10059,7 +10801,14 @@
       "bar_pass_ultimate": 0.9328,
       "notable_alumni": [],
       "notable_faculty": [],
-      "living_expense_annual": 24318
+      "living_expense_annual": 24318,
+      "attrition_1l_pct": 0.0376,
+      "faculty_ft_total": 38,
+      "student_faculty_ratio": 13.9,
+      "clinic_seats_filled": 46,
+      "field_placements_filled": 97,
+      "simulation_seats_filled": 343,
+      "hands_on_per_student": 0.92
     },
     {
       "id": "elon-university-school-of-law",
@@ -10133,7 +10882,14 @@
           "url": "https://en.wikipedia.org/wiki/ISSN_(identifier)"
         }
       ],
-      "living_expense_annual": 31000
+      "living_expense_annual": 31000,
+      "attrition_1l_pct": 0.0873,
+      "faculty_ft_total": 38,
+      "student_faculty_ratio": 14.2,
+      "clinic_seats_filled": 50,
+      "field_placements_filled": 161,
+      "simulation_seats_filled": 1218,
+      "hands_on_per_student": 2.65
     },
     {
       "id": "faulkner-university-jones-school-of-law",
@@ -10236,7 +10992,14 @@
           "url": "https://en.wikipedia.org/wiki/Allison_Garrett"
         }
       ],
-      "living_expense_annual": 32600
+      "living_expense_annual": 32600,
+      "attrition_1l_pct": 0.0236,
+      "faculty_ft_total": 20,
+      "student_faculty_ratio": 20.6,
+      "clinic_seats_filled": 32,
+      "field_placements_filled": 65,
+      "simulation_seats_filled": 222,
+      "hands_on_per_student": 0.78
     },
     {
       "id": "florida-aandm-university-college-of-law",
@@ -10289,7 +11052,14 @@
       "bar_pass_ultimate": 0.7245,
       "notable_alumni": [],
       "notable_faculty": [],
-      "living_expense_annual": 39030
+      "living_expense_annual": 39030,
+      "attrition_1l_pct": 0.0994,
+      "faculty_ft_total": 35,
+      "student_faculty_ratio": 10.9,
+      "clinic_seats_filled": 27,
+      "field_placements_filled": 82,
+      "simulation_seats_filled": 260,
+      "hands_on_per_student": 0.96
     },
     {
       "id": "georgetown-university-law-center",
@@ -10383,7 +11153,14 @@
           "url": "https://en.wikipedia.org/wiki/David_D._Cole"
         }
       ],
-      "living_expense_annual": 33905
+      "living_expense_annual": 33905,
+      "attrition_1l_pct": 0.003,
+      "faculty_ft_total": 218,
+      "student_faculty_ratio": 10.4,
+      "clinic_seats_filled": 575,
+      "field_placements_filled": 553,
+      "simulation_seats_filled": 1411,
+      "hands_on_per_student": 1.12
     },
     {
       "id": "gonzaga-university-school-of-law",
@@ -10477,7 +11254,14 @@
           "url": "https://en.wikipedia.org/wiki/J._Stanley_Webster"
         }
       ],
-      "living_expense_annual": 17105
+      "living_expense_annual": 17105,
+      "attrition_1l_pct": 0.064,
+      "faculty_ft_total": 35,
+      "student_faculty_ratio": 15.7,
+      "clinic_seats_filled": 142,
+      "field_placements_filled": 191,
+      "simulation_seats_filled": 417,
+      "hands_on_per_student": 1.36
     },
     {
       "id": "university-of-hawaii-richardson-school-of-law",
@@ -10608,7 +11392,14 @@
           "url": "https://en.wikipedia.org/wiki/Chris_Iijima"
         }
       ],
-      "living_expense_annual": 27322
+      "living_expense_annual": 27322,
+      "attrition_1l_pct": 0.0207,
+      "faculty_ft_total": 44,
+      "student_faculty_ratio": 8.5,
+      "clinic_seats_filled": 185,
+      "field_placements_filled": 88,
+      "simulation_seats_filled": 168,
+      "hands_on_per_student": 1.18
     },
     {
       "id": "hofstra-university-maurice-a-deane-school-of-law",
@@ -10661,7 +11452,14 @@
       "bar_pass_ultimate": 0.9186,
       "notable_alumni": [],
       "notable_faculty": [],
-      "living_expense_annual": 36009
+      "living_expense_annual": 36009,
+      "attrition_1l_pct": 0.0189,
+      "faculty_ft_total": 52,
+      "student_faculty_ratio": 15.4,
+      "clinic_seats_filled": 117,
+      "field_placements_filled": 120,
+      "simulation_seats_filled": 891,
+      "hands_on_per_student": 1.41
     },
     {
       "id": "howard-university-school-of-law",
@@ -10714,7 +11512,14 @@
       "bar_pass_ultimate": 0.9375,
       "notable_alumni": [],
       "notable_faculty": [],
-      "living_expense_annual": 38251
+      "living_expense_annual": 38251,
+      "attrition_1l_pct": 0.0282,
+      "faculty_ft_total": 40,
+      "student_faculty_ratio": 13.9,
+      "clinic_seats_filled": 147,
+      "field_placements_filled": 136,
+      "simulation_seats_filled": 237,
+      "hands_on_per_student": 0.94
     },
     {
       "id": "university-of-idaho-college-of-law",
@@ -10767,7 +11572,14 @@
       "bar_pass_ultimate": 0.7966,
       "notable_alumni": [],
       "notable_faculty": [],
-      "living_expense_annual": 20136
+      "living_expense_annual": 20136,
+      "attrition_1l_pct": 0.0457,
+      "faculty_ft_total": 36,
+      "student_faculty_ratio": 13.9,
+      "clinic_seats_filled": 72,
+      "field_placements_filled": 38,
+      "simulation_seats_filled": 225,
+      "hands_on_per_student": 0.67
     },
     {
       "id": "university-of-illinois-chicago-school-of-law",
@@ -10820,7 +11632,14 @@
       "bar_pass_ultimate": 0.786,
       "notable_alumni": [],
       "notable_faculty": [],
-      "living_expense_annual": 24976
+      "living_expense_annual": 24976,
+      "attrition_1l_pct": 0.0524,
+      "faculty_ft_total": 52,
+      "student_faculty_ratio": 19.5,
+      "clinic_seats_filled": 167,
+      "field_placements_filled": 307,
+      "simulation_seats_filled": 1241,
+      "hands_on_per_student": 1.69
     },
     {
       "id": "indiana-university-robert-h-mckinney-school-of-law",
@@ -10955,7 +11774,14 @@
           "url": "https://en.wikipedia.org/wiki/Indiana_Law_Review"
         }
       ],
-      "living_expense_annual": 23512
+      "living_expense_annual": 23512,
+      "attrition_1l_pct": 0.0351,
+      "faculty_ft_total": 46,
+      "student_faculty_ratio": 18.0,
+      "clinic_seats_filled": 113,
+      "field_placements_filled": 320,
+      "simulation_seats_filled": 471,
+      "hands_on_per_student": 1.09
     },
     {
       "id": "inter-american-university-of-puerto-rico-school-of-law",
@@ -11037,7 +11863,14 @@
         }
       ],
       "notable_faculty": [],
-      "living_expense_annual": 25286
+      "living_expense_annual": 25286,
+      "attrition_1l_pct": 0.069,
+      "faculty_ft_total": 31,
+      "student_faculty_ratio": 19.7,
+      "clinic_seats_filled": 132,
+      "field_placements_filled": 85,
+      "simulation_seats_filled": 403,
+      "hands_on_per_student": 1.01
     },
     {
       "id": "jacksonville-university-college-of-law",
@@ -11089,7 +11922,14 @@
       "bar_pass_vs_state": 0.1577,
       "notable_alumni": [],
       "notable_faculty": [],
-      "living_expense_annual": 24911
+      "living_expense_annual": 24911,
+      "attrition_1l_pct": 0.0417,
+      "faculty_ft_total": 13,
+      "student_faculty_ratio": 10.4,
+      "clinic_seats_filled": 0,
+      "field_placements_filled": 19,
+      "simulation_seats_filled": 51,
+      "hands_on_per_student": 0.52
     },
     {
       "id": "lewis-and-clark-law-school",
@@ -11142,7 +11982,14 @@
       "bar_pass_ultimate": 0.8848,
       "notable_alumni": [],
       "notable_faculty": [],
-      "living_expense_annual": 28370
+      "living_expense_annual": 28370,
+      "attrition_1l_pct": 0.0057,
+      "faculty_ft_total": 43,
+      "student_faculty_ratio": 12.1,
+      "clinic_seats_filled": 113,
+      "field_placements_filled": 220,
+      "simulation_seats_filled": 258,
+      "hands_on_per_student": 1.14
     },
     {
       "id": "liberty-university-school-of-law",
@@ -11217,7 +12064,14 @@
           "url": "https://en.wikipedia.org/wiki/Phill_Kline"
         }
       ],
-      "living_expense_annual": 26532
+      "living_expense_annual": 26532,
+      "attrition_1l_pct": 0.0775,
+      "faculty_ft_total": 23,
+      "student_faculty_ratio": 14.2,
+      "clinic_seats_filled": 24,
+      "field_placements_filled": 70,
+      "simulation_seats_filled": 734,
+      "hands_on_per_student": 2.54
     },
     {
       "id": "lincoln-memorial-university-duncan-school-of-law",
@@ -11270,7 +12124,14 @@
       "bar_pass_ultimate": 0.8125,
       "notable_alumni": [],
       "notable_faculty": [],
-      "living_expense_annual": 28325
+      "living_expense_annual": 28325,
+      "attrition_1l_pct": 0.1333,
+      "faculty_ft_total": 25,
+      "student_faculty_ratio": 17.2,
+      "clinic_seats_filled": 39,
+      "field_placements_filled": 99,
+      "simulation_seats_filled": 261,
+      "hands_on_per_student": 0.93
     },
     {
       "id": "lsu-paul-m-hebert-law-center",
@@ -11323,7 +12184,14 @@
       "bar_pass_ultimate": 0.9701,
       "notable_alumni": [],
       "notable_faculty": [],
-      "living_expense_annual": 27034
+      "living_expense_annual": 27034,
+      "attrition_1l_pct": 0.0391,
+      "faculty_ft_total": 43,
+      "student_faculty_ratio": 14.8,
+      "clinic_seats_filled": 92,
+      "field_placements_filled": 187,
+      "simulation_seats_filled": 351,
+      "hands_on_per_student": 0.99
     },
     {
       "id": "university-of-louisville-brandeis-school-of-law",
@@ -11417,7 +12285,14 @@
         }
       ],
       "notable_faculty": [],
-      "living_expense_annual": 26966
+      "living_expense_annual": 26966,
+      "attrition_1l_pct": 0.0138,
+      "faculty_ft_total": 30,
+      "student_faculty_ratio": 12.6,
+      "clinic_seats_filled": 55,
+      "field_placements_filled": 96,
+      "simulation_seats_filled": 359,
+      "hands_on_per_student": 1.35
     },
     {
       "id": "loyola-university-new-orleans-college-of-law",
@@ -11511,7 +12386,14 @@
         }
       ],
       "notable_faculty": [],
-      "living_expense_annual": 29205
+      "living_expense_annual": 29205,
+      "attrition_1l_pct": 0.0225,
+      "faculty_ft_total": 46,
+      "student_faculty_ratio": 14.1,
+      "clinic_seats_filled": 145,
+      "field_placements_filled": 95,
+      "simulation_seats_filled": 889,
+      "hands_on_per_student": 1.74
     },
     {
       "id": "university-of-maine-school-of-law",
@@ -11564,7 +12446,14 @@
       "bar_pass_ultimate": 0.95,
       "notable_alumni": [],
       "notable_faculty": [],
-      "living_expense_annual": 26214
+      "living_expense_annual": 26214,
+      "attrition_1l_pct": 0.0286,
+      "faculty_ft_total": 25,
+      "student_faculty_ratio": 11.4,
+      "clinic_seats_filled": 60,
+      "field_placements_filled": 115,
+      "simulation_seats_filled": 138,
+      "hands_on_per_student": 1.09
     },
     {
       "id": "marquette-university-law-school",
@@ -11689,7 +12578,14 @@
           "url": "https://en.wikipedia.org/wiki/Bud_Selig"
         }
       ],
-      "living_expense_annual": 22146
+      "living_expense_annual": 22146,
+      "attrition_1l_pct": 0.0,
+      "faculty_ft_total": 37,
+      "student_faculty_ratio": 16.6,
+      "clinic_seats_filled": 57,
+      "field_placements_filled": 150,
+      "simulation_seats_filled": 929,
+      "hands_on_per_student": 1.85
     },
     {
       "id": "university-of-massachusetts-school-of-law",
@@ -11747,7 +12643,14 @@
         }
       ],
       "notable_faculty": [],
-      "living_expense_annual": 34626
+      "living_expense_annual": 34626,
+      "attrition_1l_pct": 0.1275,
+      "faculty_ft_total": 27,
+      "student_faculty_ratio": 14.4,
+      "clinic_seats_filled": 69,
+      "field_placements_filled": 60,
+      "simulation_seats_filled": 550,
+      "hands_on_per_student": 1.75
     },
     {
       "id": "university-of-memphis-cecil-c-humphreys-school-of-law",
@@ -11858,7 +12761,14 @@
           "url": "https://en.wikipedia.org/wiki/The_Memphis_13"
         }
       ],
-      "living_expense_annual": 28729
+      "living_expense_annual": 28729,
+      "attrition_1l_pct": 0.0515,
+      "faculty_ft_total": 23,
+      "student_faculty_ratio": 10.4,
+      "clinic_seats_filled": 47,
+      "field_placements_filled": 81,
+      "simulation_seats_filled": 176,
+      "hands_on_per_student": 1.27
     },
     {
       "id": "mercer-university-school-of-law",
@@ -11911,7 +12821,14 @@
       "bar_pass_ultimate": 0.9091,
       "notable_alumni": [],
       "notable_faculty": [],
-      "living_expense_annual": 23289
+      "living_expense_annual": 23289,
+      "attrition_1l_pct": 0.0321,
+      "faculty_ft_total": 23,
+      "student_faculty_ratio": 18.5,
+      "clinic_seats_filled": 37,
+      "field_placements_filled": 156,
+      "simulation_seats_filled": 616,
+      "hands_on_per_student": 1.9
     },
     {
       "id": "michigan-state-university-college-of-law",
@@ -11964,7 +12881,14 @@
       "bar_pass_ultimate": 0.8686,
       "notable_alumni": [],
       "notable_faculty": [],
-      "living_expense_annual": 27152
+      "living_expense_annual": 27152,
+      "attrition_1l_pct": 0.0392,
+      "faculty_ft_total": 53,
+      "student_faculty_ratio": 9.4,
+      "clinic_seats_filled": 131,
+      "field_placements_filled": 84,
+      "simulation_seats_filled": 835,
+      "hands_on_per_student": 2.1
     },
     {
       "id": "mississippi-college-school-of-law",
@@ -12046,7 +12970,14 @@
         }
       ],
       "notable_faculty": [],
-      "living_expense_annual": 26100
+      "living_expense_annual": 26100,
+      "attrition_1l_pct": 0.1341,
+      "faculty_ft_total": 22,
+      "student_faculty_ratio": 18.2,
+      "clinic_seats_filled": 44,
+      "field_placements_filled": 75,
+      "simulation_seats_filled": 193,
+      "hands_on_per_student": 0.78
     },
     {
       "id": "university-of-mississippi-school-of-law",
@@ -12140,7 +13071,14 @@
         }
       ],
       "notable_faculty": [],
-      "living_expense_annual": 27192
+      "living_expense_annual": 27192,
+      "attrition_1l_pct": 0.0559,
+      "faculty_ft_total": 35,
+      "student_faculty_ratio": 13.4,
+      "clinic_seats_filled": 143,
+      "field_placements_filled": 55,
+      "simulation_seats_filled": 408,
+      "hands_on_per_student": 1.29
     },
     {
       "id": "university-of-missouri-kansas-city-school-of-law",
@@ -12234,7 +13172,14 @@
           "url": "https://en.wikipedia.org/wiki/Kevin_Warren"
         }
       ],
-      "living_expense_annual": 23924
+      "living_expense_annual": 23924,
+      "attrition_1l_pct": 0.0268,
+      "faculty_ft_total": 36,
+      "student_faculty_ratio": 11.2,
+      "clinic_seats_filled": 47,
+      "field_placements_filled": 122,
+      "simulation_seats_filled": 214,
+      "hands_on_per_student": 0.95
     },
     {
       "id": "mitchell-hamline-school-of-law",
@@ -12287,7 +13232,14 @@
       "bar_pass_ultimate": 0.8306,
       "notable_alumni": [],
       "notable_faculty": [],
-      "living_expense_annual": 16848
+      "living_expense_annual": 16848,
+      "attrition_1l_pct": 0.0618,
+      "faculty_ft_total": 53,
+      "student_faculty_ratio": 21.6,
+      "clinic_seats_filled": 92,
+      "field_placements_filled": 364,
+      "simulation_seats_filled": 631,
+      "hands_on_per_student": 0.95
     },
     {
       "id": "university-of-montana-blewett-school-of-law",
@@ -12381,7 +13333,14 @@
         }
       ],
       "notable_faculty": [],
-      "living_expense_annual": 35371
+      "living_expense_annual": 35371,
+      "attrition_1l_pct": 0.0,
+      "faculty_ft_total": 18,
+      "student_faculty_ratio": 15.6,
+      "clinic_seats_filled": 20,
+      "field_placements_filled": 93,
+      "simulation_seats_filled": 323,
+      "hands_on_per_student": 1.56
     },
     {
       "id": "university-of-nebraska-college-of-law",
@@ -12504,7 +13463,14 @@
           "url": "https://en.wikipedia.org/wiki/William_J._Riley"
         }
       ],
-      "living_expense_annual": 22092
+      "living_expense_annual": 22092,
+      "attrition_1l_pct": 0.0318,
+      "faculty_ft_total": 38,
+      "student_faculty_ratio": 11.8,
+      "clinic_seats_filled": 119,
+      "field_placements_filled": 98,
+      "simulation_seats_filled": 683,
+      "hands_on_per_student": 2.01
     },
     {
       "id": "unlv-william-s-boyd-school-of-law",
@@ -12557,7 +13523,14 @@
       "bar_pass_ultimate": 0.8923,
       "notable_alumni": [],
       "notable_faculty": [],
-      "living_expense_annual": 31263
+      "living_expense_annual": 31263,
+      "attrition_1l_pct": 0.0065,
+      "faculty_ft_total": 43,
+      "student_faculty_ratio": 10.6,
+      "clinic_seats_filled": 51,
+      "field_placements_filled": 154,
+      "simulation_seats_filled": 432,
+      "hands_on_per_student": 1.39
     },
     {
       "id": "new-england-law-boston",
@@ -12651,7 +13624,14 @@
         }
       ],
       "notable_faculty": [],
-      "living_expense_annual": 48437
+      "living_expense_annual": 48437,
+      "attrition_1l_pct": 0.0993,
+      "faculty_ft_total": 33,
+      "student_faculty_ratio": 36.0,
+      "clinic_seats_filled": 69,
+      "field_placements_filled": 213,
+      "simulation_seats_filled": 930,
+      "hands_on_per_student": 1.02
     },
     {
       "id": "university-of-new-hampshire-franklin-pierce-school-of-law",
@@ -12766,7 +13746,14 @@
           "url": "https://en.wikipedia.org/wiki/Mary_W._S._Wong"
         }
       ],
-      "living_expense_annual": 27094
+      "living_expense_annual": 27094,
+      "attrition_1l_pct": 0.0593,
+      "faculty_ft_total": 30,
+      "student_faculty_ratio": 22.8,
+      "clinic_seats_filled": 166,
+      "field_placements_filled": 120,
+      "simulation_seats_filled": 483,
+      "hands_on_per_student": 1.12
     },
     {
       "id": "university-of-new-mexico-school-of-law",
@@ -12856,7 +13843,14 @@
           "url": "https://en.wikipedia.org/wiki/KXII"
         }
       ],
-      "living_expense_annual": 23114
+      "living_expense_annual": 23114,
+      "attrition_1l_pct": 0.0,
+      "faculty_ft_total": 41,
+      "student_faculty_ratio": 7.2,
+      "clinic_seats_filled": 117,
+      "field_placements_filled": 51,
+      "simulation_seats_filled": 79,
+      "hands_on_per_student": 0.83
     },
     {
       "id": "new-york-law-school",
@@ -12909,7 +13903,14 @@
       "bar_pass_ultimate": 0.8964,
       "notable_alumni": [],
       "notable_faculty": [],
-      "living_expense_annual": 23759
+      "living_expense_annual": 23759,
+      "attrition_1l_pct": 0.0807,
+      "faculty_ft_total": 53,
+      "student_faculty_ratio": 20.9,
+      "clinic_seats_filled": 286,
+      "field_placements_filled": 188,
+      "simulation_seats_filled": 524,
+      "hands_on_per_student": 0.9
     },
     {
       "id": "north-carolina-central-university-school-of-law",
@@ -13003,7 +14004,14 @@
         }
       ],
       "notable_faculty": [],
-      "living_expense_annual": 28292
+      "living_expense_annual": 28292,
+      "attrition_1l_pct": 0.1985,
+      "faculty_ft_total": 34,
+      "student_faculty_ratio": 10.6,
+      "clinic_seats_filled": 72,
+      "field_placements_filled": 76,
+      "simulation_seats_filled": 353,
+      "hands_on_per_student": 1.39
     },
     {
       "id": "university-of-north-carolina-school-of-law",
@@ -13056,7 +14064,14 @@
       "bar_pass_ultimate": 0.9727,
       "notable_alumni": [],
       "notable_faculty": [],
-      "living_expense_annual": 25678
+      "living_expense_annual": 25678,
+      "attrition_1l_pct": 0.011,
+      "faculty_ft_total": 67,
+      "student_faculty_ratio": 8.1,
+      "clinic_seats_filled": 115,
+      "field_placements_filled": 127,
+      "simulation_seats_filled": 547,
+      "hands_on_per_student": 1.45
     },
     {
       "id": "university-of-north-dakota-school-of-law",
@@ -13109,7 +14124,14 @@
       "bar_pass_ultimate": 0.8929,
       "notable_alumni": [],
       "notable_faculty": [],
-      "living_expense_annual": 20616
+      "living_expense_annual": 20616,
+      "attrition_1l_pct": 0.0306,
+      "faculty_ft_total": 18,
+      "student_faculty_ratio": 13.7,
+      "clinic_seats_filled": 27,
+      "field_placements_filled": 122,
+      "simulation_seats_filled": 92,
+      "hands_on_per_student": 0.98
     },
     {
       "id": "unt-dallas-college-of-law",
@@ -13162,7 +14184,14 @@
       "bar_pass_ultimate": 0.9213,
       "notable_alumni": [],
       "notable_faculty": [],
-      "living_expense_annual": 24638
+      "living_expense_annual": 24638,
+      "attrition_1l_pct": 0.0394,
+      "faculty_ft_total": 32,
+      "student_faculty_ratio": 13.5,
+      "clinic_seats_filled": 47,
+      "field_placements_filled": 89,
+      "simulation_seats_filled": 17,
+      "hands_on_per_student": 0.35
     },
     {
       "id": "northern-illinois-university-college-of-law",
@@ -13224,7 +14253,14 @@
         }
       ],
       "notable_faculty": [],
-      "living_expense_annual": 22742
+      "living_expense_annual": 22742,
+      "attrition_1l_pct": 0.0597,
+      "faculty_ft_total": 26,
+      "student_faculty_ratio": 13.5,
+      "clinic_seats_filled": 43,
+      "field_placements_filled": 77,
+      "simulation_seats_filled": 156,
+      "hands_on_per_student": 0.78
     },
     {
       "id": "northern-kentucky-university-chase-college-of-law",
@@ -13277,7 +14313,14 @@
       "bar_pass_ultimate": 0.9293,
       "notable_alumni": [],
       "notable_faculty": [],
-      "living_expense_annual": 20932
+      "living_expense_annual": 20932,
+      "attrition_1l_pct": 0.0833,
+      "faculty_ft_total": 24,
+      "student_faculty_ratio": 17.2,
+      "clinic_seats_filled": 30,
+      "field_placements_filled": 93,
+      "simulation_seats_filled": 152,
+      "hands_on_per_student": 0.67
     },
     {
       "id": "nova-southeastern-university-shepard-broad-college-of-law",
@@ -13359,7 +14402,14 @@
         }
       ],
       "notable_faculty": [],
-      "living_expense_annual": 40413
+      "living_expense_annual": 40413,
+      "attrition_1l_pct": 0.0489,
+      "faculty_ft_total": 41,
+      "student_faculty_ratio": 15.5,
+      "clinic_seats_filled": 51,
+      "field_placements_filled": 105,
+      "simulation_seats_filled": 410,
+      "hands_on_per_student": 0.89
     },
     {
       "id": "ohio-northern-university-pettit-college-of-law",
@@ -13453,7 +14503,14 @@
         }
       ],
       "notable_faculty": [],
-      "living_expense_annual": 22022
+      "living_expense_annual": 22022,
+      "attrition_1l_pct": 0.1395,
+      "faculty_ft_total": 21,
+      "student_faculty_ratio": 15.2,
+      "clinic_seats_filled": 14,
+      "field_placements_filled": 20,
+      "simulation_seats_filled": 318,
+      "hands_on_per_student": 1.1
     },
     {
       "id": "oklahoma-city-university-school-of-law",
@@ -13506,7 +14563,14 @@
       "bar_pass_ultimate": 0.8591,
       "notable_alumni": [],
       "notable_faculty": [],
-      "living_expense_annual": 28305
+      "living_expense_annual": 28305,
+      "attrition_1l_pct": 0.0727,
+      "faculty_ft_total": 25,
+      "student_faculty_ratio": 17.3,
+      "clinic_seats_filled": 79,
+      "field_placements_filled": 127,
+      "simulation_seats_filled": 322,
+      "hands_on_per_student": 1.22
     },
     {
       "id": "university-of-oklahoma-college-of-law",
@@ -13559,7 +14623,14 @@
       "bar_pass_ultimate": 0.9816,
       "notable_alumni": [],
       "notable_faculty": [],
-      "living_expense_annual": 27748
+      "living_expense_annual": 27748,
+      "attrition_1l_pct": 0.0249,
+      "faculty_ft_total": 37,
+      "student_faculty_ratio": 14.6,
+      "clinic_seats_filled": 69,
+      "field_placements_filled": 60,
+      "simulation_seats_filled": 498,
+      "hands_on_per_student": 1.16
     },
     {
       "id": "university-of-oregon-school-of-law",
@@ -13612,7 +14683,14 @@
       "bar_pass_ultimate": 0.9329,
       "notable_alumni": [],
       "notable_faculty": [],
-      "living_expense_annual": 22020
+      "living_expense_annual": 22020,
+      "attrition_1l_pct": 0.0699,
+      "faculty_ft_total": 36,
+      "student_faculty_ratio": 13.4,
+      "clinic_seats_filled": 99,
+      "field_placements_filled": 124,
+      "simulation_seats_filled": 306,
+      "hands_on_per_student": 1.1
     },
     {
       "id": "pace-university-elisabeth-haub-school-of-law",
@@ -13665,7 +14743,14 @@
       "bar_pass_ultimate": 0.8235,
       "notable_alumni": [],
       "notable_faculty": [],
-      "living_expense_annual": 33422
+      "living_expense_annual": 33422,
+      "attrition_1l_pct": 0.0638,
+      "faculty_ft_total": 43,
+      "student_faculty_ratio": 20.3,
+      "clinic_seats_filled": 106,
+      "field_placements_filled": 160,
+      "simulation_seats_filled": 419,
+      "hands_on_per_student": 0.78
     },
     {
       "id": "university-of-the-pacific-mcgeorge-school-of-law",
@@ -13759,7 +14844,14 @@
         }
       ],
       "notable_faculty": [],
-      "living_expense_annual": 35081
+      "living_expense_annual": 35081,
+      "attrition_1l_pct": 0.0425,
+      "faculty_ft_total": 41,
+      "student_faculty_ratio": 15.0,
+      "clinic_seats_filled": 107,
+      "field_placements_filled": 227,
+      "simulation_seats_filled": 530,
+      "hands_on_per_student": 1.4
     },
     {
       "id": "penn-state-dickinson-law",
@@ -13853,7 +14945,14 @@
         }
       ],
       "notable_faculty": [],
-      "living_expense_annual": 28094
+      "living_expense_annual": 28094,
+      "attrition_1l_pct": 0.0093,
+      "faculty_ft_total": 72,
+      "student_faculty_ratio": 9.2,
+      "clinic_seats_filled": 181,
+      "field_placements_filled": 263,
+      "simulation_seats_filled": 638,
+      "hands_on_per_student": 1.63
     },
     {
       "id": "pontifical-catholic-university-of-puerto-rico-school-of-law",
@@ -13940,7 +15039,14 @@
           "url": "https://en.wikipedia.org/wiki/Charles_Cuprill_Oppenheimer"
         }
       ],
-      "living_expense_annual": 26644
+      "living_expense_annual": 26644,
+      "attrition_1l_pct": 0.1134,
+      "faculty_ft_total": 42,
+      "student_faculty_ratio": 11.4,
+      "clinic_seats_filled": 180,
+      "field_placements_filled": 19,
+      "simulation_seats_filled": 113,
+      "hands_on_per_student": 0.65
     },
     {
       "id": "university-of-puerto-rico-school-of-law",
@@ -13993,7 +15099,14 @@
       "bar_pass_ultimate": 0.8134,
       "notable_alumni": [],
       "notable_faculty": [],
-      "living_expense_annual": 23501
+      "living_expense_annual": 23501,
+      "attrition_1l_pct": 0.0328,
+      "faculty_ft_total": 27,
+      "student_faculty_ratio": 16.4,
+      "clinic_seats_filled": 256,
+      "field_placements_filled": 59,
+      "simulation_seats_filled": 124,
+      "hands_on_per_student": 0.99
     },
     {
       "id": "quinnipiac-university-school-of-law",
@@ -14067,7 +15180,14 @@
         }
       ],
       "notable_faculty": [],
-      "living_expense_annual": 29274
+      "living_expense_annual": 29274,
+      "attrition_1l_pct": 0.0584,
+      "faculty_ft_total": 37,
+      "student_faculty_ratio": 10.6,
+      "clinic_seats_filled": 92,
+      "field_placements_filled": 152,
+      "simulation_seats_filled": 356,
+      "hands_on_per_student": 1.53
     },
     {
       "id": "regent-university-school-of-law",
@@ -14150,7 +15270,14 @@
           "url": "https://en.wikipedia.org/wiki/Samuel_Alito"
         }
       ],
-      "living_expense_annual": 32268
+      "living_expense_annual": 32268,
+      "attrition_1l_pct": 0.0787,
+      "faculty_ft_total": 24,
+      "student_faculty_ratio": 14.2,
+      "clinic_seats_filled": 19,
+      "field_placements_filled": 136,
+      "simulation_seats_filled": 305,
+      "hands_on_per_student": 1.35
     },
     {
       "id": "roger-williams-university-school-of-law",
@@ -14208,7 +15335,14 @@
         }
       ],
       "notable_faculty": [],
-      "living_expense_annual": 25616
+      "living_expense_annual": 25616,
+      "attrition_1l_pct": 0.0305,
+      "faculty_ft_total": 35,
+      "student_faculty_ratio": 13.9,
+      "clinic_seats_filled": 76,
+      "field_placements_filled": 116,
+      "simulation_seats_filled": 486,
+      "hands_on_per_student": 1.4
     },
     {
       "id": "rutgers-law-school",
@@ -14302,7 +15436,14 @@
         }
       ],
       "notable_faculty": [],
-      "living_expense_annual": 33190
+      "living_expense_annual": 33190,
+      "attrition_1l_pct": 0.0184,
+      "faculty_ft_total": 167,
+      "student_faculty_ratio": 8.0,
+      "clinic_seats_filled": 348,
+      "field_placements_filled": 119,
+      "simulation_seats_filled": 1197,
+      "hands_on_per_student": 1.24
     },
     {
       "id": "saint-louis-university-school-of-law",
@@ -14372,7 +15513,14 @@
         }
       ],
       "notable_faculty": [],
-      "living_expense_annual": 26112
+      "living_expense_annual": 26112,
+      "attrition_1l_pct": 0.0222,
+      "faculty_ft_total": 52,
+      "student_faculty_ratio": 11.4,
+      "clinic_seats_filled": 83,
+      "field_placements_filled": 115,
+      "simulation_seats_filled": 775,
+      "hands_on_per_student": 1.64
     },
     {
       "id": "samford-university-cumberland-school-of-law",
@@ -14458,7 +15606,14 @@
         }
       ],
       "notable_faculty": [],
-      "living_expense_annual": 31226
+      "living_expense_annual": 31226,
+      "attrition_1l_pct": 0.0294,
+      "faculty_ft_total": 33,
+      "student_faculty_ratio": 14.3,
+      "clinic_seats_filled": 72,
+      "field_placements_filled": 181,
+      "simulation_seats_filled": 701,
+      "hands_on_per_student": 2.03
     },
     {
       "id": "university-of-san-francisco-school-of-law",
@@ -14552,7 +15707,14 @@
         }
       ],
       "notable_faculty": [],
-      "living_expense_annual": 34100
+      "living_expense_annual": 34100,
+      "attrition_1l_pct": 0.0995,
+      "faculty_ft_total": 42,
+      "student_faculty_ratio": 12.1,
+      "clinic_seats_filled": 97,
+      "field_placements_filled": 149,
+      "simulation_seats_filled": 465,
+      "hands_on_per_student": 1.39
     },
     {
       "id": "santa-clara-university-school-of-law",
@@ -14671,7 +15833,14 @@
           "url": "https://en.wikipedia.org/wiki/ISBN_(identifier)"
         }
       ],
-      "living_expense_annual": 35618
+      "living_expense_annual": 35618,
+      "attrition_1l_pct": 0.0344,
+      "faculty_ft_total": 53,
+      "student_faculty_ratio": 14.1,
+      "clinic_seats_filled": 189,
+      "field_placements_filled": 305,
+      "simulation_seats_filled": 843,
+      "hands_on_per_student": 1.79
     },
     {
       "id": "seattle-university-school-of-law",
@@ -14806,7 +15975,14 @@
           "url": "https://en.wikipedia.org/wiki/Mary_Yu"
         }
       ],
-      "living_expense_annual": 34161
+      "living_expense_annual": 34161,
+      "attrition_1l_pct": 0.0794,
+      "faculty_ft_total": 65,
+      "student_faculty_ratio": 9.9,
+      "clinic_seats_filled": 138,
+      "field_placements_filled": 235,
+      "simulation_seats_filled": 412,
+      "hands_on_per_student": 1.22
     },
     {
       "id": "university-of-south-carolina-joseph-f-rice-school-of-law",
@@ -14859,7 +16035,14 @@
       "bar_pass_ultimate": 0.9275,
       "notable_alumni": [],
       "notable_faculty": [],
-      "living_expense_annual": 25392
+      "living_expense_annual": 25392,
+      "attrition_1l_pct": 0.0352,
+      "faculty_ft_total": 60,
+      "student_faculty_ratio": 10.8,
+      "clinic_seats_filled": 47,
+      "field_placements_filled": 78,
+      "simulation_seats_filled": 597,
+      "hands_on_per_student": 1.11
     },
     {
       "id": "university-of-south-dakota-knudson-school-of-law",
@@ -14912,7 +16095,14 @@
       "bar_pass_ultimate": 0.9123,
       "notable_alumni": [],
       "notable_faculty": [],
-      "living_expense_annual": 18034
+      "living_expense_annual": 18034,
+      "attrition_1l_pct": 0.0568,
+      "faculty_ft_total": 19,
+      "student_faculty_ratio": 13.3,
+      "clinic_seats_filled": 0,
+      "field_placements_filled": 127,
+      "simulation_seats_filled": 91,
+      "hands_on_per_student": 0.87
     },
     {
       "id": "south-texas-college-of-law-houston",
@@ -15006,7 +16196,14 @@
         }
       ],
       "notable_faculty": [],
-      "living_expense_annual": 56958
+      "living_expense_annual": 56958,
+      "attrition_1l_pct": 0.0623,
+      "faculty_ft_total": 47,
+      "student_faculty_ratio": 24.3,
+      "clinic_seats_filled": 154,
+      "field_placements_filled": 148,
+      "simulation_seats_filled": 946,
+      "hands_on_per_student": 1.09
     },
     {
       "id": "southern-illinois-university-school-of-law",
@@ -15100,7 +16297,14 @@
         }
       ],
       "notable_faculty": [],
-      "living_expense_annual": 18608
+      "living_expense_annual": 18608,
+      "attrition_1l_pct": 0.097,
+      "faculty_ft_total": 21,
+      "student_faculty_ratio": 14.9,
+      "clinic_seats_filled": 25,
+      "field_placements_filled": 39,
+      "simulation_seats_filled": 222,
+      "hands_on_per_student": 0.91
     },
     {
       "id": "southern-university-law-center",
@@ -15194,7 +16398,14 @@
         }
       ],
       "notable_faculty": [],
-      "living_expense_annual": 32262
+      "living_expense_annual": 32262,
+      "attrition_1l_pct": 0.1027,
+      "faculty_ft_total": 61,
+      "student_faculty_ratio": 13.3,
+      "clinic_seats_filled": 208,
+      "field_placements_filled": 133,
+      "simulation_seats_filled": 235,
+      "hands_on_per_student": 0.71
     },
     {
       "id": "southwestern-law-school",
@@ -15264,7 +16475,14 @@
           "url": "https://en.wikipedia.org/wiki/Don_Biederman_(attorney)"
         }
       ],
-      "living_expense_annual": 38033
+      "living_expense_annual": 38033,
+      "attrition_1l_pct": 0.1198,
+      "faculty_ft_total": 70,
+      "student_faculty_ratio": 15.8,
+      "clinic_seats_filled": 143,
+      "field_placements_filled": 441,
+      "simulation_seats_filled": 972,
+      "hands_on_per_student": 1.4
     },
     {
       "id": "st-mary-s-university-school-of-law",
@@ -15317,7 +16535,14 @@
       "bar_pass_ultimate": 0.9242,
       "notable_alumni": [],
       "notable_faculty": [],
-      "living_expense_annual": 23878
+      "living_expense_annual": 23878,
+      "attrition_1l_pct": 0.1495,
+      "faculty_ft_total": 52,
+      "student_faculty_ratio": 15.4,
+      "clinic_seats_filled": 117,
+      "field_placements_filled": 65,
+      "simulation_seats_filled": 1090,
+      "hands_on_per_student": 1.59
     },
     {
       "id": "st-thomas-university-college-of-law",
@@ -15403,7 +16628,14 @@
         }
       ],
       "notable_faculty": [],
-      "living_expense_annual": 42548
+      "living_expense_annual": 42548,
+      "attrition_1l_pct": 0.1065,
+      "faculty_ft_total": 45,
+      "student_faculty_ratio": 22.2,
+      "clinic_seats_filled": 34,
+      "field_placements_filled": 96,
+      "simulation_seats_filled": 474,
+      "hands_on_per_student": 0.61
     },
     {
       "id": "university-of-st-thomas-school-of-law",
@@ -15493,7 +16725,14 @@
           "url": "https://en.wikipedia.org/wiki/MinnPost"
         }
       ],
-      "living_expense_annual": 27408
+      "living_expense_annual": 27408,
+      "attrition_1l_pct": 0.0181,
+      "faculty_ft_total": 26,
+      "student_faculty_ratio": 18.7,
+      "clinic_seats_filled": 110,
+      "field_placements_filled": 825,
+      "simulation_seats_filled": 401,
+      "hands_on_per_student": 2.75
     },
     {
       "id": "stetson-university-college-of-law",
@@ -15596,7 +16835,14 @@
           "url": "https://en.wikipedia.org/wiki/Harold_Sebring"
         }
       ],
-      "living_expense_annual": 27414
+      "living_expense_annual": 27414,
+      "attrition_1l_pct": 0.0234,
+      "faculty_ft_total": 51,
+      "student_faculty_ratio": 19.8,
+      "clinic_seats_filled": 100,
+      "field_placements_filled": 134,
+      "simulation_seats_filled": 955,
+      "hands_on_per_student": 1.18
     },
     {
       "id": "suffolk-university-law-school",
@@ -15658,7 +16904,14 @@
           "url": "https://en.wikipedia.org/wiki/Joseph_Glannon"
         }
       ],
-      "living_expense_annual": 34706
+      "living_expense_annual": 34706,
+      "attrition_1l_pct": 0.0346,
+      "faculty_ft_total": 81,
+      "student_faculty_ratio": 16.5,
+      "clinic_seats_filled": 260,
+      "field_placements_filled": 216,
+      "simulation_seats_filled": 1242,
+      "hands_on_per_student": 1.28
     },
     {
       "id": "syracuse-university-college-of-law",
@@ -15724,7 +16977,14 @@
           "url": "https://en.wikipedia.org/wiki/David_Cay_Johnston"
         }
       ],
-      "living_expense_annual": 24472
+      "living_expense_annual": 24472,
+      "attrition_1l_pct": 0.0865,
+      "faculty_ft_total": 59,
+      "student_faculty_ratio": 12.7,
+      "clinic_seats_filled": 185,
+      "field_placements_filled": 204,
+      "simulation_seats_filled": 1373,
+      "hands_on_per_student": 2.35
     },
     {
       "id": "texas-southern-university-thurgood-marshall-school-of-law",
@@ -15818,7 +17078,14 @@
         }
       ],
       "notable_faculty": [],
-      "living_expense_annual": 27784
+      "living_expense_annual": 27784,
+      "attrition_1l_pct": 0.1682,
+      "faculty_ft_total": 58,
+      "student_faculty_ratio": 9.6,
+      "clinic_seats_filled": 0,
+      "field_placements_filled": 0,
+      "simulation_seats_filled": 0,
+      "hands_on_per_student": 0.0
     },
     {
       "id": "texas-tech-university-school-of-law",
@@ -15892,7 +17159,14 @@
         }
       ],
       "notable_faculty": [],
-      "living_expense_annual": 20107
+      "living_expense_annual": 20107,
+      "attrition_1l_pct": 0.0719,
+      "faculty_ft_total": 43,
+      "student_faculty_ratio": 10.7,
+      "clinic_seats_filled": 59,
+      "field_placements_filled": 34,
+      "simulation_seats_filled": 257,
+      "hands_on_per_student": 0.76
     },
     {
       "id": "university-of-texas-school-of-law",
@@ -15986,7 +17260,14 @@
           "url": "https://en.wikipedia.org/wiki/Mitchell_Berman"
         }
       ],
-      "living_expense_annual": 25398
+      "living_expense_annual": 25398,
+      "attrition_1l_pct": 0.0054,
+      "faculty_ft_total": 99,
+      "student_faculty_ratio": 9.4,
+      "clinic_seats_filled": 321,
+      "field_placements_filled": 81,
+      "simulation_seats_filled": 1042,
+      "hands_on_per_student": 1.56
     },
     {
       "id": "university-of-toledo-college-of-law",
@@ -16080,7 +17361,14 @@
         }
       ],
       "notable_faculty": [],
-      "living_expense_annual": 24247
+      "living_expense_annual": 24247,
+      "attrition_1l_pct": 0.0692,
+      "faculty_ft_total": 24,
+      "student_faculty_ratio": 15.3,
+      "clinic_seats_filled": 56,
+      "field_placements_filled": 81,
+      "simulation_seats_filled": 94,
+      "hands_on_per_student": 0.63
     },
     {
       "id": "touro-university-jacob-d-fuchsberg-law-center",
@@ -16183,7 +17471,14 @@
           "url": "https://en.wikipedia.org/wiki/Sol_Wachtler"
         }
       ],
-      "living_expense_annual": 52602
+      "living_expense_annual": 52602,
+      "attrition_1l_pct": 0.0856,
+      "faculty_ft_total": 33,
+      "student_faculty_ratio": 18.3,
+      "clinic_seats_filled": 141,
+      "field_placements_filled": 117,
+      "simulation_seats_filled": 163,
+      "hands_on_per_student": 0.7
     },
     {
       "id": "university-of-tulsa-college-of-law",
@@ -16277,7 +17572,14 @@
           "url": "https://en.wikipedia.org/wiki/Sven_Erik_Holmes"
         }
       ],
-      "living_expense_annual": 29488
+      "living_expense_annual": 29488,
+      "attrition_1l_pct": 0.0167,
+      "faculty_ft_total": 20,
+      "student_faculty_ratio": 14.1,
+      "clinic_seats_filled": 56,
+      "field_placements_filled": 169,
+      "simulation_seats_filled": 0,
+      "hands_on_per_student": 0.8
     },
     {
       "id": "vermont-law-and-graduate-school",
@@ -16412,7 +17714,14 @@
           "url": "https://en.wikipedia.org/wiki/Deborah_Markowitz"
         }
       ],
-      "living_expense_annual": 23952
+      "living_expense_annual": 23952,
+      "attrition_1l_pct": 0.0311,
+      "faculty_ft_total": 53,
+      "student_faculty_ratio": 13.3,
+      "clinic_seats_filled": 116,
+      "field_placements_filled": 79,
+      "simulation_seats_filled": 841,
+      "hands_on_per_student": 1.47
     },
     {
       "id": "washburn-university-school-of-law",
@@ -16478,7 +17787,14 @@
         }
       ],
       "notable_faculty": [],
-      "living_expense_annual": 17018
+      "living_expense_annual": 17018,
+      "attrition_1l_pct": 0.029,
+      "faculty_ft_total": 28,
+      "student_faculty_ratio": 12.4,
+      "clinic_seats_filled": 49,
+      "field_placements_filled": 97,
+      "simulation_seats_filled": 360,
+      "hands_on_per_student": 1.46
     },
     {
       "id": "west-virginia-university-college-of-law",
@@ -16531,7 +17847,14 @@
       "bar_pass_ultimate": 0.8812,
       "notable_alumni": [],
       "notable_faculty": [],
-      "living_expense_annual": 26466
+      "living_expense_annual": 26466,
+      "attrition_1l_pct": 0.0504,
+      "faculty_ft_total": 27,
+      "student_faculty_ratio": 11.5,
+      "clinic_seats_filled": 120,
+      "field_placements_filled": 42,
+      "simulation_seats_filled": 228,
+      "hands_on_per_student": 1.26
     },
     {
       "id": "western-new-england-university-school-of-law",
@@ -16625,7 +17948,14 @@
         }
       ],
       "notable_faculty": [],
-      "living_expense_annual": 20731
+      "living_expense_annual": 20731,
+      "attrition_1l_pct": 0.0504,
+      "faculty_ft_total": 25,
+      "student_faculty_ratio": 13.0,
+      "clinic_seats_filled": 36,
+      "field_placements_filled": 66,
+      "simulation_seats_filled": 209,
+      "hands_on_per_student": 0.96
     },
     {
       "id": "western-state-college-of-law-at-westcliff-university",
@@ -16719,7 +18049,14 @@
         }
       ],
       "notable_faculty": [],
-      "living_expense_annual": 32140
+      "living_expense_annual": 32140,
+      "attrition_1l_pct": 0.1667,
+      "faculty_ft_total": 24,
+      "student_faculty_ratio": 14.8,
+      "clinic_seats_filled": 58,
+      "field_placements_filled": 80,
+      "simulation_seats_filled": 322,
+      "hands_on_per_student": 1.3
     },
     {
       "id": "widener-university-commonwealth-law-school",
@@ -16813,7 +18150,14 @@
         }
       ],
       "notable_faculty": [],
-      "living_expense_annual": 32862
+      "living_expense_annual": 32862,
+      "attrition_1l_pct": 0.1925,
+      "faculty_ft_total": 17,
+      "student_faculty_ratio": 24.2,
+      "clinic_seats_filled": 31,
+      "field_placements_filled": 137,
+      "simulation_seats_filled": 255,
+      "hands_on_per_student": 1.03
     },
     {
       "id": "widener-university-delaware-law-school",
@@ -16912,7 +18256,14 @@
           "url": "https://en.wikipedia.org/wiki/Joe_Biden"
         }
       ],
-      "living_expense_annual": 25720
+      "living_expense_annual": 25720,
+      "attrition_1l_pct": 0.0506,
+      "faculty_ft_total": 32,
+      "student_faculty_ratio": 25.2,
+      "clinic_seats_filled": 58,
+      "field_placements_filled": 90,
+      "simulation_seats_filled": 1224,
+      "hands_on_per_student": 1.7
     },
     {
       "id": "willamette-university-college-of-law",
@@ -17027,7 +18378,14 @@
           "url": "https://en.wikipedia.org/wiki/Edwin_J._Peterson"
         }
       ],
-      "living_expense_annual": 22828
+      "living_expense_annual": 22828,
+      "attrition_1l_pct": 0.0563,
+      "faculty_ft_total": 27,
+      "student_faculty_ratio": 13.5,
+      "clinic_seats_filled": 75,
+      "field_placements_filled": 136,
+      "simulation_seats_filled": 253,
+      "hands_on_per_student": 1.27
     },
     {
       "id": "wilmington-university-school-of-law",
@@ -17123,7 +18481,14 @@
           "url": "https://en.wikipedia.org/wiki/Joe_Biden"
         }
       ],
-      "living_expense_annual": 24622
+      "living_expense_annual": 24622,
+      "attrition_1l_pct": 0.0641,
+      "faculty_ft_total": 12,
+      "student_faculty_ratio": 9.9,
+      "clinic_seats_filled": 0,
+      "field_placements_filled": 19,
+      "simulation_seats_filled": 0,
+      "hands_on_per_student": 0.16
     },
     {
       "id": "university-of-wyoming-college-of-law",
@@ -17222,7 +18587,14 @@
           "url": "https://en.wikipedia.org/wiki/Johanna_Bond"
         }
       ],
-      "living_expense_annual": 17600
+      "living_expense_annual": 17600,
+      "attrition_1l_pct": 0.0541,
+      "faculty_ft_total": 25,
+      "student_faculty_ratio": 9.2,
+      "clinic_seats_filled": 91,
+      "field_placements_filled": 96,
+      "simulation_seats_filled": 150,
+      "hands_on_per_student": 1.47
     }
   ]
 }

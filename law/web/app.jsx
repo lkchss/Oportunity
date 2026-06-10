@@ -826,6 +826,12 @@ function DetailScreen({ school, profile, onBack }) {
               {school.transfers_in != null && <span> · admits {school.transfers_in} transfers/yr</span>}
             </div>
           )}
+          {school.attrition_1l_pct != null && (
+            <div className="mono">
+              1L attrition: {fmtPct(school.attrition_1l_pct)}
+              {school.attrition_1l_pct > 0.10 && <span> · <strong>high</strong>{school.conditional_scholarship ? " — and scholarships here are conditional" : ""}</span>}
+            </div>
+          )}
         </div>
 
         <div className="box story-col">
@@ -848,6 +854,12 @@ function DetailScreen({ school, profile, onBack }) {
           </div>
           {school.target_states && school.target_states.length > 0 && (
             <div className="mono">feeder markets: {school.target_states.join(" · ")}</div>
+          )}
+          {school.hands_on_per_student != null && (
+            <div className="mono">
+              hands-on training: {school.hands_on_per_student} clinic/externship/sim seats per student
+              {school.student_faculty_ratio != null && <span> · {school.student_faculty_ratio}:1 student-faculty</span>}
+            </div>
           )}
         </div>
 
