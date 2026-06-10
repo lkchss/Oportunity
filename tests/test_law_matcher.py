@@ -289,6 +289,19 @@ class TestScoreSanity:
         s_high = _compute_scholarship(high, school, 163, 3.75)
         assert s_low > s_high
 
+    def test_no_lsat_scholarship_not_inflated_at_low_lsat_schools(self, schools):
+        """A missing LSAT must not fake a high-LSAT splitter: at schools whose
+        lsat_75 sits far below the old 160 placeholder, the no-LSAT scholarship
+        score has to stay at or below the same GPA backed by a real LSAT at the
+        school's 75th percentile."""
+        prof = _profile()
+        low_lsat_schools = [s for s in schools if s["lsat_75"] <= 154]
+        assert low_lsat_schools, "dataset should contain low-LSAT schools"
+        for school in low_lsat_schools:
+            none_score = _compute_scholarship(prof, school, None, 3.2)
+            real_score = _compute_scholarship(prof, school, school["lsat_75"], 3.2)
+            assert none_score <= real_score, school["id"]
+
     def test_instate_improves_financial_score(self, schools):
         """In-state tuition reduces debt and should improve financial score."""
         ohio = _school(schools, "ohio-state-moritz-law")

@@ -430,23 +430,31 @@ def _compute_scholarship(
     Need:  income-bracket signal scales a flat boost across all schools.
     """
     # --- Merit component ---
+    # No-LSAT path: GPA-only merit. A placeholder LSAT must never reach the
+    # splitter branches — at low-LSAT schools it would fake a high-LSAT splitter
+    # and inflate merit (and, downstream, expected aid) for exactly the
+    # applicants who haven't tested yet.
     if lsat is None:
-        lsat = 160  # conservative placeholder
-
-    lsat_vs_75  = lsat - school["lsat_75"]
-    gpa_vs_75   = gpa  - school["gpa_75"]
-    gpa_vs_25   = gpa  - school["gpa_25"]
-    gpa_below_25 = school["gpa_25"] - gpa
-
-    # Splitter: high LSAT, low-ish GPA
-    if lsat_vs_75 > 5 and gpa_below_25 <= 0.30:
-        merit_base = 85.0
-    elif lsat_vs_75 > 5 and gpa_below_25 > 0.30:
-        merit_base = 35.0   # GPA drags school median too far
-    elif gpa_vs_75 > 0.5 and lsat < school["lsat_50"]:
-        merit_base = 60.0   # reverse splitter
+        if gpa - school["gpa_75"] > 0.1:
+            merit_base = 60.0   # clearly above the 75th — strong merit signal
+        elif gpa >= school["gpa_50"]:
+            merit_base = 50.0
+        else:
+            merit_base = 40.0
     else:
-        merit_base = 50.0
+        lsat_vs_75  = lsat - school["lsat_75"]
+        gpa_vs_75   = gpa  - school["gpa_75"]
+        gpa_below_25 = school["gpa_25"] - gpa
+
+        # Splitter: high LSAT, low-ish GPA
+        if lsat_vs_75 > 5 and gpa_below_25 <= 0.30:
+            merit_base = 85.0
+        elif lsat_vs_75 > 5 and gpa_below_25 > 0.30:
+            merit_base = 35.0   # GPA drags school median too far
+        elif gpa_vs_75 > 0.5 and lsat < school["lsat_50"]:
+            merit_base = 60.0   # reverse splitter
+        else:
+            merit_base = 50.0
 
     # Generosity: prefer the real ABA 509 award grid (weights award SIZE, not just
     # receipt) — full band counts most, then half-to-full, then <half — normalized
@@ -459,13 +467,16 @@ def _compute_scholarship(
         school_generosity = school.get("scholarship_pct", 0.75) * 100
     median_scholarship_bonus = min(school.get("median_scholarship", 20000) / 50000, 1.0) * 10
 
-    lsat_pct = _clamp(
-        (lsat - school["lsat_25"]) / max(school["lsat_75"] - school["lsat_25"], 1) * 100
-    )
     gpa_pct = _clamp(
         (gpa  - school["gpa_25"])  / max(school["gpa_75"]  - school["gpa_25"],  0.01) * 100
     )
-    percentile_fit = (lsat_pct + gpa_pct) / 2 * 0.30
+    if lsat is None:
+        percentile_fit = gpa_pct * 0.30   # GPA-only: no fake LSAT percentile
+    else:
+        lsat_pct = _clamp(
+            (lsat - school["lsat_25"]) / max(school["lsat_75"] - school["lsat_25"], 1) * 100
+        )
+        percentile_fit = (lsat_pct + gpa_pct) / 2 * 0.30
 
     merit_score = (
         merit_base                * 0.40
