@@ -1,6 +1,6 @@
 /* app.jsx — product flow: Profile form -> Results table -> School detail. */
 
-const { useState, useMemo } = React;
+const { useState, useMemo, useEffect } = React;
 
 const BAR_COLORS = [
   "var(--target)", "#7c3aed", "var(--safety)", "var(--hard)", "#b45309", "var(--accent)",
@@ -326,6 +326,116 @@ function FilterMenu({ activeTiers, setActiveTiers, tierCounts }) {
   );
 }
 
+/* Share-link profile encoding: UTF-8-safe base64 of the form JSON. */
+function encodeShare(form) {
+  return btoa(unescape(encodeURIComponent(JSON.stringify(form))));
+}
+function decodeShare(hash) {
+  return JSON.parse(decodeURIComponent(escape(atob(hash))));
+}
+
+/* CSV export of the current (filtered + sorted) results list. */
+function exportCsv(rows) {
+  const esc = (v) => {
+    const s = String(v == null ? "" : v);
+    return /[",\n]/.test(s) ? '"' + s.replace(/"/g, '""') + '"' : s;
+  };
+  const head = ["#", "School", "USNWR rank", "Tier", "Score",
+    "LSAT 25/50/75", "GPA 25/50/75", "Acceptance", "BigLaw %", "Fed clerk %",
+    "Gov %", "Pub int %", "Bar first-time", "Cost after aid", "Monthly payment",
+    "Starting salary", "Tuition basis"];
+  const lines = [head, ...rows.map((s, i) => [
+    i + 1, s.name, fmtRank(s.usnwr_rank_2026), s.admissibility_tier, s.composite_score,
+    `${s.lsat_25}/${s.lsat_50}/${s.lsat_75}`,
+    `${s.gpa_25.toFixed(2)}/${s.gpa_50.toFixed(2)}/${s.gpa_75.toFixed(2)}`,
+    fmtPct(s.acceptance_rate), fmtPct(s.biglaw_pct), fmtPct(s.federal_clerkship_pct),
+    fmtPct(s.government_pct), fmtPct(s.public_interest_pct),
+    fmtPct(s.bar_pass_rate_first_time),
+    s.financial_breakdown.net_debt, s.financial_breakdown.monthly_payment_estimate,
+    s.financial_breakdown.starting_salary,
+    s.financial_breakdown.qualifies_instate ? "in-state" : "out-of-state",
+  ])];
+  const csv = "﻿" + lines.map((r) => r.map(esc).join(",")).join("\r\n");
+  const blob = new Blob([csv], { type: "text/csv;charset=utf-8" });
+  const a = document.createElement("a");
+  a.href = URL.createObjectURL(blob);
+  a.download = "law-school-matches.csv";
+  a.click();
+  URL.revokeObjectURL(a.href);
+}
+
+/* Retake what-if: re-rank the same profile at LSAT +N and show which schools
+   cross a full admit tier. Hidden for no-LSAT profiles. */
+const TIER_ORDER = ["hard reach", "reach", "target", "safety"];
+
+function WhatIfPanel({ data }) {
+  const lsat = data.profile.lsat;
+  const [delta, setDelta] = useState(0);
+  const [res, setRes] = useState(null);
+  const [busy, setBusy] = useState(false);
+  if (lsat == null) return null;
+
+  const run = async (d) => {
+    setDelta(d);
+    if (!d) { setRes(null); return; }
+    setBusy(true);
+    try {
+      const r = await fetch("/api/match", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ ...data.profile, lsat: Math.min(lsat + d, 180) }),
+      });
+      const j = await r.json();
+      if (r.ok) setRes({ delta: d, schools: j.schools });
+    } finally { setBusy(false); }
+  };
+
+  let ups = null;
+  if (res && res.delta === delta && delta) {
+    const baseTier = {};
+    data.schools.forEach((s) => { baseTier[s.id] = s.admissibility_tier; });
+    ups = res.schools
+      .map((s) => ({ s, from: baseTier[s.id] }))
+      .filter(({ s, from }) =>
+        from && TIER_ORDER.indexOf(s.admissibility_tier) > TIER_ORDER.indexOf(from));
+  }
+
+  return (
+    <div className="box" style={{ marginBottom: 16 }}>
+      <div style={{ display: "flex", alignItems: "center", gap: 10, flexWrap: "wrap" }}>
+        <strong>Retake what-if</strong>
+        <span className="mono">your LSAT {lsat} →</span>
+        {[0, 1, 3, 5].map((d) => (
+          <button key={d} className={`btn sm ${delta === d ? "primary" : "ghost"}`}
+            onClick={() => run(d)}>
+            {d === 0 ? "off" : `+${d}`}
+          </button>
+        ))}
+        {busy && <span className="mono">computing…</span>}
+      </div>
+      {ups && (
+        <div style={{ marginTop: 10 }}>
+          {ups.length === 0 ? (
+            <div className="mono">no admit-tier changes at LSAT {Math.min(lsat + delta, 180)} — the gains show up in scores, not tiers</div>
+          ) : (
+            <React.Fragment>
+              <div className="mono">{ups.length} school(s) improve a full admit tier at LSAT {Math.min(lsat + delta, 180)}:</div>
+              <div style={{ display: "flex", flexWrap: "wrap", gap: 6, marginTop: 6 }}>
+                {ups.slice(0, 12).map(({ s, from }) => (
+                  <span key={s.id} className="metric-badge">
+                    {s.name}: {TIER_LABEL[from]} → {TIER_LABEL[s.admissibility_tier]}
+                  </span>
+                ))}
+                {ups.length > 12 && <span className="mono">+{ups.length - 12} more</span>}
+              </div>
+            </React.Fragment>
+          )}
+        </div>
+      )}
+    </div>
+  );
+}
+
 function ResultsScreen({ data, onOpen, onBack, selectedIds, onToggleSelect, onClearSelect, onCompare, onOpenSchool }) {
   const [sortKey, setSortKey] = useState("comp");
   const [asc, setAsc] = useState(false);
@@ -333,6 +443,15 @@ function ResultsScreen({ data, onOpen, onBack, selectedIds, onToggleSelect, onCl
   const [activeTiers, setActiveTiers] = useState([]);   // empty = show all
   const wantsTransfer = !!data.profile.wants_transfer;
   const [tab, setTab] = useState("matches");
+  const [copied, setCopied] = useState(false);
+
+  const copyLink = async () => {
+    try {
+      await navigator.clipboard.writeText(window.location.href);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 1500);
+    } catch (e) { /* clipboard unavailable (http) — ignore */ }
+  };
 
   const cols = useMemo(() => buildResultCols(data.profile), [data.profile]);
 
@@ -382,6 +501,8 @@ function ResultsScreen({ data, onOpen, onBack, selectedIds, onToggleSelect, onCl
             </select>
           </label>
           <FilterMenu activeTiers={activeTiers} setActiveTiers={setActiveTiers} tierCounts={tierCounts} />
+          <button className="btn sm ghost" onClick={() => exportCsv(sorted)}>Export CSV</button>
+          <button className="btn sm ghost" onClick={copyLink}>{copied ? "Copied ✓" : "Copy share link"}</button>
         </div>
       </div>
 
@@ -398,6 +519,8 @@ function ResultsScreen({ data, onOpen, onBack, selectedIds, onToggleSelect, onCl
         <TransferContent plan={data.transfer_plan} onOpenSchool={onOpenSchool} />
       ) : (
       <React.Fragment>
+
+      <WhatIfPanel data={data} />
 
       {selectedIds.length > 0 && (
         <div className="compare-bar">
@@ -1102,20 +1225,24 @@ function App() {
     setSelectedIds((ids) =>
       ids.includes(id) ? ids.filter((x) => x !== id) : [...ids, id]);
 
-  const submit = async () => {
+  const submit = async (f = form) => {
     setLoading(true);
     setError(null);
     try {
       const res = await fetch("/api/match", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(form),
+        body: JSON.stringify(f),
       });
       const json = await res.json();
       if (!res.ok) throw new Error(json.error || "Matching failed.");
       setData(json);
       setSelectedIds([]);
       setView("results");
+      // Shareable link: profile lives in the URL hash, restored on load.
+      try {
+        window.history.replaceState(null, "", "#p=" + encodeShare(f));
+      } catch (e) { /* ignore */ }
       window.scrollTo({ top: 0 });
     } catch (e) {
       setError(e.message);
@@ -1123,6 +1250,17 @@ function App() {
       setLoading(false);
     }
   };
+
+  // Opened via a share link: restore the profile and run the match once.
+  useEffect(() => {
+    const m = window.location.hash.match(/^#p=(.+)$/);
+    if (!m) return;
+    try {
+      const f = { ...DEFAULT_FORM, ...decodeShare(m[1]) };
+      setForm(f);
+      submit(f);
+    } catch (e) { /* malformed share link — start fresh */ }
+  }, []);
 
   const openSchool = (s) => { setOpened(s); setView("detail"); window.scrollTo({ top: 0 }); };
   const openSchoolById = (id) => {
