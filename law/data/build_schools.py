@@ -242,7 +242,9 @@ def build_base_record(aba: str, fy_row, tui_row, basics_row, grants_row, emp_row
         total = _num(grants_row["Total Number # of Students Total #"])
         recip = _num(grants_row["Total Number # of Recieving Grants Total #"])
         if total > 0:
-            scholarship_pct = round(recip / total, 4)
+            # ABA recipient counts can slightly exceed enrollment (mid-year
+            # leavers still counted as recipients) — cap at 100%.
+            scholarship_pct = min(round(recip / total, 4), 1.0)
 
     # jd_required_pct (FT long-term bar-required / grads) from Employment Summary;
     # not filled by build_enrichment, so compute it here.

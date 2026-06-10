@@ -3,7 +3,7 @@ services:
     name: law-school-matcher
     runtime: python
     plan: free
-    buildCommand: pip install -r requirements.txt
+    buildCommand: pip install -r requirements-law.txt
     startCommand: gunicorn law.server:app --bind 0.0.0.0:$PORT
     envVars:
       # Shared site password — set this value in the Render dashboard at deploy
