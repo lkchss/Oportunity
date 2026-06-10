@@ -71,6 +71,17 @@ class TestEdgeCases:
         score_without, _ = _compute_admissibility(None, 3.75, s)
         assert score_without <= score_with
 
+    def test_no_lsat_score_stays_in_tier_band(self, schools):
+        """No-LSAT path must keep the score inside its tier band (no score↔tier
+        contradiction from the GPA-only penalty)."""
+        bands = {"hard reach": (0, 38), "reach": (38, 60),
+                 "target": (60, 82), "safety": (82, 100)}
+        for gpa in (4.0, 3.7, 3.4, 3.0, 2.6):
+            for s in schools:
+                score, tier = _compute_admissibility(None, gpa, s)
+                lo, hi = bands[tier]
+                assert lo - 0.01 <= score <= hi + 0.01, (s["id"], gpa, score, tier)
+
     def test_extreme_splitter_high_lsat_low_gpa(self, schools, scalars):
         """165 LSAT / 2.8 GPA — should not crash, scholarship score should be elevated."""
         profile = _profile(lsat=165, gpa=2.8)
@@ -88,11 +99,20 @@ class TestEdgeCases:
         assert len(ranked) > 0
 
     def test_perfect_stats(self, schools):
-        """180 LSAT / 4.0 GPA — every school should be safety tier."""
+        """180 LSAT / 4.0 GPA — safety everywhere EXCEPT ultra-selective schools,
+        which are capped by acceptance rate (no school is a guaranteed admit)."""
         profile = _profile(lsat=180, gpa=4.0)
         ranked = rank_schools(profile, schools)
         for s in ranked:
-            assert s["admissibility_tier"] == "safety"
+            rate = s.get("acceptance_rate")
+            if rate is None or rate >= 0.12:
+                assert s["admissibility_tier"] == "safety"
+            elif rate < 0.05:
+                assert s["admissibility_tier"] == "reach"      # ceiling
+            else:
+                assert s["admissibility_tier"] == "target"     # ceiling
+            # Score must stay consistent with the (possibly capped) tier band.
+            assert s["admissibility_score"] >= 38
 
     def test_very_weak_stats(self, schools):
         """130 LSAT / 2.5 GPA — every school should be hard reach."""
@@ -194,6 +214,30 @@ class TestScoreSanity:
         smu_score  = _compute_career_fit(profile, smu,  scalars)
         assert wisc_score > smu_score
 
+    def test_career_weighted_blend_between_goals(self, schools, scalars):
+        """A BigLaw/PI weighted blend lands between the two single-goal fits."""
+        usc = _school(schools, "usc-gould-law")
+        big = _compute_career_fit(
+            _profile(goals_weighted=[{"goal": "BigLaw", "weight": 1}]), usc, scalars)
+        pi = _compute_career_fit(
+            _profile(goals_weighted=[{"goal": "Public Interest", "weight": 1}]), usc, scalars)
+        blend = _compute_career_fit(
+            _profile(goals_weighted=[{"goal": "BigLaw", "weight": 50},
+                                     {"goal": "Public Interest", "weight": 50}]), usc, scalars)
+        assert big != pi
+        assert min(big, pi) - 0.01 <= blend <= max(big, pi) + 0.01
+
+    def test_career_weighted_overrides_single_goal(self, schools, scalars):
+        """When goals_weighted is present, the legacy single goal is ignored."""
+        usc = _school(schools, "usc-gould-law")
+        a = _compute_career_fit(
+            _profile(goal="BigLaw", goals_weighted=[{"goal": "Public Interest", "weight": 1}]),
+            usc, scalars)
+        b = _compute_career_fit(
+            _profile(goal="Academia", goals_weighted=[{"goal": "Public Interest", "weight": 1}]),
+            usc, scalars)
+        assert a == b
+
     def test_location_score_primary_state_beats_unlisted(self, schools):
         """School placing grads primarily in TX scores higher for TX target than an unlisted one."""
         profile = _profile(target_state="TX")
@@ -212,6 +256,29 @@ class TestScoreSanity:
         fordham_loc = _compute_location_fit(profile, fordham)
         bc_loc      = _compute_location_fit(profile, bc)
         assert fordham_loc > bc_loc
+
+    def test_weighted_states_blend_between_extremes(self, schools):
+        """A weighted CA/NY blend sits between the single-state fits, leaning by weight."""
+        fordham = _school(schools, "fordham-law")  # NY position 0, CA unlisted
+        ny = _compute_location_fit(
+            _profile(target_state="", target_states_weighted=[{"state": "NY", "weight": 1}]), fordham)
+        ca = _compute_location_fit(
+            _profile(target_state="", target_states_weighted=[{"state": "CA", "weight": 1}]), fordham)
+        blend = _compute_location_fit(
+            _profile(target_state="",
+                     target_states_weighted=[{"state": "NY", "weight": 30},
+                                             {"state": "CA", "weight": 70}]), fordham)
+        assert ny > ca
+        assert ca < blend < ny            # blend lands between, weighted toward CA
+
+    def test_weighted_states_override_legacy_single(self, schools):
+        """When both are present, the weighted form takes precedence over target_state."""
+        fordham = _school(schools, "fordham-law")
+        weighted_only = _compute_location_fit(
+            _profile(target_state="", target_states_weighted=[{"state": "NY", "weight": 1}]), fordham)
+        legacy_conflict = _compute_location_fit(
+            _profile(target_state="CA", target_states_weighted=[{"state": "NY", "weight": 1}]), fordham)
+        assert weighted_only == legacy_conflict
 
     def test_high_need_boosts_scholarship_score(self, schools):
         """Under $65k income bracket should give higher scholarship than over $200k."""
@@ -431,21 +498,30 @@ class TestTransferUp:
         assert isinstance(plan["launchpads"], list)
         assert isinstance(plan["targets"], list)
 
-    def test_targets_rank_above_best_realistic(self, schools):
-        """Every transfer target outranks the applicant's best realistic admit."""
+    def test_targets_are_reaches_that_take_transfers(self, schools):
+        """Every transfer target is a reach for the applicant AND admits transfers."""
         profile = _profile(lsat=156, gpa=3.3)  # not T14-competitive
         plan = transfer_up_plan(profile, schools)
-        realistic = [
-            s["usnwr_rank_2026"] for s in schools
-            if _compute_admissibility(profile["lsat"], profile["gpa"], s)[1]
-            in ("safety", "target")
-        ]
-        if plan["targets"] and realistic:
-            best = min(realistic)
-            assert all(t["usnwr_rank_2026"] < best for t in plan["targets"])
+        by_id = {s["id"]: s for s in schools}
+        for t in plan["targets"]:
+            assert _compute_admissibility(
+                profile["lsat"], profile["gpa"], by_id[t["id"]])[1] == "reach"
+            assert t["transfers_in"]  # > 0
 
-    def test_launchpads_sorted_by_out_rate(self, schools):
-        """Launchpads are ordered by transfer-out mobility, descending."""
+    def test_launchpads_are_realistic_admits_by_score(self, schools):
+        """Launchpads are safety/target tier, ordered by composite score descending."""
         plan = transfer_up_plan(_profile(lsat=157, gpa=3.4), schools)
-        rates = [lp["transfer_out_rate"] for lp in plan["launchpads"]]
-        assert rates == sorted(rates, reverse=True)
+        by_id = {s["id"]: s for s in schools}
+        for lp in plan["launchpads"]:
+            assert _compute_admissibility(157, 3.4, by_id[lp["id"]])[1] in ("safety", "target")
+        scores = [lp["composite_score"] for lp in plan["launchpads"]]
+        assert scores == sorted(scores, reverse=True)
+
+    def test_transfer_plan_responds_to_profile(self, schools):
+        """Changing the target state should change the transfer-up recommendations
+        (the plan must be profile-aware, not the same schools for everyone)."""
+        tx = transfer_up_plan(_profile(lsat=156, gpa=3.3, target_state="TX"), schools)
+        ny = transfer_up_plan(_profile(lsat=156, gpa=3.3, target_state="NY"), schools)
+        tx_ids = [lp["id"] for lp in tx["launchpads"]] + [t["id"] for t in tx["targets"]]
+        ny_ids = [lp["id"] for lp in ny["launchpads"]] + [t["id"] for t in ny["targets"]]
+        assert tx_ids != ny_ids
