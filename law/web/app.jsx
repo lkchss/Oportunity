@@ -700,6 +700,10 @@ const CMP_RAW = [
     cell: (s) => ({ num: s.annual_tuition_nonresident, node: fmtMoney(s.annual_tuition_nonresident) }) },
   { label: "Employed @10mo %", better: "high",
     cell: (s) => ({ num: s.employed_10mo_pct, node: s.employed_10mo_pct == null ? "—" : fmtPct(s.employed_10mo_pct) }) },
+  { label: "Real grad fed debt (Scorecard)", better: "low",
+    cell: (s) => ({ num: s.scorecard_median_debt, node: fmtMoney(s.scorecard_median_debt) }) },
+  { label: "Real grad earnings @4yr (Scorecard)", better: "high",
+    cell: (s) => ({ num: s.scorecard_earn_4yr, node: fmtMoney(s.scorecard_earn_4yr) }) },
 ];
 
 /* Index of the school(s) holding the best value in a row, for highlighting. */
@@ -1003,6 +1007,18 @@ function DetailScreen({ school, profile, onBack }) {
             debt-to-income {bd.debt_to_income_ratio}× ·
             {bd.qualifies_instate ? " in-state tuition" : " out-of-state tuition"}
           </div>
+          {(school.scorecard_median_debt != null || school.scorecard_earn_4yr != null) && (
+            <div className="mono" style={{ marginTop: 4 }}>
+              <strong>real graduates</strong> (College Scorecard):
+              {school.scorecard_median_debt != null && (
+                <span> fed debt {fmtMoneyShort(school.scorecard_median_debt)}
+                  {school.scorecard_debt_monthly != null && <span> ({fmtMoneyShort(school.scorecard_debt_monthly)}/mo)</span>}
+                </span>
+              )}
+              {school.scorecard_earn_1yr != null && <span> · earn {fmtMoneyShort(school.scorecard_earn_1yr)} @1yr</span>}
+              {school.scorecard_earn_4yr != null && <span> · {fmtMoneyShort(school.scorecard_earn_4yr)} @4yr</span>}
+            </div>
+          )}
         </div>
       </div>
 

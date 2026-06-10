@@ -103,7 +103,11 @@
       "clinic_seats_filled": 169,
       "field_placements_filled": 101,
       "simulation_seats_filled": 1168,
-      "hands_on_per_student": 2.25
+      "hands_on_per_student": 2.25,
+      "scorecard_median_debt": 123000,
+      "scorecard_debt_monthly": 1399,
+      "scorecard_earn_1yr": 117864,
+      "scorecard_earn_4yr": 190940
     },
     {
       "id": "notre-dame-law",
@@ -255,7 +259,11 @@
       "clinic_seats_filled": 204,
       "field_placements_filled": 169,
       "simulation_seats_filled": 325,
-      "hands_on_per_student": 1.22
+      "hands_on_per_student": 1.22,
+      "scorecard_median_debt": 128413,
+      "scorecard_debt_monthly": 1461,
+      "scorecard_earn_1yr": 103733,
+      "scorecard_earn_4yr": 142699
     },
     {
       "id": "texas-am-law",
@@ -323,7 +331,11 @@
       "clinic_seats_filled": 186,
       "field_placements_filled": 162,
       "simulation_seats_filled": 306,
-      "hands_on_per_student": 1.65
+      "hands_on_per_student": 1.65,
+      "scorecard_median_debt": 71446,
+      "scorecard_debt_monthly": 813,
+      "scorecard_earn_1yr": 75674,
+      "scorecard_earn_4yr": 105673
     },
     {
       "id": "minnesota-law",
@@ -392,7 +404,11 @@
       "clinic_seats_filled": 245,
       "field_placements_filled": 411,
       "simulation_seats_filled": 748,
-      "hands_on_per_student": 2.14
+      "hands_on_per_student": 2.14,
+      "scorecard_median_debt": 98423,
+      "scorecard_debt_monthly": 1120,
+      "scorecard_earn_1yr": 77642,
+      "scorecard_earn_4yr": 117872
     },
     {
       "id": "boston-university-law",
@@ -543,7 +559,11 @@
       "clinic_seats_filled": 211,
       "field_placements_filled": 117,
       "simulation_seats_filled": 327,
-      "hands_on_per_student": 0.95
+      "hands_on_per_student": 0.95,
+      "scorecard_median_debt": 117740,
+      "scorecard_debt_monthly": 1339,
+      "scorecard_earn_1yr": 139986,
+      "scorecard_earn_4yr": 194750
     },
     {
       "id": "byu-clark-law",
@@ -613,7 +633,11 @@
       "clinic_seats_filled": 110,
       "field_placements_filled": 182,
       "simulation_seats_filled": 237,
-      "hands_on_per_student": 1.52
+      "hands_on_per_student": 1.52,
+      "scorecard_median_debt": null,
+      "scorecard_debt_monthly": null,
+      "scorecard_earn_1yr": null,
+      "scorecard_earn_4yr": null
     },
     {
       "id": "george-washington-law",
@@ -682,7 +706,11 @@
       "clinic_seats_filled": 232,
       "field_placements_filled": 497,
       "simulation_seats_filled": 2046,
-      "hands_on_per_student": 1.61
+      "hands_on_per_student": 1.61,
+      "scorecard_median_debt": 176325,
+      "scorecard_debt_monthly": 2006,
+      "scorecard_earn_1yr": 95225,
+      "scorecard_earn_4yr": 140848
     },
     {
       "id": "georgia-law",
@@ -792,7 +820,11 @@
       "clinic_seats_filled": 171,
       "field_placements_filled": 244,
       "simulation_seats_filled": 694,
-      "hands_on_per_student": 2.05
+      "hands_on_per_student": 2.05,
+      "scorecard_median_debt": 82694,
+      "scorecard_debt_monthly": 941,
+      "scorecard_earn_1yr": 76702,
+      "scorecard_earn_4yr": 116044
     },
     {
       "id": "usc-gould-law",
@@ -889,7 +921,11 @@
       "clinic_seats_filled": 160,
       "field_placements_filled": 138,
       "simulation_seats_filled": 632,
-      "hands_on_per_student": 1.43
+      "hands_on_per_student": 1.43,
+      "scorecard_median_debt": 138518,
+      "scorecard_debt_monthly": 1576,
+      "scorecard_earn_1yr": 183063,
+      "scorecard_earn_4yr": 203028
     },
     {
       "id": "wisconsin-law",
@@ -999,7 +1035,11 @@
       "clinic_seats_filled": 299,
       "field_placements_filled": 280,
       "simulation_seats_filled": 641,
-      "hands_on_per_student": 1.9
+      "hands_on_per_student": 1.9,
+      "scorecard_median_debt": 61500,
+      "scorecard_debt_monthly": 700,
+      "scorecard_earn_1yr": 71236,
+      "scorecard_earn_4yr": 100715
     },
     {
       "id": "ohio-state-moritz-law",
@@ -1147,7 +1187,11 @@
       "clinic_seats_filled": 130,
       "field_placements_filled": 156,
       "simulation_seats_filled": 930,
-      "hands_on_per_student": 2.5
+      "hands_on_per_student": 2.5,
+      "scorecard_median_debt": 91529,
+      "scorecard_debt_monthly": 1041,
+      "scorecard_earn_1yr": 77868,
+      "scorecard_earn_4yr": 122732
     },
     {
       "id": "wake-forest-law",
@@ -1258,7 +1302,11 @@
       "clinic_seats_filled": 129,
       "field_placements_filled": 69,
       "simulation_seats_filled": 491,
-      "hands_on_per_student": 1.22
+      "hands_on_per_student": 1.22,
+      "scorecard_median_debt": 105023,
+      "scorecard_debt_monthly": 1195,
+      "scorecard_earn_1yr": 76252,
+      "scorecard_earn_4yr": 112646
     },
     {
       "id": "george-mason-scalia-law",
@@ -1360,7 +1408,11 @@
       "clinic_seats_filled": 101,
       "field_placements_filled": 270,
       "simulation_seats_filled": 541,
-      "hands_on_per_student": 2.08
+      "hands_on_per_student": 2.08,
+      "scorecard_median_debt": 65077,
+      "scorecard_debt_monthly": 740,
+      "scorecard_earn_1yr": 77057,
+      "scorecard_earn_4yr": 135661
     },
     {
       "id": "iowa-law",
@@ -1471,7 +1523,11 @@
       "clinic_seats_filled": 65,
       "field_placements_filled": 84,
       "simulation_seats_filled": 519,
-      "hands_on_per_student": 1.34
+      "hands_on_per_student": 1.34,
+      "scorecard_median_debt": 80268,
+      "scorecard_debt_monthly": 913,
+      "scorecard_earn_1yr": 78560,
+      "scorecard_earn_4yr": 107273
     },
     {
       "id": "baylor-law",
@@ -1580,7 +1636,11 @@
       "clinic_seats_filled": 129,
       "field_placements_filled": 100,
       "simulation_seats_filled": 1636,
-      "hands_on_per_student": 4.25
+      "hands_on_per_student": 4.25,
+      "scorecard_median_debt": null,
+      "scorecard_debt_monthly": null,
+      "scorecard_earn_1yr": null,
+      "scorecard_earn_4yr": null
     },
     {
       "id": "florida-state-law",
@@ -1648,7 +1708,11 @@
       "clinic_seats_filled": 60,
       "field_placements_filled": 96,
       "simulation_seats_filled": 432,
-      "hands_on_per_student": 1.29
+      "hands_on_per_student": 1.29,
+      "scorecard_median_debt": 66707,
+      "scorecard_debt_monthly": 759,
+      "scorecard_earn_1yr": 62854,
+      "scorecard_earn_4yr": 98060
     },
     {
       "id": "uc-irvine-law",
@@ -1715,7 +1779,11 @@
       "clinic_seats_filled": 293,
       "field_placements_filled": 104,
       "simulation_seats_filled": 616,
-      "hands_on_per_student": 2.05
+      "hands_on_per_student": 2.05,
+      "scorecard_median_debt": 133605,
+      "scorecard_debt_monthly": 1520,
+      "scorecard_earn_1yr": 93534,
+      "scorecard_earn_4yr": 153307
     },
     {
       "id": "florida-levin-law",
@@ -1784,7 +1852,11 @@
       "clinic_seats_filled": 131,
       "field_placements_filled": 155,
       "simulation_seats_filled": 1241,
-      "hands_on_per_student": 2.32
+      "hands_on_per_student": 2.32,
+      "scorecard_median_debt": 71483,
+      "scorecard_debt_monthly": 813,
+      "scorecard_earn_1yr": 72350,
+      "scorecard_earn_4yr": 114496
     },
     {
       "id": "washington-lee-law",
@@ -1895,7 +1967,11 @@
       "clinic_seats_filled": 30,
       "field_placements_filled": 92,
       "simulation_seats_filled": 612,
-      "hands_on_per_student": 1.99
+      "hands_on_per_student": 1.99,
+      "scorecard_median_debt": 97335,
+      "scorecard_debt_monthly": 1107,
+      "scorecard_earn_1yr": 77253,
+      "scorecard_earn_4yr": 110606
     },
     {
       "id": "william-mary-law",
@@ -2042,7 +2118,11 @@
       "clinic_seats_filled": 150,
       "field_placements_filled": 178,
       "simulation_seats_filled": 143,
-      "hands_on_per_student": 0.95
+      "hands_on_per_student": 0.95,
+      "scorecard_median_debt": 105023,
+      "scorecard_debt_monthly": 1195,
+      "scorecard_earn_1yr": 77921,
+      "scorecard_earn_4yr": 115663
     },
     {
       "id": "emory-law",
@@ -2152,7 +2232,11 @@
       "clinic_seats_filled": 79,
       "field_placements_filled": 236,
       "simulation_seats_filled": 1081,
-      "hands_on_per_student": 1.53
+      "hands_on_per_student": 1.53,
+      "scorecard_median_debt": 134617,
+      "scorecard_debt_monthly": 1531,
+      "scorecard_earn_1yr": 79803,
+      "scorecard_earn_4yr": 152126
     },
     {
       "id": "alabama-law",
@@ -2263,7 +2347,11 @@
       "clinic_seats_filled": 187,
       "field_placements_filled": 136,
       "simulation_seats_filled": 568,
-      "hands_on_per_student": 2.3
+      "hands_on_per_student": 2.3,
+      "scorecard_median_debt": 61500,
+      "scorecard_debt_monthly": 700,
+      "scorecard_earn_1yr": 74203,
+      "scorecard_earn_4yr": 110931
     },
     {
       "id": "fordham-law",
@@ -2347,7 +2435,11 @@
       "clinic_seats_filled": 268,
       "field_placements_filled": 308,
       "simulation_seats_filled": 1378,
-      "hands_on_per_student": 1.45
+      "hands_on_per_student": 1.45,
+      "scorecard_median_debt": 147561,
+      "scorecard_debt_monthly": 1679,
+      "scorecard_earn_1yr": 170942,
+      "scorecard_earn_4yr": 232595
     },
     {
       "id": "smu-dedman-law",
@@ -2475,7 +2567,11 @@
       "clinic_seats_filled": 164,
       "field_placements_filled": 209,
       "simulation_seats_filled": 505,
-      "hands_on_per_student": 1.31
+      "hands_on_per_student": 1.31,
+      "scorecard_median_debt": 145569,
+      "scorecard_debt_monthly": 1656,
+      "scorecard_earn_1yr": 101456,
+      "scorecard_earn_4yr": 153614
     },
     {
       "id": "arizona-state-law",
@@ -2611,7 +2707,11 @@
       "clinic_seats_filled": 117,
       "field_placements_filled": 535,
       "simulation_seats_filled": 631,
-      "hands_on_per_student": 1.72
+      "hands_on_per_student": 1.72,
+      "scorecard_median_debt": null,
+      "scorecard_debt_monthly": null,
+      "scorecard_earn_1yr": null,
+      "scorecard_earn_4yr": null
     },
     {
       "id": "utah-quinney-law",
@@ -2722,7 +2822,11 @@
       "clinic_seats_filled": 42,
       "field_placements_filled": 163,
       "simulation_seats_filled": 316,
-      "hands_on_per_student": 1.66
+      "hands_on_per_student": 1.66,
+      "scorecard_median_debt": 74012,
+      "scorecard_debt_monthly": 842,
+      "scorecard_earn_1yr": 77542,
+      "scorecard_earn_4yr": 113168
     },
     {
       "id": "illinois-law",
@@ -2792,7 +2896,11 @@
       "clinic_seats_filled": 117,
       "field_placements_filled": 209,
       "simulation_seats_filled": 413,
-      "hands_on_per_student": 1.48
+      "hands_on_per_student": 1.48,
+      "scorecard_median_debt": null,
+      "scorecard_debt_monthly": null,
+      "scorecard_earn_1yr": null,
+      "scorecard_earn_4yr": null
     },
     {
       "id": "kansas-law",
@@ -2924,7 +3032,11 @@
       "clinic_seats_filled": 63,
       "field_placements_filled": 132,
       "simulation_seats_filled": 360,
-      "hands_on_per_student": 1.56
+      "hands_on_per_student": 1.56,
+      "scorecard_median_debt": 61500,
+      "scorecard_debt_monthly": 700,
+      "scorecard_earn_1yr": 70180,
+      "scorecard_earn_4yr": 94898
     },
     {
       "id": "pepperdine-law",
@@ -3076,7 +3188,11 @@
       "clinic_seats_filled": 138,
       "field_placements_filled": 236,
       "simulation_seats_filled": 1229,
-      "hands_on_per_student": 2.9
+      "hands_on_per_student": 2.9,
+      "scorecard_median_debt": null,
+      "scorecard_debt_monthly": null,
+      "scorecard_earn_1yr": null,
+      "scorecard_earn_4yr": null
     },
     {
       "id": "indiana-maurer-law",
@@ -3171,7 +3287,11 @@
       "clinic_seats_filled": 198,
       "field_placements_filled": 123,
       "simulation_seats_filled": 764,
-      "hands_on_per_student": 2.16
+      "hands_on_per_student": 2.16,
+      "scorecard_median_debt": 92000,
+      "scorecard_debt_monthly": 1047,
+      "scorecard_earn_1yr": 75186,
+      "scorecard_earn_4yr": 120301
     },
     {
       "id": "temple-beasley-law",
@@ -3282,7 +3402,11 @@
       "clinic_seats_filled": 197,
       "field_placements_filled": 247,
       "simulation_seats_filled": 775,
-      "hands_on_per_student": 1.78
+      "hands_on_per_student": 1.78,
+      "scorecard_median_debt": 81733,
+      "scorecard_debt_monthly": 930,
+      "scorecard_earn_1yr": 71729,
+      "scorecard_earn_4yr": 117775
     },
     {
       "id": "villanova-law",
@@ -3369,7 +3493,11 @@
       "clinic_seats_filled": 123,
       "field_placements_filled": 318,
       "simulation_seats_filled": 562,
-      "hands_on_per_student": 1.68
+      "hands_on_per_student": 1.68,
+      "scorecard_median_debt": 69861,
+      "scorecard_debt_monthly": 795,
+      "scorecard_earn_1yr": 74646,
+      "scorecard_earn_4yr": 129021
     },
     {
       "id": "washington-law",
@@ -3439,7 +3567,11 @@
       "clinic_seats_filled": 120,
       "field_placements_filled": 185,
       "simulation_seats_filled": 546,
-      "hands_on_per_student": 1.5
+      "hands_on_per_student": 1.5,
+      "scorecard_median_debt": 108519,
+      "scorecard_debt_monthly": 1234,
+      "scorecard_earn_1yr": 81079,
+      "scorecard_earn_4yr": 120015
     },
     {
       "id": "uc-davis-law",
@@ -3591,7 +3723,11 @@
       "clinic_seats_filled": 97,
       "field_placements_filled": 131,
       "simulation_seats_filled": 704,
-      "hands_on_per_student": 1.54
+      "hands_on_per_student": 1.54,
+      "scorecard_median_debt": 92689,
+      "scorecard_debt_monthly": 1054,
+      "scorecard_earn_1yr": 85816,
+      "scorecard_earn_4yr": 136814
     },
     {
       "id": "university-san-diego-law",
@@ -3702,7 +3838,11 @@
       "clinic_seats_filled": 159,
       "field_placements_filled": 428,
       "simulation_seats_filled": 1647,
-      "hands_on_per_student": 3.08
+      "hands_on_per_student": 3.08,
+      "scorecard_median_debt": 145850,
+      "scorecard_debt_monthly": 1659,
+      "scorecard_earn_1yr": 84518,
+      "scorecard_earn_4yr": 134065
     },
     {
       "id": "houston-law",
@@ -3826,7 +3966,11 @@
       "clinic_seats_filled": 143,
       "field_placements_filled": 121,
       "simulation_seats_filled": 828,
-      "hands_on_per_student": 1.3
+      "hands_on_per_student": 1.3,
+      "scorecard_median_debt": 86372,
+      "scorecard_debt_monthly": 982,
+      "scorecard_earn_1yr": 88163,
+      "scorecard_earn_4yr": 135984
     },
     {
       "id": "colorado-law",
@@ -3937,7 +4081,11 @@
       "clinic_seats_filled": 117,
       "field_placements_filled": 165,
       "simulation_seats_filled": 550,
-      "hands_on_per_student": 1.52
+      "hands_on_per_student": 1.52,
+      "scorecard_median_debt": 105696,
+      "scorecard_debt_monthly": 1202,
+      "scorecard_earn_1yr": 73809,
+      "scorecard_earn_4yr": 109411
     },
     {
       "id": "tennessee-law",
@@ -4053,7 +4201,11 @@
       "clinic_seats_filled": 113,
       "field_placements_filled": 69,
       "simulation_seats_filled": 334,
-      "hands_on_per_student": 1.23
+      "hands_on_per_student": 1.23,
+      "scorecard_median_debt": 61500,
+      "scorecard_debt_monthly": 700,
+      "scorecard_earn_1yr": 65905,
+      "scorecard_earn_4yr": 103272
     },
     {
       "id": "uconn-law",
@@ -4193,7 +4345,11 @@
       "clinic_seats_filled": 127,
       "field_placements_filled": 104,
       "simulation_seats_filled": 442,
-      "hands_on_per_student": 1.41
+      "hands_on_per_student": 1.41,
+      "scorecard_median_debt": 96386,
+      "scorecard_debt_monthly": 1096,
+      "scorecard_earn_1yr": 74876,
+      "scorecard_earn_4yr": 120178
     },
     {
       "id": "cardozo-law",
@@ -4345,7 +4501,11 @@
       "clinic_seats_filled": 263,
       "field_placements_filled": 375,
       "simulation_seats_filled": 815,
-      "hands_on_per_student": 1.54
+      "hands_on_per_student": 1.54,
+      "scorecard_median_debt": 101500,
+      "scorecard_debt_monthly": 1155,
+      "scorecard_earn_1yr": 76957,
+      "scorecard_earn_4yr": 124597
     },
     {
       "id": "missouri-law",
@@ -4448,7 +4608,11 @@
       "clinic_seats_filled": 88,
       "field_placements_filled": 57,
       "simulation_seats_filled": 620,
-      "hands_on_per_student": 2.05
+      "hands_on_per_student": 2.05,
+      "scorecard_median_debt": 73501,
+      "scorecard_debt_monthly": 836,
+      "scorecard_earn_1yr": 59716,
+      "scorecard_earn_4yr": 86349
     },
     {
       "id": "maryland-carey-law",
@@ -4518,7 +4682,11 @@
       "clinic_seats_filled": 242,
       "field_placements_filled": 167,
       "simulation_seats_filled": 571,
-      "hands_on_per_student": 1.51
+      "hands_on_per_student": 1.51,
+      "scorecard_median_debt": 118506,
+      "scorecard_debt_monthly": 1348,
+      "scorecard_earn_1yr": 73079,
+      "scorecard_earn_4yr": 112580
     },
     {
       "id": "richmond-law",
@@ -4662,7 +4830,11 @@
       "clinic_seats_filled": 57,
       "field_placements_filled": 73,
       "simulation_seats_filled": 354,
-      "hands_on_per_student": 1.17
+      "hands_on_per_student": 1.17,
+      "scorecard_median_debt": 100229,
+      "scorecard_debt_monthly": 1140,
+      "scorecard_earn_1yr": 66704,
+      "scorecard_earn_4yr": 101062
     },
     {
       "id": "st-johns-law",
@@ -4732,7 +4904,11 @@
       "clinic_seats_filled": 139,
       "field_placements_filled": 186,
       "simulation_seats_filled": 726,
-      "hands_on_per_student": 1.39
+      "hands_on_per_student": 1.39,
+      "scorecard_median_debt": 112017,
+      "scorecard_debt_monthly": 1274,
+      "scorecard_earn_1yr": 82812,
+      "scorecard_earn_4yr": 112325
     },
     {
       "id": "wayne-state-law",
@@ -4872,7 +5048,11 @@
       "clinic_seats_filled": 71,
       "field_placements_filled": 91,
       "simulation_seats_filled": 188,
-      "hands_on_per_student": 0.89
+      "hands_on_per_student": 0.89,
+      "scorecard_median_debt": 61466,
+      "scorecard_debt_monthly": 699,
+      "scorecard_earn_1yr": 70500,
+      "scorecard_earn_4yr": 96763
     },
     {
       "id": "tulane-law",
@@ -4983,7 +5163,11 @@
       "clinic_seats_filled": 215,
       "field_placements_filled": 196,
       "simulation_seats_filled": 619,
-      "hands_on_per_student": 1.64
+      "hands_on_per_student": 1.64,
+      "scorecard_median_debt": 149237,
+      "scorecard_debt_monthly": 1698,
+      "scorecard_earn_1yr": 76230,
+      "scorecard_earn_4yr": null
     },
     {
       "id": "arizona-rogers-law",
@@ -5099,7 +5283,11 @@
       "clinic_seats_filled": 218,
       "field_placements_filled": 120,
       "simulation_seats_filled": 1105,
-      "hands_on_per_student": 4.27
+      "hands_on_per_student": 4.27,
+      "scorecard_median_debt": 67750,
+      "scorecard_debt_monthly": 771,
+      "scorecard_earn_1yr": 61710,
+      "scorecard_earn_4yr": null
     },
     {
       "id": "loyola-la-law",
@@ -5210,7 +5398,11 @@
       "clinic_seats_filled": 305,
       "field_placements_filled": 198,
       "simulation_seats_filled": 1341,
-      "hands_on_per_student": 1.84
+      "hands_on_per_student": 1.84,
+      "scorecard_median_debt": 155436,
+      "scorecard_debt_monthly": 1768,
+      "scorecard_earn_1yr": 84074,
+      "scorecard_earn_4yr": 143361
     },
     {
       "id": "miami-law",
@@ -5321,7 +5513,11 @@
       "clinic_seats_filled": 265,
       "field_placements_filled": 283,
       "simulation_seats_filled": 1167,
-      "hands_on_per_student": 1.73
+      "hands_on_per_student": 1.73,
+      "scorecard_median_debt": 148750,
+      "scorecard_debt_monthly": 1692,
+      "scorecard_earn_1yr": 76760,
+      "scorecard_earn_4yr": 117811
     },
     {
       "id": "catholic-columbus-law",
@@ -5391,7 +5587,11 @@
       "clinic_seats_filled": 77,
       "field_placements_filled": 119,
       "simulation_seats_filled": 165,
-      "hands_on_per_student": 0.84
+      "hands_on_per_student": 0.84,
+      "scorecard_median_debt": 147964,
+      "scorecard_debt_monthly": 1683,
+      "scorecard_earn_1yr": 77441,
+      "scorecard_earn_4yr": 112809
     },
     {
       "id": "stanford-law",
@@ -5502,7 +5702,11 @@
       "clinic_seats_filled": 241,
       "field_placements_filled": 63,
       "simulation_seats_filled": 471,
-      "hands_on_per_student": 1.36
+      "hands_on_per_student": 1.36,
+      "scorecard_median_debt": 153302,
+      "scorecard_debt_monthly": 1744,
+      "scorecard_earn_1yr": 162001,
+      "scorecard_earn_4yr": 259944
     },
     {
       "id": "uchicago-law",
@@ -5577,7 +5781,11 @@
       "clinic_seats_filled": 589,
       "field_placements_filled": 32,
       "simulation_seats_filled": 656,
-      "hands_on_per_student": 2.08
+      "hands_on_per_student": 2.08,
+      "scorecard_median_debt": 188691,
+      "scorecard_debt_monthly": 2146,
+      "scorecard_earn_1yr": 199603,
+      "scorecard_earn_4yr": 279203
     },
     {
       "id": "yale-law",
@@ -5688,7 +5896,11 @@
       "clinic_seats_filled": 704,
       "field_placements_filled": 56,
       "simulation_seats_filled": 182,
-      "hands_on_per_student": 1.5
+      "hands_on_per_student": 1.5,
+      "scorecard_median_debt": null,
+      "scorecard_debt_monthly": null,
+      "scorecard_earn_1yr": null,
+      "scorecard_earn_4yr": null
     },
     {
       "id": "penn-carey-law",
@@ -5799,7 +6011,11 @@
       "clinic_seats_filled": 140,
       "field_placements_filled": 145,
       "simulation_seats_filled": 1354,
-      "hands_on_per_student": 2.15
+      "hands_on_per_student": 2.15,
+      "scorecard_median_debt": 171488,
+      "scorecard_debt_monthly": 1951,
+      "scorecard_earn_1yr": 210273,
+      "scorecard_earn_4yr": 302120
     },
     {
       "id": "uva-law",
@@ -5910,7 +6126,11 @@
       "clinic_seats_filled": 397,
       "field_placements_filled": 59,
       "simulation_seats_filled": 1111,
-      "hands_on_per_student": 1.71
+      "hands_on_per_student": 1.71,
+      "scorecard_median_debt": 178812,
+      "scorecard_debt_monthly": 2034,
+      "scorecard_earn_1yr": 204216,
+      "scorecard_earn_4yr": 284309
     },
     {
       "id": "harvard-law",
@@ -6021,7 +6241,11 @@
       "clinic_seats_filled": 791,
       "field_placements_filled": 481,
       "simulation_seats_filled": 905,
-      "hands_on_per_student": 1.22
+      "hands_on_per_student": 1.22,
+      "scorecard_median_debt": 93235,
+      "scorecard_debt_monthly": 1061,
+      "scorecard_earn_1yr": 175880,
+      "scorecard_earn_4yr": 291490
     },
     {
       "id": "duke-law",
@@ -6120,7 +6344,11 @@
       "clinic_seats_filled": 234,
       "field_placements_filled": 69,
       "simulation_seats_filled": 1436,
-      "hands_on_per_student": 2.41
+      "hands_on_per_student": 2.41,
+      "scorecard_median_debt": null,
+      "scorecard_debt_monthly": null,
+      "scorecard_earn_1yr": null,
+      "scorecard_earn_4yr": null
     },
     {
       "id": "nyu-law",
@@ -6231,7 +6459,11 @@
       "clinic_seats_filled": 650,
       "field_placements_filled": 350,
       "simulation_seats_filled": 752,
-      "hands_on_per_student": 1.25
+      "hands_on_per_student": 1.25,
+      "scorecard_median_debt": null,
+      "scorecard_debt_monthly": null,
+      "scorecard_earn_1yr": null,
+      "scorecard_earn_4yr": 255401
     },
     {
       "id": "columbia-law",
@@ -6342,7 +6574,11 @@
       "clinic_seats_filled": 205,
       "field_placements_filled": 1127,
       "simulation_seats_filled": 638,
-      "hands_on_per_student": 1.43
+      "hands_on_per_student": 1.43,
+      "scorecard_median_debt": 198924,
+      "scorecard_debt_monthly": 2263,
+      "scorecard_earn_1yr": 220843,
+      "scorecard_earn_4yr": 308943
     },
     {
       "id": "northwestern-pritzker-law",
@@ -6453,7 +6689,11 @@
       "clinic_seats_filled": 256,
       "field_placements_filled": 191,
       "simulation_seats_filled": 729,
-      "hands_on_per_student": 1.52
+      "hands_on_per_student": 1.52,
+      "scorecard_median_debt": 154286,
+      "scorecard_debt_monthly": 1755,
+      "scorecard_earn_1yr": 210979,
+      "scorecard_earn_4yr": 291132
     },
     {
       "id": "michigan-law",
@@ -6605,7 +6845,11 @@
       "clinic_seats_filled": 337,
       "field_placements_filled": 84,
       "simulation_seats_filled": 686,
-      "hands_on_per_student": 1.12
+      "hands_on_per_student": 1.12,
+      "scorecard_median_debt": 132524,
+      "scorecard_debt_monthly": 1507,
+      "scorecard_earn_1yr": 170537,
+      "scorecard_earn_4yr": 224391
     },
     {
       "id": "vanderbilt-law",
@@ -6675,7 +6919,11 @@
       "clinic_seats_filled": 86,
       "field_placements_filled": 61,
       "simulation_seats_filled": 901,
-      "hands_on_per_student": 2.0
+      "hands_on_per_student": 2.0,
+      "scorecard_median_debt": 139857,
+      "scorecard_debt_monthly": 1591,
+      "scorecard_earn_1yr": 156307,
+      "scorecard_earn_4yr": 196797
     },
     {
       "id": "cornell-law",
@@ -6786,7 +7034,11 @@
       "clinic_seats_filled": 290,
       "field_placements_filled": 234,
       "simulation_seats_filled": 349,
-      "hands_on_per_student": 1.43
+      "hands_on_per_student": 1.43,
+      "scorecard_median_debt": null,
+      "scorecard_debt_monthly": null,
+      "scorecard_earn_1yr": null,
+      "scorecard_earn_4yr": null
     },
     {
       "id": "ucla-law",
@@ -6897,7 +7149,11 @@
       "clinic_seats_filled": 217,
       "field_placements_filled": 145,
       "simulation_seats_filled": 616,
-      "hands_on_per_student": 0.96
+      "hands_on_per_student": 0.96,
+      "scorecard_median_debt": 135373,
+      "scorecard_debt_monthly": 1540,
+      "scorecard_earn_1yr": 155825,
+      "scorecard_earn_4yr": 177968
     },
     {
       "id": "washu-law",
@@ -6967,7 +7223,11 @@
       "clinic_seats_filled": 197,
       "field_placements_filled": 153,
       "simulation_seats_filled": 574,
-      "hands_on_per_student": 1.17
+      "hands_on_per_student": 1.17,
+      "scorecard_median_debt": 92540,
+      "scorecard_debt_monthly": 1053,
+      "scorecard_earn_1yr": 87690,
+      "scorecard_earn_4yr": 141243
     },
     {
       "id": "kentucky-rosenberg-law",
@@ -7078,7 +7338,11 @@
       "clinic_seats_filled": 19,
       "field_placements_filled": 85,
       "simulation_seats_filled": 301,
-      "hands_on_per_student": 0.97
+      "hands_on_per_student": 0.97,
+      "scorecard_median_debt": 75150,
+      "scorecard_debt_monthly": 855,
+      "scorecard_earn_1yr": 53600,
+      "scorecard_earn_4yr": 86420
     },
     {
       "id": "seton-hall-law",
@@ -7189,7 +7453,11 @@
       "clinic_seats_filled": 119,
       "field_placements_filled": 205,
       "simulation_seats_filled": 902,
-      "hands_on_per_student": 1.49
+      "hands_on_per_student": 1.49,
+      "scorecard_median_debt": 115179,
+      "scorecard_debt_monthly": 1310,
+      "scorecard_earn_1yr": 70710,
+      "scorecard_earn_4yr": 136424
     },
     {
       "id": "georgia-state-law",
@@ -7300,7 +7568,11 @@
       "clinic_seats_filled": 154,
       "field_placements_filled": 155,
       "simulation_seats_filled": 155,
-      "hands_on_per_student": 0.68
+      "hands_on_per_student": 0.68,
+      "scorecard_median_debt": 72563,
+      "scorecard_debt_monthly": 825,
+      "scorecard_earn_1yr": 77765,
+      "scorecard_earn_4yr": 116613
     },
     {
       "id": "loyola-chicago-law",
@@ -7411,7 +7683,11 @@
       "clinic_seats_filled": 179,
       "field_placements_filled": 257,
       "simulation_seats_filled": 952,
-      "hands_on_per_student": 1.64
+      "hands_on_per_student": 1.64,
+      "scorecard_median_debt": 119367,
+      "scorecard_debt_monthly": 1358,
+      "scorecard_earn_1yr": 83184,
+      "scorecard_earn_4yr": 122384
     },
     {
       "id": "northeastern-law",
@@ -7522,7 +7798,11 @@
       "clinic_seats_filled": 396,
       "field_placements_filled": 225,
       "simulation_seats_filled": 398,
-      "hands_on_per_student": 1.3
+      "hands_on_per_student": 1.3,
+      "scorecard_median_debt": 70571,
+      "scorecard_debt_monthly": 803,
+      "scorecard_earn_1yr": 73471,
+      "scorecard_earn_4yr": 116706
     },
     {
       "id": "pittsburgh-law",
@@ -7592,7 +7872,11 @@
       "clinic_seats_filled": 118,
       "field_placements_filled": 72,
       "simulation_seats_filled": 206,
-      "hands_on_per_student": 1.02
+      "hands_on_per_student": 1.02,
+      "scorecard_median_debt": 109178,
+      "scorecard_debt_monthly": 1242,
+      "scorecard_earn_1yr": 67318,
+      "scorecard_earn_4yr": 94797
     },
     {
       "id": "fiu-law",
@@ -7699,7 +7983,11 @@
       "clinic_seats_filled": 72,
       "field_placements_filled": 238,
       "simulation_seats_filled": 663,
-      "hands_on_per_student": 1.67
+      "hands_on_per_student": 1.67,
+      "scorecard_median_debt": null,
+      "scorecard_debt_monthly": null,
+      "scorecard_earn_1yr": null,
+      "scorecard_earn_4yr": null
     },
     {
       "id": "cincinnati-law",
@@ -7769,7 +8057,11 @@
       "clinic_seats_filled": 62,
       "field_placements_filled": 137,
       "simulation_seats_filled": 219,
-      "hands_on_per_student": 1.05
+      "hands_on_per_student": 1.05,
+      "scorecard_median_debt": 66694,
+      "scorecard_debt_monthly": 759,
+      "scorecard_earn_1yr": 60967,
+      "scorecard_earn_4yr": 85043
     },
     {
       "id": "drexel-kline-law",
@@ -7839,7 +8131,11 @@
       "clinic_seats_filled": 73,
       "field_placements_filled": 120,
       "simulation_seats_filled": 318,
-      "hands_on_per_student": 1.11
+      "hands_on_per_student": 1.11,
+      "scorecard_median_debt": 72191,
+      "scorecard_debt_monthly": 821,
+      "scorecard_earn_1yr": 60051,
+      "scorecard_earn_4yr": 95933
     },
     {
       "id": "suny-buffalo-law",
@@ -7975,7 +8271,11 @@
       "clinic_seats_filled": 116,
       "field_placements_filled": 69,
       "simulation_seats_filled": 331,
-      "hands_on_per_student": 1.2
+      "hands_on_per_student": 1.2,
+      "scorecard_median_debt": 94242,
+      "scorecard_debt_monthly": 1072,
+      "scorecard_earn_1yr": 64220,
+      "scorecard_earn_4yr": 85126
     },
     {
       "id": "akron-the-university-of",
@@ -8035,7 +8335,11 @@
       "clinic_seats_filled": 46,
       "field_placements_filled": 35,
       "simulation_seats_filled": 534,
-      "hands_on_per_student": 1.3
+      "hands_on_per_student": 1.3,
+      "scorecard_median_debt": 71000,
+      "scorecard_debt_monthly": 808,
+      "scorecard_earn_1yr": 57386,
+      "scorecard_earn_4yr": 79750
     },
     {
       "id": "albany-law-school",
@@ -8136,7 +8440,11 @@
       "clinic_seats_filled": 68,
       "field_placements_filled": 405,
       "simulation_seats_filled": 321,
-      "hands_on_per_student": 1.29
+      "hands_on_per_student": 1.29,
+      "scorecard_median_debt": null,
+      "scorecard_debt_monthly": null,
+      "scorecard_earn_1yr": null,
+      "scorecard_earn_4yr": null
     },
     {
       "id": "american-university-washington-college-of-law",
@@ -8237,7 +8545,11 @@
       "clinic_seats_filled": 181,
       "field_placements_filled": 261,
       "simulation_seats_filled": 619,
-      "hands_on_per_student": 0.88
+      "hands_on_per_student": 0.88,
+      "scorecard_median_debt": 161696,
+      "scorecard_debt_monthly": 1839,
+      "scorecard_earn_1yr": 73725,
+      "scorecard_earn_4yr": 109523
     },
     {
       "id": "appalachian-school-of-law",
@@ -8297,7 +8609,11 @@
       "clinic_seats_filled": 10,
       "field_placements_filled": 48,
       "simulation_seats_filled": 218,
-      "hands_on_per_student": 1.52
+      "hands_on_per_student": 1.52,
+      "scorecard_median_debt": 123970,
+      "scorecard_debt_monthly": 1410,
+      "scorecard_earn_1yr": 33989,
+      "scorecard_earn_4yr": 65332
     },
     {
       "id": "university-of-arkansas-at-little-rock-school-of-law",
@@ -8378,7 +8694,11 @@
       "clinic_seats_filled": 88,
       "field_placements_filled": 50,
       "simulation_seats_filled": 266,
-      "hands_on_per_student": 0.94
+      "hands_on_per_student": 0.94,
+      "scorecard_median_debt": 61500,
+      "scorecard_debt_monthly": 700,
+      "scorecard_earn_1yr": 57468,
+      "scorecard_earn_4yr": 78317
     },
     {
       "id": "university-of-arkansas-school-of-law",
@@ -8496,7 +8816,11 @@
       "clinic_seats_filled": 51,
       "field_placements_filled": 111,
       "simulation_seats_filled": 177,
-      "hands_on_per_student": 0.9
+      "hands_on_per_student": 0.9,
+      "scorecard_median_debt": 65000,
+      "scorecard_debt_monthly": 739,
+      "scorecard_earn_1yr": 66239,
+      "scorecard_earn_4yr": 88977
     },
     {
       "id": "atlanta-s-john-marshall-law-school",
@@ -8594,7 +8918,11 @@
       "clinic_seats_filled": 0,
       "field_placements_filled": 143,
       "simulation_seats_filled": 272,
-      "hands_on_per_student": 1.09
+      "hands_on_per_student": 1.09,
+      "scorecard_median_debt": 193041,
+      "scorecard_debt_monthly": 2196,
+      "scorecard_earn_1yr": 57019,
+      "scorecard_earn_4yr": 80422
     },
     {
       "id": "ave-maria-school-of-law",
@@ -8654,7 +8982,11 @@
       "clinic_seats_filled": 34,
       "field_placements_filled": 67,
       "simulation_seats_filled": 70,
-      "hands_on_per_student": 0.51
+      "hands_on_per_student": 0.51,
+      "scorecard_median_debt": 144259,
+      "scorecard_debt_monthly": 1641,
+      "scorecard_earn_1yr": 52984,
+      "scorecard_earn_4yr": 91005
     },
     {
       "id": "university-of-baltimore-school-of-law",
@@ -8719,7 +9051,11 @@
       "clinic_seats_filled": 149,
       "field_placements_filled": 158,
       "simulation_seats_filled": 326,
-      "hands_on_per_student": 0.87
+      "hands_on_per_student": 0.87,
+      "scorecard_median_debt": 106102,
+      "scorecard_debt_monthly": 1207,
+      "scorecard_earn_1yr": 62419,
+      "scorecard_earn_4yr": 95849
     },
     {
       "id": "barry-university-school-of-law",
@@ -8796,7 +9132,11 @@
       "clinic_seats_filled": 70,
       "field_placements_filled": 73,
       "simulation_seats_filled": 692,
-      "hands_on_per_student": 1.15
+      "hands_on_per_student": 1.15,
+      "scorecard_median_debt": 154477,
+      "scorecard_debt_monthly": 1757,
+      "scorecard_earn_1yr": 51099,
+      "scorecard_earn_4yr": 82024
     },
     {
       "id": "belmont-university-college-of-law",
@@ -8856,7 +9196,11 @@
       "clinic_seats_filled": 4,
       "field_placements_filled": 138,
       "simulation_seats_filled": 694,
-      "hands_on_per_student": 2.25
+      "hands_on_per_student": 2.25,
+      "scorecard_median_debt": null,
+      "scorecard_debt_monthly": null,
+      "scorecard_earn_1yr": null,
+      "scorecard_earn_4yr": null
     },
     {
       "id": "brooklyn-law-school",
@@ -8916,7 +9260,11 @@
       "clinic_seats_filled": 357,
       "field_placements_filled": 460,
       "simulation_seats_filled": 1546,
-      "hands_on_per_student": 2.1
+      "hands_on_per_student": 2.1,
+      "scorecard_median_debt": 96951,
+      "scorecard_debt_monthly": 1103,
+      "scorecard_earn_1yr": 79481,
+      "scorecard_earn_4yr": 121254
     },
     {
       "id": "california-western-school-of-law",
@@ -9017,7 +9365,11 @@
       "clinic_seats_filled": 63,
       "field_placements_filled": 103,
       "simulation_seats_filled": 783,
-      "hands_on_per_student": 1.42
+      "hands_on_per_student": 1.42,
+      "scorecard_median_debt": 179866,
+      "scorecard_debt_monthly": 2046,
+      "scorecard_earn_1yr": 60490,
+      "scorecard_earn_4yr": 100889
     },
     {
       "id": "university-of-california-berkeley-school-of-law",
@@ -9118,7 +9470,11 @@
       "clinic_seats_filled": 194,
       "field_placements_filled": 191,
       "simulation_seats_filled": 1314,
-      "hands_on_per_student": 1.51
+      "hands_on_per_student": 1.51,
+      "scorecard_median_debt": 155891,
+      "scorecard_debt_monthly": 1773,
+      "scorecard_earn_1yr": 196724,
+      "scorecard_earn_4yr": 226996
     },
     {
       "id": "uc-law-san-francisco",
@@ -9219,7 +9575,11 @@
       "clinic_seats_filled": 120,
       "field_placements_filled": 312,
       "simulation_seats_filled": 794,
-      "hands_on_per_student": 1.17
+      "hands_on_per_student": 1.17,
+      "scorecard_median_debt": 139352,
+      "scorecard_debt_monthly": 1585,
+      "scorecard_earn_1yr": 90386,
+      "scorecard_earn_4yr": 136001
     },
     {
       "id": "campbell-university-school-of-law",
@@ -9279,7 +9639,11 @@
       "clinic_seats_filled": 122,
       "field_placements_filled": 183,
       "simulation_seats_filled": 927,
-      "hands_on_per_student": 2.23
+      "hands_on_per_student": 2.23,
+      "scorecard_median_debt": 135880,
+      "scorecard_debt_monthly": 1546,
+      "scorecard_earn_1yr": 60334,
+      "scorecard_earn_4yr": 89637
     },
     {
       "id": "capital-university-law-school",
@@ -9389,7 +9753,11 @@
       "clinic_seats_filled": 40,
       "field_placements_filled": 142,
       "simulation_seats_filled": 659,
-      "hands_on_per_student": 1.74
+      "hands_on_per_student": 1.74,
+      "scorecard_median_debt": 106377,
+      "scorecard_debt_monthly": 1210,
+      "scorecard_earn_1yr": 62010,
+      "scorecard_earn_4yr": 85015
     },
     {
       "id": "case-western-reserve-university-school-of-law",
@@ -9470,7 +9838,11 @@
       "clinic_seats_filled": 109,
       "field_placements_filled": 287,
       "simulation_seats_filled": 612,
-      "hands_on_per_student": 1.9
+      "hands_on_per_student": 1.9,
+      "scorecard_median_debt": 98460,
+      "scorecard_debt_monthly": 1120,
+      "scorecard_earn_1yr": 70183,
+      "scorecard_earn_4yr": 105964
     },
     {
       "id": "chapman-university-fowler-school-of-law",
@@ -9560,7 +9932,11 @@
       "clinic_seats_filled": 68,
       "field_placements_filled": 196,
       "simulation_seats_filled": 636,
-      "hands_on_per_student": 2.14
+      "hands_on_per_student": 2.14,
+      "scorecard_median_debt": 170800,
+      "scorecard_debt_monthly": 1943,
+      "scorecard_earn_1yr": 74737,
+      "scorecard_earn_4yr": 119002
     },
     {
       "id": "charleston-school-of-law",
@@ -9629,7 +10005,11 @@
       "clinic_seats_filled": 53,
       "field_placements_filled": 103,
       "simulation_seats_filled": 605,
-      "hands_on_per_student": 1.08
+      "hands_on_per_student": 1.08,
+      "scorecard_median_debt": 152981,
+      "scorecard_debt_monthly": 1740,
+      "scorecard_earn_1yr": 46657,
+      "scorecard_earn_4yr": 73362
     },
     {
       "id": "chicago-kent-college-of-law",
@@ -9743,7 +10123,11 @@
       "clinic_seats_filled": 212,
       "field_placements_filled": 123,
       "simulation_seats_filled": 824,
-      "hands_on_per_student": 1.61
+      "hands_on_per_student": 1.61,
+      "scorecard_median_debt": 97727,
+      "scorecard_debt_monthly": 1112,
+      "scorecard_earn_1yr": 73249,
+      "scorecard_earn_4yr": 111515
     },
     {
       "id": "cuny-school-of-law",
@@ -9857,7 +10241,11 @@
       "clinic_seats_filled": 301,
       "field_placements_filled": 36,
       "simulation_seats_filled": 590,
-      "hands_on_per_student": 1.33
+      "hands_on_per_student": 1.33,
+      "scorecard_median_debt": 81666,
+      "scorecard_debt_monthly": 929,
+      "scorecard_earn_1yr": 73397,
+      "scorecard_earn_4yr": 87345
     },
     {
       "id": "cleveland-state-university-college-of-law",
@@ -9917,7 +10305,11 @@
       "clinic_seats_filled": 83,
       "field_placements_filled": 90,
       "simulation_seats_filled": 175,
-      "hands_on_per_student": 0.7
+      "hands_on_per_student": 0.7,
+      "scorecard_median_debt": 71500,
+      "scorecard_debt_monthly": 813,
+      "scorecard_earn_1yr": 64805,
+      "scorecard_earn_4yr": 91229
     },
     {
       "id": "cooley-law-school",
@@ -10043,7 +10435,11 @@
       "clinic_seats_filled": 50,
       "field_placements_filled": 192,
       "simulation_seats_filled": 0,
-      "hands_on_per_student": 0.51
+      "hands_on_per_student": 0.51,
+      "scorecard_median_debt": 202668,
+      "scorecard_debt_monthly": 2305,
+      "scorecard_earn_1yr": 45431,
+      "scorecard_earn_4yr": 74147
     },
     {
       "id": "creighton-university-school-of-law",
@@ -10144,7 +10540,11 @@
       "clinic_seats_filled": 47,
       "field_placements_filled": 55,
       "simulation_seats_filled": 462,
-      "hands_on_per_student": 1.32
+      "hands_on_per_student": 1.32,
+      "scorecard_median_debt": 128182,
+      "scorecard_debt_monthly": 1458,
+      "scorecard_earn_1yr": 65179,
+      "scorecard_earn_4yr": 86665
     },
     {
       "id": "university-of-dayton-school-of-law",
@@ -10230,7 +10630,11 @@
       "clinic_seats_filled": 39,
       "field_placements_filled": 71,
       "simulation_seats_filled": 369,
-      "hands_on_per_student": 1.08
+      "hands_on_per_student": 1.08,
+      "scorecard_median_debt": null,
+      "scorecard_debt_monthly": null,
+      "scorecard_earn_1yr": null,
+      "scorecard_earn_4yr": null
     },
     {
       "id": "depaul-university-college-of-law",
@@ -10331,7 +10735,11 @@
       "clinic_seats_filled": 124,
       "field_placements_filled": 163,
       "simulation_seats_filled": 305,
-      "hands_on_per_student": 1.16
+      "hands_on_per_student": 1.16,
+      "scorecard_median_debt": 131463,
+      "scorecard_debt_monthly": 1495,
+      "scorecard_earn_1yr": 68344,
+      "scorecard_earn_4yr": 107264
     },
     {
       "id": "university-of-denver-sturm-college-of-law",
@@ -10445,7 +10853,11 @@
       "clinic_seats_filled": 207,
       "field_placements_filled": 723,
       "simulation_seats_filled": 500,
-      "hands_on_per_student": 1.68
+      "hands_on_per_student": 1.68,
+      "scorecard_median_debt": 161053,
+      "scorecard_debt_monthly": 1832,
+      "scorecard_earn_1yr": 67853,
+      "scorecard_earn_4yr": 103145
     },
     {
       "id": "university-of-detroit-mercy-school-of-law",
@@ -10546,7 +10958,11 @@
       "clinic_seats_filled": 235,
       "field_placements_filled": 119,
       "simulation_seats_filled": 448,
-      "hands_on_per_student": 1.21
+      "hands_on_per_student": 1.21,
+      "scorecard_median_debt": 122626,
+      "scorecard_debt_monthly": 1395,
+      "scorecard_earn_1yr": 63731,
+      "scorecard_earn_4yr": 93055
     },
     {
       "id": "university-of-the-district-of-columbia-david-a-clarke-school-of-law",
@@ -10647,7 +11063,11 @@
       "clinic_seats_filled": 152,
       "field_placements_filled": 49,
       "simulation_seats_filled": 163,
-      "hands_on_per_student": 1.54
+      "hands_on_per_student": 1.54,
+      "scorecard_median_debt": 110258,
+      "scorecard_debt_monthly": 1254,
+      "scorecard_earn_1yr": 59595,
+      "scorecard_earn_4yr": 90325
     },
     {
       "id": "drake-university-law-school",
@@ -10748,7 +11168,11 @@
       "clinic_seats_filled": 87,
       "field_placements_filled": 91,
       "simulation_seats_filled": 193,
-      "hands_on_per_student": 1.01
+      "hands_on_per_student": 1.01,
+      "scorecard_median_debt": 83526,
+      "scorecard_debt_monthly": 950,
+      "scorecard_earn_1yr": 72226,
+      "scorecard_earn_4yr": 87375
     },
     {
       "id": "duquesne-university-school-of-law",
@@ -10808,7 +11232,11 @@
       "clinic_seats_filled": 46,
       "field_placements_filled": 97,
       "simulation_seats_filled": 343,
-      "hands_on_per_student": 0.92
+      "hands_on_per_student": 0.92,
+      "scorecard_median_debt": 72500,
+      "scorecard_debt_monthly": 825,
+      "scorecard_earn_1yr": 59904,
+      "scorecard_earn_4yr": 82014
     },
     {
       "id": "elon-university-school-of-law",
@@ -10889,7 +11317,11 @@
       "clinic_seats_filled": 50,
       "field_placements_filled": 161,
       "simulation_seats_filled": 1218,
-      "hands_on_per_student": 2.65
+      "hands_on_per_student": 2.65,
+      "scorecard_median_debt": 119023,
+      "scorecard_debt_monthly": 1354,
+      "scorecard_earn_1yr": 57581,
+      "scorecard_earn_4yr": 82321
     },
     {
       "id": "faulkner-university-jones-school-of-law",
@@ -10999,7 +11431,11 @@
       "clinic_seats_filled": 32,
       "field_placements_filled": 65,
       "simulation_seats_filled": 222,
-      "hands_on_per_student": 0.78
+      "hands_on_per_student": 0.78,
+      "scorecard_median_debt": 137560,
+      "scorecard_debt_monthly": 1565,
+      "scorecard_earn_1yr": 49400,
+      "scorecard_earn_4yr": 68740
     },
     {
       "id": "florida-aandm-university-college-of-law",
@@ -11059,7 +11495,11 @@
       "clinic_seats_filled": 27,
       "field_placements_filled": 82,
       "simulation_seats_filled": 260,
-      "hands_on_per_student": 0.96
+      "hands_on_per_student": 0.96,
+      "scorecard_median_debt": 115500,
+      "scorecard_debt_monthly": 1314,
+      "scorecard_earn_1yr": 54751,
+      "scorecard_earn_4yr": 81144
     },
     {
       "id": "georgetown-university-law-center",
@@ -11160,7 +11600,11 @@
       "clinic_seats_filled": 575,
       "field_placements_filled": 553,
       "simulation_seats_filled": 1411,
-      "hands_on_per_student": 1.12
+      "hands_on_per_student": 1.12,
+      "scorecard_median_debt": 162286,
+      "scorecard_debt_monthly": 1846,
+      "scorecard_earn_1yr": 168995,
+      "scorecard_earn_4yr": 226624
     },
     {
       "id": "gonzaga-university-school-of-law",
@@ -11261,7 +11705,11 @@
       "clinic_seats_filled": 142,
       "field_placements_filled": 191,
       "simulation_seats_filled": 417,
-      "hands_on_per_student": 1.36
+      "hands_on_per_student": 1.36,
+      "scorecard_median_debt": 110687,
+      "scorecard_debt_monthly": 1259,
+      "scorecard_earn_1yr": 65069,
+      "scorecard_earn_4yr": 88461
     },
     {
       "id": "university-of-hawaii-richardson-school-of-law",
@@ -11399,7 +11847,11 @@
       "clinic_seats_filled": 185,
       "field_placements_filled": 88,
       "simulation_seats_filled": 168,
-      "hands_on_per_student": 1.18
+      "hands_on_per_student": 1.18,
+      "scorecard_median_debt": 98536,
+      "scorecard_debt_monthly": 1121,
+      "scorecard_earn_1yr": 69865,
+      "scorecard_earn_4yr": 89520
     },
     {
       "id": "hofstra-university-maurice-a-deane-school-of-law",
@@ -11459,7 +11911,11 @@
       "clinic_seats_filled": 117,
       "field_placements_filled": 120,
       "simulation_seats_filled": 891,
-      "hands_on_per_student": 1.41
+      "hands_on_per_student": 1.41,
+      "scorecard_median_debt": 163347,
+      "scorecard_debt_monthly": 1858,
+      "scorecard_earn_1yr": 69677,
+      "scorecard_earn_4yr": 102901
     },
     {
       "id": "howard-university-school-of-law",
@@ -11519,7 +11975,11 @@
       "clinic_seats_filled": 147,
       "field_placements_filled": 136,
       "simulation_seats_filled": 237,
-      "hands_on_per_student": 0.94
+      "hands_on_per_student": 0.94,
+      "scorecard_median_debt": 185348,
+      "scorecard_debt_monthly": 2108,
+      "scorecard_earn_1yr": 81173,
+      "scorecard_earn_4yr": 116413
     },
     {
       "id": "university-of-idaho-college-of-law",
@@ -11579,7 +12039,11 @@
       "clinic_seats_filled": 72,
       "field_placements_filled": 38,
       "simulation_seats_filled": 225,
-      "hands_on_per_student": 0.67
+      "hands_on_per_student": 0.67,
+      "scorecard_median_debt": 100091,
+      "scorecard_debt_monthly": 1139,
+      "scorecard_earn_1yr": 58694,
+      "scorecard_earn_4yr": 81744
     },
     {
       "id": "university-of-illinois-chicago-school-of-law",
@@ -11639,7 +12103,11 @@
       "clinic_seats_filled": 167,
       "field_placements_filled": 307,
       "simulation_seats_filled": 1241,
-      "hands_on_per_student": 1.69
+      "hands_on_per_student": 1.69,
+      "scorecard_median_debt": null,
+      "scorecard_debt_monthly": null,
+      "scorecard_earn_1yr": null,
+      "scorecard_earn_4yr": null
     },
     {
       "id": "indiana-university-robert-h-mckinney-school-of-law",
@@ -11781,7 +12249,11 @@
       "clinic_seats_filled": 113,
       "field_placements_filled": 320,
       "simulation_seats_filled": 471,
-      "hands_on_per_student": 1.09
+      "hands_on_per_student": 1.09,
+      "scorecard_median_debt": 97806,
+      "scorecard_debt_monthly": 1113,
+      "scorecard_earn_1yr": 64496,
+      "scorecard_earn_4yr": 101372
     },
     {
       "id": "inter-american-university-of-puerto-rico-school-of-law",
@@ -11870,7 +12342,11 @@
       "clinic_seats_filled": 132,
       "field_placements_filled": 85,
       "simulation_seats_filled": 403,
-      "hands_on_per_student": 1.01
+      "hands_on_per_student": 1.01,
+      "scorecard_median_debt": 110693,
+      "scorecard_debt_monthly": 1259,
+      "scorecard_earn_1yr": 29713,
+      "scorecard_earn_4yr": 53462
     },
     {
       "id": "jacksonville-university-college-of-law",
@@ -11929,7 +12405,11 @@
       "clinic_seats_filled": 0,
       "field_placements_filled": 19,
       "simulation_seats_filled": 51,
-      "hands_on_per_student": 0.52
+      "hands_on_per_student": 0.52,
+      "scorecard_median_debt": null,
+      "scorecard_debt_monthly": null,
+      "scorecard_earn_1yr": null,
+      "scorecard_earn_4yr": null
     },
     {
       "id": "lewis-and-clark-law-school",
@@ -11989,7 +12469,11 @@
       "clinic_seats_filled": 113,
       "field_placements_filled": 220,
       "simulation_seats_filled": 258,
-      "hands_on_per_student": 1.14
+      "hands_on_per_student": 1.14,
+      "scorecard_median_debt": null,
+      "scorecard_debt_monthly": null,
+      "scorecard_earn_1yr": null,
+      "scorecard_earn_4yr": null
     },
     {
       "id": "liberty-university-school-of-law",
@@ -12071,7 +12555,11 @@
       "clinic_seats_filled": 24,
       "field_placements_filled": 70,
       "simulation_seats_filled": 734,
-      "hands_on_per_student": 2.54
+      "hands_on_per_student": 2.54,
+      "scorecard_median_debt": null,
+      "scorecard_debt_monthly": null,
+      "scorecard_earn_1yr": null,
+      "scorecard_earn_4yr": null
     },
     {
       "id": "lincoln-memorial-university-duncan-school-of-law",
@@ -12131,7 +12619,11 @@
       "clinic_seats_filled": 39,
       "field_placements_filled": 99,
       "simulation_seats_filled": 261,
-      "hands_on_per_student": 0.93
+      "hands_on_per_student": 0.93,
+      "scorecard_median_debt": 108228,
+      "scorecard_debt_monthly": 1231,
+      "scorecard_earn_1yr": 46511,
+      "scorecard_earn_4yr": 73596
     },
     {
       "id": "lsu-paul-m-hebert-law-center",
@@ -12191,7 +12683,11 @@
       "clinic_seats_filled": 92,
       "field_placements_filled": 187,
       "simulation_seats_filled": 351,
-      "hands_on_per_student": 0.99
+      "hands_on_per_student": 0.99,
+      "scorecard_median_debt": 88622,
+      "scorecard_debt_monthly": 1008,
+      "scorecard_earn_1yr": 67339,
+      "scorecard_earn_4yr": 103602
     },
     {
       "id": "university-of-louisville-brandeis-school-of-law",
@@ -12292,7 +12788,11 @@
       "clinic_seats_filled": 55,
       "field_placements_filled": 96,
       "simulation_seats_filled": 359,
-      "hands_on_per_student": 1.35
+      "hands_on_per_student": 1.35,
+      "scorecard_median_debt": 96424,
+      "scorecard_debt_monthly": 1097,
+      "scorecard_earn_1yr": 56417,
+      "scorecard_earn_4yr": 80728
     },
     {
       "id": "loyola-university-new-orleans-college-of-law",
@@ -12393,7 +12893,11 @@
       "clinic_seats_filled": 145,
       "field_placements_filled": 95,
       "simulation_seats_filled": 889,
-      "hands_on_per_student": 1.74
+      "hands_on_per_student": 1.74,
+      "scorecard_median_debt": null,
+      "scorecard_debt_monthly": null,
+      "scorecard_earn_1yr": null,
+      "scorecard_earn_4yr": null
     },
     {
       "id": "university-of-maine-school-of-law",
@@ -12453,7 +12957,11 @@
       "clinic_seats_filled": 60,
       "field_placements_filled": 115,
       "simulation_seats_filled": 138,
-      "hands_on_per_student": 1.09
+      "hands_on_per_student": 1.09,
+      "scorecard_median_debt": 85950,
+      "scorecard_debt_monthly": 978,
+      "scorecard_earn_1yr": 61048,
+      "scorecard_earn_4yr": 83912
     },
     {
       "id": "marquette-university-law-school",
@@ -12585,7 +13093,11 @@
       "clinic_seats_filled": 57,
       "field_placements_filled": 150,
       "simulation_seats_filled": 929,
-      "hands_on_per_student": 1.85
+      "hands_on_per_student": 1.85,
+      "scorecard_median_debt": 137200,
+      "scorecard_debt_monthly": 1561,
+      "scorecard_earn_1yr": 63027,
+      "scorecard_earn_4yr": 85116
     },
     {
       "id": "university-of-massachusetts-school-of-law",
@@ -12650,7 +13162,11 @@
       "clinic_seats_filled": 69,
       "field_placements_filled": 60,
       "simulation_seats_filled": 550,
-      "hands_on_per_student": 1.75
+      "hands_on_per_student": 1.75,
+      "scorecard_median_debt": null,
+      "scorecard_debt_monthly": null,
+      "scorecard_earn_1yr": null,
+      "scorecard_earn_4yr": null
     },
     {
       "id": "university-of-memphis-cecil-c-humphreys-school-of-law",
@@ -12768,7 +13284,11 @@
       "clinic_seats_filled": 47,
       "field_placements_filled": 81,
       "simulation_seats_filled": 176,
-      "hands_on_per_student": 1.27
+      "hands_on_per_student": 1.27,
+      "scorecard_median_debt": 92250,
+      "scorecard_debt_monthly": 1049,
+      "scorecard_earn_1yr": 52464,
+      "scorecard_earn_4yr": 81169
     },
     {
       "id": "mercer-university-school-of-law",
@@ -12828,7 +13348,11 @@
       "clinic_seats_filled": 37,
       "field_placements_filled": 156,
       "simulation_seats_filled": 616,
-      "hands_on_per_student": 1.9
+      "hands_on_per_student": 1.9,
+      "scorecard_median_debt": null,
+      "scorecard_debt_monthly": null,
+      "scorecard_earn_1yr": null,
+      "scorecard_earn_4yr": null
     },
     {
       "id": "michigan-state-university-college-of-law",
@@ -12888,7 +13412,11 @@
       "clinic_seats_filled": 131,
       "field_placements_filled": 84,
       "simulation_seats_filled": 835,
-      "hands_on_per_student": 2.1
+      "hands_on_per_student": 2.1,
+      "scorecard_median_debt": 103630,
+      "scorecard_debt_monthly": 1179,
+      "scorecard_earn_1yr": 67554,
+      "scorecard_earn_4yr": 96342
     },
     {
       "id": "mississippi-college-school-of-law",
@@ -12977,7 +13505,11 @@
       "clinic_seats_filled": 44,
       "field_placements_filled": 75,
       "simulation_seats_filled": 193,
-      "hands_on_per_student": 0.78
+      "hands_on_per_student": 0.78,
+      "scorecard_median_debt": 143299,
+      "scorecard_debt_monthly": 1630,
+      "scorecard_earn_1yr": 55522,
+      "scorecard_earn_4yr": 70352
     },
     {
       "id": "university-of-mississippi-school-of-law",
@@ -13078,7 +13610,11 @@
       "clinic_seats_filled": 143,
       "field_placements_filled": 55,
       "simulation_seats_filled": 408,
-      "hands_on_per_student": 1.29
+      "hands_on_per_student": 1.29,
+      "scorecard_median_debt": 69701,
+      "scorecard_debt_monthly": 793,
+      "scorecard_earn_1yr": 61201,
+      "scorecard_earn_4yr": 92069
     },
     {
       "id": "university-of-missouri-kansas-city-school-of-law",
@@ -13179,7 +13715,11 @@
       "clinic_seats_filled": 47,
       "field_placements_filled": 122,
       "simulation_seats_filled": 214,
-      "hands_on_per_student": 0.95
+      "hands_on_per_student": 0.95,
+      "scorecard_median_debt": 97000,
+      "scorecard_debt_monthly": 1103,
+      "scorecard_earn_1yr": 60766,
+      "scorecard_earn_4yr": 92296
     },
     {
       "id": "mitchell-hamline-school-of-law",
@@ -13239,7 +13779,11 @@
       "clinic_seats_filled": 92,
       "field_placements_filled": 364,
       "simulation_seats_filled": 631,
-      "hands_on_per_student": 0.95
+      "hands_on_per_student": 0.95,
+      "scorecard_median_debt": 101761,
+      "scorecard_debt_monthly": 1158,
+      "scorecard_earn_1yr": 67268,
+      "scorecard_earn_4yr": 91497
     },
     {
       "id": "university-of-montana-blewett-school-of-law",
@@ -13340,7 +13884,11 @@
       "clinic_seats_filled": 20,
       "field_placements_filled": 93,
       "simulation_seats_filled": 323,
-      "hands_on_per_student": 1.56
+      "hands_on_per_student": 1.56,
+      "scorecard_median_debt": 72126,
+      "scorecard_debt_monthly": 820,
+      "scorecard_earn_1yr": 65477,
+      "scorecard_earn_4yr": 86640
     },
     {
       "id": "university-of-nebraska-college-of-law",
@@ -13470,7 +14018,11 @@
       "clinic_seats_filled": 119,
       "field_placements_filled": 98,
       "simulation_seats_filled": 683,
-      "hands_on_per_student": 2.01
+      "hands_on_per_student": 2.01,
+      "scorecard_median_debt": 54456,
+      "scorecard_debt_monthly": 619,
+      "scorecard_earn_1yr": 66354,
+      "scorecard_earn_4yr": 90759
     },
     {
       "id": "unlv-william-s-boyd-school-of-law",
@@ -13530,7 +14082,11 @@
       "clinic_seats_filled": 51,
       "field_placements_filled": 154,
       "simulation_seats_filled": 432,
-      "hands_on_per_student": 1.39
+      "hands_on_per_student": 1.39,
+      "scorecard_median_debt": 82985,
+      "scorecard_debt_monthly": 944,
+      "scorecard_earn_1yr": 76561,
+      "scorecard_earn_4yr": 108006
     },
     {
       "id": "new-england-law-boston",
@@ -13631,7 +14187,11 @@
       "clinic_seats_filled": 69,
       "field_placements_filled": 213,
       "simulation_seats_filled": 930,
-      "hands_on_per_student": 1.02
+      "hands_on_per_student": 1.02,
+      "scorecard_median_debt": 126248,
+      "scorecard_debt_monthly": 1436,
+      "scorecard_earn_1yr": 61471,
+      "scorecard_earn_4yr": 94232
     },
     {
       "id": "university-of-new-hampshire-franklin-pierce-school-of-law",
@@ -13753,7 +14313,11 @@
       "clinic_seats_filled": 166,
       "field_placements_filled": 120,
       "simulation_seats_filled": 483,
-      "hands_on_per_student": 1.12
+      "hands_on_per_student": 1.12,
+      "scorecard_median_debt": null,
+      "scorecard_debt_monthly": null,
+      "scorecard_earn_1yr": null,
+      "scorecard_earn_4yr": null
     },
     {
       "id": "university-of-new-mexico-school-of-law",
@@ -13850,7 +14414,11 @@
       "clinic_seats_filled": 117,
       "field_placements_filled": 51,
       "simulation_seats_filled": 79,
-      "hands_on_per_student": 0.83
+      "hands_on_per_student": 0.83,
+      "scorecard_median_debt": null,
+      "scorecard_debt_monthly": null,
+      "scorecard_earn_1yr": null,
+      "scorecard_earn_4yr": null
     },
     {
       "id": "new-york-law-school",
@@ -13910,7 +14478,11 @@
       "clinic_seats_filled": 286,
       "field_placements_filled": 188,
       "simulation_seats_filled": 524,
-      "hands_on_per_student": 0.9
+      "hands_on_per_student": 0.9,
+      "scorecard_median_debt": 142500,
+      "scorecard_debt_monthly": 1621,
+      "scorecard_earn_1yr": 76166,
+      "scorecard_earn_4yr": 109122
     },
     {
       "id": "north-carolina-central-university-school-of-law",
@@ -14011,7 +14583,11 @@
       "clinic_seats_filled": 72,
       "field_placements_filled": 76,
       "simulation_seats_filled": 353,
-      "hands_on_per_student": 1.39
+      "hands_on_per_student": 1.39,
+      "scorecard_median_debt": 117597,
+      "scorecard_debt_monthly": 1338,
+      "scorecard_earn_1yr": 56228,
+      "scorecard_earn_4yr": 83361
     },
     {
       "id": "university-of-north-carolina-school-of-law",
@@ -14071,7 +14647,11 @@
       "clinic_seats_filled": 115,
       "field_placements_filled": 127,
       "simulation_seats_filled": 547,
-      "hands_on_per_student": 1.45
+      "hands_on_per_student": 1.45,
+      "scorecard_median_debt": 91570,
+      "scorecard_debt_monthly": 1042,
+      "scorecard_earn_1yr": 81794,
+      "scorecard_earn_4yr": 142928
     },
     {
       "id": "university-of-north-dakota-school-of-law",
@@ -14131,7 +14711,11 @@
       "clinic_seats_filled": 27,
       "field_placements_filled": 122,
       "simulation_seats_filled": 92,
-      "hands_on_per_student": 0.98
+      "hands_on_per_student": 0.98,
+      "scorecard_median_debt": 61500,
+      "scorecard_debt_monthly": 700,
+      "scorecard_earn_1yr": 61451,
+      "scorecard_earn_4yr": 90309
     },
     {
       "id": "unt-dallas-college-of-law",
@@ -14191,7 +14775,11 @@
       "clinic_seats_filled": 47,
       "field_placements_filled": 89,
       "simulation_seats_filled": 17,
-      "hands_on_per_student": 0.35
+      "hands_on_per_student": 0.35,
+      "scorecard_median_debt": null,
+      "scorecard_debt_monthly": null,
+      "scorecard_earn_1yr": null,
+      "scorecard_earn_4yr": 101120
     },
     {
       "id": "northern-illinois-university-college-of-law",
@@ -14260,7 +14848,11 @@
       "clinic_seats_filled": 43,
       "field_placements_filled": 77,
       "simulation_seats_filled": 156,
-      "hands_on_per_student": 0.78
+      "hands_on_per_student": 0.78,
+      "scorecard_median_debt": 75688,
+      "scorecard_debt_monthly": 861,
+      "scorecard_earn_1yr": 57561,
+      "scorecard_earn_4yr": 78459
     },
     {
       "id": "northern-kentucky-university-chase-college-of-law",
@@ -14320,7 +14912,11 @@
       "clinic_seats_filled": 30,
       "field_placements_filled": 93,
       "simulation_seats_filled": 152,
-      "hands_on_per_student": 0.67
+      "hands_on_per_student": 0.67,
+      "scorecard_median_debt": 101097,
+      "scorecard_debt_monthly": 1150,
+      "scorecard_earn_1yr": 47291,
+      "scorecard_earn_4yr": 74937
     },
     {
       "id": "nova-southeastern-university-shepard-broad-college-of-law",
@@ -14409,7 +15005,11 @@
       "clinic_seats_filled": 51,
       "field_placements_filled": 105,
       "simulation_seats_filled": 410,
-      "hands_on_per_student": 0.89
+      "hands_on_per_student": 0.89,
+      "scorecard_median_debt": 162455,
+      "scorecard_debt_monthly": 1848,
+      "scorecard_earn_1yr": 61884,
+      "scorecard_earn_4yr": 96470
     },
     {
       "id": "ohio-northern-university-pettit-college-of-law",
@@ -14510,7 +15110,11 @@
       "clinic_seats_filled": 14,
       "field_placements_filled": 20,
       "simulation_seats_filled": 318,
-      "hands_on_per_student": 1.1
+      "hands_on_per_student": 1.1,
+      "scorecard_median_debt": 61500,
+      "scorecard_debt_monthly": 700,
+      "scorecard_earn_1yr": 55402,
+      "scorecard_earn_4yr": 69823
     },
     {
       "id": "oklahoma-city-university-school-of-law",
@@ -14570,7 +15174,11 @@
       "clinic_seats_filled": 79,
       "field_placements_filled": 127,
       "simulation_seats_filled": 322,
-      "hands_on_per_student": 1.22
+      "hands_on_per_student": 1.22,
+      "scorecard_median_debt": 145281,
+      "scorecard_debt_monthly": 1653,
+      "scorecard_earn_1yr": 53246,
+      "scorecard_earn_4yr": 74062
     },
     {
       "id": "university-of-oklahoma-college-of-law",
@@ -14630,7 +15238,11 @@
       "clinic_seats_filled": 69,
       "field_placements_filled": 60,
       "simulation_seats_filled": 498,
-      "hands_on_per_student": 1.16
+      "hands_on_per_student": 1.16,
+      "scorecard_median_debt": null,
+      "scorecard_debt_monthly": null,
+      "scorecard_earn_1yr": null,
+      "scorecard_earn_4yr": null
     },
     {
       "id": "university-of-oregon-school-of-law",
@@ -14690,7 +15302,11 @@
       "clinic_seats_filled": 99,
       "field_placements_filled": 124,
       "simulation_seats_filled": 306,
-      "hands_on_per_student": 1.1
+      "hands_on_per_student": 1.1,
+      "scorecard_median_debt": 98655,
+      "scorecard_debt_monthly": 1122,
+      "scorecard_earn_1yr": 64912,
+      "scorecard_earn_4yr": 100801
     },
     {
       "id": "pace-university-elisabeth-haub-school-of-law",
@@ -14750,7 +15366,11 @@
       "clinic_seats_filled": 106,
       "field_placements_filled": 160,
       "simulation_seats_filled": 419,
-      "hands_on_per_student": 0.78
+      "hands_on_per_student": 0.78,
+      "scorecard_median_debt": 94737,
+      "scorecard_debt_monthly": 1078,
+      "scorecard_earn_1yr": 67469,
+      "scorecard_earn_4yr": null
     },
     {
       "id": "university-of-the-pacific-mcgeorge-school-of-law",
@@ -14851,7 +15471,11 @@
       "clinic_seats_filled": 107,
       "field_placements_filled": 227,
       "simulation_seats_filled": 530,
-      "hands_on_per_student": 1.4
+      "hands_on_per_student": 1.4,
+      "scorecard_median_debt": 147082,
+      "scorecard_debt_monthly": 1673,
+      "scorecard_earn_1yr": 75832,
+      "scorecard_earn_4yr": 114281
     },
     {
       "id": "penn-state-dickinson-law",
@@ -14952,7 +15576,11 @@
       "clinic_seats_filled": 181,
       "field_placements_filled": 263,
       "simulation_seats_filled": 638,
-      "hands_on_per_student": 1.63
+      "hands_on_per_student": 1.63,
+      "scorecard_median_debt": 65436,
+      "scorecard_debt_monthly": 744,
+      "scorecard_earn_1yr": 61271,
+      "scorecard_earn_4yr": 90775
     },
     {
       "id": "pontifical-catholic-university-of-puerto-rico-school-of-law",
@@ -15046,7 +15674,11 @@
       "clinic_seats_filled": 180,
       "field_placements_filled": 19,
       "simulation_seats_filled": 113,
-      "hands_on_per_student": 0.65
+      "hands_on_per_student": 0.65,
+      "scorecard_median_debt": 122712,
+      "scorecard_debt_monthly": 1396,
+      "scorecard_earn_1yr": 20330,
+      "scorecard_earn_4yr": 39634
     },
     {
       "id": "university-of-puerto-rico-school-of-law",
@@ -15106,7 +15738,11 @@
       "clinic_seats_filled": 256,
       "field_placements_filled": 59,
       "simulation_seats_filled": 124,
-      "hands_on_per_student": 0.99
+      "hands_on_per_student": 0.99,
+      "scorecard_median_debt": null,
+      "scorecard_debt_monthly": null,
+      "scorecard_earn_1yr": null,
+      "scorecard_earn_4yr": null
     },
     {
       "id": "quinnipiac-university-school-of-law",
@@ -15187,7 +15823,11 @@
       "clinic_seats_filled": 92,
       "field_placements_filled": 152,
       "simulation_seats_filled": 356,
-      "hands_on_per_student": 1.53
+      "hands_on_per_student": 1.53,
+      "scorecard_median_debt": 81000,
+      "scorecard_debt_monthly": 921,
+      "scorecard_earn_1yr": 62011,
+      "scorecard_earn_4yr": 100096
     },
     {
       "id": "regent-university-school-of-law",
@@ -15277,7 +15917,11 @@
       "clinic_seats_filled": 19,
       "field_placements_filled": 136,
       "simulation_seats_filled": 305,
-      "hands_on_per_student": 1.35
+      "hands_on_per_student": 1.35,
+      "scorecard_median_debt": 85898,
+      "scorecard_debt_monthly": 977,
+      "scorecard_earn_1yr": 59604,
+      "scorecard_earn_4yr": 82360
     },
     {
       "id": "roger-williams-university-school-of-law",
@@ -15342,7 +15986,11 @@
       "clinic_seats_filled": 76,
       "field_placements_filled": 116,
       "simulation_seats_filled": 486,
-      "hands_on_per_student": 1.4
+      "hands_on_per_student": 1.4,
+      "scorecard_median_debt": 122459,
+      "scorecard_debt_monthly": 1393,
+      "scorecard_earn_1yr": 55777,
+      "scorecard_earn_4yr": 90866
     },
     {
       "id": "rutgers-law-school",
@@ -15443,7 +16091,11 @@
       "clinic_seats_filled": 348,
       "field_placements_filled": 119,
       "simulation_seats_filled": 1197,
-      "hands_on_per_student": 1.24
+      "hands_on_per_student": 1.24,
+      "scorecard_median_debt": null,
+      "scorecard_debt_monthly": null,
+      "scorecard_earn_1yr": null,
+      "scorecard_earn_4yr": null
     },
     {
       "id": "saint-louis-university-school-of-law",
@@ -15520,7 +16172,11 @@
       "clinic_seats_filled": 83,
       "field_placements_filled": 115,
       "simulation_seats_filled": 775,
-      "hands_on_per_student": 1.64
+      "hands_on_per_student": 1.64,
+      "scorecard_median_debt": 99458,
+      "scorecard_debt_monthly": 1131,
+      "scorecard_earn_1yr": 71391,
+      "scorecard_earn_4yr": 93029
     },
     {
       "id": "samford-university-cumberland-school-of-law",
@@ -15613,7 +16269,11 @@
       "clinic_seats_filled": 72,
       "field_placements_filled": 181,
       "simulation_seats_filled": 701,
-      "hands_on_per_student": 2.03
+      "hands_on_per_student": 2.03,
+      "scorecard_median_debt": null,
+      "scorecard_debt_monthly": null,
+      "scorecard_earn_1yr": null,
+      "scorecard_earn_4yr": null
     },
     {
       "id": "university-of-san-francisco-school-of-law",
@@ -15714,7 +16374,11 @@
       "clinic_seats_filled": 97,
       "field_placements_filled": 149,
       "simulation_seats_filled": 465,
-      "hands_on_per_student": 1.39
+      "hands_on_per_student": 1.39,
+      "scorecard_median_debt": 169229,
+      "scorecard_debt_monthly": 1925,
+      "scorecard_earn_1yr": 75635,
+      "scorecard_earn_4yr": null
     },
     {
       "id": "santa-clara-university-school-of-law",
@@ -15840,7 +16504,11 @@
       "clinic_seats_filled": 189,
       "field_placements_filled": 305,
       "simulation_seats_filled": 843,
-      "hands_on_per_student": 1.79
+      "hands_on_per_student": 1.79,
+      "scorecard_median_debt": 180127,
+      "scorecard_debt_monthly": 2049,
+      "scorecard_earn_1yr": 79949,
+      "scorecard_earn_4yr": 148599
     },
     {
       "id": "seattle-university-school-of-law",
@@ -15982,7 +16650,11 @@
       "clinic_seats_filled": 138,
       "field_placements_filled": 235,
       "simulation_seats_filled": 412,
-      "hands_on_per_student": 1.22
+      "hands_on_per_student": 1.22,
+      "scorecard_median_debt": 144542,
+      "scorecard_debt_monthly": 1644,
+      "scorecard_earn_1yr": 74248,
+      "scorecard_earn_4yr": 105471
     },
     {
       "id": "university-of-south-carolina-joseph-f-rice-school-of-law",
@@ -16042,7 +16714,11 @@
       "clinic_seats_filled": 47,
       "field_placements_filled": 78,
       "simulation_seats_filled": 597,
-      "hands_on_per_student": 1.11
+      "hands_on_per_student": 1.11,
+      "scorecard_median_debt": 115354,
+      "scorecard_debt_monthly": 1312,
+      "scorecard_earn_1yr": 59216,
+      "scorecard_earn_4yr": 93806
     },
     {
       "id": "university-of-south-dakota-knudson-school-of-law",
@@ -16102,7 +16778,11 @@
       "clinic_seats_filled": 0,
       "field_placements_filled": 127,
       "simulation_seats_filled": 91,
-      "hands_on_per_student": 0.87
+      "hands_on_per_student": 0.87,
+      "scorecard_median_debt": null,
+      "scorecard_debt_monthly": null,
+      "scorecard_earn_1yr": null,
+      "scorecard_earn_4yr": 83195
     },
     {
       "id": "south-texas-college-of-law-houston",
@@ -16203,7 +16883,11 @@
       "clinic_seats_filled": 154,
       "field_placements_filled": 148,
       "simulation_seats_filled": 946,
-      "hands_on_per_student": 1.09
+      "hands_on_per_student": 1.09,
+      "scorecard_median_debt": 142976,
+      "scorecard_debt_monthly": 1626,
+      "scorecard_earn_1yr": 73069,
+      "scorecard_earn_4yr": 108296
     },
     {
       "id": "southern-illinois-university-school-of-law",
@@ -16304,7 +16988,11 @@
       "clinic_seats_filled": 25,
       "field_placements_filled": 39,
       "simulation_seats_filled": 222,
-      "hands_on_per_student": 0.91
+      "hands_on_per_student": 0.91,
+      "scorecard_median_debt": 91500,
+      "scorecard_debt_monthly": 1041,
+      "scorecard_earn_1yr": 54507,
+      "scorecard_earn_4yr": 79658
     },
     {
       "id": "southern-university-law-center",
@@ -16405,7 +17093,11 @@
       "clinic_seats_filled": 208,
       "field_placements_filled": 133,
       "simulation_seats_filled": 235,
-      "hands_on_per_student": 0.71
+      "hands_on_per_student": 0.71,
+      "scorecard_median_debt": 118010,
+      "scorecard_debt_monthly": 1342,
+      "scorecard_earn_1yr": 51071,
+      "scorecard_earn_4yr": 67462
     },
     {
       "id": "southwestern-law-school",
@@ -16482,7 +17174,11 @@
       "clinic_seats_filled": 143,
       "field_placements_filled": 441,
       "simulation_seats_filled": 972,
-      "hands_on_per_student": 1.4
+      "hands_on_per_student": 1.4,
+      "scorecard_median_debt": 203702,
+      "scorecard_debt_monthly": 2317,
+      "scorecard_earn_1yr": 67597,
+      "scorecard_earn_4yr": 108350
     },
     {
       "id": "st-mary-s-university-school-of-law",
@@ -16542,7 +17238,11 @@
       "clinic_seats_filled": 117,
       "field_placements_filled": 65,
       "simulation_seats_filled": 1090,
-      "hands_on_per_student": 1.59
+      "hands_on_per_student": 1.59,
+      "scorecard_median_debt": 145002,
+      "scorecard_debt_monthly": 1649,
+      "scorecard_earn_1yr": 61615,
+      "scorecard_earn_4yr": 87375
     },
     {
       "id": "st-thomas-university-college-of-law",
@@ -16635,7 +17335,11 @@
       "clinic_seats_filled": 34,
       "field_placements_filled": 96,
       "simulation_seats_filled": 474,
-      "hands_on_per_student": 0.61
+      "hands_on_per_student": 0.61,
+      "scorecard_median_debt": null,
+      "scorecard_debt_monthly": null,
+      "scorecard_earn_1yr": null,
+      "scorecard_earn_4yr": null
     },
     {
       "id": "university-of-st-thomas-school-of-law",
@@ -16732,7 +17436,11 @@
       "clinic_seats_filled": 110,
       "field_placements_filled": 825,
       "simulation_seats_filled": 401,
-      "hands_on_per_student": 2.75
+      "hands_on_per_student": 2.75,
+      "scorecard_median_debt": 74968,
+      "scorecard_debt_monthly": 853,
+      "scorecard_earn_1yr": 65744,
+      "scorecard_earn_4yr": 89706
     },
     {
       "id": "stetson-university-college-of-law",
@@ -16842,7 +17550,11 @@
       "clinic_seats_filled": 100,
       "field_placements_filled": 134,
       "simulation_seats_filled": 955,
-      "hands_on_per_student": 1.18
+      "hands_on_per_student": 1.18,
+      "scorecard_median_debt": 142533,
+      "scorecard_debt_monthly": 1621,
+      "scorecard_earn_1yr": 63235,
+      "scorecard_earn_4yr": 96451
     },
     {
       "id": "suffolk-university-law-school",
@@ -16911,7 +17623,11 @@
       "clinic_seats_filled": 260,
       "field_placements_filled": 216,
       "simulation_seats_filled": 1242,
-      "hands_on_per_student": 1.28
+      "hands_on_per_student": 1.28,
+      "scorecard_median_debt": null,
+      "scorecard_debt_monthly": null,
+      "scorecard_earn_1yr": null,
+      "scorecard_earn_4yr": null
     },
     {
       "id": "syracuse-university-college-of-law",
@@ -16984,7 +17700,11 @@
       "clinic_seats_filled": 185,
       "field_placements_filled": 204,
       "simulation_seats_filled": 1373,
-      "hands_on_per_student": 2.35
+      "hands_on_per_student": 2.35,
+      "scorecard_median_debt": 113050,
+      "scorecard_debt_monthly": 1286,
+      "scorecard_earn_1yr": 67081,
+      "scorecard_earn_4yr": 97648
     },
     {
       "id": "texas-southern-university-thurgood-marshall-school-of-law",
@@ -17085,7 +17805,11 @@
       "clinic_seats_filled": 0,
       "field_placements_filled": 0,
       "simulation_seats_filled": 0,
-      "hands_on_per_student": 0.0
+      "hands_on_per_student": 0.0,
+      "scorecard_median_debt": null,
+      "scorecard_debt_monthly": null,
+      "scorecard_earn_1yr": null,
+      "scorecard_earn_4yr": null
     },
     {
       "id": "texas-tech-university-school-of-law",
@@ -17166,7 +17890,11 @@
       "clinic_seats_filled": 59,
       "field_placements_filled": 34,
       "simulation_seats_filled": 257,
-      "hands_on_per_student": 0.76
+      "hands_on_per_student": 0.76,
+      "scorecard_median_debt": 86163,
+      "scorecard_debt_monthly": 980,
+      "scorecard_earn_1yr": 72448,
+      "scorecard_earn_4yr": 100716
     },
     {
       "id": "university-of-texas-school-of-law",
@@ -17267,7 +17995,11 @@
       "clinic_seats_filled": 321,
       "field_placements_filled": 81,
       "simulation_seats_filled": 1042,
-      "hands_on_per_student": 1.56
+      "hands_on_per_student": 1.56,
+      "scorecard_median_debt": null,
+      "scorecard_debt_monthly": null,
+      "scorecard_earn_1yr": null,
+      "scorecard_earn_4yr": null
     },
     {
       "id": "university-of-toledo-college-of-law",
@@ -17368,7 +18100,11 @@
       "clinic_seats_filled": 56,
       "field_placements_filled": 81,
       "simulation_seats_filled": 94,
-      "hands_on_per_student": 0.63
+      "hands_on_per_student": 0.63,
+      "scorecard_median_debt": 76000,
+      "scorecard_debt_monthly": 865,
+      "scorecard_earn_1yr": 57931,
+      "scorecard_earn_4yr": 85086
     },
     {
       "id": "touro-university-jacob-d-fuchsberg-law-center",
@@ -17478,7 +18214,11 @@
       "clinic_seats_filled": 141,
       "field_placements_filled": 117,
       "simulation_seats_filled": 163,
-      "hands_on_per_student": 0.7
+      "hands_on_per_student": 0.7,
+      "scorecard_median_debt": 132011,
+      "scorecard_debt_monthly": 1502,
+      "scorecard_earn_1yr": 61293,
+      "scorecard_earn_4yr": 86767
     },
     {
       "id": "university-of-tulsa-college-of-law",
@@ -17579,7 +18319,11 @@
       "clinic_seats_filled": 56,
       "field_placements_filled": 169,
       "simulation_seats_filled": 0,
-      "hands_on_per_student": 0.8
+      "hands_on_per_student": 0.8,
+      "scorecard_median_debt": 90365,
+      "scorecard_debt_monthly": 1028,
+      "scorecard_earn_1yr": 60334,
+      "scorecard_earn_4yr": 86293
     },
     {
       "id": "vermont-law-and-graduate-school",
@@ -17721,7 +18465,11 @@
       "clinic_seats_filled": 116,
       "field_placements_filled": 79,
       "simulation_seats_filled": 841,
-      "hands_on_per_student": 1.47
+      "hands_on_per_student": 1.47,
+      "scorecard_median_debt": 139540,
+      "scorecard_debt_monthly": 1587,
+      "scorecard_earn_1yr": 50723,
+      "scorecard_earn_4yr": 77550
     },
     {
       "id": "washburn-university-school-of-law",
@@ -17794,7 +18542,11 @@
       "clinic_seats_filled": 49,
       "field_placements_filled": 97,
       "simulation_seats_filled": 360,
-      "hands_on_per_student": 1.46
+      "hands_on_per_student": 1.46,
+      "scorecard_median_debt": 77330,
+      "scorecard_debt_monthly": 880,
+      "scorecard_earn_1yr": 60606,
+      "scorecard_earn_4yr": 83608
     },
     {
       "id": "west-virginia-university-college-of-law",
@@ -17854,7 +18606,11 @@
       "clinic_seats_filled": 120,
       "field_placements_filled": 42,
       "simulation_seats_filled": 228,
-      "hands_on_per_student": 1.26
+      "hands_on_per_student": 1.26,
+      "scorecard_median_debt": 93735,
+      "scorecard_debt_monthly": 1066,
+      "scorecard_earn_1yr": 58881,
+      "scorecard_earn_4yr": 78497
     },
     {
       "id": "western-new-england-university-school-of-law",
@@ -17955,7 +18711,11 @@
       "clinic_seats_filled": 36,
       "field_placements_filled": 66,
       "simulation_seats_filled": 209,
-      "hands_on_per_student": 0.96
+      "hands_on_per_student": 0.96,
+      "scorecard_median_debt": null,
+      "scorecard_debt_monthly": null,
+      "scorecard_earn_1yr": null,
+      "scorecard_earn_4yr": null
     },
     {
       "id": "western-state-college-of-law-at-westcliff-university",
@@ -18056,7 +18816,11 @@
       "clinic_seats_filled": 58,
       "field_placements_filled": 80,
       "simulation_seats_filled": 322,
-      "hands_on_per_student": 1.3
+      "hands_on_per_student": 1.3,
+      "scorecard_median_debt": 45240,
+      "scorecard_debt_monthly": 515,
+      "scorecard_earn_1yr": 58618,
+      "scorecard_earn_4yr": null
     },
     {
       "id": "widener-university-commonwealth-law-school",
@@ -18157,7 +18921,11 @@
       "clinic_seats_filled": 31,
       "field_placements_filled": 137,
       "simulation_seats_filled": 255,
-      "hands_on_per_student": 1.03
+      "hands_on_per_student": 1.03,
+      "scorecard_median_debt": null,
+      "scorecard_debt_monthly": null,
+      "scorecard_earn_1yr": null,
+      "scorecard_earn_4yr": null
     },
     {
       "id": "widener-university-delaware-law-school",
@@ -18263,7 +19031,11 @@
       "clinic_seats_filled": 58,
       "field_placements_filled": 90,
       "simulation_seats_filled": 1224,
-      "hands_on_per_student": 1.7
+      "hands_on_per_student": 1.7,
+      "scorecard_median_debt": 131126,
+      "scorecard_debt_monthly": 1492,
+      "scorecard_earn_1yr": 55829,
+      "scorecard_earn_4yr": 83799
     },
     {
       "id": "willamette-university-college-of-law",
@@ -18385,7 +19157,11 @@
       "clinic_seats_filled": 75,
       "field_placements_filled": 136,
       "simulation_seats_filled": 253,
-      "hands_on_per_student": 1.27
+      "hands_on_per_student": 1.27,
+      "scorecard_median_debt": 162945,
+      "scorecard_debt_monthly": 1854,
+      "scorecard_earn_1yr": 69938,
+      "scorecard_earn_4yr": 100524
     },
     {
       "id": "wilmington-university-school-of-law",
@@ -18488,7 +19264,11 @@
       "clinic_seats_filled": 0,
       "field_placements_filled": 19,
       "simulation_seats_filled": 0,
-      "hands_on_per_student": 0.16
+      "hands_on_per_student": 0.16,
+      "scorecard_median_debt": null,
+      "scorecard_debt_monthly": null,
+      "scorecard_earn_1yr": null,
+      "scorecard_earn_4yr": null
     },
     {
       "id": "university-of-wyoming-college-of-law",
@@ -18594,7 +19374,11 @@
       "clinic_seats_filled": 91,
       "field_placements_filled": 96,
       "simulation_seats_filled": 150,
-      "hands_on_per_student": 1.47
+      "hands_on_per_student": 1.47,
+      "scorecard_median_debt": 70488,
+      "scorecard_debt_monthly": 802,
+      "scorecard_earn_1yr": 63173,
+      "scorecard_earn_4yr": 81644
     }
   ]
 }
