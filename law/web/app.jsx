@@ -365,9 +365,8 @@ function exportCsv(rows) {
 }
 
 /* Retake what-if: re-rank the same profile at LSAT +N and show which schools
-   cross a full admit tier. Hidden for no-LSAT profiles. */
-const TIER_ORDER = ["hard reach", "reach", "target", "safety"];
-
+   cross a full admit tier. Hidden for no-LSAT profiles. Reuses TIER_ORDER
+   (declared above for the filter menu), which is BEST-first. */
 function WhatIfPanel({ data }) {
   const lsat = data.profile.lsat;
   const [delta, setDelta] = useState(0);
@@ -396,8 +395,8 @@ function WhatIfPanel({ data }) {
     data.schools.forEach((s) => { baseTier[s.id] = s.admissibility_tier; });
     ups = res.schools
       .map((s) => ({ s, from: baseTier[s.id] }))
-      .filter(({ s, from }) =>
-        from && TIER_ORDER.indexOf(s.admissibility_tier) > TIER_ORDER.indexOf(from));
+      .filter(({ s, from }) =>  // TIER_ORDER is best-first: lower index = better tier
+        from && TIER_ORDER.indexOf(s.admissibility_tier) < TIER_ORDER.indexOf(from));
   }
 
   return (
@@ -1305,7 +1304,8 @@ function App() {
       )}
 
       {!loading && view === "profile" && (
-        <ProfileScreen form={form} setForm={setForm} onSubmit={submit} loading={loading} />
+        // arrow shields submit(f = form) from receiving the click event as f
+        <ProfileScreen form={form} setForm={setForm} onSubmit={() => submit()} loading={loading} />
       )}
       {!loading && view === "results" && data && (
         <ResultsScreen data={data} onOpen={openSchool} onBack={() => setView("profile")}
