@@ -478,6 +478,7 @@ KIND_HINT = {
     "x": "WebSearch allowed_domains [x.com, twitter.com, nitter.net]",
     "reddit": "fetch BLOCKED — WebSearch site:reddit.com instead",
     "linkedin": "login-walled — WebSearch site:linkedin.com instead",
+    "blocked": "fetch BLOCKED (403/bot wall) — WebSearch site:<domain> instead",
 }
 
 SEED_SOURCES: dict[str, list[tuple[str, str, str, str]]] = {
@@ -682,7 +683,11 @@ def export_vault(cfg: ListCfg, conn: sqlite3.Connection, vault: str | None,
 
     existing: set[str] = set()
     if add_only:
-        for r in roots.values():
+        # Scan the WHOLE vault, not just the export roots: the user triages by
+        # moving notes to folders outside them (e.g. "0 - apply soon" at vault
+        # root); scanning only roots re-creates every moved note as a duplicate.
+        scan_roots = [Path(vault)] if vault else list(roots.values())
+        for r in scan_roots:
             existing |= {p.name for p in r.rglob("*.md")}
 
     rows = conn.execute(

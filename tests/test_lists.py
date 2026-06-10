@@ -295,6 +295,25 @@ class TestCanaries:
         assert "Recall: 1/1" in capsys.readouterr().out
 
 
+class TestVaultAddOnly:
+    def test_note_moved_outside_roots_not_recreated(self, cfg, tmp_path):
+        conn = connect(cfg)
+        _ingest(cfg, conn, [{"title": "Moved Note", "url": "https://x.com/mv"}],
+                tmp_path)
+        vault = tmp_path / "vault"
+        triaged = vault / "0 - apply soon"
+        triaged.mkdir(parents=True)
+        (triaged / f"{lists.slug('Moved Note')}.md").write_text("user copy",
+                                                                encoding="utf-8")
+        lists.export_vault(cfg, conn, vault=str(vault), subfolder=None, out=None,
+                           by_grade=True, add_only=True)
+        root_notes = [p for p in (vault / cfg.subfolder).rglob("*.md")
+                      if not p.name.startswith("_")]
+        assert root_notes == []  # not re-created inside the export root
+        assert (triaged / f"{lists.slug('Moved Note')}.md").read_text(
+            encoding="utf-8") == "user copy"
+
+
 class TestStatusBackfill:
     def test_legacy_db_gets_status_column_backfilled(self, tmp_path, cfg):
         legacy = sqlite3.connect(cfg.db)
