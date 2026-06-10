@@ -3,7 +3,7 @@ import pytest
 import tempfile
 from pathlib import Path
 
-from app.data_loader import (
+from law.data_loader import (
     load_law_schools,
     DataValidationError,
     _validate_entry,
@@ -35,6 +35,19 @@ VALID_SCHOOL = {
     "lrap_quality": "basic",
     "annual_tuition": 50000,
     "cost_of_living_index": 3,
+    # Fields added when the schema gained state/rank/public-private, NALP
+    # salary + solo/JD-required outcomes, target states, and resident vs
+    # nonresident tuition. Kept in sync with REQUIRED_FIELDS in law/data_loader.py.
+    "state": "TS",
+    "usnwr_rank_2026": 50,
+    "is_public": False,
+    "solo_small_firm_pct": 0.10,
+    "jd_required_pct": 0.85,
+    "median_private_sector_salary": 90000,
+    "median_public_sector_salary": 58000,
+    "target_states": ["TS"],
+    "annual_tuition_resident": 45000,
+    "annual_tuition_nonresident": 50000,
 }
 
 
@@ -100,7 +113,7 @@ class TestLoadLawSchools:
         json_file.write_text(json.dumps(data))
 
         # Mock _get_data_path to return our temp file
-        import app.data_loader as dl
+        import law.data_loader as dl
         original_get_data_path = dl._get_data_path
         dl._get_data_path = lambda: json_file
 
@@ -117,7 +130,7 @@ class TestLoadLawSchools:
         json_file = tmp_path / "law_schools.json"
         json_file.write_text("{invalid json")
 
-        import app.data_loader as dl
+        import law.data_loader as dl
         original_get_data_path = dl._get_data_path
         dl._get_data_path = lambda: json_file
 
@@ -131,7 +144,7 @@ class TestLoadLawSchools:
         """Missing data file should raise FileNotFoundError."""
         json_file = tmp_path / "missing.json"
 
-        import app.data_loader as dl
+        import law.data_loader as dl
         original_get_data_path = dl._get_data_path
         dl._get_data_path = lambda: json_file
 
@@ -146,7 +159,7 @@ class TestLoadLawSchools:
         json_file = tmp_path / "law_schools.json"
         json_file.write_text(json.dumps({"data": []}))
 
-        import app.data_loader as dl
+        import law.data_loader as dl
         original_get_data_path = dl._get_data_path
         dl._get_data_path = lambda: json_file
 
@@ -161,7 +174,7 @@ class TestLoadLawSchools:
         json_file = tmp_path / "law_schools.json"
         json_file.write_text(json.dumps({"schools": "not a list"}))
 
-        import app.data_loader as dl
+        import law.data_loader as dl
         original_get_data_path = dl._get_data_path
         dl._get_data_path = lambda: json_file
 
@@ -179,7 +192,7 @@ class TestLoadLawSchools:
         json_file = tmp_path / "law_schools.json"
         json_file.write_text(json.dumps({"schools": [invalid_school]}))
 
-        import app.data_loader as dl
+        import law.data_loader as dl
         original_get_data_path = dl._get_data_path
         dl._get_data_path = lambda: json_file
 
@@ -201,7 +214,7 @@ class TestLoadLawSchools:
         json_file = tmp_path / "law_schools.json"
         json_file.write_text(json.dumps(data))
 
-        import app.data_loader as dl
+        import law.data_loader as dl
         original_get_data_path = dl._get_data_path
         dl._get_data_path = lambda: json_file
 

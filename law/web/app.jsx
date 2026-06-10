@@ -10,29 +10,124 @@ const DEFAULT_FORM = {
   no_lsat: false,
   lsat: 160,
   gpa: 3.5,
-  goal: "BigLaw",
+  goals_weighted: [{ goal: "BigLaw", weight: 1 }],
   target_state: "",
-  instate_states: [],
+  target_states_weighted: [{ state: "", weight: 100 }],
+  instate_states: [""],
   income_bracket: "prefer_not",
   scholarship: 5,
   career_weight: 5,
   location_weight: 5,
+  wants_transfer: false,
 };
 
 /* ------------------------------------------------------------------ */
 /* Small form helpers                                                 */
 /* ------------------------------------------------------------------ */
 
-function Slider({ label, value, onChange, hint }) {
+function Slider({ label, value, onChange, hint, help }) {
   return (
     <div>
       <div className="slider-head">
-        <span>{label}</span>
+        <span>{label}{help && <InfoTip text={help} label={`About ${label}`} />}</span>
         <span className="val">{value}/10</span>
       </div>
       <input type="range" min="0" max="10" value={value}
         onChange={(e) => onChange(Number(e.target.value))} />
       {hint && <div className="mono">{hint}</div>}
+    </div>
+  );
+}
+
+/* Multi-state practice preference with relative weights (e.g. CA/NY = 70/30).
+   Adding a state resets all rows to an even split (1 → 100, 2 → 50/50, 3 → 33…);
+   the user can then nudge individual weights. */
+function evenSplit(n) {
+  return Array.from({ length: n }, () => Math.round(100 / n));
+}
+function PracticeStates({ value, onChange }) {
+  const addRow = () => {
+    const n = value.length + 1;
+    const weights = evenSplit(n);
+    onChange([...value, { state: "", weight: 0 }].map((r, i) => ({ ...r, weight: weights[i] })));
+  };
+  const update = (i, patch) =>
+    onChange(value.map((r, j) => (j === i ? { ...r, ...patch } : r)));
+  const remove = (i) => onChange(value.filter((_, j) => j !== i));
+
+  return (
+    <div className="field" style={{ marginTop: 16 }}>
+      <label>Practice state(s) &amp; weight</label>
+      {value.map((row, i) => (
+        <div className="weighted-row" key={i}>
+          <select value={row.state} onChange={(e) => update(i, { state: e.target.value })}>
+            <option value="">Select state</option>
+            {STATES.map((s) => <option key={s} value={s}>{s}</option>)}
+          </select>
+          <input type="number" min="0" value={row.weight}
+            onChange={(e) => update(i, { weight: Number(e.target.value) })} />
+          <button type="button" className="btn xs ghost" onClick={() => remove(i)}
+            aria-label="Remove state">×</button>
+        </div>
+      ))}
+      <div>
+        <button type="button" className="btn sm ghost" onClick={addRow}>+ Add state</button>
+      </div>
+    </div>
+  );
+}
+
+/* Multi-goal career preference (select one or more paths, equal weight). */
+function CareerGoals({ value, onChange }) {
+  const equalize = (goals) => goals.map((g) => ({ goal: g.goal, weight: 1 }));
+  const addRow = () => {
+    const used = value.map((r) => r.goal);
+    const next = GOALS.find((g) => !used.includes(g)) || GOALS[0];
+    onChange(equalize([...value, { goal: next }]));
+  };
+  const update = (i, goal) =>
+    onChange(equalize(value.map((r, j) => (j === i ? { goal } : r))));
+  const remove = (i) => onChange(equalize(value.filter((_, j) => j !== i)));
+
+  return (
+    <div className="field" style={{ marginTop: 16 }}>
+      <label>Career goal(s)</label>
+      {value.map((row, i) => (
+        <div className="weighted-row" key={i}>
+          <select value={row.goal} onChange={(e) => update(i, e.target.value)}>
+            {GOALS.map((g) => <option key={g} value={g}>{g}</option>)}
+          </select>
+          {value.length > 1 && (
+            <button type="button" className="btn xs ghost" onClick={() => remove(i)}
+              aria-label="Remove goal">×</button>
+          )}
+        </div>
+      ))}
+      {value.length < GOALS.length && (
+        <div><button type="button" className="btn sm ghost" onClick={addRow}>+ Add goal</button></div>
+      )}
+    </div>
+  );
+}
+
+/* Add/remove list of states (no weights) — used for in-state tuition eligibility. */
+function StateList({ value, onChange, addLabel }) {
+  const add = () => onChange([...value, ""]);
+  const update = (i, v) => onChange(value.map((s, j) => (j === i ? v : s)));
+  const remove = (i) => onChange(value.filter((_, j) => j !== i));
+  return (
+    <div>
+      {value.map((st, i) => (
+        <div className="weighted-row" key={i}>
+          <select value={st} onChange={(e) => update(i, e.target.value)}>
+            <option value="">Select state</option>
+            {STATES.map((s) => <option key={s} value={s}>{s}</option>)}
+          </select>
+          <button type="button" className="btn xs ghost" onClick={() => remove(i)}
+            aria-label="Remove state">×</button>
+        </div>
+      ))}
+      <div><button type="button" className="btn sm ghost" onClick={add}>{addLabel}</button></div>
     </div>
   );
 }
@@ -50,47 +145,34 @@ function ProfileScreen({ form, setForm, onSubmit, loading }) {
       <section>
         <h3 style={{ marginBottom: 16 }}>Who you are</h3>
 
-        <div className="checkbox-row" style={{ marginBottom: 14 }}>
-          <input id="nolsat" type="checkbox" checked={form.no_lsat}
-            onChange={(e) => set("no_lsat", e.target.checked)} />
-          <label htmlFor="nolsat">I haven't taken the LSAT yet</label>
-        </div>
-
         <div className="field-grid">
           <div className="field">
             <label>LSAT</label>
             <input type="number" min="120" max="180" value={form.lsat}
-              disabled={form.no_lsat}
-              onChange={(e) => set("lsat", Number(e.target.value))} />
+              disabled={form.no_lsat} placeholder="120–180"
+              onChange={(e) => set("lsat", e.target.value)} />
+            <div className="checkbox-row tiny">
+              <input id="nolsat" type="checkbox" checked={form.no_lsat}
+                onChange={(e) => set("no_lsat", e.target.checked)} />
+              <label htmlFor="nolsat">I haven't taken the LSAT yet</label>
+            </div>
           </div>
           <div className="field">
             <label>Undergrad GPA</label>
             <input type="number" min="0" max="4" step="0.01" value={form.gpa}
-              onChange={(e) => set("gpa", Number(e.target.value))} />
-          </div>
-          <div className="field">
-            <label>Career goal</label>
-            <select value={form.goal} onChange={(e) => set("goal", e.target.value)}>
-              {GOALS.map((g) => <option key={g} value={g}>{g}</option>)}
-            </select>
-          </div>
-          <div className="field">
-            <label>Practice state</label>
-            <select value={form.target_state} onChange={(e) => set("target_state", e.target.value)}>
-              <option value="">Any / undecided</option>
-              {STATES.map((s) => <option key={s} value={s}>{s}</option>)}
-            </select>
+              placeholder="0.00–4.00"
+              onChange={(e) => set("gpa", e.target.value)} />
           </div>
         </div>
 
+        <CareerGoals value={form.goals_weighted}
+          onChange={(v) => set("goals_weighted", v)} />
+
         <div className="field" style={{ marginTop: 16 }}>
           <label>In-state tuition eligibility</label>
-          <select multiple size="5" value={form.instate_states}
-            onChange={(e) => set("instate_states",
-              Array.from(e.target.selectedOptions, (o) => o.value))}>
-            {STATES.map((s) => <option key={s} value={s}>{s}</option>)}
-          </select>
-          <span className="mono">Ctrl/Cmd-click to select multiple</span>
+          <StateList value={form.instate_states}
+            onChange={(v) => set("instate_states", v)}
+            addLabel="+ Add state" />
         </div>
 
         <div className="field" style={{ marginTop: 16 }}>
@@ -103,6 +185,9 @@ function ProfileScreen({ form, setForm, onSubmit, loading }) {
             ))}
           </div>
         </div>
+
+        <PracticeStates value={form.target_states_weighted}
+          onChange={(v) => set("target_states_weighted", v)} />
       </section>
 
       {/* Right — what matters */}
@@ -113,14 +198,19 @@ function ProfileScreen({ form, setForm, onSubmit, loading }) {
             onChange={(v) => set("career_weight", v)} />
           <Slider label="Location fit" value={form.location_weight}
             onChange={(v) => set("location_weight", v)} />
-          <Slider label="Scholarship priority" value={form.scholarship}
-            onChange={(v) => set("scholarship", v)} />
+          <Slider label="Cost sensitivity" value={form.scholarship}
+            onChange={(v) => set("scholarship", v)}
+            help={"Higher cost sensitivity gives real net debt (tuition + living − aid) a " +
+                  "larger floor in the ranking and pushes high-aid / in-state schools up. " +
+                  "Lower it if prestige or career outcomes matter more to you than price."} />
         </div>
 
-        <div className="note" style={{ marginTop: 24 }}>
-          Higher <strong>scholarship</strong> weight pushes high-aid and in-state schools up
-          the list. Higher <strong>career</strong> weight favors schools with strong placement
-          into your chosen path.
+        <div className="checkbox-row" style={{ marginTop: 24 }}>
+          <input id="transfer-interest" type="checkbox" checked={form.wants_transfer}
+            onChange={(e) => set("wants_transfer", e.target.checked)} />
+          <label htmlFor="transfer-interest">
+            I'd consider transferring to a higher-ranked school after 1L
+          </label>
         </div>
 
         <div className="profile-actions">
@@ -137,34 +227,134 @@ function ProfileScreen({ form, setForm, onSubmit, loading }) {
 /* Results screen — sortable table with inline radars                 */
 /* ------------------------------------------------------------------ */
 
-const RESULT_COLS = [
-  { k: "name",     label: "School",    sort: (s) => s.name },
-  { k: "tier",     label: "Tier",      sort: (s) => s.admissibility_score },
-  { k: "radar",    label: "Profile",   sort: null },
-  { k: "rank",     label: "Rank",      sort: (s) => s.usnwr_rank_2026 },
-  { k: "biglaw",   label: "BigLaw %",  sort: (s) => s.biglaw_pct },
-  { k: "clerk",    label: "Clerk %",   sort: (s) => s.federal_clerkship_pct },
-  { k: "bar",      label: "Bar %",     sort: (s) => s.bar_pass_rate_first_time },
-  { k: "debt",     label: "Net debt",  sort: (s) => s.financial_breakdown.net_debt },
-  { k: "comp",     label: "Composite", sort: (s) => s.composite_score },
-];
+/* Career-outcome columns, keyed by metric. The two shown depend on the goal. */
+const CAREER_COLS = {
+  biglaw: { k: "biglaw", label: "BigLaw %", get: (s) => s.biglaw_pct },
+  clerk:  { k: "clerk",  label: "Clerk %",  get: (s) => s.federal_clerkship_pct },
+  gov:    { k: "gov",    label: "Gov %",    get: (s) => s.government_pct },
+  pi:     { k: "pi",     label: "Pub. Int %", get: (s) => s.public_interest_pct },
+  solo:   { k: "solo",   label: "Solo/Sm %", get: (s) => s.solo_small_firm_pct },
+};
 
-function ResultsScreen({ data, onOpen, onBack }) {
+/* Which two career columns to surface for each goal (first = primary). */
+const GOAL_CAREER_COLS = {
+  "biglaw":            ["biglaw", "clerk"],
+  "in-house":          ["biglaw", "gov"],
+  "federal clerkship": ["clerk", "biglaw"],
+  "government":        ["gov", "pi"],
+  "public interest":   ["pi", "gov"],
+  "solo/small firm":   ["solo", "biglaw"],
+  "academia":          ["clerk", "biglaw"],
+  "unsure":            ["biglaw", "pi"],
+};
+
+function matchGoalKey(goal) {
+  const key = (goal || "").toLowerCase();
+  return Object.keys(GOAL_CAREER_COLS).find((g) => key.includes(g)) || "unsure";
+}
+
+/* Career columns for the profile: one weighted goal → its two metrics; several
+   goals → the primary metric of each (deduped, capped at 3) so the table shows
+   exactly the career paths the applicant selected. */
+function careerColsForProfile(profile) {
+  const weighted = (profile.goals_weighted && profile.goals_weighted.length)
+    ? [...profile.goals_weighted].sort((a, b) => b.weight - a.weight)
+    : [{ goal: profile.goal, weight: 1 }];
+  if (weighted.length <= 1) {
+    return GOAL_CAREER_COLS[matchGoalKey(weighted[0].goal)].map((m) => CAREER_COLS[m]);
+  }
+  const metrics = [];
+  for (const g of weighted) {
+    const m = GOAL_CAREER_COLS[matchGoalKey(g.goal)][0];
+    if (!metrics.includes(m)) metrics.push(m);
+  }
+  return metrics.slice(0, 3).map((m) => CAREER_COLS[m]);
+}
+
+/* Build the full column set; the career columns track the applicant's goal(s). */
+function buildResultCols(profile) {
+  const career = careerColsForProfile(profile);
+  return [
+    { k: "name", label: "School", sort: (s) => s.name,
+      render: (s, i) => (
+        <td><div className="school-name">{i + 1}. {s.name}</div>
+          <div className="mono">{s.location}</div></td>) },
+    { k: "tier", label: "Tier", sort: (s) => s.admissibility_score,
+      render: (s) => <td><TierPill tier={s.admissibility_tier} /></td> },
+    { k: "rank", label: "Rank", sort: (s) => s.usnwr_rank_2026,
+      render: (s) => <td className="num">{fmtRank(s.usnwr_rank_2026)}</td> },
+    ...career.map((c) => ({
+      k: c.k, label: c.label, sort: c.get,
+      render: (s) => <td className="num">{fmtPct(c.get(s))}</td>,
+    })),
+    { k: "bar", label: "Bar %", sort: (s) => s.bar_pass_rate_first_time,
+      render: (s) => <td className="num">{fmtPct(s.bar_pass_rate_first_time)}</td> },
+    { k: "debt", label: "Cost after aid", sort: (s) => s.financial_breakdown.net_debt,
+      render: (s) => <td className="num">{fmtMoneyShort(s.financial_breakdown.net_debt)}</td> },
+    { k: "comp", label: "Score", sort: (s) => s.composite_score,
+      render: (s) => <td><span className="composite-badge">{Math.round(s.composite_score)}</span></td> },
+  ];
+}
+
+const TIER_ORDER = ["safety", "target", "reach", "hard reach"];
+
+/* Right-aligned filter icon that opens a dropdown of tier checkboxes (multi-select).
+   None checked = show all; checking tiers filters down to them. */
+function FilterMenu({ activeTiers, setActiveTiers, tierCounts }) {
+  const [open, setOpen] = useState(false);
+  const toggle = (t) =>
+    setActiveTiers((ts) => ts.includes(t) ? ts.filter((x) => x !== t) : [...ts, t]);
+  const filtering = activeTiers.length > 0;
+  return (
+    <div className="filter-menu">
+      <button className={`btn sm icon-btn ${filtering ? "primary" : "ghost"}`}
+        aria-label="Filter by tier" aria-expanded={open} onClick={() => setOpen((v) => !v)}>
+        <span aria-hidden="true">▼</span> Filter{filtering ? ` · ${activeTiers.length}` : ""}
+      </button>
+      {open && (
+        <div className="filter-dropdown" role="menu">
+          {TIER_ORDER.map((t) => (
+            <button key={t} className={`filter-opt ${activeTiers.includes(t) ? "active" : ""}`}
+              onClick={() => toggle(t)}>
+              <span><input type="checkbox" readOnly checked={activeTiers.includes(t)} /> {TIER_LABEL[t]}</span>
+              <span className="chip-count">{tierCounts[t] || 0}</span>
+            </button>
+          ))}
+        </div>
+      )}
+    </div>
+  );
+}
+
+function ResultsScreen({ data, onOpen, onBack, selectedIds, onToggleSelect, onClearSelect, onCompare, onOpenSchool }) {
   const [sortKey, setSortKey] = useState("comp");
   const [asc, setAsc] = useState(false);
   const [limit, setLimit] = useState(20);
+  const [activeTiers, setActiveTiers] = useState([]);   // empty = show all
+  const wantsTransfer = !!data.profile.wants_transfer;
+  const [tab, setTab] = useState("matches");
+
+  const cols = useMemo(() => buildResultCols(data.profile), [data.profile]);
+
+  const tierCounts = useMemo(() => {
+    const c = {};
+    for (const s of data.schools) c[s.admissibility_tier] = (c[s.admissibility_tier] || 0) + 1;
+    return c;
+  }, [data.schools]);
 
   const sorted = useMemo(() => {
-    const col = RESULT_COLS.find((c) => c.k === sortKey);
-    if (!col || !col.sort) return data.schools;
-    const arr = [...data.schools].sort((a, b) => {
+    const col = cols.find((c) => c.k === sortKey);
+    const filtered = activeTiers.length === 0
+      ? data.schools
+      : data.schools.filter((s) => activeTiers.includes(s.admissibility_tier));
+    if (!col || !col.sort) return filtered;
+    return [...filtered].sort((a, b) => {
       const av = col.sort(a), bv = col.sort(b);
       if (av < bv) return asc ? -1 : 1;
       if (av > bv) return asc ? 1 : -1;
       return 0;
     });
-    return arr;
-  }, [data.schools, sortKey, asc]);
+  }, [data.schools, sortKey, asc, activeTiers, cols]);
 
   const onHeader = (col) => {
     if (!col.sort) return;
@@ -176,21 +366,55 @@ function ResultsScreen({ data, onOpen, onBack }) {
 
   return (
     <div className="card" style={{ padding: 22 }}>
+      <button className="btn sm ghost back-link" onClick={onBack}>← Edit profile</button>
       <div className="section-head">
         <div>
-          <h3>Your matches</h3>
-          <div className="mono">{data.schools.length} schools ranked · click any row for detail</div>
+          <h3>Your results</h3>
+          <div className="mono">click on a school for more details</div>
         </div>
         <div className="toolbar">
-          <button className="btn sm ghost" onClick={onBack}>← Edit profile</button>
+          <label className="list-len mono">Show
+            <select value={limit} onChange={(e) => setLimit(Number(e.target.value))}>
+              <option value={10}>10</option>
+              <option value={20}>20</option>
+              <option value={50}>50</option>
+              <option value={9999}>All</option>
+            </select>
+          </label>
+          <FilterMenu activeTiers={activeTiers} setActiveTiers={setActiveTiers} tierCounts={tierCounts} />
         </div>
       </div>
+
+      {wantsTransfer && (
+        <div className="tabs" style={{ marginBottom: 16 }}>
+          <button className={`tab ${tab === "matches" ? "active" : ""}`}
+            onClick={() => setTab("matches")}>Matches</button>
+          <button className={`tab ${tab === "transfer" ? "active" : ""}`}
+            onClick={() => setTab("transfer")}>Transfers</button>
+        </div>
+      )}
+
+      {wantsTransfer && tab === "transfer" ? (
+        <TransferContent plan={data.transfer_plan} onOpenSchool={onOpenSchool} />
+      ) : (
+      <React.Fragment>
+
+      {selectedIds.length > 0 && (
+        <div className="compare-bar">
+          <span className="mono">{selectedIds.length} selected</span>
+          <button className="btn sm primary" disabled={selectedIds.length < 2} onClick={onCompare}>
+            Compare side by side →
+          </button>
+          <button className="btn sm ghost" onClick={onClearSelect}>Clear</button>
+        </div>
+      )}
 
       <div style={{ overflowX: "auto" }}>
         <table className="results-table">
           <thead>
             <tr>
-              {RESULT_COLS.map((c) => (
+              <th className="cmp-col"></th>
+              {cols.map((c) => (
                 <th key={c.k} onClick={() => onHeader(c)}>
                   {c.label}
                   {sortKey === c.k && <span className="arrow">{asc ? " ▲" : " ▼"}</span>}
@@ -200,71 +424,266 @@ function ResultsScreen({ data, onOpen, onBack }) {
           </thead>
           <tbody>
             {shown.map((s, i) => (
-              <tr key={s.id} onClick={() => onOpen(s)}>
-                <td>
-                  <div className="school-name">{i + 1}. {s.name}</div>
-                  <div className="mono">{s.location}</div>
+              <tr key={s.id} className={selectedIds.includes(s.id) ? "row-selected" : ""}
+                onClick={() => onOpen(s)}>
+                <td className="cmp-col" onClick={(e) => { e.stopPropagation(); onToggleSelect(s.id); }}>
+                  <input type="checkbox" checked={selectedIds.includes(s.id)} readOnly
+                    aria-label={`Select ${s.name} to compare`} />
                 </td>
-                <td><TierPill tier={s.admissibility_tier} /></td>
-                <td><Radar scores={s.radar} size={50} showLabels={false} showRings={false} /></td>
-                <td className="num">#{s.usnwr_rank_2026}</td>
-                <td className="num">{fmtPct(s.biglaw_pct)}</td>
-                <td className="num">{fmtPct(s.federal_clerkship_pct)}</td>
-                <td className="num">{fmtPct(s.bar_pass_rate_first_time)}</td>
-                <td className="num">{fmtMoneyShort(s.financial_breakdown.net_debt)}</td>
-                <td><span className="composite-badge">{Math.round(s.composite_score)}</span></td>
+                {cols.map((c) => (
+                  <React.Fragment key={c.k}>{c.render(s, i)}</React.Fragment>
+                ))}
               </tr>
             ))}
           </tbody>
         </table>
       </div>
 
-      {limit < sorted.length && (
-        <div style={{ textAlign: "center", marginTop: 16 }}>
-          <button className="btn ghost sm" onClick={() => setLimit(sorted.length)}>
-            Show all {sorted.length} ↓
-          </button>
+      {shown.length === 0 && (
+        <div className="center-msg">No schools match the selected tiers.</div>
+      )}
+      {shown.length > 0 && (
+        <div className="mono" style={{ marginTop: 12 }}>
+          Showing {shown.length} of {sorted.length} schools
+          {activeTiers.length > 0
+            ? ` (${activeTiers.map((t) => TIER_LABEL[t]).join(", ")})` : ""}.
         </div>
       )}
 
-      <TransferPanel plan={data.transfer_plan} />
+      </React.Fragment>
+      )}
     </div>
   );
 }
 
-/* Transfer-up plan: where to enroll and aim to transfer into after 1L. */
-function TransferPanel({ plan }) {
-  if (!plan) return null;
-  const { launchpads = [], targets = [] } = plan;
-  if (!launchpads.length && !targets.length) return null;
+/* ------------------------------------------------------------------ */
+/* Transfer-up body — rendered as the results "Transfer-up" tab        */
+/* (only when the applicant opted in on the profile screen)            */
+/* ------------------------------------------------------------------ */
+
+function TransferContent({ plan, onOpenSchool }) {
+  const { launchpads = [], targets = [] } = plan || {};
+  const empty = !launchpads.length && !targets.length;
+
   return (
-    <div className="card" style={{ marginTop: 20, padding: 18, background: "var(--panel, #f7f7f9)" }}>
-      <h4 style={{ margin: "0 0 4px" }}>Transfer-up path</h4>
-      <div className="mono" style={{ marginBottom: 12 }}>
-        Not competitive for your top tier yet? Enroll at a launchpad, excel in 1L, transfer up.
+    <div className="transfer-page">
+      <div className="note" style={{ marginBottom: 20 }}>
+        A strong 1L can transfer up after first year. <strong>Launchpads</strong> are your best
+        realistic matches now — enroll and excel. <strong>Targets</strong> are schools that are a
+        reach today but admit transfers, ranked by how well they fit you. Click any school for detail.
       </div>
-      <div style={{ display: "flex", gap: 24, flexWrap: "wrap" }}>
-        <div style={{ flex: "1 1 260px" }}>
-          <div className="mono" style={{ fontWeight: 600, marginBottom: 6 }}>
-            Launchpads — strongest 1L transfer-out mobility
+
+      {empty ? (
+        <div className="center-msg">
+          No transfer-up pipeline for this profile — your realistic admits already sit near the top,
+          or the dataset lacks transfer data for eligible schools.
+        </div>
+      ) : (
+        <div className="pipeline">
+          <div className="box stage-card">
+            <h4>① Launchpads — enroll &amp; excel</h4>
+            <div className="mono" style={{ marginBottom: 8 }}>your best realistic matches</div>
+            {launchpads.length === 0 && <div className="mono">no realistic admits found</div>}
+            {launchpads.map((s) => (
+              <div key={s.id} className="school-row" onClick={() => onOpenSchool(s.id)}
+                style={{ cursor: "pointer" }}>
+                <span><strong>{s.name}</strong> <span className="mono">{fmtRank(s.usnwr_rank_2026)} · {TIER_LABEL[s.admissibility_tier]}</span></span>
+                <span className="metric-badge">Score {Math.round(s.composite_score)}</span>
+              </div>
+            ))}
           </div>
-          {launchpads.map((s) => (
-            <div key={s.id} className="transfer-row">
-              {s.name} <span className="mono">· #{s.usnwr_rank_2026} · {Math.round(s.transfer_out_rate * 1000) / 10}% transfer out</span>
+
+          <div className="box stage-card">
+            <h4>② Targets — transfer in after 1L</h4>
+            <div className="mono" style={{ marginBottom: 8 }}>a reach now, and they take transfers</div>
+            {targets.length === 0 && (
+              <div className="mono">no reach schools that admit transfers for this profile</div>
+            )}
+            {targets.map((s) => (
+              <div key={s.id} className="school-row" onClick={() => onOpenSchool(s.id)}
+                style={{ cursor: "pointer" }}>
+                <span><strong>{s.name}</strong> <span className="mono">{fmtRank(s.usnwr_rank_2026)} · Score {Math.round(s.composite_score)}</span></span>
+                <span className="metric-badge">{s.transfers_in} transfers/yr</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
+    </div>
+  );
+}
+
+/* ------------------------------------------------------------------ */
+/* Compare screen — side-by-side, personalized vs raw stats           */
+/* ------------------------------------------------------------------ */
+
+/* Personalized rows: fit scores computed against the user's profile. */
+const CMP_PERSONALIZED = [
+  { label: "Admit tier", better: null,
+    cell: (s) => ({ node: <TierPill tier={s.admissibility_tier} />, num: null }) },
+  { label: "Score", better: "high",
+    cell: (s) => ({ num: s.composite_score, node: Math.round(s.composite_score) }) },
+  { label: "Admissibility fit", better: "high",
+    cell: (s) => ({ num: s.radar[0], node: s.radar[0] }) },
+  { label: "Prestige", better: "high",
+    cell: (s) => ({ num: s.radar[1], node: s.radar[1] }) },
+  { label: "Career fit", better: "high",
+    cell: (s) => ({ num: s.radar[2], node: s.radar[2] }) },
+  { label: "Location fit", better: "high",
+    cell: (s) => ({ num: s.radar[3], node: s.radar[3] }) },
+  { label: "Scholarship", better: "high",
+    cell: (s) => ({ num: s.radar[4], node: s.radar[4] }) },
+  { label: "Financial", better: "high",
+    cell: (s) => ({ num: s.radar[5], node: s.radar[5] }) },
+  { label: "Est. cost after aid", better: "low",
+    cell: (s) => ({ num: s.financial_breakdown.net_debt, node: fmtMoney(s.financial_breakdown.net_debt) }) },
+  { label: "Monthly payment", better: "low",
+    cell: (s) => ({ num: s.financial_breakdown.monthly_payment_estimate, node: fmtMoney(s.financial_breakdown.monthly_payment_estimate) }) },
+  { label: "Debt / income", better: "low",
+    cell: (s) => ({ num: s.financial_breakdown.debt_to_income_ratio, node: s.financial_breakdown.debt_to_income_ratio + "×" }) },
+  { label: "Tuition basis", better: null,
+    cell: (s) => ({ num: null, node: s.financial_breakdown.qualifies_instate ? "in-state" : "out-of-state" }) },
+];
+
+/* Raw rows: the school's own numbers, independent of the user. */
+const CMP_RAW = [
+  { label: "USNWR rank", better: "low",
+    cell: (s) => ({ num: s.usnwr_rank_2026, node: fmtRank(s.usnwr_rank_2026) }) },
+  { label: "Acceptance rate", better: "low",
+    cell: (s) => ({ num: s.acceptance_rate, node: fmtPct(s.acceptance_rate) }) },
+  { label: "LSAT 25/50/75", better: null,
+    cell: (s) => ({ num: null, node: `${s.lsat_25} · ${s.lsat_50} · ${s.lsat_75}` }) },
+  { label: "GPA 25/50/75", better: null,
+    cell: (s) => ({ num: null, node: `${s.gpa_25.toFixed(2)} · ${s.gpa_50.toFixed(2)} · ${s.gpa_75.toFixed(2)}` }) },
+  { label: "BigLaw %", better: "high",
+    cell: (s) => ({ num: s.biglaw_pct, node: fmtPct(s.biglaw_pct) }) },
+  { label: "Fed. clerkship %", better: "high",
+    cell: (s) => ({ num: s.federal_clerkship_pct, node: fmtPct(s.federal_clerkship_pct) }) },
+  { label: "Government %", better: "high",
+    cell: (s) => ({ num: s.government_pct, node: fmtPct(s.government_pct) }) },
+  { label: "Public interest %", better: "high",
+    cell: (s) => ({ num: s.public_interest_pct, node: fmtPct(s.public_interest_pct) }) },
+  { label: "Bar pass (first-time)", better: "high",
+    cell: (s) => ({ num: s.bar_pass_rate_first_time, node: fmtPct(s.bar_pass_rate_first_time) }) },
+  { label: "Bar pass (ultimate)", better: "high",
+    cell: (s) => ({ num: s.bar_pass_ultimate, node: fmtPct(s.bar_pass_ultimate) }) },
+  { label: "Median private salary", better: "high",
+    cell: (s) => ({ num: s.median_private_sector_salary, node: fmtMoney(s.median_private_sector_salary) }) },
+  { label: "Median public salary", better: "high",
+    cell: (s) => ({ num: s.median_public_sector_salary, node: fmtMoney(s.median_public_sector_salary) }) },
+  { label: "Resident tuition", better: "low",
+    cell: (s) => ({ num: s.annual_tuition_resident, node: fmtMoney(s.annual_tuition_resident) }) },
+  { label: "Nonresident tuition", better: "low",
+    cell: (s) => ({ num: s.annual_tuition_nonresident, node: fmtMoney(s.annual_tuition_nonresident) }) },
+  { label: "Employed @10mo %", better: "high",
+    cell: (s) => ({ num: s.employed_10mo_pct, node: s.employed_10mo_pct == null ? "—" : fmtPct(s.employed_10mo_pct) }) },
+];
+
+/* Index of the school(s) holding the best value in a row, for highlighting. */
+function bestIdx(cells, better) {
+  if (!better) return new Set();
+  const nums = cells.map((c) => c.num).filter((n) => n != null && !Number.isNaN(n));
+  if (!nums.length) return new Set();
+  const best = better === "high" ? Math.max(...nums) : Math.min(...nums);
+  const set = new Set();
+  cells.forEach((c, i) => { if (c.num === best) set.add(i); });
+  return set;
+}
+
+function CompareScreen({ schools, profile, onBack, onRemove }) {
+  const [mode, setMode] = useState("personalized");
+  const rows = mode === "personalized" ? CMP_PERSONALIZED : CMP_RAW;
+
+  if (schools.length < 2) {
+    return (
+      <div className="card" style={{ padding: 22 }}>
+        <button className="btn sm ghost back-link" onClick={onBack}>← Back to results</button>
+        <h3>Compare schools</h3>
+        <div className="center-msg">
+          Select at least two schools to compare.<br />
+          Go back to your results and tick the checkbox on the left of each school you want to line up.
+          <div style={{ marginTop: 16 }}>
+            <button className="btn primary" onClick={onBack}>← Back to results</button>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
+  return (
+    <div className="card" style={{ padding: 22 }}>
+      <button className="btn sm ghost back-link" onClick={onBack}>← Back to results</button>
+      <div className="section-head">
+        <h3>Compare schools</h3>
+      </div>
+
+      {/* All schools overlaid on a single six-axis radar, with a color legend. */}
+      <div className="compare-overlay">
+        <RadarOverlay series={schools.map((s, i) => ({
+          scores: s.radar, color: SERIES_COLORS[i % SERIES_COLORS.length],
+        }))} size={300} />
+        <div className="overlay-legend">
+          {schools.map((s, i) => (
+            <div key={s.id} className="legend-row">
+              <span className="legend-swatch"
+                style={{ background: SERIES_COLORS[i % SERIES_COLORS.length] }} />
+              <div>
+                <div className="school-name">{s.name}</div>
+                <div className="mono">
+                  {fmtRank(s.usnwr_rank_2026)} · {TIER_LABEL[s.admissibility_tier]} · Score {Math.round(s.composite_score)}
+                </div>
+              </div>
+              <button className="btn xs ghost" onClick={() => onRemove(s.id)}>remove</button>
             </div>
           ))}
         </div>
-        <div style={{ flex: "1 1 260px" }}>
-          <div className="mono" style={{ fontWeight: 600, marginBottom: 6 }}>
-            Targets — higher-ranked schools that admit the most transfers
-          </div>
-          {targets.map((s) => (
-            <div key={s.id} className="transfer-row">
-              {s.name} <span className="mono">· #{s.usnwr_rank_2026} · {s.transfers_in} transfers in</span>
-            </div>
-          ))}
-        </div>
       </div>
+
+      <div className="tabs" style={{ marginBottom: 12 }}>
+        <button className={`tab ${mode === "personalized" ? "active" : ""}`}
+          onClick={() => setMode("personalized")}>With your stats</button>
+        <button className={`tab ${mode === "raw" ? "active" : ""}`}
+          onClick={() => setMode("raw")}>Raw school stats</button>
+      </div>
+
+      <div style={{ overflowX: "auto" }}>
+        <table className="compare-table">
+          <thead>
+            <tr>
+              <th className="metric-col"></th>
+              {schools.map((s) => (
+                <th key={s.id}>
+                  <div className="school-name">{s.name}</div>
+                  <div className="mono">{s.location} · {fmtRank(s.usnwr_rank_2026)}</div>
+                  <button className="btn xs ghost" onClick={() => onRemove(s.id)}>remove</button>
+                </th>
+              ))}
+            </tr>
+          </thead>
+          <tbody>
+            {rows.map((row) => {
+              const cells = schools.map((s) => row.cell(s));
+              const best = bestIdx(cells, row.better);
+              return (
+                <tr key={row.label}>
+                  <td className="metric-col">{row.label}</td>
+                  {cells.map((c, i) => (
+                    <td key={i} className={`num ${best.has(i) ? "best" : ""}`}>{c.node}</td>
+                  ))}
+                </tr>
+              );
+            })}
+          </tbody>
+        </table>
+      </div>
+
+      {mode === "personalized" && (
+        <div className="note" style={{ marginTop: 16 }}>
+          Fit scores and cost reflect your profile (LSAT {profile.lsat ?? "—"}, GPA {profile.gpa},
+          goal {profile.goal}). Switch to <strong>Raw school stats</strong> to compare the schools
+          on their own published numbers, independent of you.
+        </div>
+      )}
     </div>
   );
 }
@@ -345,13 +764,13 @@ function DetailScreen({ school, profile, onBack }) {
           <button className="btn sm ghost" onClick={onBack}>← Back to results</button>
           <h2 style={{ marginTop: 10 }}>{school.name}</h2>
           <div className="mono">
-            {school.location} · USNWR #{school.usnwr_rank_2026} · acceptance {fmtPct(school.acceptance_rate)}
+            {school.location} · USNWR {fmtRank(school.usnwr_rank_2026)} · acceptance {fmtPct(school.acceptance_rate)}
           </div>
         </div>
         <div className="head-actions">
           <div style={{ display: "flex", gap: 8 }}>
             <TierPill tier={school.admissibility_tier} />
-            <span className="pill neutral">Composite {composite}</span>
+            <span className="pill neutral">Score {composite}</span>
           </div>
           <a href={school.website_url} target="_blank" rel="noreferrer" className="mono">Visit website ↗</a>
         </div>
@@ -395,8 +814,12 @@ function DetailScreen({ school, profile, onBack }) {
               </div>
             )}
           </div>
-          <Bar value={school.radar[0]} label="Admissibility" color={BAR_COLORS[0]} />
-          <div className="mono">tier: {TIER_LABEL[school.admissibility_tier]} · protects both medians</div>
+          <Bar value={school.radar[0]} label="Admissibility fit" color={BAR_COLORS[0]} />
+          <div className="mono" style={{ marginTop: 4 }}>
+            <strong>Not your odds of admission.</strong> This is a 0–100 fit score for how your
+            LSAT/GPA sit against the class. The <strong>tier</strong> below is the admit read.
+          </div>
+          <div className="mono">tier: {TIER_LABEL[school.admissibility_tier]} · schools protect both the LSAT and GPA median</div>
           {(school.transfer_out_rate != null || school.transfer_in_rate != null) && (
             <div className="mono">
               transfer mobility: {Math.round((school.transfer_out_rate || 0) * 1000) / 10}% leave after 1L
@@ -407,7 +830,11 @@ function DetailScreen({ school, profile, onBack }) {
 
         <div className="box story-col">
           <h4>Will you get the job?</h4>
-          <div style={{ fontSize: 14 }}>Goal: <strong>{profile.goal}</strong></div>
+          <div style={{ fontSize: 14 }}>Goal: <strong>{
+            (profile.goals_weighted && profile.goals_weighted.length)
+              ? profile.goals_weighted.map((g) => g.goal).join(" · ")
+              : profile.goal
+          }</strong></div>
           <Bar value={school.biglaw_pct * 100} label="BigLaw" color={BAR_COLORS[0]} />
           <Bar value={school.federal_clerkship_pct * 100} label="Fed. Clerkship" color={BAR_COLORS[1]} />
           <Bar value={school.government_pct * 100} label="Government" color={BAR_COLORS[2]} />
@@ -443,6 +870,37 @@ function DetailScreen({ school, profile, onBack }) {
           </div>
         </div>
       </div>
+
+      {/* Notable people (Wikipedia) */}
+      {((school.notable_alumni && school.notable_alumni.length) ||
+        (school.notable_faculty && school.notable_faculty.length)) && (
+        <div className="notable-block">
+          <h3 style={{ marginBottom: 10 }}>Notable people</h3>
+          <div className="notable-cols">
+            {school.notable_alumni && school.notable_alumni.length > 0 && (
+              <div className="box story-col">
+                <h4>Alumni</h4>
+                <div className="people-list">
+                  {school.notable_alumni.map((p) => (
+                    <a key={p.url} href={p.url} target="_blank" rel="noreferrer" className="person">{p.name}</a>
+                  ))}
+                </div>
+              </div>
+            )}
+            {school.notable_faculty && school.notable_faculty.length > 0 && (
+              <div className="box story-col">
+                <h4>Faculty</h4>
+                <div className="people-list">
+                  {school.notable_faculty.map((p) => (
+                    <a key={p.url} href={p.url} target="_blank" rel="noreferrer" className="person">{p.name}</a>
+                  ))}
+                </div>
+              </div>
+            )}
+          </div>
+          <div className="mono" style={{ marginTop: 6 }}>Source: Wikipedia</div>
+        </div>
+      )}
 
       {/* Financial detail tabs */}
       <div className="fin-detail">
@@ -527,6 +985,94 @@ function Stat({ label, value, sub }) {
 }
 
 /* ------------------------------------------------------------------ */
+/* Modals: How it works + Report a bug/feature                        */
+/* ------------------------------------------------------------------ */
+
+/* Change this to wherever bug/feature reports should be emailed. */
+const REPORT_EMAIL = "lukechaussee119@gmail.com";
+
+function Modal({ title, onClose, children }) {
+  return (
+    <div className="modal-backdrop" onClick={onClose}>
+      <div className="modal" role="dialog" aria-modal="true" aria-label={title}
+        onClick={(e) => e.stopPropagation()}>
+        <div className="modal-head">
+          <h3>{title}</h3>
+          <button className="btn xs ghost" onClick={onClose} aria-label="Close">✕</button>
+        </div>
+        {children}
+      </div>
+    </div>
+  );
+}
+
+function HowItWorks({ onClose }) {
+  return (
+    <Modal title="How it works" onClose={onClose}>
+      <div className="prose">
+        <p>This tool ranks every ABA-accredited law school for <em>your</em> profile, not by
+        prestige alone. Each school gets six 0–100 scores:</p>
+        <ul>
+          <li><strong>Admissibility</strong> — how your LSAT/GPA sit against the school's 25/50/75
+            percentiles, mapped to a tier (Safety / Target / Reach / Hard reach). The tier is also
+            capped by the school's acceptance rate, so a hyper-selective school is never a "safety".
+            The number is a fit score, <em>not</em> your odds of admission.</li>
+          <li><strong>Prestige</strong> — USNWR-rank standing.</li>
+          <li><strong>Career fit</strong> — placement into your stated goal (BigLaw %, clerkships,
+            government, public-interest + LRAP), discounted by real ABA employment outcomes and
+            bar-passage vs. the state average.</li>
+          <li><strong>Location fit</strong> — how strongly the school places graduates in your
+            target state(s); multiple states are weighted (e.g. CA/NY = 70/30).</li>
+          <li><strong>Scholarship</strong> — merit likelihood from the school's real ABA 509 award
+            grid plus a need signal, net of conditional-scholarship risk.</li>
+          <li><strong>Financial</strong> — net debt (resident vs. non-resident tuition + real ABA
+            living costs − expected aid) against your goal's typical starting salary.</li>
+        </ul>
+        <p>The <strong>composite Score</strong> is a weighted average of the six, with the weights on
+        career / location / cost driven by your sliders, then scaled by admissibility tier so
+        unrealistic reaches don't top the list. Data: ABA 509 / Employment / Bar reports (2025–26),
+        with notable people from Wikipedia.</p>
+        <p className="mono">Estimates only — verify tuition, aid, and outcomes with each school before deciding.</p>
+      </div>
+    </Modal>
+  );
+}
+
+function ReportForm({ onClose }) {
+  const [kind, setKind] = useState("Bug");
+  const [text, setText] = useState("");
+  const send = () => {
+    const subject = encodeURIComponent(`[Law School Matcher] ${kind} report`);
+    const body = encodeURIComponent(text || "");
+    window.location.href = `mailto:${REPORT_EMAIL}?subject=${subject}&body=${body}`;
+    onClose();
+  };
+  return (
+    <Modal title="Report a bug or request a feature" onClose={onClose}>
+      <div className="report-form">
+        <div className="chip-group" style={{ marginBottom: 12 }}>
+          {["Bug", "Feature"].map((k) => (
+            <button key={k} type="button" className={`chip ${kind === k ? "active" : ""}`}
+              onClick={() => setKind(k)}>{k}</button>
+          ))}
+        </div>
+        <textarea className="report-text" rows="6" value={text}
+          placeholder={kind === "Bug"
+            ? "What happened? What did you expect? Which school/profile?"
+            : "What would you like the tool to do?"}
+          onChange={(e) => setText(e.target.value)} />
+        <div className="profile-actions" style={{ marginTop: 12 }}>
+          <button className="btn ghost sm" onClick={onClose}>Cancel</button>
+          <button className="btn primary sm" onClick={send} disabled={!text.trim()}>
+            Send
+          </button>
+        </div>
+      </div>
+    </Modal>
+  );
+}
+
+/* ------------------------------------------------------------------ */
 /* App shell                                                          */
 /* ------------------------------------------------------------------ */
 
@@ -535,8 +1081,14 @@ function App() {
   const [form, setForm] = useState(DEFAULT_FORM);
   const [data, setData] = useState(null);
   const [opened, setOpened] = useState(null);
+  const [selectedIds, setSelectedIds] = useState([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
+  const [modal, setModal] = useState(null);   // "how" | "report" | null
+
+  const toggleSelect = (id) =>
+    setSelectedIds((ids) =>
+      ids.includes(id) ? ids.filter((x) => x !== id) : [...ids, id]);
 
   const submit = async () => {
     setLoading(true);
@@ -550,6 +1102,7 @@ function App() {
       const json = await res.json();
       if (!res.ok) throw new Error(json.error || "Matching failed.");
       setData(json);
+      setSelectedIds([]);
       setView("results");
       window.scrollTo({ top: 0 });
     } catch (e) {
@@ -560,13 +1113,22 @@ function App() {
   };
 
   const openSchool = (s) => { setOpened(s); setView("detail"); window.scrollTo({ top: 0 }); };
+  const openSchoolById = (id) => {
+    const s = data && data.schools.find((x) => x.id === id);
+    if (s) openSchool(s);
+  };
+  const openCompare = () => { setView("compare"); window.scrollTo({ top: 0 }); };
+  const selectedSchools = useMemo(
+    () => (data ? data.schools.filter((s) => selectedIds.includes(s.id)) : []),
+    [data, selectedIds]);
 
   return (
     <div className="app">
       <div className="topbar">
-        <div>
-          <h1>Law School Matcher</h1>
-          <div className="subtitle">Ranked by fit across admissibility, career, location, scholarship & cost</div>
+        <h1>Law School Matcher</h1>
+        <div className="topbar-actions">
+          <button className="btn sm ghost" onClick={() => setModal("how")}>how it works</button>
+          <button className="btn sm ghost" onClick={() => setModal("report")}>report bug / request feature</button>
         </div>
       </div>
 
@@ -580,11 +1142,21 @@ function App() {
         <ProfileScreen form={form} setForm={setForm} onSubmit={submit} loading={loading} />
       )}
       {!loading && view === "results" && data && (
-        <ResultsScreen data={data} onOpen={openSchool} onBack={() => setView("profile")} />
+        <ResultsScreen data={data} onOpen={openSchool} onBack={() => setView("profile")}
+          selectedIds={selectedIds} onToggleSelect={toggleSelect}
+          onClearSelect={() => setSelectedIds([])} onCompare={openCompare}
+          onOpenSchool={openSchoolById} />
       )}
       {!loading && view === "detail" && opened && (
         <DetailScreen school={opened} profile={data.profile} onBack={() => setView("results")} />
       )}
+      {!loading && view === "compare" && data && (
+        <CompareScreen schools={selectedSchools} profile={data.profile}
+          onBack={() => setView("results")} onRemove={toggleSelect} />
+      )}
+
+      {modal === "how" && <HowItWorks onClose={() => setModal(null)} />}
+      {modal === "report" && <ReportForm onClose={() => setModal(null)} />}
     </div>
   );
 }

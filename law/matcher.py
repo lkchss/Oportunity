@@ -35,56 +35,106 @@ def _clamp(value: float, lo: float = 0.0, hi: float = 100.0) -> float:
 # 1. Admissibility
 # ---------------------------------------------------------------------------
 
+# Tiers, best → worst, with the 0-100 score band each maps to. The returned
+# score is placed WITHIN its tier's band so the number can never contradict the
+# tier label (a "reach" is always 38-60, a "safety" always 82-100, etc.).
+_TIER_RANK = ["hard reach", "reach", "target", "safety"]
+_TIER_BANDS = {
+    "hard reach": (0.0, 38.0),
+    "reach":      (38.0, 60.0),
+    "target":     (60.0, 82.0),
+    "safety":     (82.0, 100.0),
+}
+
+# Absolute-selectivity ceiling: even maxed-out stats are not a "safety" at a
+# school that rejects the overwhelming majority of applicants (holistic review +
+# yield protection). Acceptance rate caps the BEST tier a school can be assigned,
+# independent of how far above the medians the applicant sits.
+_ACCEPT_CEILING = [
+    (0.05, "reach"),    # < 5% admit (Yale/Stanford tier): best case a reach
+    (0.12, "target"),   # < 12% admit (lower T14): best case a target
+]
+
+
+def _percentile_score(value, p25, p50, p75, floor=120):
+    """Map a value to 0-100 by where it sits across a school's 25/50/75 band."""
+    if value >= p75:
+        overage = (value - p75) / max(p75 - p50, 1)
+        return min(85 + overage * 15, 100)
+    elif value >= p50:
+        progress = (value - p50) / max(p75 - p50, 1)
+        return 60 + progress * 25
+    elif value >= p25:
+        progress = (value - p25) / max(p50 - p25, 1)
+        return 40 + progress * 20
+    elif value < p25 - 10:
+        return 0.0
+    else:
+        deficit = (p25 - value) / max(p25 - floor, 1)
+        return max(40 - deficit * 40, 0)
+
+
+def _selectivity_ceiling(school: dict) -> str:
+    """Best tier this school can be assigned, given its acceptance rate."""
+    rate = school.get("acceptance_rate")
+    if rate is None:
+        return "safety"
+    for threshold, ceiling in _ACCEPT_CEILING:
+        if rate < threshold:
+            return ceiling
+    return "safety"
+
+
+def _cap_tier(tier: str, ceiling: str) -> str:
+    """Demote a tier to the ceiling when the ceiling is the stricter (worse) one."""
+    if _TIER_RANK.index(tier) > _TIER_RANK.index(ceiling):
+        return ceiling
+    return tier
+
+
+def _score_in_band(tier: str, fit: float) -> float:
+    """Place a 0-100 fit value inside the tier's score band (keeps score↔tier consistent)."""
+    lo, hi = _TIER_BANDS[tier]
+    return lo + _clamp(fit) / 100 * (hi - lo)
+
+
 def _compute_admissibility(
     lsat: Optional[int],
     gpa: float,
     school: dict,
 ) -> tuple[float, str]:
     """
-    Score LSAT/GPA fit against school percentiles.
+    Score LSAT/GPA fit against school percentiles and assign a tier.
 
-    Returns (score 0-100, tier label).
-    LSAT weighted 70%, GPA 30% (mirrors law school median-protection priorities).
+    Returns (score 0-100, tier label). The score is mapped into the tier's band
+    so it never contradicts the label, and the tier is capped by the school's
+    absolute selectivity (acceptance rate) so ultra-selective schools are never
+    a "safety" regardless of stats.
     """
-    # No-LSAT path: GPA-only, capped at target
-    if lsat is None:
-        if gpa >= school["gpa_75"]:
-            return 65.0, "target"
-        elif gpa >= school["gpa_50"]:
-            return 50.0, "target"
-        elif gpa >= school["gpa_25"]:
-            return 35.0, "reach"
-        else:
-            return 15.0, "hard reach"
+    ceiling = _selectivity_ceiling(school)
 
-    def _percentile_score(value, p25, p50, p75, floor=120):
-        if value >= p75:
-            overage = (value - p75) / max(p75 - p50, 1)
-            return min(85 + overage * 15, 100)
-        elif value >= p50:
-            progress = (value - p50) / max(p75 - p50, 1)
-            return 60 + progress * 25
-        elif value >= p25:
-            progress = (value - p25) / max(p50 - p25, 1)
-            return 40 + progress * 20
-        elif value < p25 - 10:
-            return 0.0
+    # No-LSAT path: GPA-only, capped at target (an LSAT-less file is never a safety).
+    if lsat is None:
+        if gpa >= school["gpa_50"]:
+            tier = "target"
+        elif gpa >= school["gpa_25"]:
+            tier = "reach"
         else:
-            deficit = (p25 - value) / max(p25 - floor, 1)
-            return max(40 - deficit * 40, 0)
+            tier = "hard reach"
+        tier = _cap_tier(tier, ceiling)
+        gpa_fit = _percentile_score(
+            gpa, school["gpa_25"], school["gpa_50"], school["gpa_75"], floor=2.0)
+        # 0.85 factor (applied to the fit, BEFORE banding) keeps a GPA-only file
+        # below the same GPA backed by a real LSAT while staying inside the tier band.
+        return _clamp(_score_in_band(tier, gpa_fit * 0.85)), tier
 
     lsat_score = _percentile_score(
-        lsat,
-        school["lsat_25"], school["lsat_50"], school["lsat_75"],
-    )
+        lsat, school["lsat_25"], school["lsat_50"], school["lsat_75"])
     gpa_score = _percentile_score(
-        gpa,
-        school["gpa_25"], school["gpa_50"], school["gpa_75"],
-        floor=2.0,
-    )
-    composite = lsat_score * 0.70 + gpa_score * 0.30
+        gpa, school["gpa_25"], school["gpa_50"], school["gpa_75"], floor=2.0)
+    fit = lsat_score * 0.70 + gpa_score * 0.30
 
-    # Tier: both axes must be healthy (schools protect both medians)
+    # Tier: both axes must be healthy (schools protect both medians).
     at_75_lsat = lsat >= school["lsat_75"]
     at_50_lsat = lsat >= school["lsat_50"]
     at_25_lsat = lsat >= school["lsat_25"]
@@ -107,7 +157,8 @@ def _compute_admissibility(
     else:
         tier = "hard reach"
 
-    return _clamp(composite), tier
+    tier = _cap_tier(tier, ceiling)
+    return _clamp(_score_in_band(tier, fit)), tier
 
 
 # ---------------------------------------------------------------------------
@@ -146,31 +197,48 @@ def _precompute_career_scalars(schools: list[dict]) -> dict:
     }
 
 
-def _compute_career_fit(profile: dict, school: dict, scalars: dict) -> float:
+def _career_goals(profile: dict) -> list[tuple[str, float]]:
     """
-    Normalize the school's outcome percentage against the best in the dataset,
-    then apply goal-specific logic.
-    """
-    goal_key = profile.get("goal", "Unsure").lower()
+    Normalize a profile's career preference into [(goal, weight), ...].
 
-    # Fuzzy-match goal key
+    Prefers the weighted multi-goal form (``goals_weighted``: a list of
+    {"goal", "weight"}); falls back to the legacy single ``goal``. Drops blank
+    goals and non-positive weights.
+    """
+    weighted = profile.get("goals_weighted")
+    goals: list[tuple[str, float]] = []
+    if weighted:
+        for g in weighted:
+            name = (g.get("goal") or "").strip()
+            try:
+                weight = float(g.get("weight", 0))
+            except (TypeError, ValueError):
+                weight = 0.0
+            if name and weight > 0:
+                goals.append((name, weight))
+    if not goals:
+        goals.append((profile.get("goal") or "Unsure", 1.0))
+    return goals
+
+
+def _single_goal_component(goal_str: str, school: dict, scalars: dict) -> float:
+    """Goal-specific normalized outcome fit for ONE career goal (0-100)."""
+    goal_key = (goal_str or "unsure").lower()
     matched = "unsure"
     for key in _GOAL_FIELDS:
         if key in goal_key:
             matched = key
             break
 
-    fields   = _GOAL_FIELDS[matched]
-    weights  = _GOAL_WEIGHTS.get(matched, [1.0])
+    fields = _GOAL_FIELDS[matched]
+    weights = _GOAL_WEIGHTS.get(matched, [1.0])
 
-    # Normalize each field against dataset max
     normed = []
     for f in fields:
         raw = school.get(f, 0)
-        mx  = scalars.get(f, 1) or 1
+        mx = scalars.get(f, 1) or 1
         normed.append(_clamp((raw / mx) * 100))
 
-    # Weighted average across fields
     if len(normed) == 1:
         score = normed[0]
     else:
@@ -182,6 +250,20 @@ def _compute_career_fit(profile: dict, school: dict, scalars: dict) -> float:
     if matched in ("public interest", "government"):
         lrap = school.get("lrap_quality", "moderate").lower()
         score *= _LRAP_MULTIPLIERS.get(lrap, 1.0)
+
+    return score
+
+
+def _compute_career_fit(profile: dict, school: dict, scalars: dict) -> float:
+    """
+    Career-outcome fit for the applicant's goal(s). Multiple goals are combined
+    as a weight-average of each goal's single-goal fit (e.g. BigLaw/PI = 70/30),
+    then adjusted once by goal-independent real-placement and bar-passage signals.
+    """
+    goals = _career_goals(profile)
+    total_w = sum(w for _, w in goals) or 1.0
+    score = sum(_single_goal_component(g, school, scalars) * (w / total_w)
+                for g, w in goals)
 
     # Real-outcome quality adjustment (ABA Employment Summary, when available).
     # employed_10mo_pct (FTLT bar-required + JD-advantage / grads) is the
@@ -223,16 +305,11 @@ def _compute_prestige(school: dict) -> float:
 # 3. Location Fit
 # ---------------------------------------------------------------------------
 
-def _compute_location_fit(profile: dict, school: dict) -> float:
-    """
-    Score how strongly the school places graduates into the user's target state.
-
-    Uses the school's target_states list (ordered: first = strongest placement).
-    Bonus if the school is physically in the target state.
-    """
-    target = (profile.get("target_state") or "").strip().upper()
+def _single_state_fit(target: str, school: dict) -> float:
+    """Placement-strength score for one target state against a school."""
+    target = (target or "").strip().upper()
     if not target:
-        return 50.0  # neutral if no preference stated
+        return 50.0
 
     school_state   = (school.get("state") or "").upper()
     target_states  = [s.upper() for s in school.get("target_states", [])]
@@ -262,6 +339,50 @@ def _compute_location_fit(profile: dict, school: dict) -> float:
         base = min(base + 15.0, 100.0)
 
     return _clamp(base)
+
+
+def _location_prefs(profile: dict) -> list[tuple[str, float]]:
+    """
+    Normalize a profile's location preference into [(state, weight), ...].
+
+    Prefers the weighted multi-state form (``target_states_weighted``: a list of
+    {"state", "weight"}); falls back to the legacy single ``target_state``.
+    Drops blank states and non-positive weights.
+    """
+    weighted = profile.get("target_states_weighted")
+    prefs: list[tuple[str, float]] = []
+    if weighted:
+        for p in weighted:
+            state = (p.get("state") or "").strip().upper()
+            try:
+                weight = float(p.get("weight", 0))
+            except (TypeError, ValueError):
+                weight = 0.0
+            if state and weight > 0:
+                prefs.append((state, weight))
+    if not prefs:
+        single = (profile.get("target_state") or "").strip().upper()
+        if single:
+            prefs.append((single, 1.0))
+    return prefs
+
+
+def _compute_location_fit(profile: dict, school: dict) -> float:
+    """
+    Score how strongly the school places graduates into the user's target
+    state(s). Multiple states are combined as a weight-average of each state's
+    single-state fit (e.g. CA/NY = 70/30 → 0.7·fit(CA) + 0.3·fit(NY)).
+
+    Uses the school's target_states list (ordered: first = strongest placement);
+    a physical-location bonus applies when the school sits in a preferred state.
+    """
+    prefs = _location_prefs(profile)
+    if not prefs:
+        return 50.0  # neutral if no preference stated
+
+    total_w = sum(w for _, w in prefs) or 1.0
+    score = sum(_single_state_fit(state, school) * (w / total_w) for state, w in prefs)
+    return _clamp(score)
 
 
 # ---------------------------------------------------------------------------
@@ -450,8 +571,13 @@ def _compute_financial(
 
     tuition_3yr = annual_tuition * 3
 
-    col_index = school.get("cost_of_living_index", 100)
-    living_3yr = (_LIVING_EXPENSE_BASE * (col_index / 100)) * 3
+    # Living costs: prefer the school's real ABA-reported annual living expense
+    # (off-campus budget); fall back to the COL-index heuristic when absent.
+    annual_living = school.get("living_expense_annual")
+    if annual_living is None:
+        col_index = school.get("cost_of_living_index", 100)
+        annual_living = _LIVING_EXPENSE_BASE * (col_index / 100)
+    living_3yr = annual_living * 3
 
     gross_cost = tuition_3yr + living_3yr
 
@@ -630,68 +756,64 @@ def transfer_up_plan(
     top_n: int = 5,
 ) -> dict:
     """
-    Build a two-sided transfer-up plan for an applicant who may not be competitive
-    at their desired tier and wants to transfer after 1L.
+    Build a two-sided transfer-up plan from the applicant's own match results.
 
-      launchpads — schools the applicant can realistically get into (safety/target)
-                   that have the strongest transfer-out mobility: good places to
-                   enroll, perform, and transfer up from.
-      targets    — higher-ranked schools (better USNWR rank than the applicant's
-                   best realistic admit) that admit the most transfers: realistic
-                   destinations to aim for after 1L.
+      launchpads — the applicant's best realistic matches (safety/target tier),
+                   ranked by composite fit: good places to enroll, excel, and
+                   transfer up from.
+      targets    — schools that are a reach right now (so, an upgrade after a strong
+                   1L) AND that actually admit transfers, gated on transfer intake
+                   first and then ordered by how well they fit this applicant.
 
-    Returns {"launchpads": [...], "targets": [...]} where each item carries name,
-    usnwr_rank_2026, and the relevant transfer metric. Empty lists when data or
-    eligible schools are absent.
+    Both lists run through the full matcher, so they track the applicant's career,
+    location and cost — not a fixed mobility table. Returns
+    {"launchpads": [...], "targets": [...]}; empty lists when none qualify.
     """
-    lsat = profile.get("lsat")
-    gpa = profile.get("gpa")
-    if not gpa:
+    if not profile.get("gpa"):
         raise ValueError("profile must include a valid GPA")
 
-    realistic_ranks = []
-    launchpad_pool = []
-    for school in schools:
-        _, tier = _compute_admissibility(lsat, gpa, school)
-        if tier in ("safety", "target"):
-            rank = school.get("usnwr_rank_2026")
-            if rank is not None:
-                realistic_ranks.append(rank)
-            metrics = _transfer_metrics(school)
-            if metrics["transfer_out_rate"] is not None:
-                launchpad_pool.append((school, metrics["transfer_out_rate"]))
+    ranked = rank_schools(profile, schools, top_n=len(schools))
 
-    launchpad_pool.sort(key=lambda pair: pair[1], reverse=True)
+    # Launchpads: best realistic admits, by composite fit.
+    launch_pool = [s for s in ranked if s["admissibility_tier"] in ("safety", "target")]
+    launch_pool.sort(key=lambda s: s["composite_score"], reverse=True)
     launchpads = [
         {
             "id": s.get("id"),
             "name": s.get("name"),
             "usnwr_rank_2026": s.get("usnwr_rank_2026"),
-            "transfer_out_rate": rate,
+            "admissibility_tier": s.get("admissibility_tier"),
+            "composite_score": s.get("composite_score"),
         }
-        for s, rate in launchpad_pool[:top_n]
+        for s in launch_pool[:top_n]
     ]
 
-    # Best realistic admit = lowest (best) rank among safety/target schools.
-    best_realistic = min(realistic_ranks) if realistic_ranks else None
-    targets = []
-    if best_realistic is not None:
-        eligible = [
-            s for s in schools
-            if (s.get("usnwr_rank_2026") is not None
-                and s["usnwr_rank_2026"] < best_realistic
-                and s.get("transfers_in"))
-        ]
-        eligible.sort(key=lambda s: s["transfers_in"], reverse=True)
-        targets = [
-            {
-                "id": s.get("id"),
-                "name": s.get("name"),
-                "usnwr_rank_2026": s.get("usnwr_rank_2026"),
-                "transfers_in": s.get("transfers_in"),
-            }
-            for s in eligible[:top_n]
-        ]
+    # Targets: a reach now (the realistic upgrade) AND the school takes transfers.
+    # The "takes transfers" gate comes first; among those, rank mostly by how well
+    # the school fits THIS applicant (composite) so location/career/cost drive the
+    # list, with transfer-openness as a secondary factor.
+    target_pool = [
+        s for s in ranked
+        if s["admissibility_tier"] == "reach" and s.get("transfers_in")
+    ]
+    max_in = max((s["transfers_in"] for s in target_pool), default=0) or 1
+
+    def _target_score(school: dict) -> float:
+        openness = school["transfers_in"] / max_in * 100
+        return school["composite_score"] * 0.70 + openness * 0.30
+
+    target_pool.sort(key=_target_score, reverse=True)
+    targets = [
+        {
+            "id": s.get("id"),
+            "name": s.get("name"),
+            "usnwr_rank_2026": s.get("usnwr_rank_2026"),
+            "transfers_in": s.get("transfers_in"),
+            "composite_score": s.get("composite_score"),
+            "match_score": round(_target_score(s), 1),
+        }
+        for s in target_pool[:top_n]
+    ]
 
     return {"launchpads": launchpads, "targets": targets}
 
