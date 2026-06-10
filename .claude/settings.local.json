@@ -20,7 +20,20 @@
       "WebFetch(domain:www.law.gmu.edu)",
       "Bash(python -m eval.snapshot candidate)",
       "Bash(git checkout *)",
-      "Bash(python -m eval.diff)"
+      "Bash(python -m eval.diff)",
+      "WebFetch(domain:law.wisc.edu)",
+      "WebFetch(domain:moritzlaw.osu.edu)",
+      "WebFetch(domain:law.ku.edu)",
+      "WebFetch(domain:www.fordham.edu)",
+      "WebFetch(domain:backend.abarequireddisclosures.org)",
+      "Bash(git push *)",
+      "Bash(gh pr *)",
+      "Bash(gh auth *)",
+      "Bash(git fetch *)",
+      "Bash(git rev-list *)",
+      "Skill(claude-api)",
+      "Skill(loop)",
+      "Bash(claude update *)"
     ]
   }
 }

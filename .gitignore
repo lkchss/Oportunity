@@ -27,6 +27,12 @@ Thumbs.db
 
 # Opportunity personal data
 profile.json
+mvp/profile.txt
+mvp/*.db
+mvp/*.csv
+mvp/ingested/
+mvp/obsidian_export/
+mvp/results_*.json
 output/
 
 # Eval harness run artifacts (regenerated each run)
