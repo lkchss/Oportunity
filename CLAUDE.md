@@ -23,14 +23,16 @@ streamlit run mvp/main.py
 ```
 
 ### Law — Law School Matcher
-Streamlit app: user inputs academic profile → matching algorithm → ranked law school results.
+User inputs academic profile → matching algorithm → ranked law school results.
+**No LLM / generative AI in this product line** — the matcher is fully deterministic
+(real ABA data + transparent scoring). The LLM-judge under eval/ is offline dev
+tooling only, never part of the app.
 
 ```
 law/
   main.py        # Streamlit app entry point
   matcher.py     # Core matching algorithm
   data_loader.py # Loads law school data
-  claude_client.py / llm_client.py  # Claude API calls
   data/
     law_schools.json  # Law school database
 ```
