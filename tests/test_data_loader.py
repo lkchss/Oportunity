@@ -265,3 +265,16 @@ class TestIntegration:
         hands = [s["hands_on_per_student"] for s in schools if s.get("hands_on_per_student") is not None]
         assert len(hands) >= 190
         assert all(0 <= h <= 10 for h in hands)
+
+    def test_scorecard_fields_populated_and_in_range(self):
+        """College Scorecard JD debt/earnings should cover most schools (some
+        are privacy-suppressed or too new) and sit in sane dollar ranges."""
+        schools = load_law_schools()
+        debt = [s["scorecard_median_debt"] for s in schools
+                if s.get("scorecard_median_debt") is not None]
+        assert len(debt) >= 150
+        assert all(20_000 <= v <= 350_000 for v in debt)
+        earn = [s["scorecard_earn_4yr"] for s in schools
+                if s.get("scorecard_earn_4yr") is not None]
+        assert len(earn) >= 150
+        assert all(25_000 <= v <= 400_000 for v in earn)

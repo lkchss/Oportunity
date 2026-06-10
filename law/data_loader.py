@@ -75,6 +75,12 @@ OPTIONAL_FIELDS = {
     "field_placements_filled": (int, float),
     "simulation_seats_filled": (int, float),
     "hands_on_per_student": (int, float),
+    # College Scorecard JD-program outcomes (real graduates, federal data),
+    # display-only — never scored
+    "scorecard_median_debt": (int, float),
+    "scorecard_debt_monthly": (int, float),
+    "scorecard_earn_1yr": (int, float),
+    "scorecard_earn_4yr": (int, float),
 }
 
 
