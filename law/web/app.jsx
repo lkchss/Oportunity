@@ -182,7 +182,7 @@ function App() {
       <ProfileScreen form={form} setForm={setForm} onSubmit={() => submit()} loading={loading} />
       }
       {!loading && screen === "results" && results && profile &&
-      <ResultsScreen results={results} plan={eff.plan} profile={profile}
+      <ResultsScreen results={results} plan={eff.plan} portfolio={eff ? eff.portfolio : null} profile={profile}
       whatIf={whatIf.delta} setWhatIf={setWhatIfDelta}
       onOpen={openSchool} onEditProfile={() => setScreen("intake")}
       compareIds={compareIds} onToggleCompare={toggleCompare}
