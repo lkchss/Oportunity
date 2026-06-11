@@ -238,6 +238,13 @@ _BASE_SCHOOL = {
 
 
 class TestMergePhase:
+    @pytest.fixture(autouse=True)
+    def _isolate_extract(self, tmp_path, monkeypatch):
+        # merge_phase writes EXTRACT_JSON as a side effect; without this every
+        # test run clobbers the committed 194-school extract with fixture data.
+        import law.data.build_employment_states as bes
+        monkeypatch.setattr(bes, "EXTRACT_JSON", tmp_path / "employment_states.json")
+
     def _make_json(self, tmp_path: Path, schools: list) -> Path:
         p = tmp_path / "law_schools.json"
         p.write_text(json.dumps({"schools": schools}), encoding="utf-8")
