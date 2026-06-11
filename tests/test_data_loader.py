@@ -278,3 +278,73 @@ class TestIntegration:
                 if s.get("scorecard_earn_4yr") is not None]
         assert len(earn) >= 150
         assert all(25_000 <= v <= 400_000 for v in earn)
+
+    def test_placement_states_valid_when_present(self):
+        """When placement_states is populated, all entries must be valid."""
+        schools = load_law_schools()
+        with_placement = [s for s in schools if s.get("placement_states") is not None]
+        # If data has been merged, validate it; otherwise just confirm no exceptions
+        for school in with_placement:
+            ps = school["placement_states"]
+            assert isinstance(ps, list)
+            assert 1 <= len(ps) <= 3
+            for entry in ps:
+                assert isinstance(entry, dict)
+                assert isinstance(entry.get("state"), str)
+                assert len(entry["state"]) == 2
+                pct = entry.get("pct")
+                assert isinstance(pct, (int, float))
+                assert 0 <= pct <= 100
+            py = school.get("placement_year")
+            assert py is not None
+            assert isinstance(py, int)
+            assert 2020 <= py <= 2030
+
+
+class TestPlacementStatesValidation:
+    """Unit tests for placement_states field validation in _validate_entry."""
+
+    def test_valid_placement_states_passes(self):
+        school = VALID_SCHOOL.copy()
+        school["placement_states"] = [
+            {"state": "NY", "pct": 62.1},
+            {"state": "NJ", "pct": 9.0},
+            {"state": "CT", "pct": 5.0},
+        ]
+        school["placement_year"] = 2024
+        _validate_entry(school)  # should not raise
+
+    def test_placement_states_none_passes(self):
+        school = VALID_SCHOOL.copy()
+        school["placement_states"] = None
+        school["placement_year"] = None
+        _validate_entry(school)  # should not raise
+
+    def test_placement_states_too_many_entries(self):
+        school = VALID_SCHOOL.copy()
+        school["placement_states"] = [
+            {"state": "NY", "pct": 40.0},
+            {"state": "NJ", "pct": 20.0},
+            {"state": "CT", "pct": 10.0},
+            {"state": "CA", "pct": 5.0},  # 4th entry — too many
+        ]
+        with pytest.raises(DataValidationError, match="max 3"):
+            _validate_entry(school)
+
+    def test_placement_states_invalid_state_code(self):
+        school = VALID_SCHOOL.copy()
+        school["placement_states"] = [{"state": "XX", "pct": 50.0}]
+        with pytest.raises(DataValidationError, match="valid 2-letter"):
+            _validate_entry(school)
+
+    def test_placement_states_pct_out_of_range(self):
+        school = VALID_SCHOOL.copy()
+        school["placement_states"] = [{"state": "NY", "pct": 150.0}]
+        with pytest.raises(DataValidationError, match="0, 100"):
+            _validate_entry(school)
+
+    def test_placement_states_not_a_list(self):
+        school = VALID_SCHOOL.copy()
+        school["placement_states"] = {"state": "NY", "pct": 50.0}
+        with pytest.raises(DataValidationError):
+            _validate_entry(school)

@@ -59,6 +59,20 @@ def _run_build_scorecard(json_path: Path) -> None:
     bsc.main(json_path=json_path)
 
 
+def _run_build_employment_states(json_path: Path) -> None:
+    """Step 4: merge per-school ABA placement-by-state data (skipped if extract absent)."""
+    from law.data import build_employment_states as bes
+    extract = bes.EXTRACT_JSON
+    if not extract.exists():
+        print(
+            "[refresh] step 4/4: build_employment_states — SKIPPED "
+            f"(extract not found: {extract}; run build_employment_states to populate)"
+        )
+        return
+    print("[refresh] step 4/4: build_employment_states (--merge-only)")
+    bes.main(json_path=json_path, merge_only=True)
+
+
 def _run_build_notable(json_path: Path) -> None:
     """Optional step: merge notable alumni/faculty from Wikipedia cache."""
     from law.data import build_notable as bn
@@ -79,6 +93,7 @@ def run_pipeline(json_path: Path, include_notable: bool = False) -> None:
     _run_build_schools(json_path)
     _run_build_quality(json_path)
     _run_build_scorecard(json_path)
+    _run_build_employment_states(json_path)
     if include_notable:
         _run_build_notable(json_path)
 
@@ -91,15 +106,16 @@ def compute_diff(
     before: dict[str, Any],
     after: dict[str, Any],
     notable_fields: frozenset[str] = frozenset(
-        {"notable_alumni", "notable_faculty", "wiki_title"}
+        {"notable_alumni", "notable_faculty", "wiki_title",
+         "placement_states", "placement_year"}
     ),
     max_examples: int = 3,
 ) -> dict[str, Any]:
     """Compute a structured diff between two dataset dicts (each has a 'schools' list).
 
     Fields in *notable_fields* are excluded from the diff — they are produced by
-    build_notable which is excluded by default; reporting them as removed would be
-    misleading.
+    optional build steps (build_notable, build_employment_states) that are excluded
+    by default; reporting them as removed would be misleading.
 
     Returns a dict with:
         schools_added   – list of school ids present in after but not before

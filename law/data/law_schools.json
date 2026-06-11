@@ -107,7 +107,22 @@
       "scorecard_median_debt": 123000,
       "scorecard_debt_monthly": 1399,
       "scorecard_earn_1yr": 117864,
-      "scorecard_earn_4yr": 190940
+      "scorecard_earn_4yr": 190940,
+      "placement_states": [
+        {
+          "state": "MA",
+          "pct": 49.6
+        },
+        {
+          "state": "NY",
+          "pct": 15.8
+        },
+        {
+          "state": "CA",
+          "pct": 5.0
+        }
+      ],
+      "placement_year": 2024
     },
     {
       "id": "notre-dame-law",
@@ -263,7 +278,22 @@
       "scorecard_median_debt": 128413,
       "scorecard_debt_monthly": 1461,
       "scorecard_earn_1yr": 103733,
-      "scorecard_earn_4yr": 142699
+      "scorecard_earn_4yr": 142699,
+      "placement_states": [
+        {
+          "state": "IL",
+          "pct": 21.9
+        },
+        {
+          "state": "NY",
+          "pct": 15.0
+        },
+        {
+          "state": "IN",
+          "pct": 8.6
+        }
+      ],
+      "placement_year": 2024
     },
     {
       "id": "texas-am-law",
@@ -335,7 +365,22 @@
       "scorecard_median_debt": 71446,
       "scorecard_debt_monthly": 813,
       "scorecard_earn_1yr": 75674,
-      "scorecard_earn_4yr": 105673
+      "scorecard_earn_4yr": 105673,
+      "placement_states": [
+        {
+          "state": "TX",
+          "pct": 84.8
+        },
+        {
+          "state": "DC",
+          "pct": 2.8
+        },
+        {
+          "state": "NC",
+          "pct": 1.7
+        }
+      ],
+      "placement_year": 2024
     },
     {
       "id": "minnesota-law",
@@ -408,7 +453,22 @@
       "scorecard_median_debt": 98423,
       "scorecard_debt_monthly": 1120,
       "scorecard_earn_1yr": 77642,
-      "scorecard_earn_4yr": 117872
+      "scorecard_earn_4yr": 117872,
+      "placement_states": [
+        {
+          "state": "MN",
+          "pct": 61.7
+        },
+        {
+          "state": "CA",
+          "pct": 4.8
+        },
+        {
+          "state": "IL",
+          "pct": 4.8
+        }
+      ],
+      "placement_year": 2024
     },
     {
       "id": "boston-university-law",
@@ -563,7 +623,22 @@
       "scorecard_median_debt": 117740,
       "scorecard_debt_monthly": 1339,
       "scorecard_earn_1yr": 139986,
-      "scorecard_earn_4yr": 194750
+      "scorecard_earn_4yr": 194750,
+      "placement_states": [
+        {
+          "state": "MA",
+          "pct": 50.2
+        },
+        {
+          "state": "NY",
+          "pct": 19.2
+        },
+        {
+          "state": "DC",
+          "pct": 5.1
+        }
+      ],
+      "placement_year": 2024
     },
     {
       "id": "byu-clark-law",
@@ -637,7 +712,22 @@
       "scorecard_median_debt": null,
       "scorecard_debt_monthly": null,
       "scorecard_earn_1yr": null,
-      "scorecard_earn_4yr": null
+      "scorecard_earn_4yr": null,
+      "placement_states": [
+        {
+          "state": "UT",
+          "pct": 55.6
+        },
+        {
+          "state": "CA",
+          "pct": 8.5
+        },
+        {
+          "state": "TX",
+          "pct": 8.5
+        }
+      ],
+      "placement_year": 2024
     },
     {
       "id": "george-washington-law",
@@ -710,7 +800,22 @@
       "scorecard_median_debt": 176325,
       "scorecard_debt_monthly": 2006,
       "scorecard_earn_1yr": 95225,
-      "scorecard_earn_4yr": 140848
+      "scorecard_earn_4yr": 140848,
+      "placement_states": [
+        {
+          "state": "DC",
+          "pct": 45.3
+        },
+        {
+          "state": "NY",
+          "pct": 15.3
+        },
+        {
+          "state": "VA",
+          "pct": 11.1
+        }
+      ],
+      "placement_year": 2024
     },
     {
       "id": "georgia-law",
@@ -824,7 +929,22 @@
       "scorecard_median_debt": 82694,
       "scorecard_debt_monthly": 941,
       "scorecard_earn_1yr": 76702,
-      "scorecard_earn_4yr": 116044
+      "scorecard_earn_4yr": 116044,
+      "placement_states": [
+        {
+          "state": "GA",
+          "pct": 70.9
+        },
+        {
+          "state": "FL",
+          "pct": 3.2
+        },
+        {
+          "state": "TX",
+          "pct": 3.2
+        }
+      ],
+      "placement_year": 2024
     },
     {
       "id": "usc-gould-law",
@@ -925,7 +1045,22 @@
       "scorecard_median_debt": 138518,
       "scorecard_debt_monthly": 1576,
       "scorecard_earn_1yr": 183063,
-      "scorecard_earn_4yr": 203028
+      "scorecard_earn_4yr": 203028,
+      "placement_states": [
+        {
+          "state": "CA",
+          "pct": 77.8
+        },
+        {
+          "state": "NY",
+          "pct": 10.4
+        },
+        {
+          "state": "TX",
+          "pct": 1.8
+        }
+      ],
+      "placement_year": 2024
     },
     {
       "id": "wisconsin-law",
@@ -1039,7 +1174,22 @@
       "scorecard_median_debt": 61500,
       "scorecard_debt_monthly": 700,
       "scorecard_earn_1yr": 71236,
-      "scorecard_earn_4yr": 100715
+      "scorecard_earn_4yr": 100715,
+      "placement_states": [
+        {
+          "state": "WI",
+          "pct": 56.3
+        },
+        {
+          "state": "IL",
+          "pct": 12.2
+        },
+        {
+          "state": "DC",
+          "pct": 5.3
+        }
+      ],
+      "placement_year": 2024
     },
     {
       "id": "ohio-state-moritz-law",
@@ -1191,7 +1341,22 @@
       "scorecard_median_debt": 91529,
       "scorecard_debt_monthly": 1041,
       "scorecard_earn_1yr": 77868,
-      "scorecard_earn_4yr": 122732
+      "scorecard_earn_4yr": 122732,
+      "placement_states": [
+        {
+          "state": "OH",
+          "pct": 67.6
+        },
+        {
+          "state": "CA",
+          "pct": 2.8
+        },
+        {
+          "state": "DC",
+          "pct": 2.8
+        }
+      ],
+      "placement_year": 2024
     },
     {
       "id": "wake-forest-law",
@@ -1306,7 +1471,22 @@
       "scorecard_median_debt": 105023,
       "scorecard_debt_monthly": 1195,
       "scorecard_earn_1yr": 76252,
-      "scorecard_earn_4yr": 112646
+      "scorecard_earn_4yr": 112646,
+      "placement_states": [
+        {
+          "state": "NC",
+          "pct": 45.8
+        },
+        {
+          "state": "FL",
+          "pct": 9.7
+        },
+        {
+          "state": "VA",
+          "pct": 6.5
+        }
+      ],
+      "placement_year": 2024
     },
     {
       "id": "george-mason-scalia-law",
@@ -1412,7 +1592,22 @@
       "scorecard_median_debt": 65077,
       "scorecard_debt_monthly": 740,
       "scorecard_earn_1yr": 77057,
-      "scorecard_earn_4yr": 135661
+      "scorecard_earn_4yr": 135661,
+      "placement_states": [
+        {
+          "state": "VA",
+          "pct": 38.1
+        },
+        {
+          "state": "DC",
+          "pct": 29.7
+        },
+        {
+          "state": "MD",
+          "pct": 4.7
+        }
+      ],
+      "placement_year": 2024
     },
     {
       "id": "iowa-law",
@@ -1527,7 +1722,22 @@
       "scorecard_median_debt": 80268,
       "scorecard_debt_monthly": 913,
       "scorecard_earn_1yr": 78560,
-      "scorecard_earn_4yr": 107273
+      "scorecard_earn_4yr": 107273,
+      "placement_states": [
+        {
+          "state": "IA",
+          "pct": 32.4
+        },
+        {
+          "state": "IL",
+          "pct": 10.8
+        },
+        {
+          "state": "MN",
+          "pct": 5.7
+        }
+      ],
+      "placement_year": 2024
     },
     {
       "id": "baylor-law",
@@ -1640,7 +1850,22 @@
       "scorecard_median_debt": null,
       "scorecard_debt_monthly": null,
       "scorecard_earn_1yr": null,
-      "scorecard_earn_4yr": null
+      "scorecard_earn_4yr": null,
+      "placement_states": [
+        {
+          "state": "TX",
+          "pct": 86.9
+        },
+        {
+          "state": "CO",
+          "pct": 1.5
+        },
+        {
+          "state": "DC",
+          "pct": 1.5
+        }
+      ],
+      "placement_year": 2024
     },
     {
       "id": "florida-state-law",
@@ -1712,7 +1937,22 @@
       "scorecard_median_debt": 66707,
       "scorecard_debt_monthly": 759,
       "scorecard_earn_1yr": 62854,
-      "scorecard_earn_4yr": 98060
+      "scorecard_earn_4yr": 98060,
+      "placement_states": [
+        {
+          "state": "FL",
+          "pct": 78.0
+        },
+        {
+          "state": "AL",
+          "pct": 1.6
+        },
+        {
+          "state": "DC",
+          "pct": 1.6
+        }
+      ],
+      "placement_year": 2024
     },
     {
       "id": "uc-irvine-law",
@@ -1783,7 +2023,22 @@
       "scorecard_median_debt": 133605,
       "scorecard_debt_monthly": 1520,
       "scorecard_earn_1yr": 93534,
-      "scorecard_earn_4yr": 153307
+      "scorecard_earn_4yr": 153307,
+      "placement_states": [
+        {
+          "state": "CA",
+          "pct": 79.9
+        },
+        {
+          "state": "DC",
+          "pct": 3.7
+        },
+        {
+          "state": "NY",
+          "pct": 3.7
+        }
+      ],
+      "placement_year": 2024
     },
     {
       "id": "florida-levin-law",
@@ -1856,7 +2111,22 @@
       "scorecard_median_debt": 71483,
       "scorecard_debt_monthly": 813,
       "scorecard_earn_1yr": 72350,
-      "scorecard_earn_4yr": 114496
+      "scorecard_earn_4yr": 114496,
+      "placement_states": [
+        {
+          "state": "FL",
+          "pct": 62.1
+        },
+        {
+          "state": "NY",
+          "pct": 6.1
+        },
+        {
+          "state": "DC",
+          "pct": 4.9
+        }
+      ],
+      "placement_year": 2024
     },
     {
       "id": "washington-lee-law",
@@ -1971,7 +2241,22 @@
       "scorecard_median_debt": 97335,
       "scorecard_debt_monthly": 1107,
       "scorecard_earn_1yr": 77253,
-      "scorecard_earn_4yr": 110606
+      "scorecard_earn_4yr": 110606,
+      "placement_states": [
+        {
+          "state": "VA",
+          "pct": 24.8
+        },
+        {
+          "state": "DC",
+          "pct": 12.8
+        },
+        {
+          "state": "NY",
+          "pct": 10.6
+        }
+      ],
+      "placement_year": 2024
     },
     {
       "id": "william-mary-law",
@@ -2122,7 +2407,22 @@
       "scorecard_median_debt": 105023,
       "scorecard_debt_monthly": 1195,
       "scorecard_earn_1yr": 77921,
-      "scorecard_earn_4yr": 115663
+      "scorecard_earn_4yr": 115663,
+      "placement_states": [
+        {
+          "state": "VA",
+          "pct": 32.4
+        },
+        {
+          "state": "DC",
+          "pct": 15.9
+        },
+        {
+          "state": "NY",
+          "pct": 10.0
+        }
+      ],
+      "placement_year": 2024
     },
     {
       "id": "emory-law",
@@ -2236,7 +2536,22 @@
       "scorecard_median_debt": 134617,
       "scorecard_debt_monthly": 1531,
       "scorecard_earn_1yr": 79803,
-      "scorecard_earn_4yr": 152126
+      "scorecard_earn_4yr": 152126,
+      "placement_states": [
+        {
+          "state": "GA",
+          "pct": 42.7
+        },
+        {
+          "state": "NY",
+          "pct": 14.9
+        },
+        {
+          "state": "TX",
+          "pct": 4.9
+        }
+      ],
+      "placement_year": 2024
     },
     {
       "id": "alabama-law",
@@ -2351,7 +2666,22 @@
       "scorecard_median_debt": 61500,
       "scorecard_debt_monthly": 700,
       "scorecard_earn_1yr": 74203,
-      "scorecard_earn_4yr": 110931
+      "scorecard_earn_4yr": 110931,
+      "placement_states": [
+        {
+          "state": "AL",
+          "pct": 45.5
+        },
+        {
+          "state": "DC",
+          "pct": 5.8
+        },
+        {
+          "state": "TX",
+          "pct": 5.8
+        }
+      ],
+      "placement_year": 2024
     },
     {
       "id": "fordham-law",
@@ -2439,7 +2769,22 @@
       "scorecard_median_debt": 147561,
       "scorecard_debt_monthly": 1679,
       "scorecard_earn_1yr": 170942,
-      "scorecard_earn_4yr": 232595
+      "scorecard_earn_4yr": 232595,
+      "placement_states": [
+        {
+          "state": "NY",
+          "pct": 83.7
+        },
+        {
+          "state": "DC",
+          "pct": 2.2
+        },
+        {
+          "state": "NJ",
+          "pct": 2.0
+        }
+      ],
+      "placement_year": 2024
     },
     {
       "id": "smu-dedman-law",
@@ -2571,7 +2916,22 @@
       "scorecard_median_debt": 145569,
       "scorecard_debt_monthly": 1656,
       "scorecard_earn_1yr": 101456,
-      "scorecard_earn_4yr": 153614
+      "scorecard_earn_4yr": 153614,
+      "placement_states": [
+        {
+          "state": "TX",
+          "pct": 89.9
+        },
+        {
+          "state": "CO",
+          "pct": 1.2
+        },
+        {
+          "state": "CA",
+          "pct": 0.8
+        }
+      ],
+      "placement_year": 2024
     },
     {
       "id": "arizona-state-law",
@@ -2711,7 +3071,22 @@
       "scorecard_median_debt": null,
       "scorecard_debt_monthly": null,
       "scorecard_earn_1yr": null,
-      "scorecard_earn_4yr": null
+      "scorecard_earn_4yr": null,
+      "placement_states": [
+        {
+          "state": "AZ",
+          "pct": 68.0
+        },
+        {
+          "state": "CA",
+          "pct": 6.2
+        },
+        {
+          "state": "DC",
+          "pct": 3.8
+        }
+      ],
+      "placement_year": 2024
     },
     {
       "id": "utah-quinney-law",
@@ -2826,7 +3201,22 @@
       "scorecard_median_debt": 74012,
       "scorecard_debt_monthly": 842,
       "scorecard_earn_1yr": 77542,
-      "scorecard_earn_4yr": 113168
+      "scorecard_earn_4yr": 113168,
+      "placement_states": [
+        {
+          "state": "UT",
+          "pct": 78.9
+        },
+        {
+          "state": "FL",
+          "pct": 3.2
+        },
+        {
+          "state": "AK",
+          "pct": 2.1
+        }
+      ],
+      "placement_year": 2024
     },
     {
       "id": "illinois-law",
@@ -2900,7 +3290,22 @@
       "scorecard_median_debt": null,
       "scorecard_debt_monthly": null,
       "scorecard_earn_1yr": null,
-      "scorecard_earn_4yr": null
+      "scorecard_earn_4yr": null,
+      "placement_states": [
+        {
+          "state": "IL",
+          "pct": 66.5
+        },
+        {
+          "state": "CA",
+          "pct": 6.4
+        },
+        {
+          "state": "TX",
+          "pct": 4.4
+        }
+      ],
+      "placement_year": 2024
     },
     {
       "id": "kansas-law",
@@ -3036,7 +3441,22 @@
       "scorecard_median_debt": 61500,
       "scorecard_debt_monthly": 700,
       "scorecard_earn_1yr": 70180,
-      "scorecard_earn_4yr": 94898
+      "scorecard_earn_4yr": 94898,
+      "placement_states": [
+        {
+          "state": "KS",
+          "pct": 41.5
+        },
+        {
+          "state": "MO",
+          "pct": 28.0
+        },
+        {
+          "state": "TX",
+          "pct": 4.2
+        }
+      ],
+      "placement_year": 2024
     },
     {
       "id": "pepperdine-law",
@@ -3192,7 +3612,22 @@
       "scorecard_median_debt": null,
       "scorecard_debt_monthly": null,
       "scorecard_earn_1yr": null,
-      "scorecard_earn_4yr": null
+      "scorecard_earn_4yr": null,
+      "placement_states": [
+        {
+          "state": "CA",
+          "pct": 72.6
+        },
+        {
+          "state": "TX",
+          "pct": 5.6
+        },
+        {
+          "state": "CO",
+          "pct": 2.0
+        }
+      ],
+      "placement_year": 2024
     },
     {
       "id": "indiana-maurer-law",
@@ -3291,7 +3726,22 @@
       "scorecard_median_debt": 92000,
       "scorecard_debt_monthly": 1047,
       "scorecard_earn_1yr": 75186,
-      "scorecard_earn_4yr": 120301
+      "scorecard_earn_4yr": 120301,
+      "placement_states": [
+        {
+          "state": "IN",
+          "pct": 33.3
+        },
+        {
+          "state": "IL",
+          "pct": 13.6
+        },
+        {
+          "state": "DC",
+          "pct": 6.1
+        }
+      ],
+      "placement_year": 2024
     },
     {
       "id": "temple-beasley-law",
@@ -3406,7 +3856,22 @@
       "scorecard_median_debt": 81733,
       "scorecard_debt_monthly": 930,
       "scorecard_earn_1yr": 71729,
-      "scorecard_earn_4yr": 117775
+      "scorecard_earn_4yr": 117775,
+      "placement_states": [
+        {
+          "state": "PA",
+          "pct": 59.6
+        },
+        {
+          "state": "NJ",
+          "pct": 8.9
+        },
+        {
+          "state": "NY",
+          "pct": 7.6
+        }
+      ],
+      "placement_year": 2024
     },
     {
       "id": "villanova-law",
@@ -3497,7 +3962,22 @@
       "scorecard_median_debt": 69861,
       "scorecard_debt_monthly": 795,
       "scorecard_earn_1yr": 74646,
-      "scorecard_earn_4yr": 129021
+      "scorecard_earn_4yr": 129021,
+      "placement_states": [
+        {
+          "state": "PA",
+          "pct": 51.9
+        },
+        {
+          "state": "NY",
+          "pct": 9.8
+        },
+        {
+          "state": "NJ",
+          "pct": 9.3
+        }
+      ],
+      "placement_year": 2024
     },
     {
       "id": "washington-law",
@@ -3571,7 +4051,22 @@
       "scorecard_median_debt": 108519,
       "scorecard_debt_monthly": 1234,
       "scorecard_earn_1yr": 81079,
-      "scorecard_earn_4yr": 120015
+      "scorecard_earn_4yr": 120015,
+      "placement_states": [
+        {
+          "state": "WA",
+          "pct": 71.3
+        },
+        {
+          "state": "CA",
+          "pct": 7.0
+        },
+        {
+          "state": "DC",
+          "pct": 2.9
+        }
+      ],
+      "placement_year": 2024
     },
     {
       "id": "uc-davis-law",
@@ -3727,7 +4222,22 @@
       "scorecard_median_debt": 92689,
       "scorecard_debt_monthly": 1054,
       "scorecard_earn_1yr": 85816,
-      "scorecard_earn_4yr": 136814
+      "scorecard_earn_4yr": 136814,
+      "placement_states": [
+        {
+          "state": "CA",
+          "pct": 79.0
+        },
+        {
+          "state": "DC",
+          "pct": 2.9
+        },
+        {
+          "state": "AK",
+          "pct": 1.6
+        }
+      ],
+      "placement_year": 2024
     },
     {
       "id": "university-san-diego-law",
@@ -3842,7 +4352,22 @@
       "scorecard_median_debt": 145850,
       "scorecard_debt_monthly": 1659,
       "scorecard_earn_1yr": 84518,
-      "scorecard_earn_4yr": 134065
+      "scorecard_earn_4yr": 134065,
+      "placement_states": [
+        {
+          "state": "CA",
+          "pct": 88.4
+        },
+        {
+          "state": "CO",
+          "pct": 1.2
+        },
+        {
+          "state": "DC",
+          "pct": 1.2
+        }
+      ],
+      "placement_year": 2024
     },
     {
       "id": "houston-law",
@@ -3970,7 +4495,22 @@
       "scorecard_median_debt": 86372,
       "scorecard_debt_monthly": 982,
       "scorecard_earn_1yr": 88163,
-      "scorecard_earn_4yr": 135984
+      "scorecard_earn_4yr": 135984,
+      "placement_states": [
+        {
+          "state": "TX",
+          "pct": 86.9
+        },
+        {
+          "state": "NY",
+          "pct": 1.5
+        },
+        {
+          "state": "CA",
+          "pct": 1.2
+        }
+      ],
+      "placement_year": 2024
     },
     {
       "id": "colorado-law",
@@ -4085,7 +4625,22 @@
       "scorecard_median_debt": 105696,
       "scorecard_debt_monthly": 1202,
       "scorecard_earn_1yr": 73809,
-      "scorecard_earn_4yr": 109411
+      "scorecard_earn_4yr": 109411,
+      "placement_states": [
+        {
+          "state": "CO",
+          "pct": 72.0
+        },
+        {
+          "state": "DC",
+          "pct": 4.2
+        },
+        {
+          "state": "CA",
+          "pct": 3.6
+        }
+      ],
+      "placement_year": 2024
     },
     {
       "id": "tennessee-law",
@@ -4205,7 +4760,22 @@
       "scorecard_median_debt": 61500,
       "scorecard_debt_monthly": 700,
       "scorecard_earn_1yr": 65905,
-      "scorecard_earn_4yr": 103272
+      "scorecard_earn_4yr": 103272,
+      "placement_states": [
+        {
+          "state": "TN",
+          "pct": 74.8
+        },
+        {
+          "state": "NC",
+          "pct": 4.7
+        },
+        {
+          "state": "GA",
+          "pct": 3.1
+        }
+      ],
+      "placement_year": 2024
     },
     {
       "id": "uconn-law",
@@ -4349,7 +4919,22 @@
       "scorecard_median_debt": 96386,
       "scorecard_debt_monthly": 1096,
       "scorecard_earn_1yr": 74876,
-      "scorecard_earn_4yr": 120178
+      "scorecard_earn_4yr": 120178,
+      "placement_states": [
+        {
+          "state": "CT",
+          "pct": 63.3
+        },
+        {
+          "state": "NY",
+          "pct": 12.0
+        },
+        {
+          "state": "MA",
+          "pct": 7.3
+        }
+      ],
+      "placement_year": 2024
     },
     {
       "id": "cardozo-law",
@@ -4505,7 +5090,22 @@
       "scorecard_median_debt": 101500,
       "scorecard_debt_monthly": 1155,
       "scorecard_earn_1yr": 76957,
-      "scorecard_earn_4yr": 124597
+      "scorecard_earn_4yr": 124597,
+      "placement_states": [
+        {
+          "state": "NY",
+          "pct": 81.4
+        },
+        {
+          "state": "NJ",
+          "pct": 3.2
+        },
+        {
+          "state": "CA",
+          "pct": 2.6
+        }
+      ],
+      "placement_year": 2024
     },
     {
       "id": "missouri-law",
@@ -4612,7 +5212,22 @@
       "scorecard_median_debt": 73501,
       "scorecard_debt_monthly": 836,
       "scorecard_earn_1yr": 59716,
-      "scorecard_earn_4yr": 86349
+      "scorecard_earn_4yr": 86349,
+      "placement_states": [
+        {
+          "state": "MO",
+          "pct": 80.3
+        },
+        {
+          "state": "IL",
+          "pct": 3.0
+        },
+        {
+          "state": "FL",
+          "pct": 2.3
+        }
+      ],
+      "placement_year": 2024
     },
     {
       "id": "maryland-carey-law",
@@ -4686,7 +5301,22 @@
       "scorecard_median_debt": 118506,
       "scorecard_debt_monthly": 1348,
       "scorecard_earn_1yr": 73079,
-      "scorecard_earn_4yr": 112580
+      "scorecard_earn_4yr": 112580,
+      "placement_states": [
+        {
+          "state": "MD",
+          "pct": 58.6
+        },
+        {
+          "state": "DC",
+          "pct": 13.9
+        },
+        {
+          "state": "VA",
+          "pct": 4.9
+        }
+      ],
+      "placement_year": 2024
     },
     {
       "id": "richmond-law",
@@ -4834,7 +5464,22 @@
       "scorecard_median_debt": 100229,
       "scorecard_debt_monthly": 1140,
       "scorecard_earn_1yr": 66704,
-      "scorecard_earn_4yr": 101062
+      "scorecard_earn_4yr": 101062,
+      "placement_states": [
+        {
+          "state": "VA",
+          "pct": 60.3
+        },
+        {
+          "state": "DC",
+          "pct": 9.3
+        },
+        {
+          "state": "FL",
+          "pct": 3.3
+        }
+      ],
+      "placement_year": 2024
     },
     {
       "id": "st-johns-law",
@@ -4908,7 +5553,22 @@
       "scorecard_median_debt": 112017,
       "scorecard_debt_monthly": 1274,
       "scorecard_earn_1yr": 82812,
-      "scorecard_earn_4yr": 112325
+      "scorecard_earn_4yr": 112325,
+      "placement_states": [
+        {
+          "state": "NY",
+          "pct": 86.4
+        },
+        {
+          "state": "NJ",
+          "pct": 2.3
+        },
+        {
+          "state": "DE",
+          "pct": 1.1
+        }
+      ],
+      "placement_year": 2024
     },
     {
       "id": "wayne-state-law",
@@ -5052,7 +5712,22 @@
       "scorecard_median_debt": 61466,
       "scorecard_debt_monthly": 699,
       "scorecard_earn_1yr": 70500,
-      "scorecard_earn_4yr": 96763
+      "scorecard_earn_4yr": 96763,
+      "placement_states": [
+        {
+          "state": "MI",
+          "pct": 88.4
+        },
+        {
+          "state": "CA",
+          "pct": 2.2
+        },
+        {
+          "state": "FL",
+          "pct": 0.7
+        }
+      ],
+      "placement_year": 2024
     },
     {
       "id": "tulane-law",
@@ -5167,7 +5842,22 @@
       "scorecard_median_debt": 149237,
       "scorecard_debt_monthly": 1698,
       "scorecard_earn_1yr": 76230,
-      "scorecard_earn_4yr": null
+      "scorecard_earn_4yr": null,
+      "placement_states": [
+        {
+          "state": "LA",
+          "pct": 32.6
+        },
+        {
+          "state": "NY",
+          "pct": 17.9
+        },
+        {
+          "state": "TX",
+          "pct": 12.4
+        }
+      ],
+      "placement_year": 2024
     },
     {
       "id": "arizona-rogers-law",
@@ -5287,7 +5977,22 @@
       "scorecard_median_debt": 67750,
       "scorecard_debt_monthly": 771,
       "scorecard_earn_1yr": 61710,
-      "scorecard_earn_4yr": null
+      "scorecard_earn_4yr": null,
+      "placement_states": [
+        {
+          "state": "AZ",
+          "pct": 56.7
+        },
+        {
+          "state": "CA",
+          "pct": 5.0
+        },
+        {
+          "state": "OR",
+          "pct": 3.3
+        }
+      ],
+      "placement_year": 2024
     },
     {
       "id": "loyola-la-law",
@@ -5402,7 +6107,22 @@
       "scorecard_median_debt": 155436,
       "scorecard_debt_monthly": 1768,
       "scorecard_earn_1yr": 84074,
-      "scorecard_earn_4yr": 143361
+      "scorecard_earn_4yr": 143361,
+      "placement_states": [
+        {
+          "state": "CA",
+          "pct": 90.8
+        },
+        {
+          "state": "DC",
+          "pct": 0.9
+        },
+        {
+          "state": "NY",
+          "pct": 0.6
+        }
+      ],
+      "placement_year": 2024
     },
     {
       "id": "miami-law",
@@ -5517,7 +6237,22 @@
       "scorecard_median_debt": 148750,
       "scorecard_debt_monthly": 1692,
       "scorecard_earn_1yr": 76760,
-      "scorecard_earn_4yr": 117811
+      "scorecard_earn_4yr": 117811,
+      "placement_states": [
+        {
+          "state": "FL",
+          "pct": 70.0
+        },
+        {
+          "state": "NY",
+          "pct": 6.2
+        },
+        {
+          "state": "CA",
+          "pct": 2.2
+        }
+      ],
+      "placement_year": 2024
     },
     {
       "id": "catholic-columbus-law",
@@ -5591,7 +6326,22 @@
       "scorecard_median_debt": 147964,
       "scorecard_debt_monthly": 1683,
       "scorecard_earn_1yr": 77441,
-      "scorecard_earn_4yr": 112809
+      "scorecard_earn_4yr": 112809,
+      "placement_states": [
+        {
+          "state": "DC",
+          "pct": 37.3
+        },
+        {
+          "state": "MD",
+          "pct": 18.3
+        },
+        {
+          "state": "VA",
+          "pct": 13.5
+        }
+      ],
+      "placement_year": 2024
     },
     {
       "id": "stanford-law",
@@ -5706,7 +6456,22 @@
       "scorecard_median_debt": 153302,
       "scorecard_debt_monthly": 1744,
       "scorecard_earn_1yr": 162001,
-      "scorecard_earn_4yr": 259944
+      "scorecard_earn_4yr": 259944,
+      "placement_states": [
+        {
+          "state": "CA",
+          "pct": 34.7
+        },
+        {
+          "state": "NY",
+          "pct": 18.6
+        },
+        {
+          "state": "DC",
+          "pct": 14.1
+        }
+      ],
+      "placement_year": 2024
     },
     {
       "id": "uchicago-law",
@@ -5785,7 +6550,22 @@
       "scorecard_median_debt": 188691,
       "scorecard_debt_monthly": 2146,
       "scorecard_earn_1yr": 199603,
-      "scorecard_earn_4yr": 279203
+      "scorecard_earn_4yr": 279203,
+      "placement_states": [
+        {
+          "state": "IL",
+          "pct": 24.1
+        },
+        {
+          "state": "NY",
+          "pct": 20.6
+        },
+        {
+          "state": "CA",
+          "pct": 17.1
+        }
+      ],
+      "placement_year": 2024
     },
     {
       "id": "yale-law",
@@ -5900,7 +6680,22 @@
       "scorecard_median_debt": null,
       "scorecard_debt_monthly": null,
       "scorecard_earn_1yr": null,
-      "scorecard_earn_4yr": null
+      "scorecard_earn_4yr": null,
+      "placement_states": [
+        {
+          "state": "NY",
+          "pct": 31.6
+        },
+        {
+          "state": "DC",
+          "pct": 20.5
+        },
+        {
+          "state": "CA",
+          "pct": 9.8
+        }
+      ],
+      "placement_year": 2024
     },
     {
       "id": "penn-carey-law",
@@ -6015,7 +6810,22 @@
       "scorecard_median_debt": 171488,
       "scorecard_debt_monthly": 1951,
       "scorecard_earn_1yr": 210273,
-      "scorecard_earn_4yr": 302120
+      "scorecard_earn_4yr": 302120,
+      "placement_states": [
+        {
+          "state": "NY",
+          "pct": 38.8
+        },
+        {
+          "state": "PA",
+          "pct": 19.4
+        },
+        {
+          "state": "DC",
+          "pct": 13.5
+        }
+      ],
+      "placement_year": 2024
     },
     {
       "id": "uva-law",
@@ -6130,7 +6940,22 @@
       "scorecard_median_debt": 178812,
       "scorecard_debt_monthly": 2034,
       "scorecard_earn_1yr": 204216,
-      "scorecard_earn_4yr": 284309
+      "scorecard_earn_4yr": 284309,
+      "placement_states": [
+        {
+          "state": "NY",
+          "pct": 28.8
+        },
+        {
+          "state": "DC",
+          "pct": 27.8
+        },
+        {
+          "state": "VA",
+          "pct": 7.7
+        }
+      ],
+      "placement_year": 2024
     },
     {
       "id": "harvard-law",
@@ -6245,7 +7070,22 @@
       "scorecard_median_debt": 93235,
       "scorecard_debt_monthly": 1061,
       "scorecard_earn_1yr": 175880,
-      "scorecard_earn_4yr": 291490
+      "scorecard_earn_4yr": 291490,
+      "placement_states": [
+        {
+          "state": "NY",
+          "pct": 31.7
+        },
+        {
+          "state": "DC",
+          "pct": 17.2
+        },
+        {
+          "state": "CA",
+          "pct": 12.1
+        }
+      ],
+      "placement_year": 2024
     },
     {
       "id": "duke-law",
@@ -6348,7 +7188,22 @@
       "scorecard_median_debt": null,
       "scorecard_debt_monthly": null,
       "scorecard_earn_1yr": null,
-      "scorecard_earn_4yr": null
+      "scorecard_earn_4yr": null,
+      "placement_states": [
+        {
+          "state": "NY",
+          "pct": 40.1
+        },
+        {
+          "state": "DC",
+          "pct": 10.5
+        },
+        {
+          "state": "CA",
+          "pct": 9.0
+        }
+      ],
+      "placement_year": 2024
     },
     {
       "id": "nyu-law",
@@ -6463,7 +7318,22 @@
       "scorecard_median_debt": null,
       "scorecard_debt_monthly": null,
       "scorecard_earn_1yr": null,
-      "scorecard_earn_4yr": 255401
+      "scorecard_earn_4yr": 255401,
+      "placement_states": [
+        {
+          "state": "NY",
+          "pct": 69.8
+        },
+        {
+          "state": "DC",
+          "pct": 6.3
+        },
+        {
+          "state": "CA",
+          "pct": 5.7
+        }
+      ],
+      "placement_year": 2024
     },
     {
       "id": "columbia-law",
@@ -6578,7 +7448,22 @@
       "scorecard_median_debt": 198924,
       "scorecard_debt_monthly": 2263,
       "scorecard_earn_1yr": 220843,
-      "scorecard_earn_4yr": 308943
+      "scorecard_earn_4yr": 308943,
+      "placement_states": [
+        {
+          "state": "NY",
+          "pct": 69.2
+        },
+        {
+          "state": "DC",
+          "pct": 8.4
+        },
+        {
+          "state": "CA",
+          "pct": 6.5
+        }
+      ],
+      "placement_year": 2024
     },
     {
       "id": "northwestern-pritzker-law",
@@ -6693,7 +7578,22 @@
       "scorecard_median_debt": 154286,
       "scorecard_debt_monthly": 1755,
       "scorecard_earn_1yr": 210979,
-      "scorecard_earn_4yr": 291132
+      "scorecard_earn_4yr": 291132,
+      "placement_states": [
+        {
+          "state": "IL",
+          "pct": 44.1
+        },
+        {
+          "state": "NY",
+          "pct": 24.8
+        },
+        {
+          "state": "CA",
+          "pct": 10.0
+        }
+      ],
+      "placement_year": 2024
     },
     {
       "id": "michigan-law",
@@ -6849,7 +7749,22 @@
       "scorecard_median_debt": 132524,
       "scorecard_debt_monthly": 1507,
       "scorecard_earn_1yr": 170537,
-      "scorecard_earn_4yr": 224391
+      "scorecard_earn_4yr": 224391,
+      "placement_states": [
+        {
+          "state": "NY",
+          "pct": 23.3
+        },
+        {
+          "state": "IL",
+          "pct": 16.1
+        },
+        {
+          "state": "MI",
+          "pct": 13.4
+        }
+      ],
+      "placement_year": 2024
     },
     {
       "id": "vanderbilt-law",
@@ -6923,7 +7838,22 @@
       "scorecard_median_debt": 139857,
       "scorecard_debt_monthly": 1591,
       "scorecard_earn_1yr": 156307,
-      "scorecard_earn_4yr": 196797
+      "scorecard_earn_4yr": 196797,
+      "placement_states": [
+        {
+          "state": "TN",
+          "pct": 22.9
+        },
+        {
+          "state": "NY",
+          "pct": 21.1
+        },
+        {
+          "state": "TX",
+          "pct": 14.5
+        }
+      ],
+      "placement_year": 2024
     },
     {
       "id": "cornell-law",
@@ -7038,7 +7968,22 @@
       "scorecard_median_debt": null,
       "scorecard_debt_monthly": null,
       "scorecard_earn_1yr": null,
-      "scorecard_earn_4yr": null
+      "scorecard_earn_4yr": null,
+      "placement_states": [
+        {
+          "state": "NY",
+          "pct": 66.8
+        },
+        {
+          "state": "CA",
+          "pct": 7.7
+        },
+        {
+          "state": "DC",
+          "pct": 4.1
+        }
+      ],
+      "placement_year": 2024
     },
     {
       "id": "ucla-law",
@@ -7153,7 +8098,22 @@
       "scorecard_median_debt": 135373,
       "scorecard_debt_monthly": 1540,
       "scorecard_earn_1yr": 155825,
-      "scorecard_earn_4yr": 177968
+      "scorecard_earn_4yr": 177968,
+      "placement_states": [
+        {
+          "state": "CA",
+          "pct": 75.8
+        },
+        {
+          "state": "NY",
+          "pct": 9.9
+        },
+        {
+          "state": "WA",
+          "pct": 1.6
+        }
+      ],
+      "placement_year": 2024
     },
     {
       "id": "washu-law",
@@ -7227,7 +8187,22 @@
       "scorecard_median_debt": 92540,
       "scorecard_debt_monthly": 1053,
       "scorecard_earn_1yr": 87690,
-      "scorecard_earn_4yr": 141243
+      "scorecard_earn_4yr": 141243,
+      "placement_states": [
+        {
+          "state": "IL",
+          "pct": 17.9
+        },
+        {
+          "state": "MO",
+          "pct": 17.9
+        },
+        {
+          "state": "NY",
+          "pct": 12.6
+        }
+      ],
+      "placement_year": 2024
     },
     {
       "id": "kentucky-rosenberg-law",
@@ -7342,7 +8317,22 @@
       "scorecard_median_debt": 75150,
       "scorecard_debt_monthly": 855,
       "scorecard_earn_1yr": 53600,
-      "scorecard_earn_4yr": 86420
+      "scorecard_earn_4yr": 86420,
+      "placement_states": [
+        {
+          "state": "KY",
+          "pct": 59.7
+        },
+        {
+          "state": "TN",
+          "pct": 6.5
+        },
+        {
+          "state": "IL",
+          "pct": 5.8
+        }
+      ],
+      "placement_year": 2024
     },
     {
       "id": "seton-hall-law",
@@ -7457,7 +8447,22 @@
       "scorecard_median_debt": 115179,
       "scorecard_debt_monthly": 1310,
       "scorecard_earn_1yr": 70710,
-      "scorecard_earn_4yr": 136424
+      "scorecard_earn_4yr": 136424,
+      "placement_states": [
+        {
+          "state": "NJ",
+          "pct": 64.0
+        },
+        {
+          "state": "NY",
+          "pct": 23.2
+        },
+        {
+          "state": "CA",
+          "pct": 1.6
+        }
+      ],
+      "placement_year": 2024
     },
     {
       "id": "georgia-state-law",
@@ -7572,7 +8577,22 @@
       "scorecard_median_debt": 72563,
       "scorecard_debt_monthly": 825,
       "scorecard_earn_1yr": 77765,
-      "scorecard_earn_4yr": 116613
+      "scorecard_earn_4yr": 116613,
+      "placement_states": [
+        {
+          "state": "GA",
+          "pct": 84.4
+        },
+        {
+          "state": "TX",
+          "pct": 1.4
+        },
+        {
+          "state": "DC",
+          "pct": 0.9
+        }
+      ],
+      "placement_year": 2024
     },
     {
       "id": "loyola-chicago-law",
@@ -7687,7 +8707,22 @@
       "scorecard_median_debt": 119367,
       "scorecard_debt_monthly": 1358,
       "scorecard_earn_1yr": 83184,
-      "scorecard_earn_4yr": 122384
+      "scorecard_earn_4yr": 122384,
+      "placement_states": [
+        {
+          "state": "IL",
+          "pct": 71.4
+        },
+        {
+          "state": "CA",
+          "pct": 3.7
+        },
+        {
+          "state": "IN",
+          "pct": 2.6
+        }
+      ],
+      "placement_year": 2024
     },
     {
       "id": "northeastern-law",
@@ -7802,7 +8837,22 @@
       "scorecard_median_debt": 70571,
       "scorecard_debt_monthly": 803,
       "scorecard_earn_1yr": 73471,
-      "scorecard_earn_4yr": 116706
+      "scorecard_earn_4yr": 116706,
+      "placement_states": [
+        {
+          "state": "MA",
+          "pct": 48.6
+        },
+        {
+          "state": "NY",
+          "pct": 12.1
+        },
+        {
+          "state": "DC",
+          "pct": 6.1
+        }
+      ],
+      "placement_year": 2024
     },
     {
       "id": "pittsburgh-law",
@@ -7876,7 +8926,22 @@
       "scorecard_median_debt": 109178,
       "scorecard_debt_monthly": 1242,
       "scorecard_earn_1yr": 67318,
-      "scorecard_earn_4yr": 94797
+      "scorecard_earn_4yr": 94797,
+      "placement_states": [
+        {
+          "state": "PA",
+          "pct": 68.3
+        },
+        {
+          "state": "NY",
+          "pct": 4.1
+        },
+        {
+          "state": "DC",
+          "pct": 2.8
+        }
+      ],
+      "placement_year": 2024
     },
     {
       "id": "fiu-law",
@@ -7987,7 +9052,22 @@
       "scorecard_median_debt": null,
       "scorecard_debt_monthly": null,
       "scorecard_earn_1yr": null,
-      "scorecard_earn_4yr": null
+      "scorecard_earn_4yr": null,
+      "placement_states": [
+        {
+          "state": "FL",
+          "pct": 83.7
+        },
+        {
+          "state": "DC",
+          "pct": 1.7
+        },
+        {
+          "state": "NY",
+          "pct": 1.7
+        }
+      ],
+      "placement_year": 2024
     },
     {
       "id": "cincinnati-law",
@@ -8061,7 +9141,22 @@
       "scorecard_median_debt": 66694,
       "scorecard_debt_monthly": 759,
       "scorecard_earn_1yr": 60967,
-      "scorecard_earn_4yr": 85043
+      "scorecard_earn_4yr": 85043,
+      "placement_states": [
+        {
+          "state": "OH",
+          "pct": 63.8
+        },
+        {
+          "state": "KY",
+          "pct": 6.2
+        },
+        {
+          "state": "IN",
+          "pct": 3.1
+        }
+      ],
+      "placement_year": 2024
     },
     {
       "id": "drexel-kline-law",
@@ -8135,7 +9230,22 @@
       "scorecard_median_debt": 72191,
       "scorecard_debt_monthly": 821,
       "scorecard_earn_1yr": 60051,
-      "scorecard_earn_4yr": 95933
+      "scorecard_earn_4yr": 95933,
+      "placement_states": [
+        {
+          "state": "PA",
+          "pct": 59.6
+        },
+        {
+          "state": "NJ",
+          "pct": 10.3
+        },
+        {
+          "state": "DE",
+          "pct": 6.6
+        }
+      ],
+      "placement_year": 2024
     },
     {
       "id": "suny-buffalo-law",
@@ -8275,7 +9385,18 @@
       "scorecard_median_debt": 94242,
       "scorecard_debt_monthly": 1072,
       "scorecard_earn_1yr": 64220,
-      "scorecard_earn_4yr": 85126
+      "scorecard_earn_4yr": 85126,
+      "placement_states": [
+        {
+          "state": "NY",
+          "pct": 88.8
+        },
+        {
+          "state": "VA",
+          "pct": 1.2
+        }
+      ],
+      "placement_year": 2024
     },
     {
       "id": "akron-the-university-of",
@@ -8339,7 +9460,22 @@
       "scorecard_median_debt": 71000,
       "scorecard_debt_monthly": 808,
       "scorecard_earn_1yr": 57386,
-      "scorecard_earn_4yr": 79750
+      "scorecard_earn_4yr": 79750,
+      "placement_states": [
+        {
+          "state": "OH",
+          "pct": 80.2
+        },
+        {
+          "state": "PA",
+          "pct": 2.3
+        },
+        {
+          "state": "IL",
+          "pct": 1.5
+        }
+      ],
+      "placement_year": 2024
     },
     {
       "id": "albany-law-school",
@@ -8444,7 +9580,22 @@
       "scorecard_median_debt": null,
       "scorecard_debt_monthly": null,
       "scorecard_earn_1yr": null,
-      "scorecard_earn_4yr": null
+      "scorecard_earn_4yr": null,
+      "placement_states": [
+        {
+          "state": "NY",
+          "pct": 83.4
+        },
+        {
+          "state": "DC",
+          "pct": 1.5
+        },
+        {
+          "state": "MA",
+          "pct": 1.5
+        }
+      ],
+      "placement_year": 2024
     },
     {
       "id": "american-university-washington-college-of-law",
@@ -8549,7 +9700,22 @@
       "scorecard_median_debt": 161696,
       "scorecard_debt_monthly": 1839,
       "scorecard_earn_1yr": 73725,
-      "scorecard_earn_4yr": 109523
+      "scorecard_earn_4yr": 109523,
+      "placement_states": [
+        {
+          "state": "DC",
+          "pct": 38.2
+        },
+        {
+          "state": "MD",
+          "pct": 13.4
+        },
+        {
+          "state": "NY",
+          "pct": 7.1
+        }
+      ],
+      "placement_year": 2024
     },
     {
       "id": "appalachian-school-of-law",
@@ -8613,7 +9779,22 @@
       "scorecard_median_debt": 123970,
       "scorecard_debt_monthly": 1410,
       "scorecard_earn_1yr": 33989,
-      "scorecard_earn_4yr": 65332
+      "scorecard_earn_4yr": 65332,
+      "placement_states": [
+        {
+          "state": "VA",
+          "pct": 33.3
+        },
+        {
+          "state": "WV",
+          "pct": 20.5
+        },
+        {
+          "state": "KY",
+          "pct": 7.7
+        }
+      ],
+      "placement_year": 2024
     },
     {
       "id": "university-of-arkansas-at-little-rock-school-of-law",
@@ -8698,7 +9879,22 @@
       "scorecard_median_debt": 61500,
       "scorecard_debt_monthly": 700,
       "scorecard_earn_1yr": 57468,
-      "scorecard_earn_4yr": 78317
+      "scorecard_earn_4yr": 78317,
+      "placement_states": [
+        {
+          "state": "AR",
+          "pct": 62.3
+        },
+        {
+          "state": "MO",
+          "pct": 3.6
+        },
+        {
+          "state": "TX",
+          "pct": 2.9
+        }
+      ],
+      "placement_year": 2024
     },
     {
       "id": "university-of-arkansas-school-of-law",
@@ -8820,7 +10016,22 @@
       "scorecard_median_debt": 65000,
       "scorecard_debt_monthly": 739,
       "scorecard_earn_1yr": 66239,
-      "scorecard_earn_4yr": 88977
+      "scorecard_earn_4yr": 88977,
+      "placement_states": [
+        {
+          "state": "AR",
+          "pct": 59.7
+        },
+        {
+          "state": "MO",
+          "pct": 7.3
+        },
+        {
+          "state": "TX",
+          "pct": 7.3
+        }
+      ],
+      "placement_year": 2024
     },
     {
       "id": "atlanta-s-john-marshall-law-school",
@@ -8922,7 +10133,18 @@
       "scorecard_median_debt": 193041,
       "scorecard_debt_monthly": 2196,
       "scorecard_earn_1yr": 57019,
-      "scorecard_earn_4yr": 80422
+      "scorecard_earn_4yr": 80422,
+      "placement_states": [
+        {
+          "state": "GA",
+          "pct": 62.7
+        },
+        {
+          "state": "FL",
+          "pct": 3.6
+        }
+      ],
+      "placement_year": 2024
     },
     {
       "id": "ave-maria-school-of-law",
@@ -8986,7 +10208,22 @@
       "scorecard_median_debt": 144259,
       "scorecard_debt_monthly": 1641,
       "scorecard_earn_1yr": 52984,
-      "scorecard_earn_4yr": 91005
+      "scorecard_earn_4yr": 91005,
+      "placement_states": [
+        {
+          "state": "FL",
+          "pct": 63.5
+        },
+        {
+          "state": "NY",
+          "pct": 3.5
+        },
+        {
+          "state": "IN",
+          "pct": 2.4
+        }
+      ],
+      "placement_year": 2024
     },
     {
       "id": "university-of-baltimore-school-of-law",
@@ -9055,7 +10292,22 @@
       "scorecard_median_debt": 106102,
       "scorecard_debt_monthly": 1207,
       "scorecard_earn_1yr": 62419,
-      "scorecard_earn_4yr": 95849
+      "scorecard_earn_4yr": 95849,
+      "placement_states": [
+        {
+          "state": "MD",
+          "pct": 76.8
+        },
+        {
+          "state": "VA",
+          "pct": 3.9
+        },
+        {
+          "state": "DC",
+          "pct": 2.4
+        }
+      ],
+      "placement_year": 2024
     },
     {
       "id": "barry-university-school-of-law",
@@ -9136,7 +10388,22 @@
       "scorecard_median_debt": 154477,
       "scorecard_debt_monthly": 1757,
       "scorecard_earn_1yr": 51099,
-      "scorecard_earn_4yr": 82024
+      "scorecard_earn_4yr": 82024,
+      "placement_states": [
+        {
+          "state": "FL",
+          "pct": 75.8
+        },
+        {
+          "state": "NY",
+          "pct": 2.1
+        },
+        {
+          "state": "GA",
+          "pct": 1.7
+        }
+      ],
+      "placement_year": 2024
     },
     {
       "id": "belmont-university-college-of-law",
@@ -9200,7 +10467,22 @@
       "scorecard_median_debt": null,
       "scorecard_debt_monthly": null,
       "scorecard_earn_1yr": null,
-      "scorecard_earn_4yr": null
+      "scorecard_earn_4yr": null,
+      "placement_states": [
+        {
+          "state": "TN",
+          "pct": 70.7
+        },
+        {
+          "state": "FL",
+          "pct": 3.4
+        },
+        {
+          "state": "CO",
+          "pct": 2.6
+        }
+      ],
+      "placement_year": 2024
     },
     {
       "id": "brooklyn-law-school",
@@ -9264,7 +10546,22 @@
       "scorecard_median_debt": 96951,
       "scorecard_debt_monthly": 1103,
       "scorecard_earn_1yr": 79481,
-      "scorecard_earn_4yr": 121254
+      "scorecard_earn_4yr": 121254,
+      "placement_states": [
+        {
+          "state": "NY",
+          "pct": 81.0
+        },
+        {
+          "state": "NJ",
+          "pct": 3.8
+        },
+        {
+          "state": "CA",
+          "pct": 0.8
+        }
+      ],
+      "placement_year": 2024
     },
     {
       "id": "california-western-school-of-law",
@@ -9369,7 +10666,22 @@
       "scorecard_median_debt": 179866,
       "scorecard_debt_monthly": 2046,
       "scorecard_earn_1yr": 60490,
-      "scorecard_earn_4yr": 100889
+      "scorecard_earn_4yr": 100889,
+      "placement_states": [
+        {
+          "state": "CA",
+          "pct": 69.9
+        },
+        {
+          "state": "AZ",
+          "pct": 2.3
+        },
+        {
+          "state": "NV",
+          "pct": 2.3
+        }
+      ],
+      "placement_year": 2024
     },
     {
       "id": "university-of-california-berkeley-school-of-law",
@@ -9474,7 +10786,22 @@
       "scorecard_median_debt": 155891,
       "scorecard_debt_monthly": 1773,
       "scorecard_earn_1yr": 196724,
-      "scorecard_earn_4yr": 226996
+      "scorecard_earn_4yr": 226996,
+      "placement_states": [
+        {
+          "state": "CA",
+          "pct": 59.8
+        },
+        {
+          "state": "NY",
+          "pct": 14.5
+        },
+        {
+          "state": "DC",
+          "pct": 6.4
+        }
+      ],
+      "placement_year": 2024
     },
     {
       "id": "uc-law-san-francisco",
@@ -9579,7 +10906,22 @@
       "scorecard_median_debt": 139352,
       "scorecard_debt_monthly": 1585,
       "scorecard_earn_1yr": 90386,
-      "scorecard_earn_4yr": 136001
+      "scorecard_earn_4yr": 136001,
+      "placement_states": [
+        {
+          "state": "CA",
+          "pct": 86.3
+        },
+        {
+          "state": "NY",
+          "pct": 1.6
+        },
+        {
+          "state": "DC",
+          "pct": 1.1
+        }
+      ],
+      "placement_year": 2024
     },
     {
       "id": "campbell-university-school-of-law",
@@ -9643,7 +10985,22 @@
       "scorecard_median_debt": 135880,
       "scorecard_debt_monthly": 1546,
       "scorecard_earn_1yr": 60334,
-      "scorecard_earn_4yr": 89637
+      "scorecard_earn_4yr": 89637,
+      "placement_states": [
+        {
+          "state": "NC",
+          "pct": 71.3
+        },
+        {
+          "state": "VA",
+          "pct": 2.3
+        },
+        {
+          "state": "CA",
+          "pct": 1.7
+        }
+      ],
+      "placement_year": 2024
     },
     {
       "id": "capital-university-law-school",
@@ -9757,7 +11114,22 @@
       "scorecard_median_debt": 106377,
       "scorecard_debt_monthly": 1210,
       "scorecard_earn_1yr": 62010,
-      "scorecard_earn_4yr": 85015
+      "scorecard_earn_4yr": 85015,
+      "placement_states": [
+        {
+          "state": "OH",
+          "pct": 72.2
+        },
+        {
+          "state": "FL",
+          "pct": 2.1
+        },
+        {
+          "state": "DC",
+          "pct": 1.4
+        }
+      ],
+      "placement_year": 2024
     },
     {
       "id": "case-western-reserve-university-school-of-law",
@@ -9842,7 +11214,22 @@
       "scorecard_median_debt": 98460,
       "scorecard_debt_monthly": 1120,
       "scorecard_earn_1yr": 70183,
-      "scorecard_earn_4yr": 105964
+      "scorecard_earn_4yr": 105964,
+      "placement_states": [
+        {
+          "state": "OH",
+          "pct": 62.6
+        },
+        {
+          "state": "NY",
+          "pct": 11.0
+        },
+        {
+          "state": "DC",
+          "pct": 2.6
+        }
+      ],
+      "placement_year": 2024
     },
     {
       "id": "chapman-university-fowler-school-of-law",
@@ -9936,7 +11323,22 @@
       "scorecard_median_debt": 170800,
       "scorecard_debt_monthly": 1943,
       "scorecard_earn_1yr": 74737,
-      "scorecard_earn_4yr": 119002
+      "scorecard_earn_4yr": 119002,
+      "placement_states": [
+        {
+          "state": "CA",
+          "pct": 83.4
+        },
+        {
+          "state": "IL",
+          "pct": 0.7
+        },
+        {
+          "state": "IN",
+          "pct": 0.7
+        }
+      ],
+      "placement_year": 2024
     },
     {
       "id": "charleston-school-of-law",
@@ -10009,7 +11411,22 @@
       "scorecard_median_debt": 152981,
       "scorecard_debt_monthly": 1740,
       "scorecard_earn_1yr": 46657,
-      "scorecard_earn_4yr": 73362
+      "scorecard_earn_4yr": 73362,
+      "placement_states": [
+        {
+          "state": "SC",
+          "pct": 51.1
+        },
+        {
+          "state": "GA",
+          "pct": 6.4
+        },
+        {
+          "state": "NC",
+          "pct": 5.6
+        }
+      ],
+      "placement_year": 2024
     },
     {
       "id": "chicago-kent-college-of-law",
@@ -10127,7 +11544,22 @@
       "scorecard_median_debt": 97727,
       "scorecard_debt_monthly": 1112,
       "scorecard_earn_1yr": 73249,
-      "scorecard_earn_4yr": 111515
+      "scorecard_earn_4yr": 111515,
+      "placement_states": [
+        {
+          "state": "IL",
+          "pct": 79.5
+        },
+        {
+          "state": "CO",
+          "pct": 1.3
+        },
+        {
+          "state": "GA",
+          "pct": 1.3
+        }
+      ],
+      "placement_year": 2024
     },
     {
       "id": "cuny-school-of-law",
@@ -10245,7 +11677,22 @@
       "scorecard_median_debt": 81666,
       "scorecard_debt_monthly": 929,
       "scorecard_earn_1yr": 73397,
-      "scorecard_earn_4yr": 87345
+      "scorecard_earn_4yr": 87345,
+      "placement_states": [
+        {
+          "state": "NY",
+          "pct": 70.4
+        },
+        {
+          "state": "NJ",
+          "pct": 2.3
+        },
+        {
+          "state": "CA",
+          "pct": 1.9
+        }
+      ],
+      "placement_year": 2024
     },
     {
       "id": "cleveland-state-university-college-of-law",
@@ -10309,7 +11756,22 @@
       "scorecard_median_debt": 71500,
       "scorecard_debt_monthly": 813,
       "scorecard_earn_1yr": 64805,
-      "scorecard_earn_4yr": 91229
+      "scorecard_earn_4yr": 91229,
+      "placement_states": [
+        {
+          "state": "OH",
+          "pct": 82.9
+        },
+        {
+          "state": "NY",
+          "pct": 3.6
+        },
+        {
+          "state": "PA",
+          "pct": 1.8
+        }
+      ],
+      "placement_year": 2024
     },
     {
       "id": "cooley-law-school",
@@ -10439,7 +11901,22 @@
       "scorecard_median_debt": 202668,
       "scorecard_debt_monthly": 2305,
       "scorecard_earn_1yr": 45431,
-      "scorecard_earn_4yr": 74147
+      "scorecard_earn_4yr": 74147,
+      "placement_states": [
+        {
+          "state": "FL",
+          "pct": 29.8
+        },
+        {
+          "state": "MI",
+          "pct": 29.8
+        },
+        {
+          "state": "IN",
+          "pct": 7.3
+        }
+      ],
+      "placement_year": 2024
     },
     {
       "id": "creighton-university-school-of-law",
@@ -10544,7 +12021,22 @@
       "scorecard_median_debt": 128182,
       "scorecard_debt_monthly": 1458,
       "scorecard_earn_1yr": 65179,
-      "scorecard_earn_4yr": 86665
+      "scorecard_earn_4yr": 86665,
+      "placement_states": [
+        {
+          "state": "NE",
+          "pct": 52.4
+        },
+        {
+          "state": "CO",
+          "pct": 5.5
+        },
+        {
+          "state": "IA",
+          "pct": 4.8
+        }
+      ],
+      "placement_year": 2024
     },
     {
       "id": "university-of-dayton-school-of-law",
@@ -10634,7 +12126,22 @@
       "scorecard_median_debt": null,
       "scorecard_debt_monthly": null,
       "scorecard_earn_1yr": null,
-      "scorecard_earn_4yr": null
+      "scorecard_earn_4yr": null,
+      "placement_states": [
+        {
+          "state": "OH",
+          "pct": 53.7
+        },
+        {
+          "state": "IN",
+          "pct": 7.4
+        },
+        {
+          "state": "CO",
+          "pct": 3.7
+        }
+      ],
+      "placement_year": 2024
     },
     {
       "id": "depaul-university-college-of-law",
@@ -10739,7 +12246,22 @@
       "scorecard_median_debt": 131463,
       "scorecard_debt_monthly": 1495,
       "scorecard_earn_1yr": 68344,
-      "scorecard_earn_4yr": 107264
+      "scorecard_earn_4yr": 107264,
+      "placement_states": [
+        {
+          "state": "IL",
+          "pct": 73.7
+        },
+        {
+          "state": "IN",
+          "pct": 2.8
+        },
+        {
+          "state": "MI",
+          "pct": 2.2
+        }
+      ],
+      "placement_year": 2024
     },
     {
       "id": "university-of-denver-sturm-college-of-law",
@@ -10857,7 +12379,22 @@
       "scorecard_median_debt": 161053,
       "scorecard_debt_monthly": 1832,
       "scorecard_earn_1yr": 67853,
-      "scorecard_earn_4yr": 103145
+      "scorecard_earn_4yr": 103145,
+      "placement_states": [
+        {
+          "state": "CO",
+          "pct": 75.4
+        },
+        {
+          "state": "DC",
+          "pct": 1.7
+        },
+        {
+          "state": "IL",
+          "pct": 1.7
+        }
+      ],
+      "placement_year": 2024
     },
     {
       "id": "university-of-detroit-mercy-school-of-law",
@@ -10962,7 +12499,22 @@
       "scorecard_median_debt": 122626,
       "scorecard_debt_monthly": 1395,
       "scorecard_earn_1yr": 63731,
-      "scorecard_earn_4yr": 93055
+      "scorecard_earn_4yr": 93055,
+      "placement_states": [
+        {
+          "state": "MI",
+          "pct": 57.3
+        },
+        {
+          "state": "IL",
+          "pct": 1.0
+        },
+        {
+          "state": "HI",
+          "pct": 0.5
+        }
+      ],
+      "placement_year": 2024
     },
     {
       "id": "university-of-the-district-of-columbia-david-a-clarke-school-of-law",
@@ -11067,7 +12619,22 @@
       "scorecard_median_debt": 110258,
       "scorecard_debt_monthly": 1254,
       "scorecard_earn_1yr": 59595,
-      "scorecard_earn_4yr": 90325
+      "scorecard_earn_4yr": 90325,
+      "placement_states": [
+        {
+          "state": "DC",
+          "pct": 38.1
+        },
+        {
+          "state": "MD",
+          "pct": 15.9
+        },
+        {
+          "state": "VA",
+          "pct": 15.9
+        }
+      ],
+      "placement_year": 2024
     },
     {
       "id": "drake-university-law-school",
@@ -11172,7 +12739,22 @@
       "scorecard_median_debt": 83526,
       "scorecard_debt_monthly": 950,
       "scorecard_earn_1yr": 72226,
-      "scorecard_earn_4yr": 87375
+      "scorecard_earn_4yr": 87375,
+      "placement_states": [
+        {
+          "state": "IA",
+          "pct": 72.0
+        },
+        {
+          "state": "MN",
+          "pct": 4.0
+        },
+        {
+          "state": "MO",
+          "pct": 4.0
+        }
+      ],
+      "placement_year": 2024
     },
     {
       "id": "duquesne-university-school-of-law",
@@ -11236,7 +12818,22 @@
       "scorecard_median_debt": 72500,
       "scorecard_debt_monthly": 825,
       "scorecard_earn_1yr": 59904,
-      "scorecard_earn_4yr": 82014
+      "scorecard_earn_4yr": 82014,
+      "placement_states": [
+        {
+          "state": "PA",
+          "pct": 80.3
+        },
+        {
+          "state": "MD",
+          "pct": 1.9
+        },
+        {
+          "state": "VA",
+          "pct": 1.9
+        }
+      ],
+      "placement_year": 2024
     },
     {
       "id": "elon-university-school-of-law",
@@ -11321,7 +12918,22 @@
       "scorecard_median_debt": 119023,
       "scorecard_debt_monthly": 1354,
       "scorecard_earn_1yr": 57581,
-      "scorecard_earn_4yr": 82321
+      "scorecard_earn_4yr": 82321,
+      "placement_states": [
+        {
+          "state": "NC",
+          "pct": 64.3
+        },
+        {
+          "state": "SC",
+          "pct": 7.1
+        },
+        {
+          "state": "GA",
+          "pct": 4.3
+        }
+      ],
+      "placement_year": 2024
     },
     {
       "id": "faulkner-university-jones-school-of-law",
@@ -11435,7 +13047,22 @@
       "scorecard_median_debt": 137560,
       "scorecard_debt_monthly": 1565,
       "scorecard_earn_1yr": 49400,
-      "scorecard_earn_4yr": 68740
+      "scorecard_earn_4yr": 68740,
+      "placement_states": [
+        {
+          "state": "AL",
+          "pct": 62.2
+        },
+        {
+          "state": "GA",
+          "pct": 12.2
+        },
+        {
+          "state": "FL",
+          "pct": 6.8
+        }
+      ],
+      "placement_year": 2024
     },
     {
       "id": "florida-aandm-university-college-of-law",
@@ -11499,7 +13126,22 @@
       "scorecard_median_debt": 115500,
       "scorecard_debt_monthly": 1314,
       "scorecard_earn_1yr": 54751,
-      "scorecard_earn_4yr": 81144
+      "scorecard_earn_4yr": 81144,
+      "placement_states": [
+        {
+          "state": "FL",
+          "pct": 60.8
+        },
+        {
+          "state": "GA",
+          "pct": 3.9
+        },
+        {
+          "state": "NJ",
+          "pct": 3.9
+        }
+      ],
+      "placement_year": 2024
     },
     {
       "id": "georgetown-university-law-center",
@@ -11604,7 +13246,22 @@
       "scorecard_median_debt": 162286,
       "scorecard_debt_monthly": 1846,
       "scorecard_earn_1yr": 168995,
-      "scorecard_earn_4yr": 226624
+      "scorecard_earn_4yr": 226624,
+      "placement_states": [
+        {
+          "state": "DC",
+          "pct": 38.6
+        },
+        {
+          "state": "NY",
+          "pct": 24.7
+        },
+        {
+          "state": "CA",
+          "pct": 8.6
+        }
+      ],
+      "placement_year": 2024
     },
     {
       "id": "gonzaga-university-school-of-law",
@@ -11709,7 +13366,22 @@
       "scorecard_median_debt": 110687,
       "scorecard_debt_monthly": 1259,
       "scorecard_earn_1yr": 65069,
-      "scorecard_earn_4yr": 88461
+      "scorecard_earn_4yr": 88461,
+      "placement_states": [
+        {
+          "state": "WA",
+          "pct": 55.4
+        },
+        {
+          "state": "CA",
+          "pct": 5.4
+        },
+        {
+          "state": "AZ",
+          "pct": 2.4
+        }
+      ],
+      "placement_year": 2024
     },
     {
       "id": "university-of-hawaii-richardson-school-of-law",
@@ -11851,7 +13523,22 @@
       "scorecard_median_debt": 98536,
       "scorecard_debt_monthly": 1121,
       "scorecard_earn_1yr": 69865,
-      "scorecard_earn_4yr": 89520
+      "scorecard_earn_4yr": 89520,
+      "placement_states": [
+        {
+          "state": "HI",
+          "pct": 80.2
+        },
+        {
+          "state": "VA",
+          "pct": 3.1
+        },
+        {
+          "state": "IL",
+          "pct": 2.1
+        }
+      ],
+      "placement_year": 2024
     },
     {
       "id": "hofstra-university-maurice-a-deane-school-of-law",
@@ -11915,7 +13602,22 @@
       "scorecard_median_debt": 163347,
       "scorecard_debt_monthly": 1858,
       "scorecard_earn_1yr": 69677,
-      "scorecard_earn_4yr": 102901
+      "scorecard_earn_4yr": 102901,
+      "placement_states": [
+        {
+          "state": "NY",
+          "pct": 88.1
+        },
+        {
+          "state": "NJ",
+          "pct": 1.8
+        },
+        {
+          "state": "FL",
+          "pct": 0.7
+        }
+      ],
+      "placement_year": 2024
     },
     {
       "id": "howard-university-school-of-law",
@@ -11979,7 +13681,22 @@
       "scorecard_median_debt": 185348,
       "scorecard_debt_monthly": 2108,
       "scorecard_earn_1yr": 81173,
-      "scorecard_earn_4yr": 116413
+      "scorecard_earn_4yr": 116413,
+      "placement_states": [
+        {
+          "state": "DC",
+          "pct": 31.3
+        },
+        {
+          "state": "NY",
+          "pct": 23.1
+        },
+        {
+          "state": "MD",
+          "pct": 8.2
+        }
+      ],
+      "placement_year": 2024
     },
     {
       "id": "university-of-idaho-college-of-law",
@@ -12043,7 +13760,22 @@
       "scorecard_median_debt": 100091,
       "scorecard_debt_monthly": 1139,
       "scorecard_earn_1yr": 58694,
-      "scorecard_earn_4yr": 81744
+      "scorecard_earn_4yr": 81744,
+      "placement_states": [
+        {
+          "state": "ID",
+          "pct": 52.5
+        },
+        {
+          "state": "WA",
+          "pct": 14.2
+        },
+        {
+          "state": "UT",
+          "pct": 5.0
+        }
+      ],
+      "placement_year": 2024
     },
     {
       "id": "university-of-illinois-chicago-school-of-law",
@@ -12107,7 +13839,22 @@
       "scorecard_median_debt": null,
       "scorecard_debt_monthly": null,
       "scorecard_earn_1yr": null,
-      "scorecard_earn_4yr": null
+      "scorecard_earn_4yr": null,
+      "placement_states": [
+        {
+          "state": "IL",
+          "pct": 74.2
+        },
+        {
+          "state": "NY",
+          "pct": 2.0
+        },
+        {
+          "state": "CO",
+          "pct": 1.7
+        }
+      ],
+      "placement_year": 2024
     },
     {
       "id": "indiana-university-robert-h-mckinney-school-of-law",
@@ -12253,7 +14000,22 @@
       "scorecard_median_debt": 97806,
       "scorecard_debt_monthly": 1113,
       "scorecard_earn_1yr": 64496,
-      "scorecard_earn_4yr": 101372
+      "scorecard_earn_4yr": 101372,
+      "placement_states": [
+        {
+          "state": "IN",
+          "pct": 82.3
+        },
+        {
+          "state": "IL",
+          "pct": 2.6
+        },
+        {
+          "state": "FL",
+          "pct": 1.7
+        }
+      ],
+      "placement_year": 2024
     },
     {
       "id": "inter-american-university-of-puerto-rico-school-of-law",
@@ -12346,7 +14108,22 @@
       "scorecard_median_debt": 110693,
       "scorecard_debt_monthly": 1259,
       "scorecard_earn_1yr": 29713,
-      "scorecard_earn_4yr": 53462
+      "scorecard_earn_4yr": 53462,
+      "placement_states": [
+        {
+          "state": "PR",
+          "pct": 65.2
+        },
+        {
+          "state": "CA",
+          "pct": 1.5
+        },
+        {
+          "state": "FL",
+          "pct": 1.5
+        }
+      ],
+      "placement_year": 2024
     },
     {
       "id": "jacksonville-university-college-of-law",
@@ -12409,7 +14186,9 @@
       "scorecard_median_debt": null,
       "scorecard_debt_monthly": null,
       "scorecard_earn_1yr": null,
-      "scorecard_earn_4yr": null
+      "scorecard_earn_4yr": null,
+      "placement_states": null,
+      "placement_year": null
     },
     {
       "id": "lewis-and-clark-law-school",
@@ -12473,7 +14252,22 @@
       "scorecard_median_debt": null,
       "scorecard_debt_monthly": null,
       "scorecard_earn_1yr": null,
-      "scorecard_earn_4yr": null
+      "scorecard_earn_4yr": null,
+      "placement_states": [
+        {
+          "state": "OR",
+          "pct": 59.3
+        },
+        {
+          "state": "WA",
+          "pct": 11.3
+        },
+        {
+          "state": "AK",
+          "pct": 4.6
+        }
+      ],
+      "placement_year": 2024
     },
     {
       "id": "liberty-university-school-of-law",
@@ -12559,7 +14353,22 @@
       "scorecard_median_debt": null,
       "scorecard_debt_monthly": null,
       "scorecard_earn_1yr": null,
-      "scorecard_earn_4yr": null
+      "scorecard_earn_4yr": null,
+      "placement_states": [
+        {
+          "state": "VA",
+          "pct": 24.1
+        },
+        {
+          "state": "TX",
+          "pct": 10.7
+        },
+        {
+          "state": "FL",
+          "pct": 8.0
+        }
+      ],
+      "placement_year": 2024
     },
     {
       "id": "lincoln-memorial-university-duncan-school-of-law",
@@ -12623,7 +14432,22 @@
       "scorecard_median_debt": 108228,
       "scorecard_debt_monthly": 1231,
       "scorecard_earn_1yr": 46511,
-      "scorecard_earn_4yr": 73596
+      "scorecard_earn_4yr": 73596,
+      "placement_states": [
+        {
+          "state": "TN",
+          "pct": 62.4
+        },
+        {
+          "state": "KY",
+          "pct": 5.9
+        },
+        {
+          "state": "FL",
+          "pct": 2.0
+        }
+      ],
+      "placement_year": 2024
     },
     {
       "id": "lsu-paul-m-hebert-law-center",
@@ -12687,7 +14511,22 @@
       "scorecard_median_debt": 88622,
       "scorecard_debt_monthly": 1008,
       "scorecard_earn_1yr": 67339,
-      "scorecard_earn_4yr": 103602
+      "scorecard_earn_4yr": 103602,
+      "placement_states": [
+        {
+          "state": "LA",
+          "pct": 64.1
+        },
+        {
+          "state": "TX",
+          "pct": 9.1
+        },
+        {
+          "state": "FL",
+          "pct": 2.4
+        }
+      ],
+      "placement_year": 2024
     },
     {
       "id": "university-of-louisville-brandeis-school-of-law",
@@ -12792,7 +14631,22 @@
       "scorecard_median_debt": 96424,
       "scorecard_debt_monthly": 1097,
       "scorecard_earn_1yr": 56417,
-      "scorecard_earn_4yr": 80728
+      "scorecard_earn_4yr": 80728,
+      "placement_states": [
+        {
+          "state": "KY",
+          "pct": 64.3
+        },
+        {
+          "state": "IL",
+          "pct": 5.6
+        },
+        {
+          "state": "IN",
+          "pct": 4.8
+        }
+      ],
+      "placement_year": 2024
     },
     {
       "id": "loyola-university-new-orleans-college-of-law",
@@ -12897,7 +14751,22 @@
       "scorecard_median_debt": null,
       "scorecard_debt_monthly": null,
       "scorecard_earn_1yr": null,
-      "scorecard_earn_4yr": null
+      "scorecard_earn_4yr": null,
+      "placement_states": [
+        {
+          "state": "LA",
+          "pct": 65.4
+        },
+        {
+          "state": "TX",
+          "pct": 7.3
+        },
+        {
+          "state": "GA",
+          "pct": 3.9
+        }
+      ],
+      "placement_year": 2024
     },
     {
       "id": "university-of-maine-school-of-law",
@@ -12961,7 +14830,22 @@
       "scorecard_median_debt": 85950,
       "scorecard_debt_monthly": 978,
       "scorecard_earn_1yr": 61048,
-      "scorecard_earn_4yr": 83912
+      "scorecard_earn_4yr": 83912,
+      "placement_states": [
+        {
+          "state": "ME",
+          "pct": 68.3
+        },
+        {
+          "state": "NY",
+          "pct": 4.9
+        },
+        {
+          "state": "NC",
+          "pct": 3.7
+        }
+      ],
+      "placement_year": 2024
     },
     {
       "id": "marquette-university-law-school",
@@ -13097,7 +14981,22 @@
       "scorecard_median_debt": 137200,
       "scorecard_debt_monthly": 1561,
       "scorecard_earn_1yr": 63027,
-      "scorecard_earn_4yr": 85116
+      "scorecard_earn_4yr": 85116,
+      "placement_states": [
+        {
+          "state": "WI",
+          "pct": 77.2
+        },
+        {
+          "state": "IL",
+          "pct": 5.4
+        },
+        {
+          "state": "NY",
+          "pct": 2.0
+        }
+      ],
+      "placement_year": 2024
     },
     {
       "id": "university-of-massachusetts-school-of-law",
@@ -13166,7 +15065,22 @@
       "scorecard_median_debt": null,
       "scorecard_debt_monthly": null,
       "scorecard_earn_1yr": null,
-      "scorecard_earn_4yr": null
+      "scorecard_earn_4yr": null,
+      "placement_states": [
+        {
+          "state": "MA",
+          "pct": 39.6
+        },
+        {
+          "state": "RI",
+          "pct": 9.9
+        },
+        {
+          "state": "NJ",
+          "pct": 6.3
+        }
+      ],
+      "placement_year": 2024
     },
     {
       "id": "university-of-memphis-cecil-c-humphreys-school-of-law",
@@ -13288,7 +15202,22 @@
       "scorecard_median_debt": 92250,
       "scorecard_debt_monthly": 1049,
       "scorecard_earn_1yr": 52464,
-      "scorecard_earn_4yr": 81169
+      "scorecard_earn_4yr": 81169,
+      "placement_states": [
+        {
+          "state": "TN",
+          "pct": 76.3
+        },
+        {
+          "state": "AR",
+          "pct": 2.1
+        },
+        {
+          "state": "CO",
+          "pct": 2.1
+        }
+      ],
+      "placement_year": 2024
     },
     {
       "id": "mercer-university-school-of-law",
@@ -13352,7 +15281,22 @@
       "scorecard_median_debt": null,
       "scorecard_debt_monthly": null,
       "scorecard_earn_1yr": null,
-      "scorecard_earn_4yr": null
+      "scorecard_earn_4yr": null,
+      "placement_states": [
+        {
+          "state": "GA",
+          "pct": 78.8
+        },
+        {
+          "state": "FL",
+          "pct": 5.8
+        },
+        {
+          "state": "NC",
+          "pct": 2.9
+        }
+      ],
+      "placement_year": 2024
     },
     {
       "id": "michigan-state-university-college-of-law",
@@ -13416,7 +15360,22 @@
       "scorecard_median_debt": 103630,
       "scorecard_debt_monthly": 1179,
       "scorecard_earn_1yr": 67554,
-      "scorecard_earn_4yr": 96342
+      "scorecard_earn_4yr": 96342,
+      "placement_states": [
+        {
+          "state": "MI",
+          "pct": 61.8
+        },
+        {
+          "state": "IL",
+          "pct": 5.9
+        },
+        {
+          "state": "CA",
+          "pct": 3.2
+        }
+      ],
+      "placement_year": 2024
     },
     {
       "id": "mississippi-college-school-of-law",
@@ -13509,7 +15468,22 @@
       "scorecard_median_debt": 143299,
       "scorecard_debt_monthly": 1630,
       "scorecard_earn_1yr": 55522,
-      "scorecard_earn_4yr": 70352
+      "scorecard_earn_4yr": 70352,
+      "placement_states": [
+        {
+          "state": "MS",
+          "pct": 46.0
+        },
+        {
+          "state": "LA",
+          "pct": 6.5
+        },
+        {
+          "state": "TX",
+          "pct": 4.8
+        }
+      ],
+      "placement_year": 2024
     },
     {
       "id": "university-of-mississippi-school-of-law",
@@ -13614,7 +15588,22 @@
       "scorecard_median_debt": 69701,
       "scorecard_debt_monthly": 793,
       "scorecard_earn_1yr": 61201,
-      "scorecard_earn_4yr": 92069
+      "scorecard_earn_4yr": 92069,
+      "placement_states": [
+        {
+          "state": "MS",
+          "pct": 28.0
+        },
+        {
+          "state": "TN",
+          "pct": 15.4
+        },
+        {
+          "state": "TX",
+          "pct": 7.4
+        }
+      ],
+      "placement_year": 2024
     },
     {
       "id": "university-of-missouri-kansas-city-school-of-law",
@@ -13719,7 +15708,22 @@
       "scorecard_median_debt": 97000,
       "scorecard_debt_monthly": 1103,
       "scorecard_earn_1yr": 60766,
-      "scorecard_earn_4yr": 92296
+      "scorecard_earn_4yr": 92296,
+      "placement_states": [
+        {
+          "state": "MO",
+          "pct": 70.9
+        },
+        {
+          "state": "KS",
+          "pct": 21.3
+        },
+        {
+          "state": "CA",
+          "pct": 1.6
+        }
+      ],
+      "placement_year": 2024
     },
     {
       "id": "mitchell-hamline-school-of-law",
@@ -13783,7 +15787,22 @@
       "scorecard_median_debt": 101761,
       "scorecard_debt_monthly": 1158,
       "scorecard_earn_1yr": 67268,
-      "scorecard_earn_4yr": 91497
+      "scorecard_earn_4yr": 91497,
+      "placement_states": [
+        {
+          "state": "MN",
+          "pct": 46.0
+        },
+        {
+          "state": "TX",
+          "pct": 6.2
+        },
+        {
+          "state": "FL",
+          "pct": 3.6
+        }
+      ],
+      "placement_year": 2024
     },
     {
       "id": "university-of-montana-blewett-school-of-law",
@@ -13888,7 +15907,22 @@
       "scorecard_median_debt": 72126,
       "scorecard_debt_monthly": 820,
       "scorecard_earn_1yr": 65477,
-      "scorecard_earn_4yr": 86640
+      "scorecard_earn_4yr": 86640,
+      "placement_states": [
+        {
+          "state": "MT",
+          "pct": 76.9
+        },
+        {
+          "state": "CO",
+          "pct": 5.1
+        },
+        {
+          "state": "AK",
+          "pct": 2.6
+        }
+      ],
+      "placement_year": 2024
     },
     {
       "id": "university-of-nebraska-college-of-law",
@@ -14022,7 +16056,22 @@
       "scorecard_median_debt": 54456,
       "scorecard_debt_monthly": 619,
       "scorecard_earn_1yr": 66354,
-      "scorecard_earn_4yr": 90759
+      "scorecard_earn_4yr": 90759,
+      "placement_states": [
+        {
+          "state": "NE",
+          "pct": 63.4
+        },
+        {
+          "state": "MN",
+          "pct": 3.9
+        },
+        {
+          "state": "IL",
+          "pct": 3.3
+        }
+      ],
+      "placement_year": 2024
     },
     {
       "id": "unlv-william-s-boyd-school-of-law",
@@ -14086,7 +16135,22 @@
       "scorecard_median_debt": 82985,
       "scorecard_debt_monthly": 944,
       "scorecard_earn_1yr": 76561,
-      "scorecard_earn_4yr": 108006
+      "scorecard_earn_4yr": 108006,
+      "placement_states": [
+        {
+          "state": "NV",
+          "pct": 79.9
+        },
+        {
+          "state": "UT",
+          "pct": 3.9
+        },
+        {
+          "state": "CA",
+          "pct": 1.7
+        }
+      ],
+      "placement_year": 2024
     },
     {
       "id": "new-england-law-boston",
@@ -14191,7 +16255,22 @@
       "scorecard_median_debt": 126248,
       "scorecard_debt_monthly": 1436,
       "scorecard_earn_1yr": 61471,
-      "scorecard_earn_4yr": 94232
+      "scorecard_earn_4yr": 94232,
+      "placement_states": [
+        {
+          "state": "MA",
+          "pct": 48.2
+        },
+        {
+          "state": "CA",
+          "pct": 4.9
+        },
+        {
+          "state": "NY",
+          "pct": 4.6
+        }
+      ],
+      "placement_year": 2024
     },
     {
       "id": "university-of-new-hampshire-franklin-pierce-school-of-law",
@@ -14317,7 +16396,22 @@
       "scorecard_median_debt": null,
       "scorecard_debt_monthly": null,
       "scorecard_earn_1yr": null,
-      "scorecard_earn_4yr": null
+      "scorecard_earn_4yr": null,
+      "placement_states": [
+        {
+          "state": "NH",
+          "pct": 32.6
+        },
+        {
+          "state": "MA",
+          "pct": 12.8
+        },
+        {
+          "state": "NY",
+          "pct": 5.3
+        }
+      ],
+      "placement_year": 2024
     },
     {
       "id": "university-of-new-mexico-school-of-law",
@@ -14418,7 +16512,22 @@
       "scorecard_median_debt": null,
       "scorecard_debt_monthly": null,
       "scorecard_earn_1yr": null,
-      "scorecard_earn_4yr": null
+      "scorecard_earn_4yr": null,
+      "placement_states": [
+        {
+          "state": "NM",
+          "pct": 80.4
+        },
+        {
+          "state": "CO",
+          "pct": 1.8
+        },
+        {
+          "state": "AZ",
+          "pct": 0.9
+        }
+      ],
+      "placement_year": 2024
     },
     {
       "id": "new-york-law-school",
@@ -14482,7 +16591,22 @@
       "scorecard_median_debt": 142500,
       "scorecard_debt_monthly": 1621,
       "scorecard_earn_1yr": 76166,
-      "scorecard_earn_4yr": 109122
+      "scorecard_earn_4yr": 109122,
+      "placement_states": [
+        {
+          "state": "NY",
+          "pct": 74.8
+        },
+        {
+          "state": "NJ",
+          "pct": 9.3
+        },
+        {
+          "state": "CA",
+          "pct": 1.4
+        }
+      ],
+      "placement_year": 2024
     },
     {
       "id": "north-carolina-central-university-school-of-law",
@@ -14587,7 +16711,22 @@
       "scorecard_median_debt": 117597,
       "scorecard_debt_monthly": 1338,
       "scorecard_earn_1yr": 56228,
-      "scorecard_earn_4yr": 83361
+      "scorecard_earn_4yr": 83361,
+      "placement_states": [
+        {
+          "state": "NC",
+          "pct": 44.0
+        },
+        {
+          "state": "NY",
+          "pct": 8.7
+        },
+        {
+          "state": "DC",
+          "pct": 7.3
+        }
+      ],
+      "placement_year": 2024
     },
     {
       "id": "university-of-north-carolina-school-of-law",
@@ -14651,7 +16790,22 @@
       "scorecard_median_debt": 91570,
       "scorecard_debt_monthly": 1042,
       "scorecard_earn_1yr": 81794,
-      "scorecard_earn_4yr": 142928
+      "scorecard_earn_4yr": 142928,
+      "placement_states": [
+        {
+          "state": "NC",
+          "pct": 54.8
+        },
+        {
+          "state": "DC",
+          "pct": 10.0
+        },
+        {
+          "state": "NY",
+          "pct": 6.2
+        }
+      ],
+      "placement_year": 2024
     },
     {
       "id": "university-of-north-dakota-school-of-law",
@@ -14715,7 +16869,22 @@
       "scorecard_median_debt": 61500,
       "scorecard_debt_monthly": 700,
       "scorecard_earn_1yr": 61451,
-      "scorecard_earn_4yr": 90309
+      "scorecard_earn_4yr": 90309,
+      "placement_states": [
+        {
+          "state": "ND",
+          "pct": 56.8
+        },
+        {
+          "state": "MN",
+          "pct": 13.6
+        },
+        {
+          "state": "SD",
+          "pct": 6.2
+        }
+      ],
+      "placement_year": 2024
     },
     {
       "id": "unt-dallas-college-of-law",
@@ -14779,7 +16948,22 @@
       "scorecard_median_debt": null,
       "scorecard_debt_monthly": null,
       "scorecard_earn_1yr": null,
-      "scorecard_earn_4yr": 101120
+      "scorecard_earn_4yr": 101120,
+      "placement_states": [
+        {
+          "state": "TX",
+          "pct": 80.6
+        },
+        {
+          "state": "DC",
+          "pct": 2.2
+        },
+        {
+          "state": "IL",
+          "pct": 1.1
+        }
+      ],
+      "placement_year": 2024
     },
     {
       "id": "northern-illinois-university-college-of-law",
@@ -14852,7 +17036,22 @@
       "scorecard_median_debt": 75688,
       "scorecard_debt_monthly": 861,
       "scorecard_earn_1yr": 57561,
-      "scorecard_earn_4yr": 78459
+      "scorecard_earn_4yr": 78459,
+      "placement_states": [
+        {
+          "state": "IL",
+          "pct": 71.3
+        },
+        {
+          "state": "CA",
+          "pct": 2.1
+        },
+        {
+          "state": "MI",
+          "pct": 2.1
+        }
+      ],
+      "placement_year": 2024
     },
     {
       "id": "northern-kentucky-university-chase-college-of-law",
@@ -14916,7 +17115,22 @@
       "scorecard_median_debt": 101097,
       "scorecard_debt_monthly": 1150,
       "scorecard_earn_1yr": 47291,
-      "scorecard_earn_4yr": 74937
+      "scorecard_earn_4yr": 74937,
+      "placement_states": [
+        {
+          "state": "KY",
+          "pct": 46.8
+        },
+        {
+          "state": "OH",
+          "pct": 41.1
+        },
+        {
+          "state": "IN",
+          "pct": 2.4
+        }
+      ],
+      "placement_year": 2024
     },
     {
       "id": "nova-southeastern-university-shepard-broad-college-of-law",
@@ -15009,7 +17223,22 @@
       "scorecard_median_debt": 162455,
       "scorecard_debt_monthly": 1848,
       "scorecard_earn_1yr": 61884,
-      "scorecard_earn_4yr": 96470
+      "scorecard_earn_4yr": 96470,
+      "placement_states": [
+        {
+          "state": "FL",
+          "pct": 72.8
+        },
+        {
+          "state": "NJ",
+          "pct": 1.0
+        },
+        {
+          "state": "CA",
+          "pct": 0.5
+        }
+      ],
+      "placement_year": 2024
     },
     {
       "id": "ohio-northern-university-pettit-college-of-law",
@@ -15114,7 +17343,22 @@
       "scorecard_median_debt": 61500,
       "scorecard_debt_monthly": 700,
       "scorecard_earn_1yr": 55402,
-      "scorecard_earn_4yr": 69823
+      "scorecard_earn_4yr": 69823,
+      "placement_states": [
+        {
+          "state": "OH",
+          "pct": 35.5
+        },
+        {
+          "state": "IN",
+          "pct": 16.1
+        },
+        {
+          "state": "PA",
+          "pct": 6.5
+        }
+      ],
+      "placement_year": 2024
     },
     {
       "id": "oklahoma-city-university-school-of-law",
@@ -15178,7 +17422,22 @@
       "scorecard_median_debt": 145281,
       "scorecard_debt_monthly": 1653,
       "scorecard_earn_1yr": 53246,
-      "scorecard_earn_4yr": 74062
+      "scorecard_earn_4yr": 74062,
+      "placement_states": [
+        {
+          "state": "OK",
+          "pct": 67.4
+        },
+        {
+          "state": "TX",
+          "pct": 14.4
+        },
+        {
+          "state": "CO",
+          "pct": 2.3
+        }
+      ],
+      "placement_year": 2024
     },
     {
       "id": "university-of-oklahoma-college-of-law",
@@ -15242,7 +17501,22 @@
       "scorecard_median_debt": null,
       "scorecard_debt_monthly": null,
       "scorecard_earn_1yr": null,
-      "scorecard_earn_4yr": null
+      "scorecard_earn_4yr": null,
+      "placement_states": [
+        {
+          "state": "OK",
+          "pct": 58.0
+        },
+        {
+          "state": "TX",
+          "pct": 26.9
+        },
+        {
+          "state": "CO",
+          "pct": 2.1
+        }
+      ],
+      "placement_year": 2024
     },
     {
       "id": "university-of-oregon-school-of-law",
@@ -15306,7 +17580,22 @@
       "scorecard_median_debt": 98655,
       "scorecard_debt_monthly": 1122,
       "scorecard_earn_1yr": 64912,
-      "scorecard_earn_4yr": 100801
+      "scorecard_earn_4yr": 100801,
+      "placement_states": [
+        {
+          "state": "OR",
+          "pct": 51.8
+        },
+        {
+          "state": "CA",
+          "pct": 10.4
+        },
+        {
+          "state": "WA",
+          "pct": 5.5
+        }
+      ],
+      "placement_year": 2024
     },
     {
       "id": "pace-university-elisabeth-haub-school-of-law",
@@ -15370,7 +17659,22 @@
       "scorecard_median_debt": 94737,
       "scorecard_debt_monthly": 1078,
       "scorecard_earn_1yr": 67469,
-      "scorecard_earn_4yr": null
+      "scorecard_earn_4yr": null,
+      "placement_states": [
+        {
+          "state": "NY",
+          "pct": 64.3
+        },
+        {
+          "state": "NJ",
+          "pct": 13.5
+        },
+        {
+          "state": "CT",
+          "pct": 6.0
+        }
+      ],
+      "placement_year": 2024
     },
     {
       "id": "university-of-the-pacific-mcgeorge-school-of-law",
@@ -15475,7 +17779,22 @@
       "scorecard_median_debt": 147082,
       "scorecard_debt_monthly": 1673,
       "scorecard_earn_1yr": 75832,
-      "scorecard_earn_4yr": 114281
+      "scorecard_earn_4yr": 114281,
+      "placement_states": [
+        {
+          "state": "CA",
+          "pct": 83.6
+        },
+        {
+          "state": "DC",
+          "pct": 1.4
+        },
+        {
+          "state": "FL",
+          "pct": 0.7
+        }
+      ],
+      "placement_year": 2024
     },
     {
       "id": "penn-state-dickinson-law",
@@ -15580,7 +17899,22 @@
       "scorecard_median_debt": 65436,
       "scorecard_debt_monthly": 744,
       "scorecard_earn_1yr": 61271,
-      "scorecard_earn_4yr": 90775
+      "scorecard_earn_4yr": 90775,
+      "placement_states": [
+        {
+          "state": "PA",
+          "pct": 39.3
+        },
+        {
+          "state": "NY",
+          "pct": 8.7
+        },
+        {
+          "state": "DC",
+          "pct": 5.7
+        }
+      ],
+      "placement_year": 2024
     },
     {
       "id": "pontifical-catholic-university-of-puerto-rico-school-of-law",
@@ -15678,7 +18012,22 @@
       "scorecard_median_debt": 122712,
       "scorecard_debt_monthly": 1396,
       "scorecard_earn_1yr": 20330,
-      "scorecard_earn_4yr": 39634
+      "scorecard_earn_4yr": 39634,
+      "placement_states": [
+        {
+          "state": "PR",
+          "pct": 46.9
+        },
+        {
+          "state": "FL",
+          "pct": 3.5
+        },
+        {
+          "state": "TX",
+          "pct": 2.7
+        }
+      ],
+      "placement_year": 2024
     },
     {
       "id": "university-of-puerto-rico-school-of-law",
@@ -15742,7 +18091,22 @@
       "scorecard_median_debt": null,
       "scorecard_debt_monthly": null,
       "scorecard_earn_1yr": null,
-      "scorecard_earn_4yr": null
+      "scorecard_earn_4yr": null,
+      "placement_states": [
+        {
+          "state": "PR",
+          "pct": 70.8
+        },
+        {
+          "state": "NY",
+          "pct": 3.1
+        },
+        {
+          "state": "CA",
+          "pct": 0.8
+        }
+      ],
+      "placement_year": 2024
     },
     {
       "id": "quinnipiac-university-school-of-law",
@@ -15827,7 +18191,22 @@
       "scorecard_median_debt": 81000,
       "scorecard_debt_monthly": 921,
       "scorecard_earn_1yr": 62011,
-      "scorecard_earn_4yr": 100096
+      "scorecard_earn_4yr": 100096,
+      "placement_states": [
+        {
+          "state": "CT",
+          "pct": 71.6
+        },
+        {
+          "state": "NY",
+          "pct": 8.6
+        },
+        {
+          "state": "MA",
+          "pct": 4.3
+        }
+      ],
+      "placement_year": 2024
     },
     {
       "id": "regent-university-school-of-law",
@@ -15921,7 +18300,22 @@
       "scorecard_median_debt": 85898,
       "scorecard_debt_monthly": 977,
       "scorecard_earn_1yr": 59604,
-      "scorecard_earn_4yr": 82360
+      "scorecard_earn_4yr": 82360,
+      "placement_states": [
+        {
+          "state": "VA",
+          "pct": 35.7
+        },
+        {
+          "state": "PA",
+          "pct": 9.8
+        },
+        {
+          "state": "FL",
+          "pct": 6.2
+        }
+      ],
+      "placement_year": 2024
     },
     {
       "id": "roger-williams-university-school-of-law",
@@ -15990,7 +18384,22 @@
       "scorecard_median_debt": 122459,
       "scorecard_debt_monthly": 1393,
       "scorecard_earn_1yr": 55777,
-      "scorecard_earn_4yr": 90866
+      "scorecard_earn_4yr": 90866,
+      "placement_states": [
+        {
+          "state": "RI",
+          "pct": 44.2
+        },
+        {
+          "state": "MA",
+          "pct": 11.0
+        },
+        {
+          "state": "NY",
+          "pct": 8.1
+        }
+      ],
+      "placement_year": 2024
     },
     {
       "id": "rutgers-law-school",
@@ -16095,7 +18504,22 @@
       "scorecard_median_debt": null,
       "scorecard_debt_monthly": null,
       "scorecard_earn_1yr": null,
-      "scorecard_earn_4yr": null
+      "scorecard_earn_4yr": null,
+      "placement_states": [
+        {
+          "state": "NJ",
+          "pct": 63.2
+        },
+        {
+          "state": "NY",
+          "pct": 11.4
+        },
+        {
+          "state": "PA",
+          "pct": 8.9
+        }
+      ],
+      "placement_year": 2024
     },
     {
       "id": "saint-louis-university-school-of-law",
@@ -16176,7 +18600,22 @@
       "scorecard_median_debt": 99458,
       "scorecard_debt_monthly": 1131,
       "scorecard_earn_1yr": 71391,
-      "scorecard_earn_4yr": 93029
+      "scorecard_earn_4yr": 93029,
+      "placement_states": [
+        {
+          "state": "MO",
+          "pct": 62.7
+        },
+        {
+          "state": "IL",
+          "pct": 10.8
+        },
+        {
+          "state": "NY",
+          "pct": 3.2
+        }
+      ],
+      "placement_year": 2024
     },
     {
       "id": "samford-university-cumberland-school-of-law",
@@ -16273,7 +18712,22 @@
       "scorecard_median_debt": null,
       "scorecard_debt_monthly": null,
       "scorecard_earn_1yr": null,
-      "scorecard_earn_4yr": null
+      "scorecard_earn_4yr": null,
+      "placement_states": [
+        {
+          "state": "AL",
+          "pct": 65.8
+        },
+        {
+          "state": "FL",
+          "pct": 8.4
+        },
+        {
+          "state": "GA",
+          "pct": 5.8
+        }
+      ],
+      "placement_year": 2024
     },
     {
       "id": "university-of-san-francisco-school-of-law",
@@ -16378,7 +18832,22 @@
       "scorecard_median_debt": 169229,
       "scorecard_debt_monthly": 1925,
       "scorecard_earn_1yr": 75635,
-      "scorecard_earn_4yr": null
+      "scorecard_earn_4yr": null,
+      "placement_states": [
+        {
+          "state": "CA",
+          "pct": 74.2
+        },
+        {
+          "state": "DC",
+          "pct": 1.7
+        },
+        {
+          "state": "WA",
+          "pct": 1.7
+        }
+      ],
+      "placement_year": 2024
     },
     {
       "id": "santa-clara-university-school-of-law",
@@ -16508,7 +18977,22 @@
       "scorecard_median_debt": 180127,
       "scorecard_debt_monthly": 2049,
       "scorecard_earn_1yr": 79949,
-      "scorecard_earn_4yr": 148599
+      "scorecard_earn_4yr": 148599,
+      "placement_states": [
+        {
+          "state": "CA",
+          "pct": 79.2
+        },
+        {
+          "state": "OH",
+          "pct": 1.0
+        },
+        {
+          "state": "TX",
+          "pct": 1.0
+        }
+      ],
+      "placement_year": 2024
     },
     {
       "id": "seattle-university-school-of-law",
@@ -16654,7 +19138,22 @@
       "scorecard_median_debt": 144542,
       "scorecard_debt_monthly": 1644,
       "scorecard_earn_1yr": 74248,
-      "scorecard_earn_4yr": 105471
+      "scorecard_earn_4yr": 105471,
+      "placement_states": [
+        {
+          "state": "WA",
+          "pct": 78.6
+        },
+        {
+          "state": "CA",
+          "pct": 2.9
+        },
+        {
+          "state": "DC",
+          "pct": 1.5
+        }
+      ],
+      "placement_year": 2024
     },
     {
       "id": "university-of-south-carolina-joseph-f-rice-school-of-law",
@@ -16718,7 +19217,22 @@
       "scorecard_median_debt": 115354,
       "scorecard_debt_monthly": 1312,
       "scorecard_earn_1yr": 59216,
-      "scorecard_earn_4yr": 93806
+      "scorecard_earn_4yr": 93806,
+      "placement_states": [
+        {
+          "state": "SC",
+          "pct": 70.8
+        },
+        {
+          "state": "NC",
+          "pct": 6.4
+        },
+        {
+          "state": "GA",
+          "pct": 4.5
+        }
+      ],
+      "placement_year": 2024
     },
     {
       "id": "university-of-south-dakota-knudson-school-of-law",
@@ -16782,7 +19296,22 @@
       "scorecard_median_debt": null,
       "scorecard_debt_monthly": null,
       "scorecard_earn_1yr": null,
-      "scorecard_earn_4yr": 83195
+      "scorecard_earn_4yr": 83195,
+      "placement_states": [
+        {
+          "state": "SD",
+          "pct": 61.3
+        },
+        {
+          "state": "IA",
+          "pct": 5.3
+        },
+        {
+          "state": "CO",
+          "pct": 4.0
+        }
+      ],
+      "placement_year": 2024
     },
     {
       "id": "south-texas-college-of-law-houston",
@@ -16887,7 +19416,22 @@
       "scorecard_median_debt": 142976,
       "scorecard_debt_monthly": 1626,
       "scorecard_earn_1yr": 73069,
-      "scorecard_earn_4yr": 108296
+      "scorecard_earn_4yr": 108296,
+      "placement_states": [
+        {
+          "state": "TX",
+          "pct": 89.5
+        },
+        {
+          "state": "CO",
+          "pct": 0.7
+        },
+        {
+          "state": "VA",
+          "pct": 0.7
+        }
+      ],
+      "placement_year": 2024
     },
     {
       "id": "southern-illinois-university-school-of-law",
@@ -16992,7 +19536,22 @@
       "scorecard_median_debt": 91500,
       "scorecard_debt_monthly": 1041,
       "scorecard_earn_1yr": 54507,
-      "scorecard_earn_4yr": 79658
+      "scorecard_earn_4yr": 79658,
+      "placement_states": [
+        {
+          "state": "IL",
+          "pct": 51.2
+        },
+        {
+          "state": "MO",
+          "pct": 14.3
+        },
+        {
+          "state": "IN",
+          "pct": 4.8
+        }
+      ],
+      "placement_year": 2024
     },
     {
       "id": "southern-university-law-center",
@@ -17097,7 +19656,22 @@
       "scorecard_median_debt": 118010,
       "scorecard_debt_monthly": 1342,
       "scorecard_earn_1yr": 51071,
-      "scorecard_earn_4yr": 67462
+      "scorecard_earn_4yr": 67462,
+      "placement_states": [
+        {
+          "state": "LA",
+          "pct": 39.8
+        },
+        {
+          "state": "TX",
+          "pct": 11.1
+        },
+        {
+          "state": "DC",
+          "pct": 3.8
+        }
+      ],
+      "placement_year": 2024
     },
     {
       "id": "southwestern-law-school",
@@ -17178,7 +19752,22 @@
       "scorecard_median_debt": 203702,
       "scorecard_debt_monthly": 2317,
       "scorecard_earn_1yr": 67597,
-      "scorecard_earn_4yr": 108350
+      "scorecard_earn_4yr": 108350,
+      "placement_states": [
+        {
+          "state": "CA",
+          "pct": 76.6
+        },
+        {
+          "state": "NV",
+          "pct": 0.7
+        },
+        {
+          "state": "TX",
+          "pct": 0.7
+        }
+      ],
+      "placement_year": 2024
     },
     {
       "id": "st-mary-s-university-school-of-law",
@@ -17242,7 +19831,22 @@
       "scorecard_median_debt": 145002,
       "scorecard_debt_monthly": 1649,
       "scorecard_earn_1yr": 61615,
-      "scorecard_earn_4yr": 87375
+      "scorecard_earn_4yr": 87375,
+      "placement_states": [
+        {
+          "state": "TX",
+          "pct": 80.7
+        },
+        {
+          "state": "CO",
+          "pct": 1.2
+        },
+        {
+          "state": "CA",
+          "pct": 0.8
+        }
+      ],
+      "placement_year": 2024
     },
     {
       "id": "st-thomas-university-college-of-law",
@@ -17339,7 +19943,22 @@
       "scorecard_median_debt": null,
       "scorecard_debt_monthly": null,
       "scorecard_earn_1yr": null,
-      "scorecard_earn_4yr": null
+      "scorecard_earn_4yr": null,
+      "placement_states": [
+        {
+          "state": "FL",
+          "pct": 75.5
+        },
+        {
+          "state": "CA",
+          "pct": 0.8
+        },
+        {
+          "state": "NJ",
+          "pct": 0.8
+        }
+      ],
+      "placement_year": 2024
     },
     {
       "id": "university-of-st-thomas-school-of-law",
@@ -17440,7 +20059,22 @@
       "scorecard_median_debt": 74968,
       "scorecard_debt_monthly": 853,
       "scorecard_earn_1yr": 65744,
-      "scorecard_earn_4yr": 89706
+      "scorecard_earn_4yr": 89706,
+      "placement_states": [
+        {
+          "state": "MN",
+          "pct": 79.9
+        },
+        {
+          "state": "WI",
+          "pct": 3.1
+        },
+        {
+          "state": "CO",
+          "pct": 1.9
+        }
+      ],
+      "placement_year": 2024
     },
     {
       "id": "stetson-university-college-of-law",
@@ -17554,7 +20188,22 @@
       "scorecard_median_debt": 142533,
       "scorecard_debt_monthly": 1621,
       "scorecard_earn_1yr": 63235,
-      "scorecard_earn_4yr": 96451
+      "scorecard_earn_4yr": 96451,
+      "placement_states": [
+        {
+          "state": "FL",
+          "pct": 77.9
+        },
+        {
+          "state": "CA",
+          "pct": 1.4
+        },
+        {
+          "state": "DC",
+          "pct": 1.4
+        }
+      ],
+      "placement_year": 2024
     },
     {
       "id": "suffolk-university-law-school",
@@ -17627,7 +20276,22 @@
       "scorecard_median_debt": null,
       "scorecard_debt_monthly": null,
       "scorecard_earn_1yr": null,
-      "scorecard_earn_4yr": null
+      "scorecard_earn_4yr": null,
+      "placement_states": [
+        {
+          "state": "MA",
+          "pct": 74.9
+        },
+        {
+          "state": "NY",
+          "pct": 3.2
+        },
+        {
+          "state": "RI",
+          "pct": 1.7
+        }
+      ],
+      "placement_year": 2024
     },
     {
       "id": "syracuse-university-college-of-law",
@@ -17704,7 +20368,22 @@
       "scorecard_median_debt": 113050,
       "scorecard_debt_monthly": 1286,
       "scorecard_earn_1yr": 67081,
-      "scorecard_earn_4yr": 97648
+      "scorecard_earn_4yr": 97648,
+      "placement_states": [
+        {
+          "state": "NY",
+          "pct": 46.5
+        },
+        {
+          "state": "DC",
+          "pct": 5.9
+        },
+        {
+          "state": "CA",
+          "pct": 5.0
+        }
+      ],
+      "placement_year": 2024
     },
     {
       "id": "texas-southern-university-thurgood-marshall-school-of-law",
@@ -17809,7 +20488,22 @@
       "scorecard_median_debt": null,
       "scorecard_debt_monthly": null,
       "scorecard_earn_1yr": null,
-      "scorecard_earn_4yr": null
+      "scorecard_earn_4yr": null,
+      "placement_states": [
+        {
+          "state": "TX",
+          "pct": 57.9
+        },
+        {
+          "state": "MD",
+          "pct": 1.6
+        },
+        {
+          "state": "CA",
+          "pct": 1.1
+        }
+      ],
+      "placement_year": 2024
     },
     {
       "id": "texas-tech-university-school-of-law",
@@ -17894,7 +20588,22 @@
       "scorecard_median_debt": 86163,
       "scorecard_debt_monthly": 980,
       "scorecard_earn_1yr": 72448,
-      "scorecard_earn_4yr": 100716
+      "scorecard_earn_4yr": 100716,
+      "placement_states": [
+        {
+          "state": "TX",
+          "pct": 83.4
+        },
+        {
+          "state": "CO",
+          "pct": 2.1
+        },
+        {
+          "state": "NM",
+          "pct": 2.1
+        }
+      ],
+      "placement_year": 2024
     },
     {
       "id": "university-of-texas-school-of-law",
@@ -17999,7 +20708,22 @@
       "scorecard_median_debt": null,
       "scorecard_debt_monthly": null,
       "scorecard_earn_1yr": null,
-      "scorecard_earn_4yr": null
+      "scorecard_earn_4yr": null,
+      "placement_states": [
+        {
+          "state": "TX",
+          "pct": 70.4
+        },
+        {
+          "state": "NY",
+          "pct": 7.3
+        },
+        {
+          "state": "DC",
+          "pct": 5.8
+        }
+      ],
+      "placement_year": 2024
     },
     {
       "id": "university-of-toledo-college-of-law",
@@ -18104,7 +20828,22 @@
       "scorecard_median_debt": 76000,
       "scorecard_debt_monthly": 865,
       "scorecard_earn_1yr": 57931,
-      "scorecard_earn_4yr": 85086
+      "scorecard_earn_4yr": 85086,
+      "placement_states": [
+        {
+          "state": "OH",
+          "pct": 39.2
+        },
+        {
+          "state": "MI",
+          "pct": 25.6
+        },
+        {
+          "state": "NY",
+          "pct": 4.0
+        }
+      ],
+      "placement_year": 2024
     },
     {
       "id": "touro-university-jacob-d-fuchsberg-law-center",
@@ -18218,7 +20957,22 @@
       "scorecard_median_debt": 132011,
       "scorecard_debt_monthly": 1502,
       "scorecard_earn_1yr": 61293,
-      "scorecard_earn_4yr": 86767
+      "scorecard_earn_4yr": 86767,
+      "placement_states": [
+        {
+          "state": "NY",
+          "pct": 81.6
+        },
+        {
+          "state": "NJ",
+          "pct": 4.8
+        },
+        {
+          "state": "DC",
+          "pct": 1.4
+        }
+      ],
+      "placement_year": 2024
     },
     {
       "id": "university-of-tulsa-college-of-law",
@@ -18323,7 +21077,22 @@
       "scorecard_median_debt": 90365,
       "scorecard_debt_monthly": 1028,
       "scorecard_earn_1yr": 60334,
-      "scorecard_earn_4yr": 86293
+      "scorecard_earn_4yr": 86293,
+      "placement_states": [
+        {
+          "state": "OK",
+          "pct": 65.3
+        },
+        {
+          "state": "TX",
+          "pct": 16.1
+        },
+        {
+          "state": "IL",
+          "pct": 1.6
+        }
+      ],
+      "placement_year": 2024
     },
     {
       "id": "vermont-law-and-graduate-school",
@@ -18469,7 +21238,22 @@
       "scorecard_median_debt": 139540,
       "scorecard_debt_monthly": 1587,
       "scorecard_earn_1yr": 50723,
-      "scorecard_earn_4yr": 77550
+      "scorecard_earn_4yr": 77550,
+      "placement_states": [
+        {
+          "state": "VT",
+          "pct": 12.3
+        },
+        {
+          "state": "MD",
+          "pct": 7.5
+        },
+        {
+          "state": "NY",
+          "pct": 7.5
+        }
+      ],
+      "placement_year": 2024
     },
     {
       "id": "washburn-university-school-of-law",
@@ -18546,7 +21330,22 @@
       "scorecard_median_debt": 77330,
       "scorecard_debt_monthly": 880,
       "scorecard_earn_1yr": 60606,
-      "scorecard_earn_4yr": 83608
+      "scorecard_earn_4yr": 83608,
+      "placement_states": [
+        {
+          "state": "KS",
+          "pct": 70.5
+        },
+        {
+          "state": "MO",
+          "pct": 8.4
+        },
+        {
+          "state": "CO",
+          "pct": 4.2
+        }
+      ],
+      "placement_year": 2024
     },
     {
       "id": "west-virginia-university-college-of-law",
@@ -18610,7 +21409,22 @@
       "scorecard_median_debt": 93735,
       "scorecard_debt_monthly": 1066,
       "scorecard_earn_1yr": 58881,
-      "scorecard_earn_4yr": 78497
+      "scorecard_earn_4yr": 78497,
+      "placement_states": [
+        {
+          "state": "WV",
+          "pct": 58.9
+        },
+        {
+          "state": "PA",
+          "pct": 7.5
+        },
+        {
+          "state": "FL",
+          "pct": 3.7
+        }
+      ],
+      "placement_year": 2024
     },
     {
       "id": "western-new-england-university-school-of-law",
@@ -18715,7 +21529,22 @@
       "scorecard_median_debt": null,
       "scorecard_debt_monthly": null,
       "scorecard_earn_1yr": null,
-      "scorecard_earn_4yr": null
+      "scorecard_earn_4yr": null,
+      "placement_states": [
+        {
+          "state": "MA",
+          "pct": 57.3
+        },
+        {
+          "state": "CT",
+          "pct": 19.1
+        },
+        {
+          "state": "NY",
+          "pct": 4.5
+        }
+      ],
+      "placement_year": 2024
     },
     {
       "id": "western-state-college-of-law-at-westcliff-university",
@@ -18820,7 +21649,22 @@
       "scorecard_median_debt": 45240,
       "scorecard_debt_monthly": 515,
       "scorecard_earn_1yr": 58618,
-      "scorecard_earn_4yr": null
+      "scorecard_earn_4yr": null,
+      "placement_states": [
+        {
+          "state": "CA",
+          "pct": 89.5
+        },
+        {
+          "state": "MD",
+          "pct": 1.3
+        },
+        {
+          "state": "NV",
+          "pct": 1.3
+        }
+      ],
+      "placement_year": 2024
     },
     {
       "id": "widener-university-commonwealth-law-school",
@@ -18925,7 +21769,22 @@
       "scorecard_median_debt": null,
       "scorecard_debt_monthly": null,
       "scorecard_earn_1yr": null,
-      "scorecard_earn_4yr": null
+      "scorecard_earn_4yr": null,
+      "placement_states": [
+        {
+          "state": "PA",
+          "pct": 64.9
+        },
+        {
+          "state": "NY",
+          "pct": 5.2
+        },
+        {
+          "state": "DC",
+          "pct": 3.1
+        }
+      ],
+      "placement_year": 2024
     },
     {
       "id": "widener-university-delaware-law-school",
@@ -19035,7 +21894,22 @@
       "scorecard_median_debt": 131126,
       "scorecard_debt_monthly": 1492,
       "scorecard_earn_1yr": 55829,
-      "scorecard_earn_4yr": 83799
+      "scorecard_earn_4yr": 83799,
+      "placement_states": [
+        {
+          "state": "PA",
+          "pct": 36.7
+        },
+        {
+          "state": "DE",
+          "pct": 23.0
+        },
+        {
+          "state": "NJ",
+          "pct": 22.4
+        }
+      ],
+      "placement_year": 2024
     },
     {
       "id": "willamette-university-college-of-law",
@@ -19161,7 +22035,22 @@
       "scorecard_median_debt": 162945,
       "scorecard_debt_monthly": 1854,
       "scorecard_earn_1yr": 69938,
-      "scorecard_earn_4yr": 100524
+      "scorecard_earn_4yr": 100524,
+      "placement_states": [
+        {
+          "state": "OR",
+          "pct": 55.4
+        },
+        {
+          "state": "WA",
+          "pct": 11.6
+        },
+        {
+          "state": "CA",
+          "pct": 3.6
+        }
+      ],
+      "placement_year": 2024
     },
     {
       "id": "wilmington-university-school-of-law",
@@ -19268,7 +22157,9 @@
       "scorecard_median_debt": null,
       "scorecard_debt_monthly": null,
       "scorecard_earn_1yr": null,
-      "scorecard_earn_4yr": null
+      "scorecard_earn_4yr": null,
+      "placement_states": null,
+      "placement_year": null
     },
     {
       "id": "university-of-wyoming-college-of-law",
@@ -19378,7 +22269,22 @@
       "scorecard_median_debt": 70488,
       "scorecard_debt_monthly": 802,
       "scorecard_earn_1yr": 63173,
-      "scorecard_earn_4yr": 81644
+      "scorecard_earn_4yr": 81644,
+      "placement_states": [
+        {
+          "state": "WY",
+          "pct": 29.1
+        },
+        {
+          "state": "CO",
+          "pct": 23.3
+        },
+        {
+          "state": "AK",
+          "pct": 3.5
+        }
+      ],
+      "placement_year": 2024
     }
   ]
 }

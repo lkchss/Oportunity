@@ -106,6 +106,8 @@ function adaptRaw(s) {
     size, feeds: s.target_states || [],
     scDebt: s.scorecard_median_debt, scEarn: s.scorecard_earn_4yr,
     alumni: s.notable_alumni || [],
+    placementStates: s.placement_states || null,
+    placementYear: s.placement_year || null,
   };
 }
 
