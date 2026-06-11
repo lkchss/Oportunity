@@ -215,6 +215,57 @@ input[type="range"]::-moz-range-thumb {
 }
 .fin-body { margin-top: 14px; padding: 16px; border: 1px solid var(--line); border-radius: 10px; background: var(--surface); }
 
+/* ---------- scenarios panel ---------- */
+.sc-panel {
+  margin-top: 20px; border: 1px solid var(--line); border-radius: 10px;
+  background: var(--surface); overflow: hidden;
+}
+.sc-bar {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 8px 12px; gap: 10px;
+}
+.sc-label {
+  font-size: 11px; font-weight: 600; color: var(--soft);
+  text-transform: uppercase; letter-spacing: 0.08em;
+}
+.sc-toggle {
+  font-size: 12px; font-weight: 600; color: var(--soft);
+  display: flex; align-items: center; gap: 5px;
+  text-transform: uppercase; letter-spacing: 0.07em;
+}
+.sc-toggle-arrow { font-size: 10px; }
+.sc-count {
+  background: #efeadd; color: var(--soft); border-radius: 999px;
+  font-size: 10px; font-weight: 700; padding: 1px 7px;
+}
+.sc-save-area { display: flex; align-items: center; gap: 7px; }
+.sc-name-row { display: flex; align-items: center; gap: 6px; }
+.sc-name-input {
+  font: inherit; font-size: 13px; padding: 4px 9px;
+  border: 1px solid var(--accent); border-radius: 6px;
+  background: var(--surface); color: var(--ink);
+  width: 180px;
+}
+.sc-name-input:focus { outline: 2px solid var(--accent-soft); }
+.sc-save-btn { font-size: 12px; color: var(--soft); }
+.sc-list {
+  list-style: none; margin: 0; padding: 0 12px 8px;
+  border-top: 1px solid var(--line);
+}
+.sc-item {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 5px 0; border-bottom: 1px solid var(--line);
+}
+.sc-item:last-child { border-bottom: none; }
+.sc-load-btn {
+  border: none; background: none; padding: 0 4px; cursor: pointer;
+  font: inherit; font-size: 13px; font-weight: 500; color: var(--ink);
+  text-align: left; flex: 1;
+}
+.sc-load-btn:hover { color: var(--accent-deep); text-decoration: underline; }
+.sc-del { font-size: 11px; color: var(--faint); flex: none; }
+.sc-del:hover { color: var(--hard); }
+
 /* ---------- results: shared header ---------- */
 .results-head { display: flex; justify-content: space-between; align-items: flex-end; gap: 28px; padding: 34px 0 0; }
 .results-head p { margin: 8px 0 0; font-size: 14.5px; color: var(--soft); max-width: 540px; }
