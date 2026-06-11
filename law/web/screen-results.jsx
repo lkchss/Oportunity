@@ -334,7 +334,7 @@ function SaveMenu({ results, pure }) {
 
 }
 
-function ResultsScreen({ results, plan, profile, whatIf, setWhatIf, onOpen, onEditProfile, compareIds, onToggleCompare, onClearCompare, onCompare, rview, setRview }) {
+function ResultsScreen({ results, plan, profile, whatIf, setWhatIf, onOpen, onEditProfile, compareIds, onToggleCompare, onClearCompare, onCompare, rview, setRview, tweakOpen, onTweakToggle }) {
   const [pure, setPure] = React.useState(false);
   const [whatIfOpen, setWhatIfOpen] = React.useState(false);
   const goalLabel = GOAL_LABEL[profile.goal] || "BigLaw";
@@ -372,6 +372,14 @@ function ResultsScreen({ results, plan, profile, whatIf, setWhatIf, onOpen, onEd
       <div className="results-toolbar">
         <Seg options={viewOpts} value={view} onChange={setRview} />
         <span className="spacer"></span>
+        {onTweakToggle &&
+          <button className={`twp-trigger${tweakOpen ? " active" : ""}`}
+            aria-pressed={!!tweakOpen} onClick={onTweakToggle}
+            title="Adjust how much each score dimension influences the ranking">
+            <span className="dot"></span>
+            Adjust weights
+          </button>
+        }
         {!profile.noLsat && view !== "transfers" && (whatIfOpen ?
         <span className="spin" title="What-if LSAT">
             <span className="spin-val" style={whatIf > 0 ? {} : { color: "var(--soft)" }}>{Math.min(profile.lsat + whatIf, 180)}</span>
