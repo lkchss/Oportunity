@@ -1,13 +1,3680 @@
 {
-  "25": {
-    "school_name": "YALE UNIVERSITY",
-    "total_grads": 0,
+  "1": {
+    "school_name": "SAMFORD UNIVERSITY",
+    "total_grads": 155,
     "locations": [
       {
-        "state": "NY",
-        "count": 0
+        "state": "AL",
+        "count": 102
+      },
+      {
+        "state": "FL",
+        "count": 13
+      },
+      {
+        "state": "GA",
+        "count": 9
       }
     ],
     "foreign": 0
+  },
+  "2": {
+    "school_name": "ALABAMA, THE UNIVERSITY OF",
+    "total_grads": 154,
+    "locations": [
+      {
+        "state": "AL",
+        "count": 70
+      },
+      {
+        "state": "DC",
+        "count": 9
+      },
+      {
+        "state": "TX",
+        "count": 9
+      }
+    ],
+    "foreign": 1
+  },
+  "3": {
+    "school_name": "ARIZONA STATE UNIVERSITY",
+    "total_grads": 291,
+    "locations": [
+      {
+        "state": "AZ",
+        "count": 198
+      },
+      {
+        "state": "CA",
+        "count": 18
+      },
+      {
+        "state": "DC",
+        "count": 11
+      }
+    ],
+    "foreign": 5
+  },
+  "4": {
+    "school_name": "ARIZONA, THE UNIVERSITY OF",
+    "total_grads": 120,
+    "locations": [
+      {
+        "state": "AZ",
+        "count": 68
+      },
+      {
+        "state": "CA",
+        "count": 6
+      },
+      {
+        "state": "OR",
+        "count": 4
+      }
+    ],
+    "foreign": 1
+  },
+  "5": {
+    "school_name": "ARKANSAS, UNIVERSITY OF",
+    "total_grads": 124,
+    "locations": [
+      {
+        "state": "AR",
+        "count": 74
+      },
+      {
+        "state": "MO",
+        "count": 9
+      },
+      {
+        "state": "TX",
+        "count": 9
+      }
+    ],
+    "foreign": 0
+  },
+  "6": {
+    "school_name": "ARKANSAS AT LITTLE ROCK, UNIVERSITY OF",
+    "total_grads": 138,
+    "locations": [
+      {
+        "state": "AR",
+        "count": 86
+      },
+      {
+        "state": "MO",
+        "count": 5
+      },
+      {
+        "state": "TX",
+        "count": 4
+      }
+    ],
+    "foreign": 1
+  },
+  "7": {
+    "school_name": "CALIFORNIA-BERKELEY, UNIVERSITY OF",
+    "total_grads": 408,
+    "locations": [
+      {
+        "state": "CA",
+        "count": 244
+      },
+      {
+        "state": "NY",
+        "count": 59
+      },
+      {
+        "state": "DC",
+        "count": 26
+      }
+    ],
+    "foreign": 2
+  },
+  "8": {
+    "school_name": "CALIFORNIA-DAVIS, UNIVERSITY OF",
+    "total_grads": 243,
+    "locations": [
+      {
+        "state": "CA",
+        "count": 192
+      },
+      {
+        "state": "DC",
+        "count": 7
+      },
+      {
+        "state": "AK",
+        "count": 4
+      }
+    ],
+    "foreign": 4
+  },
+  "9": {
+    "school_name": "CALIFORNIA-LOS ANGELES, UNIVERSITY OF",
+    "total_grads": 372,
+    "locations": [
+      {
+        "state": "CA",
+        "count": 282
+      },
+      {
+        "state": "NY",
+        "count": 37
+      },
+      {
+        "state": "WA",
+        "count": 6
+      }
+    ],
+    "foreign": 5
+  },
+  "10": {
+    "school_name": "LOYOLA MARYMOUNT UNIVERSITY-LOS ANGELES",
+    "total_grads": 336,
+    "locations": [
+      {
+        "state": "CA",
+        "count": 305
+      },
+      {
+        "state": "DC",
+        "count": 3
+      },
+      {
+        "state": "NY",
+        "count": 2
+      }
+    ],
+    "foreign": 1
+  },
+  "11": {
+    "school_name": "SOUTHWESTERN LAW SCHOOL",
+    "total_grads": 290,
+    "locations": [
+      {
+        "state": "CA",
+        "count": 222
+      },
+      {
+        "state": "NV",
+        "count": 2
+      },
+      {
+        "state": "TX",
+        "count": 2
+      }
+    ],
+    "foreign": 0
+  },
+  "12": {
+    "school_name": "SOUTHERN CALIFORNIA, UNIVERSITY OF",
+    "total_grads": 221,
+    "locations": [
+      {
+        "state": "CA",
+        "count": 172
+      },
+      {
+        "state": "NY",
+        "count": 23
+      },
+      {
+        "state": "TX",
+        "count": 4
+      }
+    ],
+    "foreign": 1
+  },
+  "13": {
+    "school_name": "PACIFIC, UNIVERSITY OF THE",
+    "total_grads": 146,
+    "locations": [
+      {
+        "state": "CA",
+        "count": 122
+      },
+      {
+        "state": "DC",
+        "count": 2
+      },
+      {
+        "state": "FL",
+        "count": 1
+      }
+    ],
+    "foreign": 1
+  },
+  "14": {
+    "school_name": "CALIFORNIA WESTERN SCHOOL OF LAW",
+    "total_grads": 216,
+    "locations": [
+      {
+        "state": "CA",
+        "count": 151
+      },
+      {
+        "state": "AZ",
+        "count": 5
+      },
+      {
+        "state": "NV",
+        "count": 5
+      }
+    ],
+    "foreign": 1
+  },
+  "15": {
+    "school_name": "SAN DIEGO, UNIVERSITY OF",
+    "total_grads": 249,
+    "locations": [
+      {
+        "state": "CA",
+        "count": 220
+      },
+      {
+        "state": "CO",
+        "count": 3
+      },
+      {
+        "state": "DC",
+        "count": 3
+      }
+    ],
+    "foreign": 0
+  },
+  "16": {
+    "school_name": "CALIFORNIA-SAN FRANCISCO, UNIVERSITY OF",
+    "total_grads": 366,
+    "locations": [
+      {
+        "state": "CA",
+        "count": 316
+      },
+      {
+        "state": "NY",
+        "count": 6
+      },
+      {
+        "state": "DC",
+        "count": 4
+      }
+    ],
+    "foreign": 3
+  },
+  "18": {
+    "school_name": "SAN FRANCISCO, UNIVERSITY OF",
+    "total_grads": 120,
+    "locations": [
+      {
+        "state": "CA",
+        "count": 89
+      },
+      {
+        "state": "DC",
+        "count": 2
+      },
+      {
+        "state": "WA",
+        "count": 2
+      }
+    ],
+    "foreign": 1
+  },
+  "19": {
+    "school_name": "PEPPERDINE UNIVERSITY",
+    "total_grads": 197,
+    "locations": [
+      {
+        "state": "CA",
+        "count": 143
+      },
+      {
+        "state": "TX",
+        "count": 11
+      },
+      {
+        "state": "CO",
+        "count": 4
+      }
+    ],
+    "foreign": 2
+  },
+  "20": {
+    "school_name": "SANTA CLARA UNIVERSITY",
+    "total_grads": 202,
+    "locations": [
+      {
+        "state": "CA",
+        "count": 160
+      },
+      {
+        "state": "OH",
+        "count": 2
+      },
+      {
+        "state": "TX",
+        "count": 2
+      }
+    ],
+    "foreign": 1
+  },
+  "21": {
+    "school_name": "STANFORD UNIVERSITY",
+    "total_grads": 199,
+    "locations": [
+      {
+        "state": "CA",
+        "count": 69
+      },
+      {
+        "state": "NY",
+        "count": 37
+      },
+      {
+        "state": "DC",
+        "count": 28
+      }
+    ],
+    "foreign": 2
+  },
+  "22": {
+    "school_name": "COLORADO, UNIVERSITY OF",
+    "total_grads": 168,
+    "locations": [
+      {
+        "state": "CO",
+        "count": 121
+      },
+      {
+        "state": "DC",
+        "count": 7
+      },
+      {
+        "state": "CA",
+        "count": 6
+      }
+    ],
+    "foreign": 0
+  },
+  "23": {
+    "school_name": "DENVER, UNIVERSITY OF",
+    "total_grads": 232,
+    "locations": [
+      {
+        "state": "CO",
+        "count": 175
+      },
+      {
+        "state": "DC",
+        "count": 4
+      },
+      {
+        "state": "IL",
+        "count": 4
+      }
+    ],
+    "foreign": 0
+  },
+  "24": {
+    "school_name": "CONNECTICUT, UNIVERSITY OF",
+    "total_grads": 150,
+    "locations": [
+      {
+        "state": "CT",
+        "count": 95
+      },
+      {
+        "state": "NY",
+        "count": 18
+      },
+      {
+        "state": "MA",
+        "count": 11
+      }
+    ],
+    "foreign": 1
+  },
+  "25": {
+    "school_name": "YALE UNIVERSITY",
+    "total_grads": 215,
+    "locations": [
+      {
+        "state": "NY",
+        "count": 68
+      },
+      {
+        "state": "DC",
+        "count": 44
+      },
+      {
+        "state": "CA",
+        "count": 21
+      }
+    ],
+    "foreign": 4
+  },
+  "26": {
+    "school_name": "WIDENER UNIVERSITY DELAWARE LAW SCHOOL",
+    "total_grads": 196,
+    "locations": [
+      {
+        "state": "PA",
+        "count": 72
+      },
+      {
+        "state": "DE",
+        "count": 45
+      },
+      {
+        "state": "NJ",
+        "count": 44
+      }
+    ],
+    "foreign": 0
+  },
+  "27": {
+    "school_name": "AMERICAN UNIVERSITY",
+    "total_grads": 382,
+    "locations": [
+      {
+        "state": "DC",
+        "count": 146
+      },
+      {
+        "state": "MD",
+        "count": 51
+      },
+      {
+        "state": "NY",
+        "count": 27
+      }
+    ],
+    "foreign": 4
+  },
+  "29": {
+    "school_name": "CATHOLIC UNIVERSITY OF AMERICA, THE",
+    "total_grads": 126,
+    "locations": [
+      {
+        "state": "DC",
+        "count": 47
+      },
+      {
+        "state": "MD",
+        "count": 23
+      },
+      {
+        "state": "VA",
+        "count": 17
+      }
+    ],
+    "foreign": 0
+  },
+  "30": {
+    "school_name": "GEORGETOWN UNIVERSITY",
+    "total_grads": 661,
+    "locations": [
+      {
+        "state": "DC",
+        "count": 255
+      },
+      {
+        "state": "NY",
+        "count": 163
+      },
+      {
+        "state": "CA",
+        "count": 57
+      }
+    ],
+    "foreign": 10
+  },
+  "31": {
+    "school_name": "GEORGE WASHINGTON UNIVERSITY, THE",
+    "total_grads": 550,
+    "locations": [
+      {
+        "state": "DC",
+        "count": 249
+      },
+      {
+        "state": "NY",
+        "count": 84
+      },
+      {
+        "state": "VA",
+        "count": 61
+      }
+    ],
+    "foreign": 9
+  },
+  "32": {
+    "school_name": "HOWARD UNIVERSITY",
+    "total_grads": 147,
+    "locations": [
+      {
+        "state": "DC",
+        "count": 46
+      },
+      {
+        "state": "NY",
+        "count": 34
+      },
+      {
+        "state": "MD",
+        "count": 12
+      }
+    ],
+    "foreign": 1
+  },
+  "33": {
+    "school_name": "MIAMI, UNIVERSITY OF",
+    "total_grads": 404,
+    "locations": [
+      {
+        "state": "FL",
+        "count": 283
+      },
+      {
+        "state": "NY",
+        "count": 25
+      },
+      {
+        "state": "CA",
+        "count": 9
+      }
+    ],
+    "foreign": 1
+  },
+  "34": {
+    "school_name": "FLORIDA, UNIVERSITY OF",
+    "total_grads": 264,
+    "locations": [
+      {
+        "state": "FL",
+        "count": 164
+      },
+      {
+        "state": "NY",
+        "count": 16
+      },
+      {
+        "state": "DC",
+        "count": 13
+      }
+    ],
+    "foreign": 2
+  },
+  "35": {
+    "school_name": "STETSON UNIVERSITY",
+    "total_grads": 285,
+    "locations": [
+      {
+        "state": "FL",
+        "count": 222
+      },
+      {
+        "state": "CA",
+        "count": 4
+      },
+      {
+        "state": "DC",
+        "count": 4
+      }
+    ],
+    "foreign": 2
+  },
+  "36": {
+    "school_name": "FLORIDA STATE UNIVERSITY",
+    "total_grads": 191,
+    "locations": [
+      {
+        "state": "FL",
+        "count": 149
+      },
+      {
+        "state": "AL",
+        "count": 3
+      },
+      {
+        "state": "DC",
+        "count": 3
+      }
+    ],
+    "foreign": 1
+  },
+  "37": {
+    "school_name": "NOVA SOUTHEASTERN UNIVERSITY",
+    "total_grads": 191,
+    "locations": [
+      {
+        "state": "FL",
+        "count": 139
+      },
+      {
+        "state": "NJ",
+        "count": 2
+      },
+      {
+        "state": "CA",
+        "count": 1
+      }
+    ],
+    "foreign": 4
+  },
+  "38": {
+    "school_name": "GEORGIA, UNIVERSITY OF",
+    "total_grads": 189,
+    "locations": [
+      {
+        "state": "GA",
+        "count": 134
+      },
+      {
+        "state": "FL",
+        "count": 6
+      },
+      {
+        "state": "TX",
+        "count": 6
+      }
+    ],
+    "foreign": 0
+  },
+  "39": {
+    "school_name": "EMORY UNIVERSITY",
+    "total_grads": 288,
+    "locations": [
+      {
+        "state": "GA",
+        "count": 123
+      },
+      {
+        "state": "NY",
+        "count": 43
+      },
+      {
+        "state": "TX",
+        "count": 14
+      }
+    ],
+    "foreign": 2
+  },
+  "40": {
+    "school_name": "MERCER UNIVERSITY",
+    "total_grads": 104,
+    "locations": [
+      {
+        "state": "GA",
+        "count": 82
+      },
+      {
+        "state": "FL",
+        "count": 6
+      },
+      {
+        "state": "NC",
+        "count": 3
+      }
+    ],
+    "foreign": 0
+  },
+  "41": {
+    "school_name": "HAWAII, UNIVERSITY OF",
+    "total_grads": 96,
+    "locations": [
+      {
+        "state": "HI",
+        "count": 77
+      },
+      {
+        "state": "VA",
+        "count": 3
+      },
+      {
+        "state": "IL",
+        "count": 2
+      }
+    ],
+    "foreign": 0
+  },
+  "42": {
+    "school_name": "IDAHO, UNIVERSITY OF",
+    "total_grads": 120,
+    "locations": [
+      {
+        "state": "ID",
+        "count": 63
+      },
+      {
+        "state": "WA",
+        "count": 17
+      },
+      {
+        "state": "UT",
+        "count": 6
+      }
+    ],
+    "foreign": 0
+  },
+  "43": {
+    "school_name": "SOUTHERN ILLINOIS UNIVERSITY",
+    "total_grads": 84,
+    "locations": [
+      {
+        "state": "IL",
+        "count": 43
+      },
+      {
+        "state": "MO",
+        "count": 12
+      },
+      {
+        "state": "IN",
+        "count": 4
+      }
+    ],
+    "foreign": 0
+  },
+  "44": {
+    "school_name": "ILLINOIS, UNIVERSITY OF",
+    "total_grads": 203,
+    "locations": [
+      {
+        "state": "IL",
+        "count": 135
+      },
+      {
+        "state": "CA",
+        "count": 13
+      },
+      {
+        "state": "TX",
+        "count": 9
+      }
+    ],
+    "foreign": 1
+  },
+  "45": {
+    "school_name": "CHICAGO-KENT, ILLINOIS INSTITUTE OF TECHNOLOGY",
+    "total_grads": 234,
+    "locations": [
+      {
+        "state": "IL",
+        "count": 186
+      },
+      {
+        "state": "CO",
+        "count": 3
+      },
+      {
+        "state": "GA",
+        "count": 3
+      }
+    ],
+    "foreign": 0
+  },
+  "46": {
+    "school_name": "DEPAUL UNIVERSITY",
+    "total_grads": 179,
+    "locations": [
+      {
+        "state": "IL",
+        "count": 132
+      },
+      {
+        "state": "IN",
+        "count": 5
+      },
+      {
+        "state": "MI",
+        "count": 4
+      }
+    ],
+    "foreign": 0
+  },
+  "47": {
+    "school_name": "ILLINOIS-CHICAGO, UNIVERSITY OF",
+    "total_grads": 295,
+    "locations": [
+      {
+        "state": "IL",
+        "count": 219
+      },
+      {
+        "state": "NY",
+        "count": 6
+      },
+      {
+        "state": "CO",
+        "count": 5
+      }
+    ],
+    "foreign": 3
+  },
+  "48": {
+    "school_name": "LOYOLA UNIVERSITY-CHICAGO",
+    "total_grads": 350,
+    "locations": [
+      {
+        "state": "IL",
+        "count": 250
+      },
+      {
+        "state": "CA",
+        "count": 13
+      },
+      {
+        "state": "IN",
+        "count": 9
+      }
+    ],
+    "foreign": 0
+  },
+  "49": {
+    "school_name": "NORTHWESTERN UNIVERSITY",
+    "total_grads": 270,
+    "locations": [
+      {
+        "state": "IL",
+        "count": 119
+      },
+      {
+        "state": "NY",
+        "count": 67
+      },
+      {
+        "state": "CA",
+        "count": 27
+      }
+    ],
+    "foreign": 1
+  },
+  "50": {
+    "school_name": "CHICAGO, THE UNIVERSITY OF",
+    "total_grads": 199,
+    "locations": [
+      {
+        "state": "IL",
+        "count": 48
+      },
+      {
+        "state": "NY",
+        "count": 41
+      },
+      {
+        "state": "CA",
+        "count": 34
+      }
+    ],
+    "foreign": 1
+  },
+  "51": {
+    "school_name": "INDIANA UNIVERSITY-BLOOMINGTON",
+    "total_grads": 198,
+    "locations": [
+      {
+        "state": "IN",
+        "count": 66
+      },
+      {
+        "state": "IL",
+        "count": 27
+      },
+      {
+        "state": "DC",
+        "count": 12
+      }
+    ],
+    "foreign": 8
+  },
+  "52": {
+    "school_name": "INDIANA UNIVERSITY-INDIANAPOLIS",
+    "total_grads": 232,
+    "locations": [
+      {
+        "state": "IN",
+        "count": 191
+      },
+      {
+        "state": "IL",
+        "count": 6
+      },
+      {
+        "state": "FL",
+        "count": 4
+      }
+    ],
+    "foreign": 0
+  },
+  "53": {
+    "school_name": "NOTRE DAME, UNIVERSITY OF",
+    "total_grads": 187,
+    "locations": [
+      {
+        "state": "IL",
+        "count": 41
+      },
+      {
+        "state": "NY",
+        "count": 28
+      },
+      {
+        "state": "IN",
+        "count": 16
+      }
+    ],
+    "foreign": 2
+  },
+  "55": {
+    "school_name": "DRAKE UNIVERSITY",
+    "total_grads": 100,
+    "locations": [
+      {
+        "state": "IA",
+        "count": 72
+      },
+      {
+        "state": "MN",
+        "count": 4
+      },
+      {
+        "state": "MO",
+        "count": 4
+      }
+    ],
+    "foreign": 0
+  },
+  "56": {
+    "school_name": "IOWA, UNIVERSITY OF",
+    "total_grads": 176,
+    "locations": [
+      {
+        "state": "IA",
+        "count": 57
+      },
+      {
+        "state": "IL",
+        "count": 19
+      },
+      {
+        "state": "MN",
+        "count": 10
+      }
+    ],
+    "foreign": 1
+  },
+  "57": {
+    "school_name": "KANSAS, THE UNIVERSITY OF",
+    "total_grads": 118,
+    "locations": [
+      {
+        "state": "KS",
+        "count": 49
+      },
+      {
+        "state": "MO",
+        "count": 33
+      },
+      {
+        "state": "TX",
+        "count": 5
+      }
+    ],
+    "foreign": 0
+  },
+  "58": {
+    "school_name": "WASHBURN UNIVERSITY",
+    "total_grads": 95,
+    "locations": [
+      {
+        "state": "KS",
+        "count": 67
+      },
+      {
+        "state": "MO",
+        "count": 8
+      },
+      {
+        "state": "CO",
+        "count": 4
+      }
+    ],
+    "foreign": 0
+  },
+  "59": {
+    "school_name": "NORTHERN KENTUCKY UNIVERSITY",
+    "total_grads": 124,
+    "locations": [
+      {
+        "state": "KY",
+        "count": 58
+      },
+      {
+        "state": "OH",
+        "count": 51
+      },
+      {
+        "state": "IN",
+        "count": 3
+      }
+    ],
+    "foreign": 0
+  },
+  "60": {
+    "school_name": "KENTUCKY, UNIVERSITY OF",
+    "total_grads": 139,
+    "locations": [
+      {
+        "state": "KY",
+        "count": 83
+      },
+      {
+        "state": "TN",
+        "count": 9
+      },
+      {
+        "state": "IL",
+        "count": 8
+      }
+    ],
+    "foreign": 0
+  },
+  "61": {
+    "school_name": "LOUISVILLE, UNIVERSITY OF",
+    "total_grads": 126,
+    "locations": [
+      {
+        "state": "KY",
+        "count": 81
+      },
+      {
+        "state": "IL",
+        "count": 7
+      },
+      {
+        "state": "IN",
+        "count": 6
+      }
+    ],
+    "foreign": 0
+  },
+  "62": {
+    "school_name": "LOUISIANA STATE UNIVERSITY",
+    "total_grads": 209,
+    "locations": [
+      {
+        "state": "LA",
+        "count": 134
+      },
+      {
+        "state": "TX",
+        "count": 19
+      },
+      {
+        "state": "FL",
+        "count": 5
+      }
+    ],
+    "foreign": 0
+  },
+  "63": {
+    "school_name": "SOUTHERN UNIVERSITY",
+    "total_grads": 261,
+    "locations": [
+      {
+        "state": "LA",
+        "count": 104
+      },
+      {
+        "state": "TX",
+        "count": 29
+      },
+      {
+        "state": "DC",
+        "count": 10
+      }
+    ],
+    "foreign": 0
+  },
+  "64": {
+    "school_name": "LOYOLA UNIVERSITY-NEW ORLEANS",
+    "total_grads": 179,
+    "locations": [
+      {
+        "state": "LA",
+        "count": 117
+      },
+      {
+        "state": "TX",
+        "count": 13
+      },
+      {
+        "state": "GA",
+        "count": 7
+      }
+    ],
+    "foreign": 0
+  },
+  "65": {
+    "school_name": "TULANE UNIVERSITY",
+    "total_grads": 218,
+    "locations": [
+      {
+        "state": "LA",
+        "count": 71
+      },
+      {
+        "state": "NY",
+        "count": 39
+      },
+      {
+        "state": "TX",
+        "count": 27
+      }
+    ],
+    "foreign": 1
+  },
+  "66": {
+    "school_name": "MAINE, UNIVERSITY OF",
+    "total_grads": 82,
+    "locations": [
+      {
+        "state": "ME",
+        "count": 56
+      },
+      {
+        "state": "NY",
+        "count": 4
+      },
+      {
+        "state": "NC",
+        "count": 3
+      }
+    ],
+    "foreign": 0
+  },
+  "67": {
+    "school_name": "BALTIMORE, UNIVERSITY OF",
+    "total_grads": 207,
+    "locations": [
+      {
+        "state": "MD",
+        "count": 159
+      },
+      {
+        "state": "VA",
+        "count": 8
+      },
+      {
+        "state": "DC",
+        "count": 5
+      }
+    ],
+    "foreign": 0
+  },
+  "68": {
+    "school_name": "MARYLAND, UNIVERSITY OF",
+    "total_grads": 244,
+    "locations": [
+      {
+        "state": "MD",
+        "count": 143
+      },
+      {
+        "state": "DC",
+        "count": 34
+      },
+      {
+        "state": "VA",
+        "count": 12
+      }
+    ],
+    "foreign": 1
+  },
+  "69": {
+    "school_name": "BOSTON UNIVERSITY",
+    "total_grads": 297,
+    "locations": [
+      {
+        "state": "MA",
+        "count": 149
+      },
+      {
+        "state": "NY",
+        "count": 57
+      },
+      {
+        "state": "DC",
+        "count": 15
+      }
+    ],
+    "foreign": 1
+  },
+  "70": {
+    "school_name": "NEW ENGLAND LAW/BOSTON",
+    "total_grads": 307,
+    "locations": [
+      {
+        "state": "MA",
+        "count": 148
+      },
+      {
+        "state": "CA",
+        "count": 15
+      },
+      {
+        "state": "NY",
+        "count": 14
+      }
+    ],
+    "foreign": 2
+  },
+  "71": {
+    "school_name": "NORTHEASTERN UNIVERSITY",
+    "total_grads": 214,
+    "locations": [
+      {
+        "state": "MA",
+        "count": 104
+      },
+      {
+        "state": "NY",
+        "count": 26
+      },
+      {
+        "state": "DC",
+        "count": 13
+      }
+    ],
+    "foreign": 2
+  },
+  "72": {
+    "school_name": "SUFFOLK UNIVERSITY",
+    "total_grads": 402,
+    "locations": [
+      {
+        "state": "MA",
+        "count": 301
+      },
+      {
+        "state": "NY",
+        "count": 13
+      },
+      {
+        "state": "RI",
+        "count": 7
+      }
+    ],
+    "foreign": 0
+  },
+  "73": {
+    "school_name": "BOSTON COLLEGE",
+    "total_grads": 341,
+    "locations": [
+      {
+        "state": "MA",
+        "count": 169
+      },
+      {
+        "state": "NY",
+        "count": 54
+      },
+      {
+        "state": "CA",
+        "count": 17
+      }
+    ],
+    "foreign": 4
+  },
+  "74": {
+    "school_name": "HARVARD UNIVERSITY",
+    "total_grads": 622,
+    "locations": [
+      {
+        "state": "NY",
+        "count": 197
+      },
+      {
+        "state": "DC",
+        "count": 107
+      },
+      {
+        "state": "CA",
+        "count": 75
+      }
+    ],
+    "foreign": 12
+  },
+  "75": {
+    "school_name": "WESTERN NEW ENGLAND UNIVERSITY",
+    "total_grads": 110,
+    "locations": [
+      {
+        "state": "MA",
+        "count": 63
+      },
+      {
+        "state": "CT",
+        "count": 21
+      },
+      {
+        "state": "NY",
+        "count": 5
+      }
+    ],
+    "foreign": 1
+  },
+  "76": {
+    "school_name": "MICHIGAN, UNIVERSITY OF",
+    "total_grads": 322,
+    "locations": [
+      {
+        "state": "NY",
+        "count": 75
+      },
+      {
+        "state": "IL",
+        "count": 52
+      },
+      {
+        "state": "MI",
+        "count": 43
+      }
+    ],
+    "foreign": 3
+  },
+  "77": {
+    "school_name": "MICHIGAN STATE UNIVERSITY",
+    "total_grads": 220,
+    "locations": [
+      {
+        "state": "MI",
+        "count": 136
+      },
+      {
+        "state": "IL",
+        "count": 13
+      },
+      {
+        "state": "CA",
+        "count": 7
+      }
+    ],
+    "foreign": 1
+  },
+  "78": {
+    "school_name": "DETROIT MERCY, UNIVERSITY OF",
+    "total_grads": 199,
+    "locations": [
+      {
+        "state": "MI",
+        "count": 114
+      },
+      {
+        "state": "IL",
+        "count": 2
+      },
+      {
+        "state": "HI",
+        "count": 1
+      }
+    ],
+    "foreign": 62
+  },
+  "79": {
+    "school_name": "WAYNE STATE UNIVERSITY",
+    "total_grads": 138,
+    "locations": [
+      {
+        "state": "MI",
+        "count": 122
+      },
+      {
+        "state": "CA",
+        "count": 3
+      },
+      {
+        "state": "FL",
+        "count": 1
+      }
+    ],
+    "foreign": 0
+  },
+  "81": {
+    "school_name": "MINNESOTA, UNIVERSITY OF",
+    "total_grads": 230,
+    "locations": [
+      {
+        "state": "MN",
+        "count": 142
+      },
+      {
+        "state": "CA",
+        "count": 11
+      },
+      {
+        "state": "IL",
+        "count": 11
+      }
+    ],
+    "foreign": 1
+  },
+  "84": {
+    "school_name": "MISSISSIPPI, THE UNIVERSITY OF",
+    "total_grads": 175,
+    "locations": [
+      {
+        "state": "MS",
+        "count": 49
+      },
+      {
+        "state": "TN",
+        "count": 27
+      },
+      {
+        "state": "TX",
+        "count": 13
+      }
+    ],
+    "foreign": 0
+  },
+  "85": {
+    "school_name": "MISSOURI, UNIVERSITY OF",
+    "total_grads": 132,
+    "locations": [
+      {
+        "state": "MO",
+        "count": 106
+      },
+      {
+        "state": "IL",
+        "count": 4
+      },
+      {
+        "state": "FL",
+        "count": 3
+      }
+    ],
+    "foreign": 0
+  },
+  "86": {
+    "school_name": "MISSOURI-KANSAS CITY, UNIVERSITY OF",
+    "total_grads": 127,
+    "locations": [
+      {
+        "state": "MO",
+        "count": 90
+      },
+      {
+        "state": "KS",
+        "count": 27
+      },
+      {
+        "state": "CA",
+        "count": 2
+      }
+    ],
+    "foreign": 0
+  },
+  "87": {
+    "school_name": "SAINT LOUIS UNIVERSITY",
+    "total_grads": 185,
+    "locations": [
+      {
+        "state": "MO",
+        "count": 116
+      },
+      {
+        "state": "IL",
+        "count": 20
+      },
+      {
+        "state": "NY",
+        "count": 6
+      }
+    ],
+    "foreign": 0
+  },
+  "88": {
+    "school_name": "WASHINGTON UNIVERSITY (ST. LOUIS)",
+    "total_grads": 285,
+    "locations": [
+      {
+        "state": "IL",
+        "count": 51
+      },
+      {
+        "state": "MO",
+        "count": 51
+      },
+      {
+        "state": "NY",
+        "count": 36
+      }
+    ],
+    "foreign": 2
+  },
+  "89": {
+    "school_name": "MONTANA, UNIVERSITY OF",
+    "total_grads": 78,
+    "locations": [
+      {
+        "state": "MT",
+        "count": 60
+      },
+      {
+        "state": "CO",
+        "count": 4
+      },
+      {
+        "state": "AK",
+        "count": 2
+      }
+    ],
+    "foreign": 0
+  },
+  "90": {
+    "school_name": "NEBRASKA, UNIVERSITY OF",
+    "total_grads": 153,
+    "locations": [
+      {
+        "state": "NE",
+        "count": 97
+      },
+      {
+        "state": "MN",
+        "count": 6
+      },
+      {
+        "state": "IL",
+        "count": 5
+      }
+    ],
+    "foreign": 1
+  },
+  "91": {
+    "school_name": "CREIGHTON UNIVERSITY",
+    "total_grads": 145,
+    "locations": [
+      {
+        "state": "NE",
+        "count": 76
+      },
+      {
+        "state": "CO",
+        "count": 8
+      },
+      {
+        "state": "IA",
+        "count": 7
+      }
+    ],
+    "foreign": 0
+  },
+  "92": {
+    "school_name": "NEW HAMPSHIRE, UNIVERSITY OF",
+    "total_grads": 187,
+    "locations": [
+      {
+        "state": "NH",
+        "count": 61
+      },
+      {
+        "state": "MA",
+        "count": 24
+      },
+      {
+        "state": "NY",
+        "count": 10
+      }
+    ],
+    "foreign": 1
+  },
+  "95": {
+    "school_name": "SETON HALL UNIVERSITY",
+    "total_grads": 314,
+    "locations": [
+      {
+        "state": "NJ",
+        "count": 201
+      },
+      {
+        "state": "NY",
+        "count": 73
+      },
+      {
+        "state": "CA",
+        "count": 5
+      }
+    ],
+    "foreign": 1
+  },
+  "96": {
+    "school_name": "NEW MEXICO, THE UNIVERSITY OF",
+    "total_grads": 112,
+    "locations": [
+      {
+        "state": "NM",
+        "count": 90
+      },
+      {
+        "state": "CO",
+        "count": 2
+      },
+      {
+        "state": "AZ",
+        "count": 1
+      }
+    ],
+    "foreign": 1
+  },
+  "97": {
+    "school_name": "ALBANY LAW SCHOOL",
+    "total_grads": 205,
+    "locations": [
+      {
+        "state": "NY",
+        "count": 171
+      },
+      {
+        "state": "DC",
+        "count": 3
+      },
+      {
+        "state": "MA",
+        "count": 3
+      }
+    ],
+    "foreign": 1
+  },
+  "98": {
+    "school_name": "BUFFALO, UNIVERSITY AT",
+    "total_grads": 160,
+    "locations": [
+      {
+        "state": "NY",
+        "count": 142
+      },
+      {
+        "state": "VA",
+        "count": 2
+      }
+    ],
+    "foreign": 0
+  },
+  "99": {
+    "school_name": "CORNELL UNIVERSITY",
+    "total_grads": 196,
+    "locations": [
+      {
+        "state": "NY",
+        "count": 131
+      },
+      {
+        "state": "CA",
+        "count": 15
+      },
+      {
+        "state": "DC",
+        "count": 8
+      }
+    ],
+    "foreign": 4
+  },
+  "100": {
+    "school_name": "BROOKLYN LAW SCHOOL",
+    "total_grads": 400,
+    "locations": [
+      {
+        "state": "NY",
+        "count": 324
+      },
+      {
+        "state": "NJ",
+        "count": 15
+      },
+      {
+        "state": "CA",
+        "count": 3
+      }
+    ],
+    "foreign": 2
+  },
+  "101": {
+    "school_name": "COLUMBIA UNIVERSITY",
+    "total_grads": 523,
+    "locations": [
+      {
+        "state": "NY",
+        "count": 362
+      },
+      {
+        "state": "DC",
+        "count": 44
+      },
+      {
+        "state": "CA",
+        "count": 34
+      }
+    ],
+    "foreign": 11
+  },
+  "102": {
+    "school_name": "FORDHAM UNIVERSITY",
+    "total_grads": 455,
+    "locations": [
+      {
+        "state": "NY",
+        "count": 381
+      },
+      {
+        "state": "DC",
+        "count": 10
+      },
+      {
+        "state": "NJ",
+        "count": 9
+      }
+    ],
+    "foreign": 3
+  },
+  "103": {
+    "school_name": "HOFSTRA UNIVERSITY",
+    "total_grads": 278,
+    "locations": [
+      {
+        "state": "NY",
+        "count": 245
+      },
+      {
+        "state": "NJ",
+        "count": 5
+      },
+      {
+        "state": "FL",
+        "count": 2
+      }
+    ],
+    "foreign": 0
+  },
+  "104": {
+    "school_name": "NEW YORK LAW SCHOOL",
+    "total_grads": 345,
+    "locations": [
+      {
+        "state": "NY",
+        "count": 258
+      },
+      {
+        "state": "NJ",
+        "count": 32
+      },
+      {
+        "state": "CA",
+        "count": 5
+      }
+    ],
+    "foreign": 2
+  },
+  "105": {
+    "school_name": "NEW YORK UNIVERSITY",
+    "total_grads": 523,
+    "locations": [
+      {
+        "state": "NY",
+        "count": 365
+      },
+      {
+        "state": "DC",
+        "count": 33
+      },
+      {
+        "state": "CA",
+        "count": 30
+      }
+    ],
+    "foreign": 4
+  },
+  "106": {
+    "school_name": "ST. JOHN'S UNIVERSITY",
+    "total_grads": 265,
+    "locations": [
+      {
+        "state": "NY",
+        "count": 229
+      },
+      {
+        "state": "NJ",
+        "count": 6
+      },
+      {
+        "state": "DE",
+        "count": 3
+      }
+    ],
+    "foreign": 0
+  },
+  "107": {
+    "school_name": "SYRACUSE UNIVERSITY",
+    "total_grads": 202,
+    "locations": [
+      {
+        "state": "NY",
+        "count": 94
+      },
+      {
+        "state": "DC",
+        "count": 12
+      },
+      {
+        "state": "CA",
+        "count": 10
+      }
+    ],
+    "foreign": 1
+  },
+  "108": {
+    "school_name": "NORTH CAROLINA, UNIVERSITY OF",
+    "total_grads": 210,
+    "locations": [
+      {
+        "state": "NC",
+        "count": 115
+      },
+      {
+        "state": "DC",
+        "count": 21
+      },
+      {
+        "state": "NY",
+        "count": 13
+      }
+    ],
+    "foreign": 0
+  },
+  "109": {
+    "school_name": "DUKE UNIVERSITY",
+    "total_grads": 277,
+    "locations": [
+      {
+        "state": "NY",
+        "count": 111
+      },
+      {
+        "state": "DC",
+        "count": 29
+      },
+      {
+        "state": "CA",
+        "count": 25
+      }
+    ],
+    "foreign": 2
+  },
+  "110": {
+    "school_name": "NORTH CAROLINA CENTRAL UNIVERSITY",
+    "total_grads": 150,
+    "locations": [
+      {
+        "state": "NC",
+        "count": 66
+      },
+      {
+        "state": "NY",
+        "count": 13
+      },
+      {
+        "state": "DC",
+        "count": 11
+      }
+    ],
+    "foreign": 0
+  },
+  "111": {
+    "school_name": "WAKE FOREST UNIVERSITY",
+    "total_grads": 155,
+    "locations": [
+      {
+        "state": "NC",
+        "count": 71
+      },
+      {
+        "state": "FL",
+        "count": 15
+      },
+      {
+        "state": "VA",
+        "count": 10
+      }
+    ],
+    "foreign": 0
+  },
+  "112": {
+    "school_name": "NORTH DAKOTA, UNIVERSITY OF",
+    "total_grads": 81,
+    "locations": [
+      {
+        "state": "ND",
+        "count": 46
+      },
+      {
+        "state": "MN",
+        "count": 11
+      },
+      {
+        "state": "SD",
+        "count": 5
+      }
+    ],
+    "foreign": 2
+  },
+  "113": {
+    "school_name": "OHIO NORTHERN UNIVERSITY",
+    "total_grads": 62,
+    "locations": [
+      {
+        "state": "OH",
+        "count": 22
+      },
+      {
+        "state": "IN",
+        "count": 10
+      },
+      {
+        "state": "PA",
+        "count": 4
+      }
+    ],
+    "foreign": 0
+  },
+  "114": {
+    "school_name": "AKRON, THE UNIVERSITY OF",
+    "total_grads": 131,
+    "locations": [
+      {
+        "state": "OH",
+        "count": 105
+      },
+      {
+        "state": "PA",
+        "count": 3
+      },
+      {
+        "state": "IL",
+        "count": 2
+      }
+    ],
+    "foreign": 0
+  },
+  "115": {
+    "school_name": "CINCINNATI, UNIVERSITY OF",
+    "total_grads": 130,
+    "locations": [
+      {
+        "state": "OH",
+        "count": 83
+      },
+      {
+        "state": "KY",
+        "count": 8
+      },
+      {
+        "state": "IN",
+        "count": 4
+      }
+    ],
+    "foreign": 0
+  },
+  "116": {
+    "school_name": "CLEVELAND STATE UNIVERSITY",
+    "total_grads": 111,
+    "locations": [
+      {
+        "state": "OH",
+        "count": 92
+      },
+      {
+        "state": "NY",
+        "count": 4
+      },
+      {
+        "state": "PA",
+        "count": 2
+      }
+    ],
+    "foreign": 0
+  },
+  "117": {
+    "school_name": "CASE WESTERN RESERVE UNIVERSITY",
+    "total_grads": 155,
+    "locations": [
+      {
+        "state": "OH",
+        "count": 97
+      },
+      {
+        "state": "NY",
+        "count": 17
+      },
+      {
+        "state": "DC",
+        "count": 4
+      }
+    ],
+    "foreign": 4
+  },
+  "118": {
+    "school_name": "CAPITAL UNIVERSITY LAW SCHOOL",
+    "total_grads": 144,
+    "locations": [
+      {
+        "state": "OH",
+        "count": 104
+      },
+      {
+        "state": "FL",
+        "count": 3
+      },
+      {
+        "state": "DC",
+        "count": 2
+      }
+    ],
+    "foreign": 0
+  },
+  "119": {
+    "school_name": "THE OHIO STATE UNIVERSITY",
+    "total_grads": 179,
+    "locations": [
+      {
+        "state": "OH",
+        "count": 121
+      },
+      {
+        "state": "CA",
+        "count": 5
+      },
+      {
+        "state": "DC",
+        "count": 5
+      }
+    ],
+    "foreign": 1
+  },
+  "120": {
+    "school_name": "TOLEDO, THE UNIVERSITY OF",
+    "total_grads": 125,
+    "locations": [
+      {
+        "state": "OH",
+        "count": 49
+      },
+      {
+        "state": "MI",
+        "count": 32
+      },
+      {
+        "state": "NY",
+        "count": 5
+      }
+    ],
+    "foreign": 0
+  },
+  "121": {
+    "school_name": "DAYTON, UNIVERSITY OF",
+    "total_grads": 108,
+    "locations": [
+      {
+        "state": "OH",
+        "count": 58
+      },
+      {
+        "state": "IN",
+        "count": 8
+      },
+      {
+        "state": "CO",
+        "count": 4
+      }
+    ],
+    "foreign": 1
+  },
+  "122": {
+    "school_name": "OKLAHOMA, UNIVERSITY OF",
+    "total_grads": 193,
+    "locations": [
+      {
+        "state": "OK",
+        "count": 112
+      },
+      {
+        "state": "TX",
+        "count": 52
+      },
+      {
+        "state": "CO",
+        "count": 4
+      }
+    ],
+    "foreign": 0
+  },
+  "123": {
+    "school_name": "OKLAHOMA CITY UNIVERSITY",
+    "total_grads": 132,
+    "locations": [
+      {
+        "state": "OK",
+        "count": 89
+      },
+      {
+        "state": "TX",
+        "count": 19
+      },
+      {
+        "state": "CO",
+        "count": 3
+      }
+    ],
+    "foreign": 1
+  },
+  "124": {
+    "school_name": "TULSA, THE UNIVERSITY OF",
+    "total_grads": 124,
+    "locations": [
+      {
+        "state": "OK",
+        "count": 81
+      },
+      {
+        "state": "TX",
+        "count": 20
+      },
+      {
+        "state": "IL",
+        "count": 2
+      }
+    ],
+    "foreign": 1
+  },
+  "125": {
+    "school_name": "OREGON, UNIVERSITY OF",
+    "total_grads": 164,
+    "locations": [
+      {
+        "state": "OR",
+        "count": 85
+      },
+      {
+        "state": "CA",
+        "count": 17
+      },
+      {
+        "state": "WA",
+        "count": 9
+      }
+    ],
+    "foreign": 2
+  },
+  "126": {
+    "school_name": "LEWIS & CLARK LAW SCHOOL",
+    "total_grads": 194,
+    "locations": [
+      {
+        "state": "OR",
+        "count": 115
+      },
+      {
+        "state": "WA",
+        "count": 22
+      },
+      {
+        "state": "AK",
+        "count": 9
+      }
+    ],
+    "foreign": 2
+  },
+  "127": {
+    "school_name": "WILLAMETTE UNIVERSITY",
+    "total_grads": 112,
+    "locations": [
+      {
+        "state": "OR",
+        "count": 62
+      },
+      {
+        "state": "WA",
+        "count": 13
+      },
+      {
+        "state": "CA",
+        "count": 4
+      }
+    ],
+    "foreign": 1
+  },
+  "129": {
+    "school_name": "TEMPLE UNIVERSITY",
+    "total_grads": 225,
+    "locations": [
+      {
+        "state": "PA",
+        "count": 134
+      },
+      {
+        "state": "NJ",
+        "count": 20
+      },
+      {
+        "state": "NY",
+        "count": 17
+      }
+    ],
+    "foreign": 0
+  },
+  "130": {
+    "school_name": "PENNSYLVANIA, UNIVERSITY OF",
+    "total_grads": 304,
+    "locations": [
+      {
+        "state": "NY",
+        "count": 118
+      },
+      {
+        "state": "PA",
+        "count": 59
+      },
+      {
+        "state": "DC",
+        "count": 41
+      }
+    ],
+    "foreign": 5
+  },
+  "131": {
+    "school_name": "DUQUESNE UNIVERSITY",
+    "total_grads": 157,
+    "locations": [
+      {
+        "state": "PA",
+        "count": 126
+      },
+      {
+        "state": "MD",
+        "count": 3
+      },
+      {
+        "state": "VA",
+        "count": 3
+      }
+    ],
+    "foreign": 0
+  },
+  "132": {
+    "school_name": "PITTSBURGH, UNIVERSITY OF",
+    "total_grads": 145,
+    "locations": [
+      {
+        "state": "PA",
+        "count": 99
+      },
+      {
+        "state": "NY",
+        "count": 6
+      },
+      {
+        "state": "DC",
+        "count": 4
+      }
+    ],
+    "foreign": 0
+  },
+  "133": {
+    "school_name": "VILLANOVA UNIVERSITY",
+    "total_grads": 214,
+    "locations": [
+      {
+        "state": "PA",
+        "count": 111
+      },
+      {
+        "state": "NY",
+        "count": 21
+      },
+      {
+        "state": "NJ",
+        "count": 20
+      }
+    ],
+    "foreign": 1
+  },
+  "134": {
+    "school_name": "INTER AMERICAN UNIVERSITY OF PUERTO RICO",
+    "total_grads": 135,
+    "locations": [
+      {
+        "state": "PR",
+        "count": 88
+      },
+      {
+        "state": "CA",
+        "count": 2
+      },
+      {
+        "state": "FL",
+        "count": 2
+      }
+    ],
+    "foreign": 0
+  },
+  "135": {
+    "school_name": "PONTIFICAL CATHOLIC UNIVERSITY OF PUERTO RICO",
+    "total_grads": 113,
+    "locations": [
+      {
+        "state": "PR",
+        "count": 53
+      },
+      {
+        "state": "FL",
+        "count": 4
+      },
+      {
+        "state": "TX",
+        "count": 3
+      }
+    ],
+    "foreign": 0
+  },
+  "136": {
+    "school_name": "PUERTO RICO, UNIVERSITY OF",
+    "total_grads": 130,
+    "locations": [
+      {
+        "state": "PR",
+        "count": 92
+      },
+      {
+        "state": "NY",
+        "count": 4
+      },
+      {
+        "state": "CA",
+        "count": 1
+      }
+    ],
+    "foreign": 0
+  },
+  "137": {
+    "school_name": "SOUTH CAROLINA, UNIVERSITY OF",
+    "total_grads": 202,
+    "locations": [
+      {
+        "state": "SC",
+        "count": 143
+      },
+      {
+        "state": "NC",
+        "count": 13
+      },
+      {
+        "state": "GA",
+        "count": 9
+      }
+    ],
+    "foreign": 1
+  },
+  "138": {
+    "school_name": "SOUTH DAKOTA, UNIVERSITY OF",
+    "total_grads": 75,
+    "locations": [
+      {
+        "state": "SD",
+        "count": 46
+      },
+      {
+        "state": "IA",
+        "count": 4
+      },
+      {
+        "state": "CO",
+        "count": 3
+      }
+    ],
+    "foreign": 0
+  },
+  "139": {
+    "school_name": "TENNESSEE, UNIVERSITY OF",
+    "total_grads": 127,
+    "locations": [
+      {
+        "state": "TN",
+        "count": 95
+      },
+      {
+        "state": "NC",
+        "count": 6
+      },
+      {
+        "state": "GA",
+        "count": 4
+      }
+    ],
+    "foreign": 0
+  },
+  "140": {
+    "school_name": "MEMPHIS, THE UNIVERSITY OF",
+    "total_grads": 97,
+    "locations": [
+      {
+        "state": "TN",
+        "count": 74
+      },
+      {
+        "state": "AR",
+        "count": 2
+      },
+      {
+        "state": "CO",
+        "count": 2
+      }
+    ],
+    "foreign": 0
+  },
+  "141": {
+    "school_name": "VANDERBILT UNIVERSITY",
+    "total_grads": 166,
+    "locations": [
+      {
+        "state": "TN",
+        "count": 38
+      },
+      {
+        "state": "NY",
+        "count": 35
+      },
+      {
+        "state": "TX",
+        "count": 24
+      }
+    ],
+    "foreign": 1
+  },
+  "142": {
+    "school_name": "TEXAS, UNIVERSITY OF",
+    "total_grads": 412,
+    "locations": [
+      {
+        "state": "TX",
+        "count": 290
+      },
+      {
+        "state": "NY",
+        "count": 30
+      },
+      {
+        "state": "DC",
+        "count": 24
+      }
+    ],
+    "foreign": 1
+  },
+  "143": {
+    "school_name": "SOUTHERN METHODIST UNIVERSITY",
+    "total_grads": 247,
+    "locations": [
+      {
+        "state": "TX",
+        "count": 222
+      },
+      {
+        "state": "CO",
+        "count": 3
+      },
+      {
+        "state": "CA",
+        "count": 2
+      }
+    ],
+    "foreign": 0
+  },
+  "144": {
+    "school_name": "HOUSTON, UNIVERSITY OF",
+    "total_grads": 260,
+    "locations": [
+      {
+        "state": "TX",
+        "count": 226
+      },
+      {
+        "state": "NY",
+        "count": 4
+      },
+      {
+        "state": "CA",
+        "count": 3
+      }
+    ],
+    "foreign": 1
+  },
+  "145": {
+    "school_name": "SOUTH TEXAS COLLEGE OF LAW HOUSTON",
+    "total_grads": 286,
+    "locations": [
+      {
+        "state": "TX",
+        "count": 256
+      },
+      {
+        "state": "CO",
+        "count": 2
+      },
+      {
+        "state": "VA",
+        "count": 2
+      }
+    ],
+    "foreign": 0
+  },
+  "146": {
+    "school_name": "TEXAS SOUTHERN UNIVERSITY",
+    "total_grads": 183,
+    "locations": [
+      {
+        "state": "TX",
+        "count": 106
+      },
+      {
+        "state": "MD",
+        "count": 3
+      },
+      {
+        "state": "CA",
+        "count": 2
+      }
+    ],
+    "foreign": 1
+  },
+  "147": {
+    "school_name": "TEXAS TECH UNIVERSITY",
+    "total_grads": 145,
+    "locations": [
+      {
+        "state": "TX",
+        "count": 121
+      },
+      {
+        "state": "CO",
+        "count": 3
+      },
+      {
+        "state": "NM",
+        "count": 3
+      }
+    ],
+    "foreign": 0
+  },
+  "148": {
+    "school_name": "ST. MARY'S UNIVERSITY",
+    "total_grads": 243,
+    "locations": [
+      {
+        "state": "TX",
+        "count": 196
+      },
+      {
+        "state": "CO",
+        "count": 3
+      },
+      {
+        "state": "CA",
+        "count": 2
+      }
+    ],
+    "foreign": 0
+  },
+  "149": {
+    "school_name": "BAYLOR UNIVERSITY",
+    "total_grads": 198,
+    "locations": [
+      {
+        "state": "TX",
+        "count": 172
+      },
+      {
+        "state": "CO",
+        "count": 3
+      },
+      {
+        "state": "DC",
+        "count": 3
+      }
+    ],
+    "foreign": 0
+  },
+  "150": {
+    "school_name": "BRIGHAM YOUNG UNIVERSITY",
+    "total_grads": 142,
+    "locations": [
+      {
+        "state": "UT",
+        "count": 79
+      },
+      {
+        "state": "CA",
+        "count": 12
+      },
+      {
+        "state": "TX",
+        "count": 12
+      }
+    ],
+    "foreign": 0
+  },
+  "151": {
+    "school_name": "UTAH, THE UNIVERSITY OF",
+    "total_grads": 95,
+    "locations": [
+      {
+        "state": "UT",
+        "count": 75
+      },
+      {
+        "state": "FL",
+        "count": 3
+      },
+      {
+        "state": "AK",
+        "count": 2
+      }
+    ],
+    "foreign": 0
+  },
+  "152": {
+    "school_name": "VERMONT LAW SCHOOL",
+    "total_grads": 146,
+    "locations": [
+      {
+        "state": "VT",
+        "count": 18
+      },
+      {
+        "state": "MD",
+        "count": 11
+      },
+      {
+        "state": "NY",
+        "count": 11
+      }
+    ],
+    "foreign": 0
+  },
+  "153": {
+    "school_name": "VIRGINIA, UNIVERSITY OF",
+    "total_grads": 299,
+    "locations": [
+      {
+        "state": "NY",
+        "count": 86
+      },
+      {
+        "state": "DC",
+        "count": 83
+      },
+      {
+        "state": "VA",
+        "count": 23
+      }
+    ],
+    "foreign": 0
+  },
+  "155": {
+    "school_name": "WASHINGTON AND LEE UNIVERSITY",
+    "total_grads": 141,
+    "locations": [
+      {
+        "state": "VA",
+        "count": 35
+      },
+      {
+        "state": "DC",
+        "count": 18
+      },
+      {
+        "state": "NY",
+        "count": 15
+      }
+    ],
+    "foreign": 1
+  },
+  "156": {
+    "school_name": "RICHMOND, UNIVERSITY OF",
+    "total_grads": 151,
+    "locations": [
+      {
+        "state": "VA",
+        "count": 91
+      },
+      {
+        "state": "DC",
+        "count": 14
+      },
+      {
+        "state": "FL",
+        "count": 5
+      }
+    ],
+    "foreign": 0
+  },
+  "157": {
+    "school_name": "WILLIAM & MARY",
+    "total_grads": 170,
+    "locations": [
+      {
+        "state": "VA",
+        "count": 55
+      },
+      {
+        "state": "DC",
+        "count": 27
+      },
+      {
+        "state": "NY",
+        "count": 17
+      }
+    ],
+    "foreign": 1
+  },
+  "158": {
+    "school_name": "WASHINGTON, UNIVERSITY OF",
+    "total_grads": 171,
+    "locations": [
+      {
+        "state": "WA",
+        "count": 122
+      },
+      {
+        "state": "CA",
+        "count": 12
+      },
+      {
+        "state": "DC",
+        "count": 5
+      }
+    ],
+    "foreign": 1
+  },
+  "159": {
+    "school_name": "GONZAGA UNIVERSITY",
+    "total_grads": 166,
+    "locations": [
+      {
+        "state": "WA",
+        "count": 92
+      },
+      {
+        "state": "CA",
+        "count": 9
+      },
+      {
+        "state": "AZ",
+        "count": 4
+      }
+    ],
+    "foreign": 0
+  },
+  "161": {
+    "school_name": "WEST VIRGINIA UNIVERSITY",
+    "total_grads": 107,
+    "locations": [
+      {
+        "state": "WV",
+        "count": 63
+      },
+      {
+        "state": "PA",
+        "count": 8
+      },
+      {
+        "state": "FL",
+        "count": 4
+      }
+    ],
+    "foreign": 0
+  },
+  "162": {
+    "school_name": "WISCONSIN, UNIVERSITY OF",
+    "total_grads": 263,
+    "locations": [
+      {
+        "state": "WI",
+        "count": 148
+      },
+      {
+        "state": "IL",
+        "count": 32
+      },
+      {
+        "state": "DC",
+        "count": 14
+      }
+    ],
+    "foreign": 1
+  },
+  "163": {
+    "school_name": "MARQUETTE UNIVERSITY",
+    "total_grads": 202,
+    "locations": [
+      {
+        "state": "WI",
+        "count": 156
+      },
+      {
+        "state": "IL",
+        "count": 11
+      },
+      {
+        "state": "NY",
+        "count": 4
+      }
+    ],
+    "foreign": 0
+  },
+  "164": {
+    "school_name": "WYOMING, UNIVERSITY OF",
+    "total_grads": 86,
+    "locations": [
+      {
+        "state": "WY",
+        "count": 25
+      },
+      {
+        "state": "CO",
+        "count": 20
+      },
+      {
+        "state": "AK",
+        "count": 3
+      }
+    ],
+    "foreign": 0
+  },
+  "165": {
+    "school_name": "NORTHERN ILLINOIS UNIVERSITY",
+    "total_grads": 94,
+    "locations": [
+      {
+        "state": "IL",
+        "count": 67
+      },
+      {
+        "state": "CA",
+        "count": 2
+      },
+      {
+        "state": "MI",
+        "count": 2
+      }
+    ],
+    "foreign": 0
+  },
+  "166": {
+    "school_name": "PACE UNIVERSITY",
+    "total_grads": 252,
+    "locations": [
+      {
+        "state": "NY",
+        "count": 162
+      },
+      {
+        "state": "NJ",
+        "count": 34
+      },
+      {
+        "state": "CT",
+        "count": 15
+      }
+    ],
+    "foreign": 2
+  },
+  "168": {
+    "school_name": "CARDOZO, YESHIVA UNIVERSITY",
+    "total_grads": 311,
+    "locations": [
+      {
+        "state": "NY",
+        "count": 253
+      },
+      {
+        "state": "NJ",
+        "count": 10
+      },
+      {
+        "state": "CA",
+        "count": 8
+      }
+    ],
+    "foreign": 2
+  },
+  "169": {
+    "school_name": "CAMPBELL UNIVERSITY",
+    "total_grads": 174,
+    "locations": [
+      {
+        "state": "NC",
+        "count": 124
+      },
+      {
+        "state": "VA",
+        "count": 4
+      },
+      {
+        "state": "CA",
+        "count": 3
+      }
+    ],
+    "foreign": 0
+  },
+  "171": {
+    "school_name": "GEORGE MASON UNIVERSITY",
+    "total_grads": 236,
+    "locations": [
+      {
+        "state": "VA",
+        "count": 90
+      },
+      {
+        "state": "DC",
+        "count": 70
+      },
+      {
+        "state": "MD",
+        "count": 11
+      }
+    ],
+    "foreign": 1
+  },
+  "172": {
+    "school_name": "MISSISSIPPI COLLEGE",
+    "total_grads": 124,
+    "locations": [
+      {
+        "state": "MS",
+        "count": 57
+      },
+      {
+        "state": "LA",
+        "count": 8
+      },
+      {
+        "state": "TX",
+        "count": 6
+      }
+    ],
+    "foreign": 0
+  },
+  "174": {
+    "school_name": "TOURO UNIVERSITY",
+    "total_grads": 147,
+    "locations": [
+      {
+        "state": "NY",
+        "count": 120
+      },
+      {
+        "state": "NJ",
+        "count": 7
+      },
+      {
+        "state": "DC",
+        "count": 2
+      }
+    ],
+    "foreign": 0
+  },
+  "175": {
+    "school_name": "GEORGIA STATE UNIVERSITY",
+    "total_grads": 211,
+    "locations": [
+      {
+        "state": "GA",
+        "count": 178
+      },
+      {
+        "state": "TX",
+        "count": 3
+      },
+      {
+        "state": "DC",
+        "count": 2
+      }
+    ],
+    "foreign": 0
+  },
+  "176": {
+    "school_name": "CITY UNIVERSITY OF NEW YORK, UNIVERSITY OF",
+    "total_grads": 213,
+    "locations": [
+      {
+        "state": "NY",
+        "count": 150
+      },
+      {
+        "state": "NJ",
+        "count": 5
+      },
+      {
+        "state": "CA",
+        "count": 4
+      }
+    ],
+    "foreign": 0
+  },
+  "177": {
+    "school_name": "ST. THOMAS UNIVERSITY (MIAMI)",
+    "total_grads": 249,
+    "locations": [
+      {
+        "state": "FL",
+        "count": 188
+      },
+      {
+        "state": "CA",
+        "count": 2
+      },
+      {
+        "state": "NJ",
+        "count": 2
+      }
+    ],
+    "foreign": 2
+  },
+  "178": {
+    "school_name": "REGENT UNIVERSITY",
+    "total_grads": 112,
+    "locations": [
+      {
+        "state": "VA",
+        "count": 40
+      },
+      {
+        "state": "PA",
+        "count": 11
+      },
+      {
+        "state": "FL",
+        "count": 7
+      }
+    ],
+    "foreign": 0
+  },
+  "179": {
+    "school_name": "WIDENER UNIVERSITY COMMONWEALTH LAW SCHOOL",
+    "total_grads": 97,
+    "locations": [
+      {
+        "state": "PA",
+        "count": 63
+      },
+      {
+        "state": "NY",
+        "count": 5
+      },
+      {
+        "state": "DC",
+        "count": 3
+      }
+    ],
+    "foreign": 0
+  },
+  "180": {
+    "school_name": "DISTRICT OF COLUMBIA, UNIVERSITY OF",
+    "total_grads": 63,
+    "locations": [
+      {
+        "state": "DC",
+        "count": 24
+      },
+      {
+        "state": "MD",
+        "count": 10
+      },
+      {
+        "state": "VA",
+        "count": 10
+      }
+    ],
+    "foreign": 0
+  },
+  "181": {
+    "school_name": "QUINNIPIAC UNIVERSITY",
+    "total_grads": 116,
+    "locations": [
+      {
+        "state": "CT",
+        "count": 83
+      },
+      {
+        "state": "NY",
+        "count": 10
+      },
+      {
+        "state": "MA",
+        "count": 5
+      }
+    ],
+    "foreign": 0
+  },
+  "182": {
+    "school_name": "TEXAS A&M UNIVERSITY",
+    "total_grads": 178,
+    "locations": [
+      {
+        "state": "TX",
+        "count": 151
+      },
+      {
+        "state": "DC",
+        "count": 5
+      },
+      {
+        "state": "NC",
+        "count": 3
+      }
+    ],
+    "foreign": 0
+  },
+  "183": {
+    "school_name": "SEATTLE UNIVERSITY",
+    "total_grads": 206,
+    "locations": [
+      {
+        "state": "WA",
+        "count": 162
+      },
+      {
+        "state": "CA",
+        "count": 6
+      },
+      {
+        "state": "DC",
+        "count": 3
+      }
+    ],
+    "foreign": 0
+  },
+  "184": {
+    "school_name": "ROGER WILLIAMS UNIVERSITY",
+    "total_grads": 172,
+    "locations": [
+      {
+        "state": "RI",
+        "count": 76
+      },
+      {
+        "state": "MA",
+        "count": 19
+      },
+      {
+        "state": "NY",
+        "count": 14
+      }
+    ],
+    "foreign": 3
+  },
+  "186": {
+    "school_name": "CHAPMAN UNIVERSITY",
+    "total_grads": 145,
+    "locations": [
+      {
+        "state": "CA",
+        "count": 121
+      },
+      {
+        "state": "IL",
+        "count": 1
+      },
+      {
+        "state": "IN",
+        "count": 1
+      }
+    ],
+    "foreign": 0
+  },
+  "188": {
+    "school_name": "WESTERN STATE, WESTCLIFF UNIVERSITY",
+    "total_grads": 76,
+    "locations": [
+      {
+        "state": "CA",
+        "count": 68
+      },
+      {
+        "state": "MD",
+        "count": 1
+      },
+      {
+        "state": "NV",
+        "count": 1
+      }
+    ],
+    "foreign": 0
+  },
+  "190": {
+    "school_name": "NEVADA-LAS VEGAS, UNIVERSITY OF",
+    "total_grads": 179,
+    "locations": [
+      {
+        "state": "NV",
+        "count": 143
+      },
+      {
+        "state": "UT",
+        "count": 7
+      },
+      {
+        "state": "CA",
+        "count": 3
+      }
+    ],
+    "foreign": 0
+  },
+  "191": {
+    "school_name": "APPALACHIAN SCHOOL OF LAW",
+    "total_grads": 39,
+    "locations": [
+      {
+        "state": "VA",
+        "count": 13
+      },
+      {
+        "state": "WV",
+        "count": 8
+      },
+      {
+        "state": "KY",
+        "count": 3
+      }
+    ],
+    "foreign": 0
+  },
+  "192": {
+    "school_name": "BARRY UNIVERSITY",
+    "total_grads": 236,
+    "locations": [
+      {
+        "state": "FL",
+        "count": 179
+      },
+      {
+        "state": "NY",
+        "count": 5
+      },
+      {
+        "state": "GA",
+        "count": 4
+      }
+    ],
+    "foreign": 0
+  },
+  "193": {
+    "school_name": "AVE MARIA SCHOOL OF LAW",
+    "total_grads": 85,
+    "locations": [
+      {
+        "state": "FL",
+        "count": 54
+      },
+      {
+        "state": "NY",
+        "count": 3
+      },
+      {
+        "state": "IN",
+        "count": 2
+      }
+    ],
+    "foreign": 0
+  },
+  "194": {
+    "school_name": "ST. THOMAS, (MINNEAPOLIS) UNIVERSITY OF",
+    "total_grads": 159,
+    "locations": [
+      {
+        "state": "MN",
+        "count": 127
+      },
+      {
+        "state": "WI",
+        "count": 5
+      },
+      {
+        "state": "CO",
+        "count": 3
+      }
+    ],
+    "foreign": 1
+  },
+  "195": {
+    "school_name": "FLORIDA A&M UNIVERSITY",
+    "total_grads": 102,
+    "locations": [
+      {
+        "state": "FL",
+        "count": 62
+      },
+      {
+        "state": "GA",
+        "count": 4
+      },
+      {
+        "state": "NJ",
+        "count": 4
+      }
+    ],
+    "foreign": 0
+  },
+  "196": {
+    "school_name": "FLORIDA INTERNATIONAL UNIVERSITY",
+    "total_grads": 172,
+    "locations": [
+      {
+        "state": "FL",
+        "count": 144
+      },
+      {
+        "state": "DC",
+        "count": 3
+      },
+      {
+        "state": "NY",
+        "count": 3
+      }
+    ],
+    "foreign": 1
+  },
+  "199": {
+    "school_name": "LIBERTY UNIVERSITY",
+    "total_grads": 112,
+    "locations": [
+      {
+        "state": "VA",
+        "count": 27
+      },
+      {
+        "state": "TX",
+        "count": 12
+      },
+      {
+        "state": "FL",
+        "count": 9
+      }
+    ],
+    "foreign": 0
+  },
+  "200": {
+    "school_name": "FAULKNER UNIVERSITY",
+    "total_grads": 74,
+    "locations": [
+      {
+        "state": "AL",
+        "count": 46
+      },
+      {
+        "state": "GA",
+        "count": 9
+      },
+      {
+        "state": "FL",
+        "count": 5
+      }
+    ],
+    "foreign": 0
+  },
+  "201": {
+    "school_name": "CHARLESTON SCHOOL OF LAW",
+    "total_grads": 233,
+    "locations": [
+      {
+        "state": "SC",
+        "count": 119
+      },
+      {
+        "state": "GA",
+        "count": 15
+      },
+      {
+        "state": "NC",
+        "count": 13
+      }
+    ],
+    "foreign": 0
+  },
+  "205": {
+    "school_name": "ELON UNIVERSITY",
+    "total_grads": 140,
+    "locations": [
+      {
+        "state": "NC",
+        "count": 90
+      },
+      {
+        "state": "SC",
+        "count": 10
+      },
+      {
+        "state": "GA",
+        "count": 6
+      }
+    ],
+    "foreign": 0
+  },
+  "207": {
+    "school_name": "DREXEL UNIVERSITY",
+    "total_grads": 136,
+    "locations": [
+      {
+        "state": "PA",
+        "count": 81
+      },
+      {
+        "state": "NJ",
+        "count": 14
+      },
+      {
+        "state": "DE",
+        "count": 9
+      }
+    ],
+    "foreign": 0
+  },
+  "211": {
+    "school_name": "CALIFORNIA-IRVINE, UNIVERSITY OF",
+    "total_grads": 164,
+    "locations": [
+      {
+        "state": "CA",
+        "count": 131
+      },
+      {
+        "state": "DC",
+        "count": 6
+      },
+      {
+        "state": "NY",
+        "count": 6
+      }
+    ],
+    "foreign": 0
+  },
+  "213": {
+    "school_name": "BELMONT UNIVERSITY",
+    "total_grads": 116,
+    "locations": [
+      {
+        "state": "TN",
+        "count": 82
+      },
+      {
+        "state": "FL",
+        "count": 4
+      },
+      {
+        "state": "CO",
+        "count": 3
+      }
+    ],
+    "foreign": 0
+  },
+  "215": {
+    "school_name": "LINCOLN MEMORIAL UNIVERSITY",
+    "total_grads": 101,
+    "locations": [
+      {
+        "state": "TN",
+        "count": 63
+      },
+      {
+        "state": "KY",
+        "count": 6
+      },
+      {
+        "state": "FL",
+        "count": 2
+      }
+    ],
+    "foreign": 0
+  },
+  "216": {
+    "school_name": "MASSACHUSETTS/DARTMOUTH, UNIVERSITY OF",
+    "total_grads": 111,
+    "locations": [
+      {
+        "state": "MA",
+        "count": 44
+      },
+      {
+        "state": "RI",
+        "count": 11
+      },
+      {
+        "state": "NJ",
+        "count": 7
+      }
+    ],
+    "foreign": 0
+  },
+  "219": {
+    "school_name": "PENN STATE DICKINSON LAW",
+    "total_grads": 229,
+    "locations": [
+      {
+        "state": "PA",
+        "count": 90
+      },
+      {
+        "state": "NY",
+        "count": 20
+      },
+      {
+        "state": "DC",
+        "count": 13
+      }
+    ],
+    "foreign": 1
+  },
+  "222": {
+    "school_name": "ATLANTA'S JOHN MARSHALL LAW SCHOOL",
+    "total_grads": 83,
+    "locations": [
+      {
+        "state": "GA",
+        "count": 52
+      },
+      {
+        "state": "FL",
+        "count": 3
+      }
+    ],
+    "foreign": 0
+  },
+  "223": {
+    "school_name": "COOLEY LAW SCHOOL",
+    "total_grads": 124,
+    "locations": [
+      {
+        "state": "FL",
+        "count": 37
+      },
+      {
+        "state": "MI",
+        "count": 37
+      },
+      {
+        "state": "IN",
+        "count": 9
+      }
+    ],
+    "foreign": 0
+  },
+  "224": {
+    "school_name": "RUTGERS UNIVERSITY",
+    "total_grads": 481,
+    "locations": [
+      {
+        "state": "NJ",
+        "count": 304
+      },
+      {
+        "state": "NY",
+        "count": 55
+      },
+      {
+        "state": "PA",
+        "count": 43
+      }
+    ],
+    "foreign": 0
+  },
+  "225": {
+    "school_name": "NORTH TEXAS AT DALLAS, UNIVERSITY OF",
+    "total_grads": 93,
+    "locations": [
+      {
+        "state": "TX",
+        "count": 75
+      },
+      {
+        "state": "DC",
+        "count": 2
+      },
+      {
+        "state": "IL",
+        "count": 1
+      }
+    ],
+    "foreign": 0
+  },
+  "226": {
+    "school_name": "MITCHELL/HAMLINE SCHOOL OF LAW",
+    "total_grads": 389,
+    "locations": [
+      {
+        "state": "MN",
+        "count": 179
+      },
+      {
+        "state": "TX",
+        "count": 24
+      },
+      {
+        "state": "FL",
+        "count": 14
+      }
+    ],
+    "foreign": 2
   }
 }
