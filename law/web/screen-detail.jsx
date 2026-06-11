@@ -190,6 +190,29 @@ function DetailScreen({ m, profile, onBack }) {
         </div>
       </div>
 
+      {m.leverage && m.leverage.above_both_medians && (
+        <div className="detail-section leverage-block" data-testid="leverage-block">
+          <h2 className="display">Negotiation leverage</h2>
+          <div className="panel" style={{ maxWidth: 640 }}>
+            <div className="label" style={{ marginBottom: 10 }}>
+              Your LSAT and GPA are both at or above this school&#39;s 50th-percentile medians
+              <InfoTip text="When your numbers clear both medians, you have real bargaining power. Schools compete for applicants who lift their reported stats." />
+            </div>
+            <div className="kv">
+              {m.leverage.pct_half_plus != null && (
+                <React.Fragment>
+                  <span className="k">Students receiving half tuition or more</span>
+                  <span className="v">{m.leverage.pct_half_plus}%</span>
+                  <span className="k">Students receiving a full ride</span>
+                  <span className="v">{m.leverage.pct_full}%</span>
+                </React.Fragment>
+              )}
+            </div>
+            <div className="mono" style={{ marginTop: 10, lineHeight: 1.5 }}>{m.leverage.note}</div>
+          </div>
+        </div>
+      )}
+
       {alumni.length > 0 && (
         <div className="detail-section">
           <h2 className="display">Notable alumni</h2>
