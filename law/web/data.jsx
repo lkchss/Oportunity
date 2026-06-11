@@ -52,12 +52,12 @@ function incomeBracket(raw) {
   return "over_200k";
 }
 
-function buildPayload(form, lsatOverride) {
+function buildPayload(form, lsatOverride, weightsOverride) {
   const raw = lsatOverride !== undefined ? lsatOverride : form.lsat;
   const lsat = Number(raw);
   // A blank/zero/garbage LSAT must never reach the matcher as a real score.
   const noLsat = !!form.noLsat || raw === "" || raw == null || Number.isNaN(lsat) || lsat <= 0;
-  return {
+  const payload = {
     no_lsat: noLsat,
     lsat: noLsat ? null : Math.min(lsat, 180),
     gpa: Number(form.gpa),
@@ -72,6 +72,11 @@ function buildPayload(form, lsatOverride) {
     location_weight: Math.round(form.locW),
     wants_transfer: !!form.transfer,
   };
+  // Optional per-score weight multipliers from the TweaksPanel.
+  // null/undefined → key omitted → byte-identical backend baseline.
+  const w = weightsOverride !== undefined ? weightsOverride : (form.weights || null);
+  if (w != null) payload.weights = w;
+  return payload;
 }
 
 /* ---------------- API → screen shape ---------------- */
