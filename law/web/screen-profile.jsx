@@ -110,6 +110,7 @@ function FinancialsSection({ form, set }) {
 
 function ProfileScreen({ form, setForm, onSubmit, loading }) {
   const set = (k, v) => setForm((f) => ({ ...f, [k]: v }));
+  const loadScenario = (f) => setForm(f);
   const lsatOk = form.noLsat || (Number(form.lsat) >= 120 && Number(form.lsat) <= 180);
   const gpaOk = Number(form.gpa) > 0 && Number(form.gpa) <= 4.33;
   return (
@@ -179,6 +180,8 @@ function ProfileScreen({ form, setForm, onSubmit, loading }) {
             title={!lsatOk ? "Enter an LSAT (120–180) or check “I haven't taken it yet”" : !gpaOk ? "Enter a GPA (0–4.33)" : undefined}
             onClick={onSubmit}>{loading ? "Matching…" : "Find my schools →"}</button>
           </div>
+
+          <ScenariosPanel form={form} onLoad={loadScenario} />
         </section>
       </div>
     </div>);
