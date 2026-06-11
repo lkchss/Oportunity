@@ -878,6 +878,83 @@ def _fit_without_admissibility(
 # who intend to transfer to a higher-ranked school after 1L)
 # ---------------------------------------------------------------------------
 
+def compute_scholarship_leverage(
+    lsat: Optional[int],
+    gpa: float,
+    school: dict,
+) -> dict:
+    """
+    Display-only aid-grid insight: is the applicant above both of the school's
+    50th-percentile medians, and if so, how does the school's real ABA 509
+    scholarship grid break down?
+
+    Returns a dict with:
+      above_both_medians (bool)
+      pct_full (float|None)   -- fraction (as pct, 0-100) receiving full-tuition aid
+      pct_half_plus (float|None) -- fraction receiving half-tuition or more
+      note (str)              -- human-readable one-liner for display
+
+    Rules:
+    - No-LSAT profile (lsat None): always above_both_medians=False (no LSAT on file
+      means the school cannot benchmark the applicant on its primary admissions axis).
+    - Grid absent (scholarship_full_pct is None): pct_full / pct_half_plus are None.
+    - Does NOT touch any score, tier, or sort key.
+    """
+    if lsat is None:
+        return {
+            "above_both_medians": False,
+            "pct_full": None,
+            "pct_half_plus": None,
+            "note": "Submit an LSAT score to see leverage data.",
+        }
+
+    above = lsat >= school.get("lsat_50", 0) and gpa >= school.get("gpa_50", 0.0)
+
+    full = school.get("scholarship_full_pct")
+    htf  = school.get("scholarship_half_to_full_pct")
+
+    if full is None:
+        pct_full      = None
+        pct_half_plus = None
+    else:
+        pct_full      = round(full * 100, 1)
+        pct_half_plus = round((full + (htf or 0.0)) * 100, 1)
+
+    if not above:
+        return {
+            "above_both_medians": False,
+            "pct_full": pct_full,
+            "pct_half_plus": pct_half_plus,
+            "note": "Your numbers are below one or both medians here.",
+        }
+
+    # Applicant is above both medians -- build a meaningful note
+    if pct_half_plus is not None and pct_half_plus > 0:
+        note = (
+            f"Your numbers are above both medians -- "
+            f"{pct_half_plus}% of students here received half tuition or more "
+            f"({pct_full}% received a full ride). "
+            "Use this as leverage in negotiations."
+        )
+    elif pct_half_plus is not None:
+        note = (
+            "Your numbers are above both medians. "
+            "Aid grid shows limited half-or-more scholarships -- ask directly."
+        )
+    else:
+        note = (
+            "Your numbers are above both medians -- "
+            "no detailed grid available, but your profile is competitive for aid."
+        )
+
+    return {
+        "above_both_medians": True,
+        "pct_full": pct_full,
+        "pct_half_plus": pct_half_plus,
+        "note": note,
+    }
+
+
 def _transfer_metrics(school: dict) -> dict:
     """
     Per-school transfer mobility from ABA Transfers data, normalized by 1L class
@@ -1043,6 +1120,8 @@ def rank_schools(
         entry["financial_score"]       = round(financial, 1)
         entry["financial_breakdown"]   = breakdown
         entry.update(_transfer_metrics(school))
+        # Display-only aid insight — never used in any score or sort key
+        entry["scholarship_leverage"]  = compute_scholarship_leverage(lsat, gpa, school)
         entry["composite_score"]       = round(
             _composite(scores, career_slider, location_slider, scholarship_slider,
                        tier, cost_sensitivity), 1

@@ -150,6 +150,8 @@ function adaptMatched(s, goal) {
   m.idrMonthly = fb.idr_monthly_net;
   m.pslfPaid = fb.pslf_total_paid;
   m.pslfForgiven = fb.pslf_forgiven;
+  // Display-only scholarship leverage insight (never affects scores or ranking)
+  m.leverage = s.scholarship_leverage || null;
   const gk = GOAL_KEY[goal] || "biglaw";
   m.goalPct = gk === "biglaw" ? m.biglaw : gk === "clerk" ? m.clerk :
     gk === "gov" ? m.gov : gk === "pi" ? m.pi : m.solo;
