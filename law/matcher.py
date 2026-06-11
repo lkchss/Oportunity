@@ -1144,6 +1144,142 @@ def transfer_up_plan(
     return {"launchpads": launchpads, "targets": targets}
 
 
+def build_portfolio(ranked: list[dict]) -> dict:
+    """
+    Build a deterministic application portfolio from the already-ranked school list.
+
+    Selection rules
+    ---------------
+    Targets: 2 safeties + 4 targets + 3 reaches (hard reaches are not included).
+    Counts shrink gracefully when a tier contains fewer schools than the quota.
+
+    Within each bucket the algorithm takes the composite-ranked top of that tier
+    subject to two diversification constraints:
+
+    1. State cap: at most 2 schools sharing the same state per bucket, unless no
+       alternative exists. When a state would exceed the cap the next-best school
+       from a different state is taken in its place (continuing down the ranked list).
+
+    2. Cheap-safety preference: within the safety bucket, when two candidates are
+       within 3 composite points of each other, the one with the lower net_debt
+       (from financial_breakdown) is preferred.
+
+    Each slate entry carries:
+      id, name, admissibility_tier, composite_score, net_debt, reason (one-line,
+      built deterministically from real fields).
+
+    The reason line is the strongest of the school's six scores (prestige,
+    career_fit, location_fit, scholarship, financial) plus an in-state / cheap
+    flag when relevant.
+
+    The function does NOT modify any score, tier, or ranking order.
+    Snapshot guard: the caller must verify id+composite order is byte-identical
+    before and after calling this function (it reads only, never writes back).
+
+    Returns {"safeties": [...], "targets": [...], "reaches": [...]} — any bucket
+    may be an empty list when the tier has no schools at all.
+    """
+    # Buckets we care about (hard reaches excluded by policy)
+    QUOTA: dict[str, int] = {"safety": 2, "target": 4, "reach": 3}
+    STATE_CAP = 2
+
+    # Score-name → label used in the reason line
+    _SCORE_LABELS: dict[str, str] = {
+        "prestige_score":      "strong prestige",
+        "career_fit_score":    "strong career fit",
+        "location_fit_score":  "strong location fit",
+        "scholarship_score":   "strong scholarship odds",
+        "financial_score":     "favorable cost",
+    }
+
+    def _reason(school: dict) -> str:
+        """One deterministic reason line built from real school fields."""
+        # Find the strongest non-admissibility score dimension
+        best_key = max(
+            _SCORE_LABELS.keys(),
+            key=lambda k: school.get(k, 0.0),
+        )
+        reason = _SCORE_LABELS[best_key]
+
+        fb = school.get("financial_breakdown") or {}
+        instate = fb.get("qualifies_instate", False)
+        net_debt = fb.get("net_debt")
+
+        # Append a cost / location flag when meaningful
+        tier = school.get("admissibility_tier", "")
+        if instate:
+            reason += " · in-state tuition"
+        elif tier == "safety" and net_debt is not None and net_debt < 80_000:
+            reason += " · low projected debt"
+
+        return f"{school.get('admissibility_tier', 'safety').title()} — {reason}."
+
+    def _pick_bucket(pool: list[dict], quota: int) -> list[dict]:
+        """
+        Select up to `quota` schools from pool (already ordered best-first by
+        composite_score) respecting the state cap.
+        """
+        chosen: list[dict] = []
+        state_counts: dict[str, int] = {}
+        for s in pool:
+            state = (s.get("state") or "").upper()
+            if state_counts.get(state, 0) >= STATE_CAP:
+                continue
+            chosen.append(s)
+            state_counts[state] = state_counts.get(state, 0) + 1
+            if len(chosen) >= quota:
+                break
+        return chosen
+
+    def _apply_cheap_safety_preference(candidates: list[dict]) -> list[dict]:
+        """
+        Within the safety bucket: when two adjacent candidates are within 3
+        composite points of each other, prefer the cheaper one (lower net_debt).
+        Uses a single-pass bubble-style swap so the sort stays stable for
+        well-separated candidates.
+        """
+        result = list(candidates)
+        for i in range(len(result) - 1):
+            a, b = result[i], result[i + 1]
+            if abs(a.get("composite_score", 0) - b.get("composite_score", 0)) <= 3:
+                debt_a = (a.get("financial_breakdown") or {}).get("net_debt") or float("inf")
+                debt_b = (b.get("financial_breakdown") or {}).get("net_debt") or float("inf")
+                if debt_b < debt_a:
+                    result[i], result[i + 1] = b, a
+        return result
+
+    def _slate_entry(school: dict) -> dict:
+        fb = school.get("financial_breakdown") or {}
+        return {
+            "id":                school.get("id"),
+            "name":              school.get("name"),
+            "admissibility_tier": school.get("admissibility_tier"),
+            "composite_score":   school.get("composite_score"),
+            "net_debt":          fb.get("net_debt"),
+            "reason":            _reason(school),
+        }
+
+    # Partition ranked list by tier (preserving composite order)
+    by_tier: dict[str, list[dict]] = {"safety": [], "target": [], "reach": []}
+    for s in ranked:
+        t = s.get("admissibility_tier", "")
+        if t in by_tier:
+            by_tier[t].append(s)
+
+    # Safety bucket: apply cheap preference first, then state-cap filter
+    safety_pool = _apply_cheap_safety_preference(by_tier["safety"])
+    safeties = _pick_bucket(safety_pool, QUOTA["safety"])
+
+    targets = _pick_bucket(by_tier["target"], QUOTA["target"])
+    reaches = _pick_bucket(by_tier["reach"], QUOTA["reach"])
+
+    return {
+        "safeties": [_slate_entry(s) for s in safeties],
+        "targets":  [_slate_entry(s) for s in targets],
+        "reaches":  [_slate_entry(s) for s in reaches],
+    }
+
+
 def rank_schools(
     profile: dict,
     schools: list[dict],

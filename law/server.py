@@ -12,7 +12,7 @@ from pathlib import Path
 from flask import Flask, Response, jsonify, request, send_from_directory
 
 from law.data_loader import DataValidationError, load_law_schools
-from law.matcher import rank_schools, transfer_up_plan, _parse_user_weights
+from law.matcher import rank_schools, transfer_up_plan, build_portfolio, _parse_user_weights
 
 WEB_DIR = Path(__file__).parent / "web"
 
@@ -174,11 +174,13 @@ def match():
         school["radar"] = [round(school[k]) for k in _RADAR_KEYS]
 
     transfer_plan = transfer_up_plan(profile, _SCHOOLS)
+    portfolio = build_portfolio(ranked)
 
     return jsonify({
         "profile": profile,
         "schools": ranked,
         "transfer_plan": transfer_plan,
+        "portfolio": portfolio,
     })
 
 

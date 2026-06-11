@@ -334,7 +334,79 @@ function SaveMenu({ results, pure }) {
 
 }
 
-function ResultsScreen({ results, plan, profile, whatIf, setWhatIf, onOpen, onEditProfile, compareIds, onToggleCompare, onClearCompare, onCompare, rview, setRview, tweakOpen, onTweakToggle }) {
+/* ---- Apply Plan (portfolio) ---- */
+
+const PORTFOLIO_BUCKETS = [
+  { key: "safeties", title: "Safeties",  sub: "Likely admits — anchor your list here.", tier: "safety" },
+  { key: "targets",  title: "Targets",   sub: "Your numbers are at or near the median.", tier: "target" },
+  { key: "reaches",  title: "Reaches",   sub: "Below their medians, but worth the shot.", tier: "reach"  },
+];
+
+function PortfolioBucketCard({ m, onOpen }) {
+  const t = TIERS[m.tier] || TIERS.target;
+  return (
+    <div className="school-card" onClick={() => onOpen(m)} style={{ cursor: "pointer" }}>
+      <ScoreRing value={m.composite} color={gradeColor(m.composite)} />
+      <div style={{ flex: 1, minWidth: 0 }}>
+        <div style={{ display: "flex", alignItems: "baseline", gap: 10, flexWrap: "wrap" }}>
+          <span className="sc-name">{m.name}</span>
+          <span className="sc-meta">{m.loc} · USNWR {fmtRank(m.rank)}</span>
+        </div>
+        <div className="sc-why">
+          <span className={`lead ${t.cls}`}>{t.label}.</span>{" "}
+          {m.portfolioReason || m.why}
+        </div>
+      </div>
+      <div className="sc-stats">
+        <div className="sc-stat">
+          <div className="v">{fmtMoneyK(m.netDebt)}</div>
+          <div className="k">Est. cost</div>
+        </div>
+        <div className="sc-stat">
+          <div className="v">{Math.round(m.composite)}</div>
+          <div className="k">Score</div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function PortfolioView({ portfolio, onOpen }) {
+  if (!portfolio) {
+    return (
+      <div className="tier-section">
+        <p className="muted">Not enough schools across tiers to build a slate — add more profile detail or check your stats.</p>
+      </div>
+    );
+  }
+
+  return (
+    <div>
+      {PORTFOLIO_BUCKETS.map(({ key, title, sub, tier }) => {
+        const entries = portfolio[key] || [];
+        return (
+          <section className="tier-section" key={key}>
+            <div className="ts-head">
+              <span className="dot" style={{ width: 10, height: 10, borderRadius: 99, background: TIERS[tier].color }}></span>
+              <h2>{title}</h2>
+              <span className="count">{entries.length} school{entries.length !== 1 ? "s" : ""}</span>
+            </div>
+            <p className="ts-sub">{sub}</p>
+            {entries.length === 0
+              ? <p className="muted" style={{ marginTop: 8 }}>No schools in this tier for your profile.</p>
+              : <div>{entries.map((m) => <PortfolioBucketCard key={m.id} m={m} onOpen={onOpen} />)}</div>
+            }
+          </section>
+        );
+      })}
+      <p className="muted" style={{ fontSize: 12, marginTop: 20 }}>
+        Slate sizes (2 safeties / 4 targets / 3 reaches) are a guideline. Apply to as many as your time and budget allow.
+      </p>
+    </div>
+  );
+}
+
+function ResultsScreen({ results, plan, portfolio, profile, whatIf, setWhatIf, onOpen, onEditProfile, compareIds, onToggleCompare, onClearCompare, onCompare, rview, setRview, tweakOpen, onTweakToggle }) {
   const [pure, setPure] = React.useState(false);
   const [whatIfOpen, setWhatIfOpen] = React.useState(false);
   const goalLabel = GOAL_LABEL[profile.goal] || "BigLaw";
@@ -346,10 +418,13 @@ function ResultsScreen({ results, plan, profile, whatIf, setWhatIf, onOpen, onEd
   const viewOpts = [
   { k: "guided", label: "Shortlist" },
   { k: "table", label: "Full table" },
-  ...(profile.transfer ? [{ k: "transfers", label: "Transfer path" }] : [])];
+  ...(profile.transfer ? [{ k: "transfers", label: "Transfer path" }] : []),
+  ...(portfolio ? [{ k: "portfolio", label: "Apply plan" }] : [])];
 
-  // Stale view guard: a re-submitted profile may have dropped the transfer intent.
-  const view = rview === "transfers" && !profile.transfer ? "guided" : rview;
+  // Stale view guard: a re-submitted profile may have dropped the transfer intent,
+  // or the portfolio may have disappeared on re-submit.
+  const view = (rview === "transfers" && !profile.transfer) ||
+               (rview === "portfolio" && !portfolio) ? "guided" : rview;
 
   const compareNames = results.filter((m) => compareIds.includes(m.id)).map((m) => m.name);
 
@@ -411,6 +486,9 @@ function ResultsScreen({ results, plan, profile, whatIf, setWhatIf, onOpen, onEd
       }
       {view === "transfers" &&
       <TransfersView plan={plan} onOpen={onOpen} goalLabel={goalLabel} />
+      }
+      {view === "portfolio" &&
+      <PortfolioView portfolio={portfolio} onOpen={onOpen} />
       }
 
       {compareIds.length > 0 &&

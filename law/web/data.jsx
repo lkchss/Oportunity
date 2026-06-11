@@ -164,8 +164,11 @@ function adaptMatched(s, goal) {
   return m;
 }
 
-/* Full /api/match response → { schools, plan }. The transfer plan entries are
-   resolved back to the full matched objects so cards render the same idiom. */
+/* Full /api/match response → { schools, plan, portfolio }. The transfer plan
+   entries are resolved back to the full matched objects so cards render the same
+   idiom. Portfolio slate entries keep the backend shape (id, name, tier, reason,
+   net_debt, composite_score) and are resolved to full school objects for click-
+   through. */
 function adaptMatchResponse(json, goal) {
   const schools = (json.schools || []).map((s) => adaptMatched(s, goal));
   const byId = {};
@@ -175,7 +178,28 @@ function adaptMatchResponse(json, goal) {
   // The launchpad card asserts "X% of 1Ls transfer up" — keep only schools
   // where that claim holds (the backend ranks but doesn't gate on it).
   const launchpads = resolve(tp.launchpads).filter((m) => m.trOut != null && m.trOut >= 0.015);
-  return { schools, plan: { launchpads, targets: resolve(tp.targets) } };
+
+  // Portfolio: resolve each slate entry to full school + carry the reason line.
+  const rawPortfolio = json.portfolio || {};
+  function resolveSlate(entries) {
+    return (entries || []).map((e) => {
+      const full = byId[e.id];
+      if (!full) return null;
+      return { ...full, portfolioReason: e.reason };
+    }).filter(Boolean);
+  }
+  const portfolio = {
+    safeties: resolveSlate(rawPortfolio.safeties),
+    targets:  resolveSlate(rawPortfolio.targets),
+    reaches:  resolveSlate(rawPortfolio.reaches),
+  };
+  const totalSlate = portfolio.safeties.length + portfolio.targets.length + portfolio.reaches.length;
+
+  return {
+    schools,
+    plan: { launchpads, targets: resolve(tp.targets) },
+    portfolio: totalSlate > 0 ? portfolio : null,
+  };
 }
 
 /* Share-link profile encoding: UTF-8-safe base64 of the form JSON. */
