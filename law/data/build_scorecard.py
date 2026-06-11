@@ -144,10 +144,11 @@ def _jd_program(inst: dict) -> Optional[dict]:
     return None
 
 
-def main() -> None:
+def main(json_path: Optional[Path] = None) -> None:
+    target = json_path if json_path is not None else JSON_PATH
     insts = json.loads(RAW.read_text(encoding="utf-8"))
 
-    data = json.loads(JSON_PATH.read_text(encoding="utf-8"))
+    data = json.loads(target.read_text(encoding="utf-8"))
     schools = data["schools"]
     assigned = _assign(schools, insts)
 
@@ -174,7 +175,7 @@ def main() -> None:
         if debt.get("median") is None and earn1 is None:
             suppressed.append(school["id"])
 
-    JSON_PATH.write_text(
+    target.write_text(
         json.dumps(data, indent=2, ensure_ascii=False) + "\n", encoding="utf-8"
     )
 

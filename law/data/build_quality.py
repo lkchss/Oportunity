@@ -38,13 +38,14 @@ def _ratio(num: float, den: float, dp: int = 4) -> Optional[float]:
     return round(num / den, dp) if den > 0 else None
 
 
-def main() -> None:
+def main(json_path: Optional[Path] = None) -> None:
+    target = json_path if json_path is not None else JSON_PATH
     attr = be._index(pd.read_excel(RAW / "Attrition_2025.xlsx"))
     fac = be._index(pd.read_excel(RAW / "Faculty_Resources_2025.xlsx"))
     curr = be._index(pd.read_excel(RAW / "Curricular_Offerings_2025.xlsx"))
     enroll = be._index(pd.read_excel(RAW / "JD_Enrollment_and_Ethnicity_2025.xlsx"))
 
-    data = json.loads(JSON_PATH.read_text(encoding="utf-8"))
+    data = json.loads(target.read_text(encoding="utf-8"))
     schools = data["schools"]
     mapping = _id_to_aba()
 
@@ -102,7 +103,7 @@ def main() -> None:
 
         covered.append(school["id"])
 
-    JSON_PATH.write_text(
+    target.write_text(
         json.dumps(data, indent=2, ensure_ascii=False) + "\n", encoding="utf-8"
     )
 
