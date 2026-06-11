@@ -517,8 +517,22 @@ _MONTHLY_PAYMENT_FACTOR = 0.01161   # 10-yr repayment at 7% interest
 # PSLF / IDR constants
 _PSLF_ELIGIBLE_GOALS  = {"public interest", "government"}
 _IDR_POVERTY_LINE     = 22_590   # 150% of 2024 federal poverty line (1 person)
+_IDR_POVERTY_PER_DEP  = 8_070    # 150% of the +$5,380 per additional household member
 _IDR_INCOME_PCT       = 0.10     # PAYE/IBR: 10% of discretionary income
 _PSLF_MONTHS          = 120      # 10 years of qualifying payments
+
+
+def _financial_inputs(profile: dict) -> tuple[float, float, int]:
+    """Optional financials (cash toward law school, existing student debt,
+    dependents) — all default to 0 so omitting them is a no-op."""
+    def _num(key: str) -> float:
+        try:
+            v = float(profile.get(key) or 0)
+        except (TypeError, ValueError):
+            return 0.0
+        # NaN/Infinity survive float() but poison round() downstream → treat as 0
+        return max(v, 0.0) if math.isfinite(v) else 0.0
+    return _num("cash_available"), _num("existing_debt"), int(_num("dependents"))
 
 # LRAP monthly reductions by school quality tier (dollars)
 _LRAP_MONTHLY_REDUCTION = {
@@ -606,7 +620,13 @@ def _compute_financial(
     else:
         expected_aid = 0.0
 
-    net_debt = max(gross_cost - expected_aid, 0)
+    # Optional financials: cash on hand reduces what must be borrowed; existing
+    # student debt rides along into the repayment math (it doesn't vary by
+    # school, but it changes the monthly payment and DTI the applicant faces).
+    cash_available, existing_debt, dependents = _financial_inputs(profile)
+
+    net_debt = max(gross_cost - expected_aid - cash_available, 0)
+    total_debt = net_debt + existing_debt
 
     # Starting salary based on career goal
     goal_key = (profile.get("goal") or "Unsure").lower()
@@ -617,11 +637,12 @@ def _compute_financial(
     )
 
     # Primary score: standard 10-yr repayment DTI (conservative baseline).
-    # Use the rounded net_debt that gets reported so the displayed DTI exactly
-    # equals reported net_debt / salary (no off-by-a-cent rounding drift).
-    dti            = round(net_debt) / max(starting_salary, 1)
+    # Use the rounded total_debt that gets reported so the displayed DTI exactly
+    # equals reported debt / salary (no off-by-a-cent rounding drift).
+    # total_debt == net_debt when no existing debt is entered (the default).
+    dti            = round(total_debt) / max(starting_salary, 1)
     score          = _clamp(100 - (dti * 25))
-    monthly_payment = net_debt * _MONTHLY_PAYMENT_FACTOR
+    monthly_payment = total_debt * _MONTHLY_PAYMENT_FACTOR
 
     breakdown = {
         "annual_tuition_effective":  annual_tuition,
@@ -630,7 +651,10 @@ def _compute_financial(
         "living_3yr":                round(living_3yr),
         "gross_cost":                round(gross_cost),
         "expected_aid":              round(expected_aid),
+        "cash_applied":              round(cash_available),
+        "existing_debt":             round(existing_debt),
         "net_debt":                  round(net_debt),
+        "total_debt":                round(total_debt),
         "starting_salary":           starting_salary,
         "monthly_payment_estimate":  round(monthly_payment),
         "debt_to_income_ratio":      round(dti, 2),
@@ -645,8 +669,11 @@ def _compute_financial(
             break
 
     if matched_goal != "unsure":
-        # IDR monthly payment (PAYE/IBR: 10% of income above 150% poverty line)
-        discretionary_income = max(starting_salary - _IDR_POVERTY_LINE, 0)
+        # IDR monthly payment (PAYE/IBR: 10% of income above 150% poverty line).
+        # The poverty line scales with household size, so dependents lower the
+        # payment and raise the forgiven amount.
+        poverty_line         = _IDR_POVERTY_LINE + dependents * _IDR_POVERTY_PER_DEP
+        discretionary_income = max(starting_salary - poverty_line, 0)
         idr_monthly_gross    = round(discretionary_income * _IDR_INCOME_PCT / 12)
 
         # LRAP reduces your out-of-pocket IDR payment
@@ -654,9 +681,9 @@ def _compute_financial(
         lrap_reduction   = _LRAP_MONTHLY_REDUCTION.get(lrap_quality, 0)
         idr_monthly_net  = max(idr_monthly_gross - lrap_reduction, 0)
 
-        # Total paid over 10 years, capped at net_debt (can't overpay)
-        pslf_total_paid  = min(idr_monthly_net * _PSLF_MONTHS, net_debt)
-        pslf_forgiven    = max(round(net_debt - pslf_total_paid), 0)
+        # Total paid over 10 years, capped at total_debt (can't overpay)
+        pslf_total_paid  = min(idr_monthly_net * _PSLF_MONTHS, total_debt)
+        pslf_forgiven    = max(round(total_debt - pslf_total_paid), 0)
 
         breakdown.update({
             "pslf_eligible":       True,
@@ -684,26 +711,20 @@ _TIER_COMPOSITE_MULTIPLIER = {
 }
 
 
-def _composite(
-    scores: dict,
+def _composite_weights(
     career_slider: float,
     location_slider: float,
     scholarship_slider: float,
-    tier: str,
     cost_sensitivity: float = 0.0,
-) -> float:
+) -> tuple[float, float, float, float]:
     """
-    Weighted average of six scores, scaled by admissibility tier.
-
-    Fixed weights:  admissibility 0.12, prestige 0.08  (total 0.20 fixed)
-    User-adjustable (sliders 0-10 each, financial absorbs the remainder):
+    User-adjustable weights (sliders 0-10 each, financial absorbs the remainder):
       career_w     = 0.25 + (career_slider/10)*0.12     → [0.25, 0.37]
       location_w   = 0.17 + (location_slider/10)*0.10   → [0.17, 0.27]
       scholarship_w = 0.05 + (scholarship_slider/10)*0.10 → [0.05, 0.15]
       financial_w  = 0.80 − career_w − location_w − scholarship_w
 
     At all defaults (slider=5): career 31%, location 22%, scholarship 10%, financial 17%.
-    Tier multiplier suppresses hard-reach schools in the composite ranking.
     """
     career_w      = 0.25 + (career_slider      / 10) * 0.12
     location_w    = 0.17 + (location_slider    / 10) * 0.10
@@ -726,6 +747,26 @@ def _composite(
             location_w -= deficit * (location_w / pool)
         financial_w = financial_floor
 
+    return career_w, location_w, scholarship_w, financial_w
+
+
+def _composite(
+    scores: dict,
+    career_slider: float,
+    location_slider: float,
+    scholarship_slider: float,
+    tier: str,
+    cost_sensitivity: float = 0.0,
+) -> float:
+    """
+    Weighted average of six scores, scaled by admissibility tier.
+
+    Fixed weights:  admissibility 0.12, prestige 0.08  (total 0.20 fixed)
+    Tier multiplier suppresses hard-reach schools in the composite ranking.
+    """
+    career_w, location_w, scholarship_w, financial_w = _composite_weights(
+        career_slider, location_slider, scholarship_slider, cost_sensitivity)
+
     raw = (
         scores["admissibility"] * 0.12
         + scores["prestige"]    * 0.08
@@ -736,6 +777,31 @@ def _composite(
     )
     multiplier = _TIER_COMPOSITE_MULTIPLIER.get(tier, 1.00)
     return _clamp(raw * multiplier)
+
+
+def _fit_without_admissibility(
+    scores: dict,
+    career_slider: float,
+    location_slider: float,
+    scholarship_slider: float,
+    cost_sensitivity: float = 0.0,
+) -> float:
+    """
+    Composite with admissibility removed: drop the admissibility term AND the
+    tier multiplier, renormalize the remaining 0.88 of weight back to 0-100.
+    Answers "how well does this school fit me, ignoring whether I'd get in".
+    """
+    career_w, location_w, scholarship_w, financial_w = _composite_weights(
+        career_slider, location_slider, scholarship_slider, cost_sensitivity)
+
+    raw = (
+        scores["prestige"]      * 0.08
+        + scores["career_fit"]  * career_w
+        + scores["location_fit"]* location_w
+        + scores["scholarship"] * scholarship_w
+        + scores["financial"]   * financial_w
+    )
+    return _clamp(raw / 0.88)
 
 
 # ---------------------------------------------------------------------------
@@ -795,6 +861,7 @@ def transfer_up_plan(
             "usnwr_rank_2026": s.get("usnwr_rank_2026"),
             "admissibility_tier": s.get("admissibility_tier"),
             "composite_score": s.get("composite_score"),
+            "transfer_out_rate": s.get("transfer_out_rate"),
         }
         for s in launch_pool[:top_n]
     ]
@@ -909,6 +976,12 @@ def rank_schools(
         entry["composite_score"]       = round(
             _composite(scores, career_slider, location_slider, scholarship_slider,
                        tier, cost_sensitivity), 1
+        )
+        # Admissibility-blind fit — same weights, no admissibility term, no tier
+        # multiplier. Surfaced as the "pure fit" view; never drives the ranking.
+        entry["fit_no_admissibility_score"] = round(
+            _fit_without_admissibility(scores, career_slider, location_slider,
+                                       scholarship_slider, cost_sensitivity), 1
         )
         scored.append(entry)
 
