@@ -81,6 +81,12 @@ OPTIONAL_FIELDS = {
     "scorecard_debt_monthly": (int, float),
     "scorecard_earn_1yr": (int, float),
     "scorecard_earn_4yr": (int, float),
+    # ABA Employment Summary placement-by-state (per-school reports, class of 2024),
+    # display-only — never scored.
+    # placement_states: list of {"state": "<2-letter>", "pct": <0-100 float>}, max 3 entries
+    # placement_year: int (graduating class year, e.g. 2024)
+    "placement_states": list,
+    "placement_year": (int, float),
 }
 
 
@@ -148,6 +154,42 @@ def _validate_entry(entry: dict) -> None:
                 f"School '{school_id}': field '{field}' has type {type(value).__name__}, "
                 f"expected {' or '.join(t.__name__ for t in types)}"
             )
+
+    # Extra validation for placement_states entries
+    ps = entry.get("placement_states")
+    if ps is not None:
+        _VALID_STATE_CODES = {
+            "AL","AK","AZ","AR","CA","CO","CT","DE","DC","FL","GA","HI","ID",
+            "IL","IN","IA","KS","KY","LA","ME","MD","MA","MI","MN","MS","MO",
+            "MT","NE","NV","NH","NJ","NM","NY","NC","ND","OH","OK","OR","PA",
+            "RI","SC","SD","TN","TX","UT","VT","VA","WA","WV","WI","WY",
+            "PR","GU","VI","MP","AS",
+        }
+        if not isinstance(ps, list):
+            raise DataValidationError(
+                f"School '{school_id}': placement_states must be a list"
+            )
+        if len(ps) > 3:
+            raise DataValidationError(
+                f"School '{school_id}': placement_states has {len(ps)} entries (max 3)"
+            )
+        for i, item in enumerate(ps):
+            if not isinstance(item, dict):
+                raise DataValidationError(
+                    f"School '{school_id}': placement_states[{i}] must be a dict"
+                )
+            state = item.get("state")
+            pct = item.get("pct")
+            if not isinstance(state, str) or state not in _VALID_STATE_CODES:
+                raise DataValidationError(
+                    f"School '{school_id}': placement_states[{i}].state={state!r} "
+                    f"is not a valid 2-letter state/territory code"
+                )
+            if not isinstance(pct, (int, float)) or not (0 <= pct <= 100):
+                raise DataValidationError(
+                    f"School '{school_id}': placement_states[{i}].pct={pct!r} "
+                    f"must be a number in [0, 100]"
+                )
 
 
 def load_law_schools() -> list[dict]:

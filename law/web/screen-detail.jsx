@@ -186,6 +186,15 @@ function DetailScreen({ m, profile, onBack }) {
             <span className="k">Real grads: debt · earnings
               <InfoTip text="College Scorecard medians: actual federal debt and earnings four years out." /></span>
             <span className="v">{fmtMoneyK(m.scDebt)} · {fmtMoneyK(m.scEarn)}</span>
+            {m.placementStates && m.placementStates.length > 0 && (
+              <React.Fragment>
+                <span className="k">Where grads work</span>
+                <span className="v" data-testid="placement-states">
+                  {m.placementStates.map((p) => `${p.state} ${p.pct}%`).join(" · ")}
+                  {m.placementYear ? ` (Class of ${m.placementYear})` : ""}
+                </span>
+              </React.Fragment>
+            )}
           </div>
         </div>
       </div>
