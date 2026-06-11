@@ -73,6 +73,20 @@ def _run_build_employment_states(json_path: Path) -> None:
     bes.main(json_path=json_path, merge_only=True)
 
 
+def _run_build_selectivity_trend(json_path: Path) -> None:
+    """Step 5: merge multi-year 509 selectivity trend (skipped if prior-year files absent)."""
+    from law.data import build_selectivity_trend as bst
+    missing = [y for y in bst.CYCLES if not bst._fy_path(y).exists()]
+    if len(bst.CYCLES) - len(missing) < 2:
+        print(
+            "[refresh] step 5/5: build_selectivity_trend — SKIPPED "
+            f"(need >=2 cycle files; missing: {missing})"
+        )
+        return
+    print("[refresh] step 5/5: build_selectivity_trend")
+    bst.main(json_path=json_path)
+
+
 def _run_build_notable(json_path: Path) -> None:
     """Optional step: merge notable alumni/faculty from Wikipedia cache."""
     from law.data import build_notable as bn
@@ -94,6 +108,7 @@ def run_pipeline(json_path: Path, include_notable: bool = False) -> None:
     _run_build_quality(json_path)
     _run_build_scorecard(json_path)
     _run_build_employment_states(json_path)
+    _run_build_selectivity_trend(json_path)
     if include_notable:
         _run_build_notable(json_path)
 
@@ -107,7 +122,7 @@ def compute_diff(
     after: dict[str, Any],
     notable_fields: frozenset[str] = frozenset(
         {"notable_alumni", "notable_faculty", "wiki_title",
-         "placement_states", "placement_year"}
+         "placement_states", "placement_year", "selectivity_trend"}
     ),
     max_examples: int = 3,
 ) -> dict[str, Any]:

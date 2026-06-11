@@ -69,6 +69,23 @@ function RangeLine({ label, lo, mid, hi, you, fmt }) {
   );
 }
 
+/* Render a one-line selectivity trend summary, or null when unavailable.
+   Hidden when fewer than 2 years of data exist (selTrend is null in that case). */
+function SelTrendLine({ trend }) {
+  if (!trend || !trend.years || trend.years.length < 2) return null;
+  const yrs = trend.years;
+  const first = yrs[0], last = yrs[yrs.length - 1];
+  const lsats = trend.lsat_50;
+  const accs  = trend.accept_rate;
+  const lsatStr = lsats.join("→");   // →
+  const accStr  = accs.map((a) => a != null ? Math.round(a * 100) + "%" : "—").join("→");
+  return (
+    <div className="selectivity-trend mono" style={{ fontSize: "0.78rem", color: "var(--fg2)", marginTop: 4 }}>
+      Selectivity trend ({first}–{last}): LSAT median {lsatStr}, acceptance {accStr}
+    </div>
+  );
+}
+
 function DetailScreen({ m, profile, onBack }) {
   const userLsat = profile.noLsat ? null : profile.lsat;
   const stdRows = buildSchedule(m.totalDebt, m.monthly);
@@ -139,6 +156,7 @@ function DetailScreen({ m, profile, onBack }) {
           <RangeLine label="GPA" lo={m.g25} mid={m.g50} hi={m.g75} you={profile.gpa}
             fmt={(v) => Number(v).toFixed(2)} />
           <div className="verdict"><TierPill tier={m.tier} /></div>
+          <SelTrendLine trend={m.selTrend} />
           <div className="kv">
             <span className="k">1L attrition</span><span className="v">{fmtPct1(m.attr)}</span>
             <span className="k">Transfer out / in</span><span className="v">{fmtPct1(m.trOut)} · {m.trIn == null ? "—" : m.trIn + "/yr"}</span>

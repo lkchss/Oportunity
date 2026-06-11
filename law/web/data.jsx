@@ -108,6 +108,7 @@ function adaptRaw(s) {
     alumni: s.notable_alumni || [],
     placementStates: s.placement_states || null,
     placementYear: s.placement_year || null,
+    selTrend: s.selectivity_trend || null,
   };
 }
 
