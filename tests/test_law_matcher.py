@@ -631,3 +631,67 @@ class TestOptionalFinancialsAndPureFit:
         plan = transfer_up_plan(_profile(lsat=155, gpa=3.3), schools)
         assert plan["launchpads"]
         assert all("transfer_out_rate" in lp for lp in plan["launchpads"])
+
+
+# ---------------------------------------------------------------------------
+# 6. Prestige (top-heavy curve + regional standing)
+# ---------------------------------------------------------------------------
+
+from law.matcher import (
+    _compute_prestige,
+    _national_prestige,
+    _precompute_regional_pools,
+    _UNRANKED_PRESTIGE,
+    _REGIONAL_PRESTIGE_MAX,
+)
+
+
+class TestPrestige:
+
+    def test_national_curve_is_top_heavy(self):
+        """Differences shrink past rank ~20: the 1→20 drop dwarfs the 60→100 drop."""
+        steep = _national_prestige(1) - _national_prestige(20)
+        flat = _national_prestige(60) - _national_prestige(100)
+        assert steep > 3 * flat
+
+    def test_national_curve_monotonic(self):
+        vals = [_national_prestige(r) for r in range(1, 197)]
+        assert all(a >= b for a, b in zip(vals, vals[1:]))
+        assert _national_prestige(999) == _UNRANKED_PRESTIGE
+        assert _national_prestige(None) == _UNRANKED_PRESTIGE
+
+    def test_regional_school_gains_local_prestige(self, schools):
+        """A strong regional school is more prestigious to an applicant
+        targeting its market than to one targeting a distant market."""
+        pools = _precompute_regional_pools(schools)
+        fordham = _school(schools, "fordham-law")
+        local = _compute_prestige(fordham, {"target_state": "NY"}, pools)
+        national_only = _compute_prestige(fordham)
+        assert local > national_only
+
+    def test_home_market_beats_minor_feed_market(self, schools):
+        """Fordham's prestige in NY (home, primary feed) must clearly beat its
+        prestige in CA (a minor listed feed)."""
+        pools = _precompute_regional_pools(schools)
+        fordham = _school(schools, "fordham-law")
+        ny = _compute_prestige(fordham, {"target_state": "NY"}, pools)
+        ca = _compute_prestige(fordham, {"target_state": "CA"}, pools)
+        assert ny > ca + 5
+
+    def test_regional_boost_capped_below_national_elite(self, schools):
+        """The market flagship never out-prestiges the national elite there."""
+        pools = _precompute_regional_pools(schools)
+        elite = min(schools, key=lambda s: s.get("usnwr_rank_2026") or 999)
+        profile = {"target_state": elite["state"]}
+        flagship_cap = _REGIONAL_PRESTIGE_MAX
+        assert _compute_prestige(elite, profile, pools) > flagship_cap
+
+    def test_prestige_unchanged_for_school_outside_market(self, schools):
+        """Targeting a market a school doesn't serve leaves national prestige."""
+        pools = _precompute_regional_pools(schools)
+        for s in schools:
+            feeds = {s["state"], *s.get("target_states", [])}
+            if "HI" not in feeds:
+                out = _compute_prestige(s, {"target_state": "HI"}, pools)
+                assert out == _compute_prestige(s)
+                break

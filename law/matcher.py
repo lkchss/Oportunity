@@ -290,15 +290,84 @@ def _compute_career_fit(profile: dict, school: dict, scalars: dict) -> float:
 # 2. Prestige
 # ---------------------------------------------------------------------------
 
-def _compute_prestige(school: dict) -> float:
-    """
-    Rank-based institutional prestige score (0-100).
+# Reputation is top-heavy, not linear: the T14 cliff is steep, differences
+# shrink rapidly past ~rank 20, and the long tail is nearly flat (rank 60 vs 90
+# barely registers nationally). Piecewise-linear over documented knots.
+_PRESTIGE_KNOTS = [
+    (1, 100.0), (5, 92.0), (10, 83.0), (14, 76.0), (20, 62.0),
+    (35, 40.0), (60, 26.0), (100, 16.0), (150, 10.0), (196, 7.0),
+]
+_UNRANKED_PRESTIGE = 5.0
 
-    Rank 1 → 100, rank 82 → ~2. Ensures that for otherwise-equal profiles,
-    higher-ranked schools sort above lower-ranked ones.
+# Regional prestige band: a school's standing among the schools serving the
+# applicant's target market. The market's flagship earns real prestige even if
+# its national rank is modest, but stays below the national elite.
+_REGIONAL_PRESTIGE_MIN = 20.0
+_REGIONAL_PRESTIGE_MAX = 75.0
+
+
+def _national_prestige(rank: Optional[int]) -> float:
+    """USNWR rank → 0-100 on the top-heavy curve. Unranked (999) → floor."""
+    if rank is None or rank >= 999:
+        return _UNRANKED_PRESTIGE
+    if rank <= _PRESTIGE_KNOTS[0][0]:
+        return _PRESTIGE_KNOTS[0][1]
+    for (r0, p0), (r1, p1) in zip(_PRESTIGE_KNOTS, _PRESTIGE_KNOTS[1:]):
+        if rank <= r1:
+            return p0 + (p1 - p0) * (rank - r0) / (r1 - r0)
+    return _PRESTIGE_KNOTS[-1][1]
+
+
+def _precompute_regional_pools(schools: list[dict]) -> dict[str, list[str]]:
     """
-    rank = school.get("usnwr_rank_2026", 100)
-    return _clamp(100 - (rank - 1) * 1.2)
+    state → school ids serving that market (located there or listing it as a
+    target state), ordered best-to-worst by national rank.
+    """
+    pools: dict[str, list[tuple[float, str, str]]] = {}
+    for s in schools:
+        states = {(s.get("state") or "").upper()}
+        states.update((t or "").upper() for t in s.get("target_states", []))
+        rank = s.get("usnwr_rank_2026") or 999
+        for st in states:
+            if st:
+                pools.setdefault(st, []).append((rank, s.get("name", ""), s.get("id", "")))
+    return {st: [sid for _, _, sid in sorted(rows)] for st, rows in pools.items()}
+
+
+def _compute_prestige(
+    school: dict,
+    profile: Optional[dict] = None,
+    regional_pools: Optional[dict] = None,
+) -> float:
+    """
+    Institutional prestige (0-100): national reputation on a top-heavy curve,
+    lifted by regional standing in the applicant's target market(s).
+
+    Regional component: where the school sits among all schools serving each
+    target state (banded 20-75 so a market flagship beats its national tail
+    score but never outranks the national elite), scaled by how strongly it
+    actually serves that market (home state / primary feed > minor feed), and
+    weight-averaged across the applicant's markets.
+    Final score = max(national, regional).
+    """
+    nat = _national_prestige(school.get("usnwr_rank_2026"))
+    prefs = _location_prefs(profile or {})
+    if not prefs or not regional_pools:
+        return _clamp(nat)
+
+    reg_acc, w_acc = 0.0, 0.0
+    band = _REGIONAL_PRESTIGE_MAX - _REGIONAL_PRESTIGE_MIN
+    for state, weight in prefs:
+        pool = regional_pools.get(state) or []
+        reg = 0.0
+        if school.get("id") in pool and len(pool) > 1:
+            standing = 1 - pool.index(school["id"]) / (len(pool) - 1)
+            serve = _single_state_fit(state, school) / 100.0
+            reg = (_REGIONAL_PRESTIGE_MIN + standing * band) * serve
+        reg_acc += reg * weight
+        w_acc += weight
+    regional = reg_acc / w_acc if w_acc else 0.0
+    return _clamp(max(nat, regional))
 
 
 # ---------------------------------------------------------------------------
@@ -944,11 +1013,12 @@ def rank_schools(
 
     scalars = _precompute_career_scalars(schools)
     generosity_max = _precompute_scholarship_scalar(schools)
+    regional_pools = _precompute_regional_pools(schools)
 
     scored = []
     for school in schools:
         admissibility, tier = _compute_admissibility(lsat, gpa, school)
-        prestige            = _compute_prestige(school)
+        prestige            = _compute_prestige(school, profile, regional_pools)
         career_fit          = _compute_career_fit(profile, school, scalars)
         location_fit        = _compute_location_fit(profile, school)
         scholarship         = _compute_scholarship(profile, school, lsat, gpa, generosity_max)
