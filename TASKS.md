@@ -34,16 +34,16 @@ Data unlocks (real data beats re-weighting):
 
 Product features (no new data needed unless noted):
 - [ ] Application portfolio builder: propose a concrete apply slate (e.g. 2 safety / 4 target / 3 reach from the ranked list, balanced across cost + location) + total application/CAS fees. Deterministic, built on existing tiers.  → uses: reviewer (top), verify (subj)
-- [ ] Scholarship negotiation leverage: surface aid-grid percentile for above-median applicants ("78% of students with your numbers at X received $20k+; competing offer from Y is plausible leverage"). Grid data already in dataset.  → uses: reviewer (top)
+- [x] Scholarship negotiation leverage DONE (2026-06-11, agent, commit 3cd8794): compute_scholarship_leverage() in matcher (display-only; above-both-medians → pct_half_plus/pct_full from ABA 509 grid fields scholarship_full_pct + scholarship_half_to_full_pct; no-LSAT always false) → scholarship_leverage on each result → data.jsx m.leverage → marigold panel on detail screen (hidden when not above). Snapshot guard: rankings byte-identical across 6 profiles. +11 tests; Playwright 0 console errors.  → uses: reviewer (top)
 - [ ] Saved scenarios: multiple named profiles ("current me" / "after retake" / "with spouse income") + diff view; builds on existing localStorage profile + what-if stepper.  → uses: verify (subj)
 - [ ] Application deadlines per school (ED/EA/regular/rolling; ~196 rows, needs annual sourcing). Companion to portfolio builder.  → uses: fact-checker (top), data-validator (subj)
 - [ ] Ship TweaksPanel: user-adjustable six-score weights (matcher already accepts them; defaults untouched → no eval run needed; reinforces transparency positioning).  → uses: verify (subj)
 
 Engineering hardening:
 - [ ] Replace in-browser Babel with a real build (Vite or precompiled esbuild output; drop React-from-CDN). Main blocker between demo and deployable product.  → uses: verify (subj), a11y-perf (subj)
-- [ ] Annual data-refresh pipeline: one refresh.py that re-runs the build_*.py mergers in order against a new ABA bulk drop + emits a diff report of changed fields/schools.  → uses: data-validator (subj)
+- [x] Annual data-refresh pipeline DONE (2026-06-11, agent, commit 3cf2e59): law/data/refresh.py — dry-run-by-default against temp copy (build_schools→enrichment→quality→scorecard; --write validates via data_loader first; --include-notable gates the live scraper), diff report (added/removed schools, per-field change counts + examples, notable fields excluded). build_*.py main() now takes optional json_path (CLI behavior preserved). Dry run = 0 diff (idempotent). +22 tests (135 pass).  → uses: data-validator (subj)
       ⟳ skill-candidate: "data-refresh" — re-run build mergers against a new raw drop, diff the dataset, report what changed
-- [ ] CI: GitHub Actions workflow running the pytest suite + Playwright smoke on push.  → uses: test-runner (subj)
+- [x] CI DONE (2026-06-11, agent, commit 608b7e6): .github/workflows/ci.yml — ubuntu, py3.11, pip install pytest flask (verified minimal set via import analysis), `pytest tests/ -q` on push/PR to main + algo-optimization. Playwright smoke stays local. (NOTE: `pytest tests/` collects clean now — old stale-imports memory was outdated, deleted.)  → uses: test-runner (subj)
 - [ ] Deploy live (render.yaml + requirements-law.txt exist) + privacy-respecting analytics to see which features get used.  → uses: verify (subj)
 
 ### Feature requests — round 7 (2026-06-10) — IMPLEMENTED, browser-smoke-tested (Playwright, 0 console errors), 60 tests pass; reviewer ran → fixed: Infinity/NaN 500s (isfinite in _financial_inputs + OverflowError catch), what-if state lifted to App (detail/compare/transfers now share the re-ranked payload; survives navigation), legacy share-link goal normalization (old BigLaw/In-house/multi-goal links), CSV labels pure-fit/what-if exports, rankings fetch retry + keyboard rows
