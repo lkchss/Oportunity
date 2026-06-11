@@ -14,6 +14,8 @@ Requires: pip install playwright && playwright install chromium
 Server must be running: python -m law.server
 """
 
+import socket
+
 import pytest
 
 pytest.importorskip("playwright")
@@ -21,6 +23,21 @@ pytest.importorskip("playwright")
 from playwright.sync_api import sync_playwright, ConsoleMessage
 
 BASE_URL = "http://127.0.0.1:5000"
+
+
+def _server_reachable(host: str = "127.0.0.1", port: int = 5000) -> bool:
+    try:
+        with socket.create_connection((host, port), timeout=1):
+            return True
+    except OSError:
+        return False
+
+
+if not _server_reachable():
+    pytest.skip(
+        "law server not running on 127.0.0.1:5000 (start with `python -m law.server`)",
+        allow_module_level=True,
+    )
 
 
 def _fill_and_submit(page):
