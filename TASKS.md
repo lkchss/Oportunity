@@ -20,11 +20,31 @@
 - [ ] UI/UX streamlining pass (informed by stress test findings)
 - [ ] p14 (no-LSAT/MA/65k-130k): UMass (in-state MA, affordable) now IS in the dataset, but expansion still regressed p14 — cheap out-of-state schools pushed MA schools down (the over-qualification/intrusion artifact above). Fixing the dampener should also fix p14.
 - [ ] Add class_size_1l -> admissibility softener (transfers now done as a feature)
-- [ ] Tier-3 data status: median_grad_debt now UNBLOCKED via College Scorecard (merged 2026-06-10, display-only; model wiring = open decision above). placement_by_state still blocked (per-school ABA PDFs only).
+- [ ] Tier-3 data status: median_grad_debt now UNBLOCKED via College Scorecard (merged 2026-06-10, display-only; model wiring = open decision above). placement_by_state still blocked (per-school ABA PDFs only — PDF-parser task queued in Extensions roadmap below).
 - [ ] Open PR for algo-optimization (pushed to origin; URL: github.com/lkchss/Opportunity/pull/new/algo-optimization)
 - [ ] Render transfer-up plan styling in the final UI pass (TransferPanel is placeholder-styled)
 - [x] STALE — resolved by the 196-school expansion: 157/3.4 now gets 5 launchpads + 5 targets, 81 safety/target schools (verified 2026-06-10).
-- [ ] Data enrichment HARD/predicted (later): selectivity trend (multi-year), NLJ250-by-market, part-time/transfer
+- [ ] Data enrichment HARD/predicted (later): NLJ250-by-market, part-time/transfer (selectivity trend moved to Extensions roadmap below)
+
+### Extensions roadmap (2026-06-11) — brainstormed, none started
+Data unlocks (real data beats re-weighting):
+- [ ] Parse per-school ABA Employment Summary PDFs → placement_by_state (standardized forms; batch download + pdfplumber over 196 schools). Unblocks the standing Tier-3 location-fit blocker. Eval-affecting once wired into location fit → LLM-judge run.  → uses: data-validator (subj), reviewer (top)
+- [ ] Multi-year 509 selectivity trend: pull 2–3 prior ABA cycles, extend build_schools.py at older bulk files → per-school median/acceptance trend ("medians rose 2 pts in 2 yrs"), display-first.  → uses: data-validator (subj), fact-checker (top)
+- [ ] Real admit probability line ("~X% of applicants with your numbers were admitted") to replace the admissibility-≠-odds disclaimer: LSData-style self-reported cycle data (check sourcing/ToS first) or logistic fit on medians + acceptance rate.  → uses: fact-checker (top), reviewer (top)
+
+Product features (no new data needed unless noted):
+- [ ] Application portfolio builder: propose a concrete apply slate (e.g. 2 safety / 4 target / 3 reach from the ranked list, balanced across cost + location) + total application/CAS fees. Deterministic, built on existing tiers.  → uses: reviewer (top), verify (subj)
+- [ ] Scholarship negotiation leverage: surface aid-grid percentile for above-median applicants ("78% of students with your numbers at X received $20k+; competing offer from Y is plausible leverage"). Grid data already in dataset.  → uses: reviewer (top)
+- [ ] Saved scenarios: multiple named profiles ("current me" / "after retake" / "with spouse income") + diff view; builds on existing localStorage profile + what-if stepper.  → uses: verify (subj)
+- [ ] Application deadlines per school (ED/EA/regular/rolling; ~196 rows, needs annual sourcing). Companion to portfolio builder.  → uses: fact-checker (top), data-validator (subj)
+- [ ] Ship TweaksPanel: user-adjustable six-score weights (matcher already accepts them; defaults untouched → no eval run needed; reinforces transparency positioning).  → uses: verify (subj)
+
+Engineering hardening:
+- [ ] Replace in-browser Babel with a real build (Vite or precompiled esbuild output; drop React-from-CDN). Main blocker between demo and deployable product.  → uses: verify (subj), a11y-perf (subj)
+- [ ] Annual data-refresh pipeline: one refresh.py that re-runs the build_*.py mergers in order against a new ABA bulk drop + emits a diff report of changed fields/schools.  → uses: data-validator (subj)
+      ⟳ skill-candidate: "data-refresh" — re-run build mergers against a new raw drop, diff the dataset, report what changed
+- [ ] CI: GitHub Actions workflow running the pytest suite + Playwright smoke on push.  → uses: test-runner (subj)
+- [ ] Deploy live (render.yaml + requirements-law.txt exist) + privacy-respecting analytics to see which features get used.  → uses: verify (subj)
 
 ### Feature requests — round 7 (2026-06-10) — IMPLEMENTED, browser-smoke-tested (Playwright, 0 console errors), 60 tests pass; reviewer ran → fixed: Infinity/NaN 500s (isfinite in _financial_inputs + OverflowError catch), what-if state lifted to App (detail/compare/transfers now share the re-ranked payload; survives navigation), legacy share-link goal normalization (old BigLaw/In-house/multi-goal links), CSV labels pure-fit/what-if exports, rankings fetch retry + keyboard rows
 - [x] Page 1: renamed "Opportunity: Law" (title + topbar); brand click returns to landing; career goal single-select default Unsure; In-house merged into "BigLaw / In-house" (audit: it mapped to identical fields+salary as BigLaw — the one no-impact option; all others verified distinct); income moved into collapsible optional Financials section + dependents (IDR poverty line scales +$8,070/person), savings for law school (reduces borrowing), existing student debt (total_debt drives DTI/monthly/PSLF; all default 0 = no-op, eval unaffected); no-data-saved footer disclosure; methodology modal rewritten per user text w/ explicit prestige formula (linear: 100 − (rank−1)·1.2).
