@@ -203,7 +203,8 @@ function Methodology({ onClose }) {
         <ul>
           <li><strong>Admissibility</strong> : how your LSAT/GPA sit against the school's 25/50/75 percentiles, mapped to a tier (Safety / Target / Reach / Hard reach). Not your odds of admission.
           </li>
-          <li><strong>Prestige</strong> : US News ranking, scaled linearly from 100 at rank 1.</li>
+          <li><strong>Prestige</strong> : US News rank on a top-heavy curve (steep through the
+            T14, tapering past ~20), lifted by the school's standing in your target market.</li>
           <li><strong>Career fit</strong> : placement into your stated goal, discounted by employment
             and bar-passage outcomes.</li>
           <li><strong>Location fit</strong> : how strongly the school feeds your target market(s).</li>
@@ -215,6 +216,38 @@ function Methodology({ onClose }) {
           by admit tier so unrealistic reaches don't top the list.</p>
         <p className="mono">All 196 ABA-accredited schools, scored from ABA 509 disclosures,
           ABA employment summaries, and College Scorecard data.</p>
+      </div>
+    </Modal>);
+
+}
+
+const REPORT_EMAIL = "lukechaussee119@gmail.com";
+
+function ReportForm({ onClose }) {
+  const [kind, setKind] = React.useState("Bug");
+  const [text, setText] = React.useState("");
+  const send = () => {
+    const subject = encodeURIComponent(`[Opportunity: Law] ${kind} report`);
+    const body = encodeURIComponent(text || "");
+    window.location.href = `mailto:${REPORT_EMAIL}?subject=${subject}&body=${body}`;
+    onClose();
+  };
+  return (
+    <Modal title="Report a bug / request a feature" onClose={onClose}>
+      <div className="chip-group" style={{ marginBottom: 12 }}>
+        {["Bug", "Feature"].map((k) =>
+        <button key={k} type="button" className={`chip ${kind === k ? "active" : ""}`}
+        onClick={() => setKind(k)}>{k}</button>
+        )}
+      </div>
+      <textarea className="report-text" rows="6" value={text}
+      placeholder={kind === "Bug" ?
+      "What happened? What did you expect? Which school or profile?" :
+      "What would you like the tool to do?"}
+      onChange={(e) => setText(e.target.value)} />
+      <div style={{ display: "flex", justifyContent: "flex-end", gap: 10, marginTop: 14 }}>
+        <button className="btn sm ghost" onClick={onClose}>Cancel</button>
+        <button className="btn sm primary" onClick={send} disabled={!text.trim()}>Send</button>
       </div>
     </Modal>);
 
@@ -241,5 +274,5 @@ function Masthead({ view, onNav }) {
 Object.assign(window, {
   SCORE_NAMES, SCORE_NAMES_LONG, SERIES_COLORS, gradeColor,
   TierTag, TierPill, ScoreRing, Bar, CellBar, Radar, RadarOverlay,
-  InfoTip, Stat, Seg, Modal, Methodology, Masthead
+  InfoTip, Stat, Seg, Modal, Methodology, ReportForm, Masthead
 });

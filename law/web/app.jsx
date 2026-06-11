@@ -184,11 +184,13 @@ function App() {
         <span className="mono">None of your data is saved.
         </span>
         <span className="mono">
-          <a href="mailto:lukechaussee119@gmail.com?subject=[Opportunity: Law] feedback">Report a bug / request a feature</a>
+          <button type="button" className="linklike" onClick={() => setModal("report")}>
+            Report a bug / request a feature</button>
         </span>
       </div>
 
       {modal === "how" && <Methodology onClose={() => setModal(null)} />}
+      {modal === "report" && <ReportForm onClose={() => setModal(null)} />}
     </div>);
 
 }

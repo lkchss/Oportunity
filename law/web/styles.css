@@ -486,6 +486,15 @@ input[type="range"]::-moz-range-thumb {
   margin-top: 44px; padding-top: 16px; border-top: 1px solid var(--line);
   display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap;
 }
+.report-text {
+  width: 100%; resize: vertical; font-family: var(--sans); font-size: 14px;
+}
+.linklike {
+  border: none; background: none; padding: 0; cursor: pointer;
+  font: inherit; color: var(--accent-deep);
+}
+.linklike:hover { text-decoration: underline; }
+
 .infotip { position: relative; display: inline-flex; margin-left: 4px; vertical-align: middle; }
 .infotip-btn {
   width: 16px; height: 16px; padding: 0; border-radius: 50%;
