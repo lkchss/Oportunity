@@ -120,6 +120,10 @@ def _build_profile(payload: dict) -> dict:
         "target_states_weighted": weighted,
         "instate_states": [s for s in (payload.get("instate_states") or []) if str(s).strip()],
         "income_bracket": payload.get("income_bracket") or "prefer_not",
+        # Optional financials — blank/absent means 0 (a no-op in the matcher).
+        "dependents": int(float(payload.get("dependents") or 0)),
+        "cash_available": float(payload.get("cash_available") or 0),
+        "existing_debt": float(payload.get("existing_debt") or 0),
         "scholarship": int(payload.get("scholarship", 5)),
         "career_weight": int(payload.get("career_weight", 5)),
         "location_weight": int(payload.get("location_weight", 5)),
@@ -132,6 +136,12 @@ def index():
     return send_from_directory(WEB_DIR, "index.html")
 
 
+@app.get("/api/schools")
+def schools():
+    """Raw dataset for the rankings/browse view — no profile, no algorithm."""
+    return jsonify({"schools": _SCHOOLS})
+
+
 @app.post("/api/match")
 def match():
     payload = request.get_json(silent=True) or {}
@@ -140,7 +150,7 @@ def match():
     # API (the UI guards most of this); turn it into a clean 400, not a 500.
     try:
         profile = _build_profile(payload)
-    except (TypeError, ValueError):
+    except (TypeError, ValueError, OverflowError):
         return jsonify({"error": "Invalid profile fields (check LSAT/GPA)."}), 400
 
     if not (profile["gpa"] > 0) or math.isnan(profile["gpa"]):

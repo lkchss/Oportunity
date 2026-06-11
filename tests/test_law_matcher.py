@@ -560,3 +560,74 @@ class TestDisplayOnlyFields:
         assert [s["id"] for s in base] == [s["id"] for s in again]
         assert ([s["composite_score"] for s in base]
                 == [s["composite_score"] for s in again])
+
+
+# ---------------------------------------------------------------------------
+# 6. Optional financials + pure-fit score (2026-06 feature batch)
+# ---------------------------------------------------------------------------
+
+class TestOptionalFinancialsAndPureFit:
+
+    def test_defaults_are_noop(self, schools):
+        """Omitting the optional financials must not change any score."""
+        base = rank_schools(_profile(), schools, top_n=5)
+        explicit = rank_schools(
+            _profile(dependents=0, cash_available=0, existing_debt=0),
+            schools, top_n=5)
+        for a, b in zip(base, explicit):
+            assert a["id"] == b["id"]
+            assert a["composite_score"] == b["composite_score"]
+            assert a["financial_breakdown"] == b["financial_breakdown"]
+
+    def test_cash_reduces_net_debt(self, schools):
+        s = _school(schools, "iowa-law")
+        _, bd0 = _compute_financial(_profile(), s, 50)
+        _, bd1 = _compute_financial(_profile(cash_available=30_000), s, 50)
+        assert bd1["net_debt"] == max(bd0["net_debt"] - 30_000, 0)
+        assert bd1["cash_applied"] == 30_000
+
+    def test_existing_debt_raises_total_and_monthly(self, schools):
+        s = _school(schools, "iowa-law")
+        _, bd0 = _compute_financial(_profile(), s, 50)
+        _, bd1 = _compute_financial(_profile(existing_debt=40_000), s, 50)
+        assert bd1["total_debt"] == bd1["net_debt"] + 40_000
+        assert bd1["monthly_payment_estimate"] > bd0["monthly_payment_estimate"]
+        assert bd1["debt_to_income_ratio"] > bd0["debt_to_income_ratio"]
+
+    def test_dependents_lower_idr_payment(self, schools):
+        s = _school(schools, "iowa-law")
+        _, bd0 = _compute_financial(_profile(goal="Public Interest"), s, 50)
+        _, bd2 = _compute_financial(
+            _profile(goal="Public Interest", dependents=2), s, 50)
+        assert bd2["idr_monthly_gross"] <= bd0["idr_monthly_gross"]
+
+    def test_negative_financials_clamped(self, schools):
+        """Negative or junk values behave as 0, not as credits."""
+        s = _school(schools, "iowa-law")
+        _, bd0 = _compute_financial(_profile(), s, 50)
+        _, bd1 = _compute_financial(
+            _profile(cash_available=-5000, existing_debt="oops", dependents=-1),
+            s, 50)
+        assert bd1["net_debt"] == bd0["net_debt"]
+        assert bd1["total_debt"] == bd0["total_debt"]
+
+    def test_pure_fit_score_present_and_bounded(self, schools):
+        ranked = rank_schools(_profile(), schools, top_n=len(schools))
+        for s in ranked:
+            assert 0 <= s["fit_no_admissibility_score"] <= 100
+
+    def test_pure_fit_ignores_tier_penalty(self, schools):
+        """A hard-reach school keeps its full pure-fit score while its composite
+        is tier-suppressed: pure fit must exceed composite for at least one
+        hard-reach school (the 0.80 multiplier + missing admissibility term)."""
+        ranked = rank_schools(_profile(lsat=150, gpa=3.0), schools,
+                              top_n=len(schools))
+        hard = [s for s in ranked if s["admissibility_tier"] == "hard reach"]
+        assert hard, "expected hard-reach schools for a 150/3.0 profile"
+        assert any(s["fit_no_admissibility_score"] > s["composite_score"]
+                   for s in hard)
+
+    def test_launchpads_carry_transfer_out_rate(self, schools):
+        plan = transfer_up_plan(_profile(lsat=155, gpa=3.3), schools)
+        assert plan["launchpads"]
+        assert all("transfer_out_rate" in lp for lp in plan["launchpads"])
