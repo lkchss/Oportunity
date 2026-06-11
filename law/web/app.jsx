@@ -40,11 +40,11 @@ function profileView(f) {
   return { ...f, lsat: f.noLsat ? null : Number(f.lsat), gpa: Number(f.gpa) };
 }
 
-async function fetchMatch(formSnapshot, lsatOverride) {
+async function fetchMatch(formSnapshot, lsatOverride, weightsOverride) {
   const res = await fetch("/api/match", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify(buildPayload(formSnapshot, lsatOverride)),
+    body: JSON.stringify(buildPayload(formSnapshot, lsatOverride, weightsOverride)),
   });
   // Error bodies aren't always JSON (Basic-Auth 401, proxy 502) — don't let
   // the parse failure mask the real status.
@@ -66,6 +66,9 @@ function App() {
   const [rview, setRview] = React.useState("guided");
   const [modal, setModal] = React.useState(null);
   const [rawSchools, setRawSchools] = React.useState(null); // adapted /api/schools | "error"
+  // TweaksPanel: per-score weight multipliers. null = defaults (key omitted from payload).
+  const [tweakWeights, setTweakWeights] = React.useState(null);
+  const [tweakOpen, setTweakOpen] = React.useState(false);
   // Bumped on every successful submit so in-flight what-if responses from an
   // older profile can be recognized as stale and dropped.
   const submitSeq = React.useRef(0);
@@ -74,7 +77,9 @@ function App() {
     setLoading(true);
     setError(null);
     try {
-      const adapted = await fetchMatch(f);
+      // Reset tweaks on a full profile submit so the results reflect the profile, not stale weights.
+      setTweakWeights(null);
+      const adapted = await fetchMatch(f, undefined, null);
       submitSeq.current += 1;
       setData(adapted);
       setSubmitted(f);
@@ -91,6 +96,23 @@ function App() {
       setLoading(false);
     }
   };
+
+  // Re-rank with new weights (called by TweaksPanel after debounce).
+  // Uses the same submitted form snapshot; weight changes go through fetchMatch
+  // so what-if/pure-fit/transfer tabs stay consistent.
+  const resubmitWithWeights = React.useCallback(async (w) => {
+    if (!submitted) return;
+    setTweakWeights(w);
+    const seq = submitSeq.current;
+    try {
+      const adapted = await fetchMatch(submitted, undefined, w);
+      // Drop if the user re-submitted the profile while this was in flight.
+      if (seq === submitSeq.current) {
+        setData(adapted);
+        setWhatIf({ delta: 0, data: null });
+      }
+    } catch (e) {/* keep the last good result — don't show an error for a tweak failure */}
+  }, [submitted]);
 
   // Opened via a share link: restore the profile and run the match once.
   React.useEffect(() => {
@@ -111,7 +133,8 @@ function App() {
     const seq = submitSeq.current;
     setWhatIf((w) => ({ ...w, delta: d }));
     try {
-      const adapted = await fetchMatch(submitted, Number(submitted.lsat) + d);
+      // Pass current tweakWeights so what-if respects the user's weight adjustments.
+      const adapted = await fetchMatch(submitted, Number(submitted.lsat) + d, tweakWeights);
       // Drop if the user kept clicking (delta moved on) or re-submitted the
       // profile while this request was in flight.
       setWhatIf((w) => w.delta === d && seq === submitSeq.current ? { delta: d, data: adapted } : w);
@@ -159,14 +182,21 @@ function App() {
       <ProfileScreen form={form} setForm={setForm} onSubmit={() => submit()} loading={loading} />
       }
       {!loading && screen === "results" && results && profile &&
-      <ResultsScreen results={results} plan={eff.plan} profile={profile}
+      <ResultsScreen results={results} plan={eff.plan} portfolio={eff ? eff.portfolio : null} profile={profile}
       whatIf={whatIf.delta} setWhatIf={setWhatIfDelta}
       onOpen={openSchool} onEditProfile={() => setScreen("intake")}
       compareIds={compareIds} onToggleCompare={toggleCompare}
       onClearCompare={() => setCompareIds([])}
       rview={rview} setRview={setRview}
-      onCompare={() => {setScreen("compare");window.scrollTo({ top: 0 });}} />
+      onCompare={() => {setScreen("compare");window.scrollTo({ top: 0 });}}
+      tweakOpen={tweakOpen} onTweakToggle={() => setTweakOpen((v) => !v)} />
       }
+
+      <ScoreWeightsPanel
+        open={tweakOpen}
+        onClose={() => setTweakOpen(false)}
+        onWeightsChange={resubmitWithWeights}
+      />
       {!loading && screen === "detail" && opened && profile &&
       <DetailScreen m={opened} profile={profile}
       onBack={() => {setScreen("results");}} />

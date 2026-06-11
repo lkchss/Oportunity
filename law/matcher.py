@@ -819,6 +819,76 @@ def _composite_weights(
     return career_w, location_w, scholarship_w, financial_w
 
 
+# Valid score keys that the user-weight multiplier layer recognises.
+_WEIGHT_KEYS = frozenset(
+    {"admissibility", "prestige", "career_fit", "location_fit", "scholarship", "financial"}
+)
+
+
+def _parse_user_weights(raw: object) -> Optional[dict]:
+    """
+    Parse and validate an optional per-score multiplier map sent by the client.
+
+    Accepted shape: {score_key: multiplier, ...} where keys are drawn from
+    _WEIGHT_KEYS.  Unknown keys are silently ignored so future fields don't
+    break old clients.
+
+    Rules:
+      - None / empty dict / missing → returns None (caller uses default weights).
+      - Non-finite or negative values are clamped to 0.0 (not rejected), so a
+        client that sends 0.0 for a dimension simply removes that dimension from
+        the composite rather than crashing.
+      - If every recognised key maps to 0.0 after clamping, the call is invalid
+        and ValueError is raised (caller should return 400).
+
+    Returns a dict with only the recognised, clamped values, or None.
+    """
+    if not raw:
+        return None
+    if not isinstance(raw, dict):
+        return None
+    out: dict[str, float] = {}
+    for k in _WEIGHT_KEYS:
+        if k not in raw:
+            continue
+        try:
+            v = float(raw[k])
+        except (TypeError, ValueError):
+            v = 0.0
+        out[k] = max(v, 0.0) if math.isfinite(v) else 0.0
+    if not out:
+        return None
+    if all(v == 0.0 for v in out.values()):
+        raise ValueError("All user-supplied weights are zero — at least one must be positive.")
+    return out
+
+
+def _apply_user_weights(
+    base_w: dict,
+    user_weights: Optional[dict],
+) -> dict:
+    """
+    Apply optional per-score multipliers to a pre-computed weight map, then
+    renormalize so the total weight stays at 1.0.
+
+    The cost-sensitivity floor is already baked into base_w before this is
+    called, so multiplying financial's weight down can never violate it in a
+    way that would surprise the user — the floor was already the minimum, and
+    the user is consciously reducing that score's influence.  The result is
+    renormalized, not refloor-checked, to keep the interaction transparent.
+
+    If user_weights is None or empty, base_w is returned unchanged (no copy).
+    """
+    if not user_weights:
+        return base_w
+    adjusted = {k: v * user_weights.get(k, 1.0) for k, v in base_w.items()}
+    total = sum(adjusted.values())
+    if total <= 0:
+        return base_w  # safety: all multiplied to zero — fall back
+    factor = 1.0 / total
+    return {k: v * factor for k, v in adjusted.items()}
+
+
 def _composite(
     scores: dict,
     career_slider: float,
@@ -826,23 +896,38 @@ def _composite(
     scholarship_slider: float,
     tier: str,
     cost_sensitivity: float = 0.0,
+    user_weights: Optional[dict] = None,
 ) -> float:
     """
     Weighted average of six scores, scaled by admissibility tier.
 
     Fixed weights:  admissibility 0.12, prestige 0.08  (total 0.20 fixed)
     Tier multiplier suppresses hard-reach schools in the composite ranking.
+
+    Optional user_weights: per-score multipliers (from _parse_user_weights).
+    Applied AFTER the cost-sensitivity floor is resolved, then renormalized so
+    the total remains 1.0.  Absent/None → identical to current behavior.
     """
     career_w, location_w, scholarship_w, financial_w = _composite_weights(
         career_slider, location_slider, scholarship_slider, cost_sensitivity)
 
+    base_w = {
+        "admissibility": 0.12,
+        "prestige":      0.08,
+        "career_fit":    career_w,
+        "location_fit":  location_w,
+        "scholarship":   scholarship_w,
+        "financial":     financial_w,
+    }
+    w = _apply_user_weights(base_w, user_weights)
+
     raw = (
-        scores["admissibility"] * 0.12
-        + scores["prestige"]    * 0.08
-        + scores["career_fit"]  * career_w
-        + scores["location_fit"]* location_w
-        + scores["scholarship"] * scholarship_w
-        + scores["financial"]   * financial_w
+        scores["admissibility"] * w["admissibility"]
+        + scores["prestige"]    * w["prestige"]
+        + scores["career_fit"]  * w["career_fit"]
+        + scores["location_fit"]* w["location_fit"]
+        + scores["scholarship"] * w["scholarship"]
+        + scores["financial"]   * w["financial"]
     )
     multiplier = _TIER_COMPOSITE_MULTIPLIER.get(tier, 1.00)
     return _clamp(raw * multiplier)
@@ -854,29 +939,123 @@ def _fit_without_admissibility(
     location_slider: float,
     scholarship_slider: float,
     cost_sensitivity: float = 0.0,
+    user_weights: Optional[dict] = None,
 ) -> float:
     """
     Composite with admissibility removed: drop the admissibility term AND the
     tier multiplier, renormalize the remaining 0.88 of weight back to 0-100.
     Answers "how well does this school fit me, ignoring whether I'd get in".
+
+    user_weights: same per-score multipliers as _composite; admissibility key
+    is ignored here since that score is excluded by definition.
     """
     career_w, location_w, scholarship_w, financial_w = _composite_weights(
         career_slider, location_slider, scholarship_slider, cost_sensitivity)
 
+    base_w = {
+        "prestige":     0.08,
+        "career_fit":   career_w,
+        "location_fit": location_w,
+        "scholarship":  scholarship_w,
+        "financial":    financial_w,
+    }
+    # Strip admissibility key from user_weights before applying (not present here)
+    uw_no_adm = {k: v for k, v in (user_weights or {}).items() if k != "admissibility"}
+    w = _apply_user_weights(base_w, uw_no_adm or None)
+
     raw = (
-        scores["prestige"]      * 0.08
-        + scores["career_fit"]  * career_w
-        + scores["location_fit"]* location_w
-        + scores["scholarship"] * scholarship_w
-        + scores["financial"]   * financial_w
+        scores["prestige"]      * w["prestige"]
+        + scores["career_fit"]  * w["career_fit"]
+        + scores["location_fit"]* w["location_fit"]
+        + scores["scholarship"] * w["scholarship"]
+        + scores["financial"]   * w["financial"]
     )
-    return _clamp(raw / 0.88)
+    # Renormalize back to 0-100: divide by the sum of non-admissibility weights
+    total_w = sum(w.values())
+    return _clamp(raw / total_w) if total_w > 0 else 0.0
 
 
 # ---------------------------------------------------------------------------
 # Transfer-up planning (for applicants not competitive at their target tier
 # who intend to transfer to a higher-ranked school after 1L)
 # ---------------------------------------------------------------------------
+
+def compute_scholarship_leverage(
+    lsat: Optional[int],
+    gpa: float,
+    school: dict,
+) -> dict:
+    """
+    Display-only aid-grid insight: is the applicant above both of the school's
+    50th-percentile medians, and if so, how does the school's real ABA 509
+    scholarship grid break down?
+
+    Returns a dict with:
+      above_both_medians (bool)
+      pct_full (float|None)   -- fraction (as pct, 0-100) receiving full-tuition aid
+      pct_half_plus (float|None) -- fraction receiving half-tuition or more
+      note (str)              -- human-readable one-liner for display
+
+    Rules:
+    - No-LSAT profile (lsat None): always above_both_medians=False (no LSAT on file
+      means the school cannot benchmark the applicant on its primary admissions axis).
+    - Grid absent (scholarship_full_pct is None): pct_full / pct_half_plus are None.
+    - Does NOT touch any score, tier, or sort key.
+    """
+    if lsat is None:
+        return {
+            "above_both_medians": False,
+            "pct_full": None,
+            "pct_half_plus": None,
+            "note": "Submit an LSAT score to see leverage data.",
+        }
+
+    above = lsat >= school.get("lsat_50", 0) and gpa >= school.get("gpa_50", 0.0)
+
+    full = school.get("scholarship_full_pct")
+    htf  = school.get("scholarship_half_to_full_pct")
+
+    if full is None:
+        pct_full      = None
+        pct_half_plus = None
+    else:
+        pct_full      = round(full * 100, 1)
+        pct_half_plus = round((full + (htf or 0.0)) * 100, 1)
+
+    if not above:
+        return {
+            "above_both_medians": False,
+            "pct_full": pct_full,
+            "pct_half_plus": pct_half_plus,
+            "note": "Your numbers are below one or both medians here.",
+        }
+
+    # Applicant is above both medians -- build a meaningful note
+    if pct_half_plus is not None and pct_half_plus > 0:
+        note = (
+            f"Your numbers are above both medians -- "
+            f"{pct_half_plus}% of students here received half tuition or more "
+            f"({pct_full}% received a full ride). "
+            "Use this as leverage in negotiations."
+        )
+    elif pct_half_plus is not None:
+        note = (
+            "Your numbers are above both medians. "
+            "Aid grid shows limited half-or-more scholarships -- ask directly."
+        )
+    else:
+        note = (
+            "Your numbers are above both medians -- "
+            "no detailed grid available, but your profile is competitive for aid."
+        )
+
+    return {
+        "above_both_medians": True,
+        "pct_full": pct_full,
+        "pct_half_plus": pct_half_plus,
+        "note": note,
+    }
+
 
 def _transfer_metrics(school: dict) -> dict:
     """
@@ -965,10 +1144,147 @@ def transfer_up_plan(
     return {"launchpads": launchpads, "targets": targets}
 
 
+def build_portfolio(ranked: list[dict]) -> dict:
+    """
+    Build a deterministic application portfolio from the already-ranked school list.
+
+    Selection rules
+    ---------------
+    Targets: 2 safeties + 4 targets + 3 reaches (hard reaches are not included).
+    Counts shrink gracefully when a tier contains fewer schools than the quota.
+
+    Within each bucket the algorithm takes the composite-ranked top of that tier
+    subject to two diversification constraints:
+
+    1. State cap: at most 2 schools sharing the same state per bucket, unless no
+       alternative exists. When a state would exceed the cap the next-best school
+       from a different state is taken in its place (continuing down the ranked list).
+
+    2. Cheap-safety preference: within the safety bucket, when two candidates are
+       within 3 composite points of each other, the one with the lower net_debt
+       (from financial_breakdown) is preferred.
+
+    Each slate entry carries:
+      id, name, admissibility_tier, composite_score, net_debt, reason (one-line,
+      built deterministically from real fields).
+
+    The reason line is the strongest of the school's six scores (prestige,
+    career_fit, location_fit, scholarship, financial) plus an in-state / cheap
+    flag when relevant.
+
+    The function does NOT modify any score, tier, or ranking order.
+    Snapshot guard: the caller must verify id+composite order is byte-identical
+    before and after calling this function (it reads only, never writes back).
+
+    Returns {"safeties": [...], "targets": [...], "reaches": [...]} — any bucket
+    may be an empty list when the tier has no schools at all.
+    """
+    # Buckets we care about (hard reaches excluded by policy)
+    QUOTA: dict[str, int] = {"safety": 2, "target": 4, "reach": 3}
+    STATE_CAP = 2
+
+    # Score-name → label used in the reason line
+    _SCORE_LABELS: dict[str, str] = {
+        "prestige_score":      "strong prestige",
+        "career_fit_score":    "strong career fit",
+        "location_fit_score":  "strong location fit",
+        "scholarship_score":   "strong scholarship odds",
+        "financial_score":     "favorable cost",
+    }
+
+    def _reason(school: dict) -> str:
+        """One deterministic reason line built from real school fields."""
+        # Find the strongest non-admissibility score dimension
+        best_key = max(
+            _SCORE_LABELS.keys(),
+            key=lambda k: school.get(k, 0.0),
+        )
+        reason = _SCORE_LABELS[best_key]
+
+        fb = school.get("financial_breakdown") or {}
+        instate = fb.get("qualifies_instate", False)
+        net_debt = fb.get("net_debt")
+
+        # Append a cost / location flag when meaningful
+        tier = school.get("admissibility_tier", "")
+        if instate:
+            reason += " · in-state tuition"
+        elif tier == "safety" and net_debt is not None and net_debt < 80_000:
+            reason += " · low projected debt"
+
+        return f"{school.get('admissibility_tier', 'safety').title()} — {reason}."
+
+    def _pick_bucket(pool: list[dict], quota: int) -> list[dict]:
+        """
+        Select up to `quota` schools from pool (already ordered best-first by
+        composite_score) respecting the state cap.
+        """
+        chosen: list[dict] = []
+        state_counts: dict[str, int] = {}
+        for s in pool:
+            state = (s.get("state") or "").upper()
+            if state_counts.get(state, 0) >= STATE_CAP:
+                continue
+            chosen.append(s)
+            state_counts[state] = state_counts.get(state, 0) + 1
+            if len(chosen) >= quota:
+                break
+        return chosen
+
+    def _apply_cheap_safety_preference(candidates: list[dict]) -> list[dict]:
+        """
+        Within the safety bucket: when two adjacent candidates are within 3
+        composite points of each other, prefer the cheaper one (lower net_debt).
+        Uses a single-pass bubble-style swap so the sort stays stable for
+        well-separated candidates.
+        """
+        result = list(candidates)
+        for i in range(len(result) - 1):
+            a, b = result[i], result[i + 1]
+            if abs(a.get("composite_score", 0) - b.get("composite_score", 0)) <= 3:
+                debt_a = (a.get("financial_breakdown") or {}).get("net_debt") or float("inf")
+                debt_b = (b.get("financial_breakdown") or {}).get("net_debt") or float("inf")
+                if debt_b < debt_a:
+                    result[i], result[i + 1] = b, a
+        return result
+
+    def _slate_entry(school: dict) -> dict:
+        fb = school.get("financial_breakdown") or {}
+        return {
+            "id":                school.get("id"),
+            "name":              school.get("name"),
+            "admissibility_tier": school.get("admissibility_tier"),
+            "composite_score":   school.get("composite_score"),
+            "net_debt":          fb.get("net_debt"),
+            "reason":            _reason(school),
+        }
+
+    # Partition ranked list by tier (preserving composite order)
+    by_tier: dict[str, list[dict]] = {"safety": [], "target": [], "reach": []}
+    for s in ranked:
+        t = s.get("admissibility_tier", "")
+        if t in by_tier:
+            by_tier[t].append(s)
+
+    # Safety bucket: apply cheap preference first, then state-cap filter
+    safety_pool = _apply_cheap_safety_preference(by_tier["safety"])
+    safeties = _pick_bucket(safety_pool, QUOTA["safety"])
+
+    targets = _pick_bucket(by_tier["target"], QUOTA["target"])
+    reaches = _pick_bucket(by_tier["reach"], QUOTA["reach"])
+
+    return {
+        "safeties": [_slate_entry(s) for s in safeties],
+        "targets":  [_slate_entry(s) for s in targets],
+        "reaches":  [_slate_entry(s) for s in reaches],
+    }
+
+
 def rank_schools(
     profile: dict,
     schools: list[dict],
     top_n: int = 20,
+    user_weights: Optional[dict] = None,
 ) -> list[dict]:
     """
     Rank law schools by profile fit. Returns top N with all scores attached.
@@ -981,6 +1297,11 @@ def rank_schools(
       scholarship (int 0-10),       scholarship importance slider
       career_weight (int 0-10),     career fit importance slider
       location_weight (int 0-10),   location fit importance slider
+
+    Optional user_weights: per-score multipliers parsed by _parse_user_weights.
+      Keys: admissibility, prestige, career_fit, location_fit, scholarship, financial.
+      None (default) → identical to current behavior (no change to results).
+      Applied after the cost-sensitivity floor, then renormalized to sum=1.0.
 
     Each returned school dict has extra keys:
       admissibility_score, admissibility_tier,
@@ -1043,15 +1364,17 @@ def rank_schools(
         entry["financial_score"]       = round(financial, 1)
         entry["financial_breakdown"]   = breakdown
         entry.update(_transfer_metrics(school))
+        # Display-only aid insight — never used in any score or sort key
+        entry["scholarship_leverage"]  = compute_scholarship_leverage(lsat, gpa, school)
         entry["composite_score"]       = round(
             _composite(scores, career_slider, location_slider, scholarship_slider,
-                       tier, cost_sensitivity), 1
+                       tier, cost_sensitivity, user_weights), 1
         )
         # Admissibility-blind fit — same weights, no admissibility term, no tier
         # multiplier. Surfaced as the "pure fit" view; never drives the ranking.
         entry["fit_no_admissibility_score"] = round(
             _fit_without_admissibility(scores, career_slider, location_slider,
-                                       scholarship_slider, cost_sensitivity), 1
+                                       scholarship_slider, cost_sensitivity, user_weights), 1
         )
         scored.append(entry)
 

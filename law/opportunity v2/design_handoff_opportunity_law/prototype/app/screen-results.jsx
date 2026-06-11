@@ -6,12 +6,11 @@ const TIER_SECTIONS = [
 { tier: "reach", title: "Reaches", sub: "Below their medians, but worth the application fee" }];
 
 
-function SchoolCard({ m, onOpen, added, onToggleCompare, goalLabel, pure }) {
+function SchoolCard({ m, onOpen, added, onToggleCompare, goalLabel }) {
   const t = TIERS[m.tier];
-  const score = pure ? m.pure : m.composite;
   return (
-    <div className="school-card" onClick={() => onOpen(m)}>
-      <ScoreRing value={score} color={gradeColor(score)} />
+    <div className="school-card" onClick={() => onOpen(m)} data-comment-anchor={`card-${m.id}`}>
+      <ScoreRing value={m.composite} color={gradeColor(m.composite)} />
       <div style={{ flex: 1, minWidth: 0 }}>
         <div style={{ display: "flex", alignItems: "baseline", gap: 10, flexWrap: "wrap" }}>
           <span className="sc-name">{m.name}</span>
@@ -42,40 +41,11 @@ function SchoolCard({ m, onOpen, added, onToggleCompare, goalLabel, pure }) {
 
 }
 
-function GuidedView({ results, pure, onOpen, compareIds, onToggleCompare, goalLabel }) {
+function GuidedView({ results, onOpen, compareIds, onToggleCompare, goalLabel }) {
   const [expanded, setExpanded] = React.useState({}); // tier -> bool (show all)
   const [showHard, setShowHard] = React.useState(false);
   const byTier = (t) => results.filter((m) => m.tier === t);
   const hard = byTier("hard");
-
-  // "Ignore admissibility": admission is assumed everywhere, so tier grouping
-  // is meaningless — one flat list ranked by pure fit. Tier pills still show.
-  if (pure) {
-    const cap = expanded.pure ? results.length : 10;
-    return (
-      <section className="tier-section">
-        <div className="ts-head">
-          <h2>Best fit<span className="colon">:</span></h2>
-          <span className="count">{results.length} schools</span>
-        </div>
-        <p className="ts-sub">Ranked by fit alone, as if you could get in anywhere</p>
-        <div>
-          {results.slice(0, cap).map((m) =>
-          <SchoolCard key={m.id} m={m} pure onOpen={onOpen} goalLabel={goalLabel}
-          added={compareIds.includes(m.id)} onToggleCompare={onToggleCompare} />
-          )}
-        </div>
-        {results.length > 10 &&
-        <div className="show-more-row">
-            <button className="btn sm ghost"
-          onClick={() => setExpanded((e) => ({ ...e, pure: !e.pure }))}>
-              {expanded.pure ? "Show fewer" : `Show all ${results.length} schools ▾`}
-            </button>
-          </div>
-        }
-      </section>);
-  }
-
   return (
     <div>
       {TIER_SECTIONS.map(({ tier, title, sub }) => {
@@ -83,7 +53,7 @@ function GuidedView({ results, pure, onOpen, compareIds, onToggleCompare, goalLa
         if (!rows.length) return null;
         const cap = expanded[tier] ? rows.length : 4;
         return (
-          <section className="tier-section" key={tier}>
+          <section className="tier-section" key={tier} data-screen-label={`results-${tier}`}>
             <div className="ts-head">
               <span className="dot" style={{ width: 10, height: 10, borderRadius: 99, background: TIERS[tier].color }}></span>
               <h2>{title}</h2>
@@ -116,7 +86,7 @@ function GuidedView({ results, pure, onOpen, compareIds, onToggleCompare, goalLa
         </div>
       }
       {hard.length > 0 && showHard &&
-      <section className="tier-section">
+      <section className="tier-section" data-screen-label="results-hard">
           <div className="ts-head">
             <span className="dot" style={{ width: 10, height: 10, borderRadius: 99, background: TIERS.hard.color }}></span>
             <h2>Hard Reaches</h2>
@@ -194,7 +164,8 @@ function TableView({ results, profile, pure, onOpen, compareIds, onToggleCompare
         </thead>
         <tbody>
           {sorted.map((m) => {
-              const delta = profile.lsat == null || m.l50 == null ? null : profile.lsat - m.l50;
+              const t = TIERS[m.tier];
+              const delta = profile.lsat == null ? null : profile.lsat - m.l50;
               const sc = pure ? m.pure : m.composite;
               return (
                 <tr key={m.id} className={compareIds.includes(m.id) ? "selected" : ""} onClick={() => onOpen(m)}>
@@ -249,11 +220,12 @@ function TransferCard({ m, onOpen, stats, whyText }) {
     </div>);
 }
 
-function TransfersView({ plan, onOpen, goalLabel }) {
+function TransfersView({ plan, onOpenId, results }) {
   const { launchpads, targets } = plan;
+  const open = (m) => onOpenId(m.id);
   return (
     <div>
-      <section className="tier-section">
+      <section className="tier-section" data-screen-label="transfers-launchpads">
         <div className="ts-head">
           <h2>Launchpads<span className="colon">:</span></h2>
           <span className="count">{launchpads.length} of your matches</span>
@@ -262,14 +234,14 @@ function TransfersView({ plan, onOpen, goalLabel }) {
         <div>
           {launchpads.length === 0 && <div className="muted">No realistic admits with strong transfer-out records.</div>}
           {launchpads.map((m) =>
-          <TransferCard key={m.id} m={m} onOpen={onOpen}
+          <TransferCard key={m.id} m={m} onOpen={open}
           whyText={`${fmtPct1(m.trOut)} of 1Ls transfer up · ${m.scholarship >= 70 ? "big merit aid keeps 1L cheap" : "keeps 1L costs down"}`}
           stats={[[fmtPct1(m.trOut), "move up /yr"], [fmtMoneyK(m.netDebt), "est. cost"], [fmtPct(m.bar), "bar pass"]]} />
           )}
         </div>
       </section>
 
-      <section className="tier-section">
+      <section className="tier-section" data-screen-label="transfers-targets">
         <div className="ts-head">
           <h2>Transfer-friendly targets<span className="colon">:</span></h2>
           <span className="count">{targets.length} schools</span>
@@ -278,9 +250,9 @@ function TransfersView({ plan, onOpen, goalLabel }) {
         <div>
           {targets.length === 0 && <div className="muted">No reach schools with meaningful transfer classes for this profile.</div>}
           {targets.map((m) =>
-          <TransferCard key={m.id} m={m} onOpen={onOpen}
+          <TransferCard key={m.id} m={m} onOpen={open}
           whyText={`Admits ~${m.trIn} transfers a year · 1L grades replace your LSAT here`}
-          stats={[[String(m.trIn), "seats /yr"], [fmtPct(m.goalPct), goalLabel], [fmtRank(m.rank), "USNWR"]]} />
+          stats={[[String(m.trIn), "seats /yr"], [fmtPct(m.biglaw), "BigLaw"], [fmtRank(m.rank), "USNWR"]]} />
           )}
         </div>
       </section>
@@ -334,82 +306,15 @@ function SaveMenu({ results, pure }) {
 
 }
 
-/* ---- Apply Plan (portfolio) ---- */
-
-const PORTFOLIO_BUCKETS = [
-  { key: "safeties", title: "Safeties",  sub: "Likely admits — anchor your list here.", tier: "safety" },
-  { key: "targets",  title: "Targets",   sub: "Your numbers are at or near the median.", tier: "target" },
-  { key: "reaches",  title: "Reaches",   sub: "Below their medians, but worth the shot.", tier: "reach"  },
-];
-
-function PortfolioBucketCard({ m, onOpen }) {
-  const t = TIERS[m.tier] || TIERS.target;
-  return (
-    <div className="school-card" onClick={() => onOpen(m)} style={{ cursor: "pointer" }}>
-      <ScoreRing value={m.composite} color={gradeColor(m.composite)} />
-      <div style={{ flex: 1, minWidth: 0 }}>
-        <div style={{ display: "flex", alignItems: "baseline", gap: 10, flexWrap: "wrap" }}>
-          <span className="sc-name">{m.name}</span>
-          <span className="sc-meta">{m.loc} · USNWR {fmtRank(m.rank)}</span>
-        </div>
-        <div className="sc-why">
-          <span className={`lead ${t.cls}`}>{t.label}.</span>{" "}
-          {m.portfolioReason || m.why}
-        </div>
-      </div>
-      <div className="sc-stats">
-        <div className="sc-stat">
-          <div className="v">{fmtMoneyK(m.netDebt)}</div>
-          <div className="k">Est. cost</div>
-        </div>
-        <div className="sc-stat">
-          <div className="v">{Math.round(m.composite)}</div>
-          <div className="k">Score</div>
-        </div>
-      </div>
-    </div>
-  );
-}
-
-function PortfolioView({ portfolio, onOpen }) {
-  if (!portfolio) {
-    return (
-      <div className="tier-section">
-        <p className="muted">Not enough schools across tiers to build a slate — add more profile detail or check your stats.</p>
-      </div>
-    );
-  }
-
-  return (
-    <div>
-      {PORTFOLIO_BUCKETS.map(({ key, title, sub, tier }) => {
-        const entries = portfolio[key] || [];
-        return (
-          <section className="tier-section" key={key}>
-            <div className="ts-head">
-              <span className="dot" style={{ width: 10, height: 10, borderRadius: 99, background: TIERS[tier].color }}></span>
-              <h2>{title}</h2>
-              <span className="count">{entries.length} school{entries.length !== 1 ? "s" : ""}</span>
-            </div>
-            <p className="ts-sub">{sub}</p>
-            {entries.length === 0
-              ? <p className="muted" style={{ marginTop: 8 }}>No schools in this tier for your profile.</p>
-              : <div>{entries.map((m) => <PortfolioBucketCard key={m.id} m={m} onOpen={onOpen} />)}</div>
-            }
-          </section>
-        );
-      })}
-      <p className="muted" style={{ fontSize: 12, marginTop: 20 }}>
-        Slate sizes (2 safeties / 4 targets / 3 reaches) are a guideline. Apply to as many as your time and budget allow.
-      </p>
-    </div>
-  );
-}
-
-function ResultsScreen({ results, plan, portfolio, profile, whatIf, setWhatIf, onOpen, onEditProfile, compareIds, onToggleCompare, onClearCompare, onCompare, rview, setRview, tweakOpen, onTweakToggle }) {
+function ResultsScreen({ results, baseResults, profile, whatIf, setWhatIf, onOpen, onEditProfile, compareIds, onToggleCompare, onClearCompare, onCompare, rview, setRview }) {
   const [pure, setPure] = React.useState(false);
   const [whatIfOpen, setWhatIfOpen] = React.useState(false);
-  const goalLabel = GOAL_LABEL[profile.goal] || "BigLaw";
+  const goalLabel = profile.goal === "BigLaw / In-house" ? "BigLaw" :
+  profile.goal === "Federal Clerkship" ? "Fed clerk" :
+  profile.goal === "Government" ? "Gov" :
+  profile.goal === "Public Interest" ? "Pub int" :
+  profile.goal === "Solo/Small Firm" ? "Solo/Sm" :
+  profile.goal === "Academia" ? "Clerk" : "BigLaw";
 
   const ranked = React.useMemo(
     () => pure ? [...results].sort((a, b) => b.pure - a.pure) : results,
@@ -418,18 +323,13 @@ function ResultsScreen({ results, plan, portfolio, profile, whatIf, setWhatIf, o
   const viewOpts = [
   { k: "guided", label: "Shortlist" },
   { k: "table", label: "Full table" },
-  ...(profile.transfer ? [{ k: "transfers", label: "Transfer path" }] : []),
-  ...(portfolio ? [{ k: "portfolio", label: "Apply plan" }] : [])];
+  ...(profile.transfer ? [{ k: "transfers", label: "Transfer path" }] : [])];
 
-  // Stale view guard: a re-submitted profile may have dropped the transfer intent,
-  // or the portfolio may have disappeared on re-submit.
-  const view = (rview === "transfers" && !profile.transfer) ||
-               (rview === "portfolio" && !portfolio) ? "guided" : rview;
 
-  const compareNames = results.filter((m) => compareIds.includes(m.id)).map((m) => m.name);
+  const compareNames = baseResults.filter((m) => compareIds.includes(m.id)).map((m) => m.name);
 
   return (
-    <div>
+    <div data-screen-label="results">
       <div className="results-head">
         <div>
           <h1 className="display">Your matches, ranked<span className="colon">:</span></h1>
@@ -445,17 +345,9 @@ function ResultsScreen({ results, plan, portfolio, profile, whatIf, setWhatIf, o
       </div>
 
       <div className="results-toolbar">
-        <Seg options={viewOpts} value={view} onChange={setRview} />
+        <Seg options={viewOpts} value={rview} onChange={setRview} />
         <span className="spacer"></span>
-        {onTweakToggle &&
-          <button className={`twp-trigger${tweakOpen ? " active" : ""}`}
-            aria-pressed={!!tweakOpen} onClick={onTweakToggle}
-            title="Adjust how much each score dimension influences the ranking">
-            <span className="dot"></span>
-            Adjust weights
-          </button>
-        }
-        {!profile.noLsat && view !== "transfers" && (whatIfOpen ?
+        {!profile.noLsat && rview !== "transfers" && (whatIfOpen ?
         <span className="spin" title="What-if LSAT">
             <span className="spin-val" style={whatIf > 0 ? {} : { color: "var(--soft)" }}>{Math.min(profile.lsat + whatIf, 180)}</span>
             <span className="spin-btns">
@@ -476,19 +368,18 @@ function ResultsScreen({ results, plan, portfolio, profile, whatIf, setWhatIf, o
         <SaveMenu results={ranked} pure={pure} />
       </div>
 
-      {view === "guided" &&
-      <GuidedView results={ranked} pure={pure} onOpen={onOpen} compareIds={compareIds}
+      {rview === "guided" &&
+      <GuidedView results={ranked} onOpen={onOpen} compareIds={compareIds}
       onToggleCompare={onToggleCompare} goalLabel={goalLabel} />
       }
-      {view === "table" &&
+      {rview === "table" &&
       <TableView results={ranked} profile={profile} pure={pure} onOpen={onOpen}
       compareIds={compareIds} onToggleCompare={onToggleCompare} goalLabel={goalLabel} />
       }
-      {view === "transfers" &&
-      <TransfersView plan={plan} onOpen={onOpen} goalLabel={goalLabel} />
-      }
-      {view === "portfolio" &&
-      <PortfolioView portfolio={portfolio} onOpen={onOpen} />
+      {rview === "transfers" &&
+      <TransfersView plan={transferPlan(results)} onOpenId={(id) => {
+        const m = results.find((x) => x.id === id);if (m) onOpen(m);
+      }} />
       }
 
       {compareIds.length > 0 &&

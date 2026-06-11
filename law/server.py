@@ -12,7 +12,7 @@ from pathlib import Path
 from flask import Flask, Response, jsonify, request, send_from_directory
 
 from law.data_loader import DataValidationError, load_law_schools
-from law.matcher import rank_schools, transfer_up_plan
+from law.matcher import rank_schools, transfer_up_plan, build_portfolio, _parse_user_weights
 
 WEB_DIR = Path(__file__).parent / "web"
 
@@ -156,8 +156,17 @@ def match():
     if not (profile["gpa"] > 0) or math.isnan(profile["gpa"]):
         return jsonify({"error": "A valid GPA is required."}), 400
 
+    # Optional per-score weight multipliers from the TweaksPanel.
+    # Absent / null / {} → None (exact default behavior, byte-identical output).
+    # All-zero → 400.  Unknown keys are silently ignored.
     try:
-        ranked = rank_schools(profile, _SCHOOLS, top_n=len(_SCHOOLS))
+        user_weights = _parse_user_weights(payload.get("weights"))
+    except ValueError as exc:
+        return jsonify({"error": str(exc)}), 400
+
+    try:
+        ranked = rank_schools(profile, _SCHOOLS, top_n=len(_SCHOOLS),
+                              user_weights=user_weights)
     except ValueError as exc:
         return jsonify({"error": str(exc)}), 400
 
@@ -165,11 +174,13 @@ def match():
         school["radar"] = [round(school[k]) for k in _RADAR_KEYS]
 
     transfer_plan = transfer_up_plan(profile, _SCHOOLS)
+    portfolio = build_portfolio(ranked)
 
     return jsonify({
         "profile": profile,
         "schools": ranked,
         "transfer_plan": transfer_plan,
+        "portfolio": portfolio,
     })
 
 

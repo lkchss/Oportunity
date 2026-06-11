@@ -108,17 +108,14 @@ function FinancialsSection({ form, set }) {
 
 }
 
-function ProfileScreen({ form, setForm, onSubmit, loading }) {
+function ProfileScreen({ form, setForm, onSubmit }) {
   const set = (k, v) => setForm((f) => ({ ...f, [k]: v }));
-  const loadScenario = (f) => setForm(f);
-  const lsatOk = form.noLsat || (Number(form.lsat) >= 120 && Number(form.lsat) <= 180);
-  const gpaOk = Number(form.gpa) > 0 && Number(form.gpa) <= 4.33;
   return (
     <div>
       <div className="intake-head">
         <h1 className="display">Where should you go to law school<span className="colon">:</span></h1>
         <p>Tell us a little about yourself. We'll rank every ABA-accredited school by how realistic it is, how well it serves your career, and what it would really cost
-
+          
           <em> you</em>.</p>
       </div>
 
@@ -131,7 +128,7 @@ function ProfileScreen({ form, setForm, onSubmit, loading }) {
             <div className="field">
               <label>LSAT</label>
               <input type="number" min="120" max="180" value={form.lsat} disabled={form.noLsat}
-              placeholder="120–180" onChange={(e) => set("lsat", e.target.value)} />
+              placeholder="120–180" onChange={(e) => set("lsat", Number(e.target.value))} />
               <div className="checkbox-row" style={{ fontSize: 12.5, marginTop: 2 }}>
                 <input id="nolsat" type="checkbox" checked={form.noLsat}
                 onChange={(e) => set("noLsat", e.target.checked)} />
@@ -141,7 +138,7 @@ function ProfileScreen({ form, setForm, onSubmit, loading }) {
             <div className="field">
               <label>Undergrad GPA</label>
               <input type="number" min="0" max="4" step="0.01" value={form.gpa}
-              placeholder="0.00–4.00" onChange={(e) => set("gpa", e.target.value)} />
+              placeholder="0.00–4.00" onChange={(e) => set("gpa", Number(e.target.value))} />
             </div>
           </div>
 
@@ -176,12 +173,8 @@ function ProfileScreen({ form, setForm, onSubmit, loading }) {
           </div>
 
           <div className="intake-actions">
-            <button className="btn primary" style={{ width: "100%" }} disabled={loading || !lsatOk || !gpaOk}
-            title={!lsatOk ? "Enter an LSAT (120–180) or check “I haven't taken it yet”" : !gpaOk ? "Enter a GPA (0–4.33)" : undefined}
-            onClick={onSubmit}>{loading ? "Matching…" : "Find my schools →"}</button>
+            <button className="btn primary" style={{ width: "100%" }} onClick={onSubmit}>Find my schools →</button>
           </div>
-
-          <ScenariosPanel form={form} onLoad={loadScenario} />
         </section>
       </div>
     </div>);

@@ -81,6 +81,15 @@ OPTIONAL_FIELDS = {
     "scorecard_debt_monthly": (int, float),
     "scorecard_earn_1yr": (int, float),
     "scorecard_earn_4yr": (int, float),
+    # ABA Employment Summary placement-by-state (per-school reports, class of 2024),
+    # display-only — never scored.
+    # placement_states: list of {"state": "<2-letter>", "pct": <0-100 float>}, max 3 entries
+    # placement_year: int (graduating class year, e.g. 2024)
+    "placement_states": list,
+    "placement_year": (int, float),
+    # Multi-year 509 selectivity trend (ABA First Year Class bulk reports),
+    # display-only — never scored.  Validated separately by _validate_trend().
+    "selectivity_trend": dict,
 }
 
 
@@ -137,6 +146,12 @@ def _validate_entry(entry: dict) -> None:
         if field not in entry or entry[field] is None:
             continue
         value = entry[field]
+
+        # selectivity_trend has its own deep validator.
+        if field == "selectivity_trend":
+            _validate_selectivity_trend(school_id, value)
+            continue
+
         types = expected_type if isinstance(expected_type, tuple) else (expected_type,)
         # bool is a subclass of int — guard so a bool field can't be a stray int
         if expected_type is bool and not isinstance(value, bool):
@@ -147,6 +162,85 @@ def _validate_entry(entry: dict) -> None:
             raise DataValidationError(
                 f"School '{school_id}': field '{field}' has type {type(value).__name__}, "
                 f"expected {' or '.join(t.__name__ for t in types)}"
+            )
+
+    # Extra validation for placement_states entries
+    ps = entry.get("placement_states")
+    if ps is not None:
+        _VALID_STATE_CODES = {
+            "AL","AK","AZ","AR","CA","CO","CT","DE","DC","FL","GA","HI","ID",
+            "IL","IN","IA","KS","KY","LA","ME","MD","MA","MI","MN","MS","MO",
+            "MT","NE","NV","NH","NJ","NM","NY","NC","ND","OH","OK","OR","PA",
+            "RI","SC","SD","TN","TX","UT","VT","VA","WA","WV","WI","WY",
+            "PR","GU","VI","MP","AS",
+        }
+        if not isinstance(ps, list):
+            raise DataValidationError(
+                f"School '{school_id}': placement_states must be a list"
+            )
+        if len(ps) > 3:
+            raise DataValidationError(
+                f"School '{school_id}': placement_states has {len(ps)} entries (max 3)"
+            )
+        for i, item in enumerate(ps):
+            if not isinstance(item, dict):
+                raise DataValidationError(
+                    f"School '{school_id}': placement_states[{i}] must be a dict"
+                )
+            state = item.get("state")
+            pct = item.get("pct")
+            if not isinstance(state, str) or state not in _VALID_STATE_CODES:
+                raise DataValidationError(
+                    f"School '{school_id}': placement_states[{i}].state={state!r} "
+                    f"is not a valid 2-letter state/territory code"
+                )
+            if not isinstance(pct, (int, float)) or not (0 <= pct <= 100):
+                raise DataValidationError(
+                    f"School '{school_id}': placement_states[{i}].pct={pct!r} "
+                    f"must be a number in [0, 100]"
+                )
+
+
+def _validate_selectivity_trend(school_id: str, trend: object) -> None:
+    """Validate the selectivity_trend dict: parallel arrays, sane ranges."""
+    if not isinstance(trend, dict):
+        raise DataValidationError(
+            f"School '{school_id}': selectivity_trend must be a dict"
+        )
+    for key in ("years", "lsat_50", "gpa_50", "accept_rate"):
+        if key not in trend:
+            raise DataValidationError(
+                f"School '{school_id}': selectivity_trend missing key '{key}'"
+            )
+        if not isinstance(trend[key], list):
+            raise DataValidationError(
+                f"School '{school_id}': selectivity_trend['{key}'] must be a list"
+            )
+    n = len(trend["years"])
+    if n < 2:
+        raise DataValidationError(
+            f"School '{school_id}': selectivity_trend needs >=2 years, got {n}"
+        )
+    for key in ("lsat_50", "gpa_50", "accept_rate"):
+        if len(trend[key]) != n:
+            raise DataValidationError(
+                f"School '{school_id}': selectivity_trend['{key}'] length {len(trend[key])} "
+                f"!= years length {n}"
+            )
+    for lsat in trend["lsat_50"]:
+        if lsat is not None and not (100 <= lsat <= 180):
+            raise DataValidationError(
+                f"School '{school_id}': selectivity_trend lsat_50 value {lsat} out of range 100-180"
+            )
+    for gpa in trend["gpa_50"]:
+        if gpa is not None and not (0.0 <= gpa <= 4.33):
+            raise DataValidationError(
+                f"School '{school_id}': selectivity_trend gpa_50 value {gpa} out of range 0-4.33"
+            )
+    for acc in trend["accept_rate"]:
+        if acc is not None and not (0.0 <= acc <= 1.0):
+            raise DataValidationError(
+                f"School '{school_id}': selectivity_trend accept_rate value {acc} out of range 0-1"
             )
 
 

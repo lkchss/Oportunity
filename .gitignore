@@ -37,3 +37,7 @@ output/
 
 # Eval harness run artifacts (regenerated each run)
 eval/runs/
+law/opportunity v2.zip
+
+# ABA employment summary per-school PDFs (bulky; reproducible via build_employment_states.py)
+law/data/raw/employment_states/*.pdf

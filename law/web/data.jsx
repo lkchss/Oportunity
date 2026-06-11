@@ -52,12 +52,12 @@ function incomeBracket(raw) {
   return "over_200k";
 }
 
-function buildPayload(form, lsatOverride) {
+function buildPayload(form, lsatOverride, weightsOverride) {
   const raw = lsatOverride !== undefined ? lsatOverride : form.lsat;
   const lsat = Number(raw);
   // A blank/zero/garbage LSAT must never reach the matcher as a real score.
   const noLsat = !!form.noLsat || raw === "" || raw == null || Number.isNaN(lsat) || lsat <= 0;
-  return {
+  const payload = {
     no_lsat: noLsat,
     lsat: noLsat ? null : Math.min(lsat, 180),
     gpa: Number(form.gpa),
@@ -72,6 +72,11 @@ function buildPayload(form, lsatOverride) {
     location_weight: Math.round(form.locW),
     wants_transfer: !!form.transfer,
   };
+  // Optional per-score weight multipliers from the TweaksPanel.
+  // null/undefined → key omitted → byte-identical backend baseline.
+  const w = weightsOverride !== undefined ? weightsOverride : (form.weights || null);
+  if (w != null) payload.weights = w;
+  return payload;
 }
 
 /* ---------------- API → screen shape ---------------- */
@@ -101,6 +106,9 @@ function adaptRaw(s) {
     size, feeds: s.target_states || [],
     scDebt: s.scorecard_median_debt, scEarn: s.scorecard_earn_4yr,
     alumni: s.notable_alumni || [],
+    placementStates: s.placement_states || null,
+    placementYear: s.placement_year || null,
+    selTrend: s.selectivity_trend || null,
   };
 }
 
@@ -150,6 +158,8 @@ function adaptMatched(s, goal) {
   m.idrMonthly = fb.idr_monthly_net;
   m.pslfPaid = fb.pslf_total_paid;
   m.pslfForgiven = fb.pslf_forgiven;
+  // Display-only scholarship leverage insight (never affects scores or ranking)
+  m.leverage = s.scholarship_leverage || null;
   const gk = GOAL_KEY[goal] || "biglaw";
   m.goalPct = gk === "biglaw" ? m.biglaw : gk === "clerk" ? m.clerk :
     gk === "gov" ? m.gov : gk === "pi" ? m.pi : m.solo;
@@ -157,8 +167,11 @@ function adaptMatched(s, goal) {
   return m;
 }
 
-/* Full /api/match response → { schools, plan }. The transfer plan entries are
-   resolved back to the full matched objects so cards render the same idiom. */
+/* Full /api/match response → { schools, plan, portfolio }. The transfer plan
+   entries are resolved back to the full matched objects so cards render the same
+   idiom. Portfolio slate entries keep the backend shape (id, name, tier, reason,
+   net_debt, composite_score) and are resolved to full school objects for click-
+   through. */
 function adaptMatchResponse(json, goal) {
   const schools = (json.schools || []).map((s) => adaptMatched(s, goal));
   const byId = {};
@@ -168,7 +181,28 @@ function adaptMatchResponse(json, goal) {
   // The launchpad card asserts "X% of 1Ls transfer up" — keep only schools
   // where that claim holds (the backend ranks but doesn't gate on it).
   const launchpads = resolve(tp.launchpads).filter((m) => m.trOut != null && m.trOut >= 0.015);
-  return { schools, plan: { launchpads, targets: resolve(tp.targets) } };
+
+  // Portfolio: resolve each slate entry to full school + carry the reason line.
+  const rawPortfolio = json.portfolio || {};
+  function resolveSlate(entries) {
+    return (entries || []).map((e) => {
+      const full = byId[e.id];
+      if (!full) return null;
+      return { ...full, portfolioReason: e.reason };
+    }).filter(Boolean);
+  }
+  const portfolio = {
+    safeties: resolveSlate(rawPortfolio.safeties),
+    targets:  resolveSlate(rawPortfolio.targets),
+    reaches:  resolveSlate(rawPortfolio.reaches),
+  };
+  const totalSlate = portfolio.safeties.length + portfolio.targets.length + portfolio.reaches.length;
+
+  return {
+    schools,
+    plan: { launchpads, targets: resolve(tp.targets) },
+    portfolio: totalSlate > 0 ? portfolio : null,
+  };
 }
 
 /* Share-link profile encoding: UTF-8-safe base64 of the form JSON. */
