@@ -286,14 +286,15 @@ def build_base_record(aba: str, fy_row, tui_row, basics_row, grants_row, emp_row
     return record
 
 
-def main() -> None:
+def main(json_path: Optional[Path] = None) -> None:
+    target = json_path if json_path is not None else JSON_PATH
     fy = be._index(pd.read_excel(RAW / "First_Year_Class_2025.xlsx"))
     tui = be._index(pd.read_excel(RAW / "Tuitions_and_Fees_Living_Expenses_Cond._Scholarships_2025.xlsx"))
     basics = be._index(pd.read_excel(RAW / "The_Basics_Academic_Calendar_2025.xlsx"))
     grants = be._index(pd.read_excel(RAW / "Grants_and_Scholarships_2025.xlsx"))
     emp = be._index(pd.read_excel(RAW / "Employment_Summary_2025.xlsx"))
 
-    data = json.loads(JSON_PATH.read_text(encoding="utf-8"))
+    data = json.loads(target.read_text(encoding="utf-8"))
     schools = data["schools"]
     existing_ids = {s["id"] for s in schools}
 
@@ -324,7 +325,7 @@ def main() -> None:
         f"USNWR 1-82 + ABA-accredited expansion ({len(schools)} schools; "
         f"non-T82 schools RNP unless noted)"
     )
-    JSON_PATH.write_text(
+    target.write_text(
         json.dumps(data, indent=2, ensure_ascii=False) + "\n", encoding="utf-8"
     )
 
@@ -338,7 +339,7 @@ def main() -> None:
     # Enrich the new schools (and re-enrich existing) with real ABA data.
     be.ID_TO_ABA.update(new_mappings)
     print("\n--- running build_enrichment over expanded set ---")
-    be.main()
+    be.main(json_path=target)
 
 
 if __name__ == "__main__":

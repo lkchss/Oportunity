@@ -122,7 +122,8 @@ def _index(df: pd.DataFrame, key: str = "SchoolName") -> dict[str, pd.Series]:
     return {str(r[key]).strip(): r for _, r in df.iterrows()}
 
 
-def main() -> None:
+def main(json_path: Optional[Path] = None) -> None:
+    target = json_path if json_path is not None else JSON_PATH
     grants = _index(pd.read_excel(RAW / "Grants_and_Scholarships_2025.xlsx"))
     enroll = _index(pd.read_excel(RAW / "JD_Enrollment_and_Ethnicity_2025.xlsx"))
     emp = _index(pd.read_excel(RAW / "Employment_Summary_2025.xlsx"))
@@ -131,7 +132,7 @@ def main() -> None:
     bar_ft = _index(pd.read_excel(RAW / "First_Time_Bar_Admission_2026.xlsx"), key="School Name")
     bar_ult = _index(pd.read_excel(RAW / "Two-Year_Ultimate_Bar_Admission_2026.xlsx"), key="School Name")
 
-    data = json.loads(JSON_PATH.read_text(encoding="utf-8"))
+    data = json.loads(target.read_text(encoding="utf-8"))
     schools = data["schools"]
 
     covered, missing = [], []
@@ -255,7 +256,7 @@ def main() -> None:
         school.update({k: v for k, v in bar_fields.items() if v is not None})
         covered.append(sid)
 
-    JSON_PATH.write_text(
+    target.write_text(
         json.dumps(data, indent=2, ensure_ascii=False) + "\n", encoding="utf-8"
     )
 
