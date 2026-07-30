@@ -4,7 +4,9 @@ Makes `ship/opportunity_finder` importable without an editable install, so the
 test suite exercises the package source directly (an `pip install -e ship` is
 also supported and covered separately by the packaging verification step).
 
-Also stubs the three heavy optional third-party packages -- see below.
+Also stubs the three heavy optional third-party packages -- see below -- and
+disables opportunity_finder.sources' network-calling connectors by default
+-- see _disable_structured_sources_by_default below.
 """
 from __future__ import annotations
 
@@ -12,6 +14,8 @@ import importlib.util
 import sys
 import types
 from pathlib import Path
+
+import pytest
 
 _SHIP_SRC = Path(__file__).resolve().parent.parent / "ship"
 if str(_SHIP_SRC) not in sys.path:
@@ -89,3 +93,20 @@ def _declines_extraction(*args: object, **kwargs: object) -> None:
 _stub_module("anthropic", Anthropic=_unusable("anthropic", "Anthropic"))
 _stub_module("openai", OpenAI=_unusable("openai", "OpenAI"))
 _stub_module("trafilatura", extract=_declines_extraction)
+
+
+# ------------------------------------------------------- structured sources off by default
+#
+# opportunity_finder.sources adds network-calling connectors (apprenticeship.
+# gov, College Scorecard, grants.gov, a doctrine.toml hub crawl) to
+# pipeline.run_cycle's discover stage, on by default in production (its own
+# kill switch, env OPP_STRUCTURED_SOURCES, defaults to enabled). Every
+# pre-existing run_cycle test predates that module and does not inject a
+# fetcher for it, so without this it would make REAL network calls under
+# pytest -- confirmed the hard way: wiring it in briefly leaked a real
+# grants.gov URL into test_ship_pipeline.py's end-to-end assertions. Off by
+# default for the whole suite, same rationale as the SDK stubs above;
+# tests/test_ship_sources.py re-enables it for its own file.
+@pytest.fixture(autouse=True)
+def _disable_structured_sources_by_default(monkeypatch):
+    monkeypatch.setenv("OPP_STRUCTURED_SOURCES", "0")
