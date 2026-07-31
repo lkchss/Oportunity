@@ -15,6 +15,7 @@ import sys
 import types
 from pathlib import Path
 
+import platformdirs
 import pytest
 
 _SHIP_SRC = Path(__file__).resolve().parent.parent / "ship"
@@ -110,3 +111,34 @@ _stub_module("trafilatura", extract=_declines_extraction)
 @pytest.fixture(autouse=True)
 def _disable_structured_sources_by_default(monkeypatch):
     monkeypatch.setenv("OPP_STRUCTURED_SOURCES", "0")
+
+
+# ------------------------------------------------------- platformdirs isolation by default
+#
+# opportunity_finder.config.get_or_create_user_key() (added for the per-user-
+# identity ship work) WRITES to config.toml on first call -- every other
+# config.py function before it only ever READ config.toml. It's called from
+# pipeline.run_cycle (every cycle_start event) and web/server.py's
+# /api/config, both exercised by most of test_ship_pipeline.py and
+# test_ship_web.py, essentially none of which isolate config.config_path /
+# platformdirs today, because until now nothing they touched ever wrote to
+# disk. Without a default sandbox here, the FIRST such test in a suite run
+# would create-or-mutate a real config.toml under this machine's actual
+# platformdirs path -- exactly the kind of hidden real-filesystem effect
+# this file already goes out of its way to avoid above (see the SDK stubs),
+# and several individual test files already hand-roll this same isolation
+# for tests that DO know they touch config (test_ship_wizard.py's `sandbox`
+# fixture, test_ship_cli_run_profile.py's `sandbox` fixture, ad-hoc
+# config.config_path overrides in test_ship_web.py / test_ship_llm.py /
+# test_ship_pipeline.py) -- this just makes that the default everywhere else
+# too. A test that wants a specific config.toml on disk still monkeypatches
+# config.config_path / platformdirs itself, same as today: monkeypatch calls
+# layer cleanly (last setattr wins for the duration of a test, unwound in
+# reverse order at teardown), so an explicit override in a test's own
+# fixture is never fought by this default.
+@pytest.fixture(autouse=True)
+def _isolate_platformdirs_by_default(monkeypatch, tmp_path):
+    monkeypatch.setattr(platformdirs, "user_config_dir",
+                        lambda *a, **k: str(tmp_path / "_autouse_config"))
+    monkeypatch.setattr(platformdirs, "user_data_dir",
+                        lambda *a, **k: str(tmp_path / "_autouse_data"))
