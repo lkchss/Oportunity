@@ -2,9 +2,9 @@ name: CI
 
 on:
   push:
-    branches: [ main, algo-optimization ]
+    branches: [ main ]
   pull_request:
-    branches: [ main, algo-optimization ]
+    branches: [ main ]
 
 jobs:
   test:
@@ -22,23 +22,16 @@ jobs:
       with:
         python-version: ${{ matrix.python-version }}
         cache: 'pip'
-        cache-dependency-path: |
-          requirements.txt
-          ship/pyproject.toml
+        cache-dependency-path: requirements-law.txt
 
-    # `-e ./ship` pulls the ship package's real dependency list (ddgs,
-    # platformdirs, trafilatura, pypdf, python-dotenv, flask) from its own
-    # pyproject.toml -- the bulk of the suite is tests/test_ship_*.py and
-    # imports these; the previous hand-picked `pytest flask` list predates
-    # ship/ and could never collect those tests. The [anthropic]/[openai]/
-    # [bundled] extras stay out: every backend SDK is monkeypatched in tests
-    # (one importorskip("openai") skips cleanly), and llama-cpp-python needs
-    # a wheel index CI has no reason to hit.
+    # The law product is Flask + committed JSON data; pytest is the only
+    # test-time addition. Playwright suites skip themselves in CI (no local
+    # server to reach).
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
         pip install pytest
-        pip install -e ./ship
+        pip install -r requirements-law.txt
 
     - name: Run tests
       run: |
